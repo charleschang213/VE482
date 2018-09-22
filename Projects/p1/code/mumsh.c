@@ -16,6 +16,7 @@
 int main(){
 	while (1){
 		printf("mumsh $ ");
+		fflush(stdout);
 		char command[1024]={0};
 	    fgets(command,1024,stdin);
 		const char *esc="exit";
