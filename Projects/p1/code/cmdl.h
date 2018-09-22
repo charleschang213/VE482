@@ -11,7 +11,7 @@
 #include<unistd.h>
 #include<fcntl.h>
 #include<string.h>
-#include<wait.h>
+#include<sys/wait.h>
 #include<stdlib.h>
 
 typedef struct _cmd_{

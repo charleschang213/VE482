@@ -10,7 +10,7 @@
 #include<fcntl.h>
 #include<string.h>
 #include<unistd.h>
-#include<wait.h>
+#include<sys/wait.h>
 #include "cmdl.h"
 
 int main(){
