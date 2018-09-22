@@ -8,7 +8,7 @@
 #include "cmdl.h"
 
 cmdl parse(char* str){
-	char* ttmp = malloc(strlen(str)*sizeof(char));
+	char* ttmp = malloc((strlen(str)+1)*sizeof(char));
 	strcpy(ttmp,str);
 	cmdl newline;
 	char **command_group;
@@ -19,7 +19,7 @@ cmdl parse(char* str){
 	while (tmp){
 		newline.cmdc++;
 		command_group = realloc(command_group,newline.cmdc*sizeof(char*));
-		command_group[newline.cmdc-1] = malloc(strlen(tmp)*sizeof(char));
+		command_group[newline.cmdc-1] = malloc((strlen(tmp)+1)*sizeof(char));
 		strcpy(command_group[newline.cmdc-1],tmp);
 		tmp = strtok(NULL,"|");
 	}
@@ -33,7 +33,7 @@ cmdl parse(char* str){
 		while (tmp){
 			if (strcmp(tmp,"<")==0){
 				tmp = strtok(NULL," ");
-				newline.commands[i].irdr = malloc(strlen(tmp)*sizeof(char));
+				newline.commands[i].irdr = malloc((strlen(tmp)+1)*sizeof(char));
 				strcpy(newline.commands[i].irdr,tmp);
 				tmp = strtok(NULL," ");
 				continue;
@@ -41,14 +41,14 @@ cmdl parse(char* str){
 			if ((strcmp(tmp,">")==0)||(strcmp(tmp,">>")==0)){
 				if (strcmp(tmp,">>")==0) newline.commands[i].append_o=1;
 				tmp = strtok(NULL," ");
-				newline.commands[i].ordr = malloc(strlen(tmp)*sizeof(char));
+				newline.commands[i].ordr = malloc((strlen(tmp)+1)*sizeof(char));
 				strcpy(newline.commands[i].ordr,tmp);
 				tmp = strtok(NULL," ");
 				continue;
 			}
 			newline.commands[i].argc++;
 			newline.commands[i].argv = realloc(newline.commands[i].argv,newline.commands[i].argc*sizeof(char*));
-			newline.commands[i].argv[newline.commands[i].argc-1]=malloc(strlen(tmp)*sizeof(char));
+			newline.commands[i].argv[newline.commands[i].argc-1]=malloc((strlen(tmp)+1)*sizeof(char));
 			strcpy(newline.commands[i].argv[newline.commands[i].argc-1],tmp);
 			tmp = strtok(NULL," ");
 		}
@@ -75,7 +75,6 @@ void exec_cmdl(cmdl line){
 	if (line.cmdc==0) return;
 	int **pipegroup = NULL;
 	pid_t *pid = malloc(line.cmdc*sizeof(pid_t));
-	pid_t *ppid = malloc(line.cmdc*sizeof(pid_t));
 	for (int i=0;i<line.cmdc;i++) pid[i]=0xffff;
 	if(line.cmdc>1){
 		pipegroup = malloc((line.cmdc-1)*sizeof(int*));
