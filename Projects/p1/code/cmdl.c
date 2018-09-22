@@ -129,10 +129,11 @@ void exec_cmdl(cmdl line){
 				close(pipegroup[i][1]);
 		}
 		waitpid(pid[line.cmdc-1],NULL,0);
-		/*free(pid);
+		free(pid);
 		for (int i=0;i<line.cmdc-1;i++) free(pipegroup[i]);
 		if (line.cmdc>1) free(pipegroup);
-		exit(0);*/
+		cmdl_clean(line);
+		exit(0);
 	}
 	else{
 		char dir[] = "/bin/";
