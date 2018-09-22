@@ -1,13 +1,1 @@
-总用量 1676
-drwxr-xr-x 2 charles users    4096 9月  22 17:10 .
-drwxr-xr-x 3 charles users    4096 9月  16 18:31 ..
--rw-r--r-- 1 charles users     710 9月  22 17:11 1.txt
--rw-r--r-- 1 charles users       0 9月  22 17:11 2.txt
--rw-r--r-- 1 charles users     376 9月  22 17:01 CMakeLists.txt
--rw-r--r-- 1 charles users    4660 9月  22 16:52 cmdl.c
--rw-r--r-- 1 charles users     656 9月  16 23:26 cmdl.h
--rw-r--r-- 1 charles users     567 9月  22 16:45 Makefile
--rwxr-xr-x 1 charles users   17736 9月  22 17:06 mumsh
--rw-r--r-- 1 charles users     841 9月  22 17:04 mumsh.c
--rwxr-xr-x 1 charles users 1653928 9月  22 17:06 mumsh_memory_check
--rw-r--r-- 1 charles users    1975 9月  22 17:04 p1.tar
+/

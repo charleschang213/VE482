@@ -31,18 +31,37 @@ cmdl parse(char* str){
 		newline.commands[i].append_o=0;
 		newline.commands[i].irdr=newline.commands[i].ordr=NULL;
 		while (tmp){
-			if (strcmp(tmp,"<")==0){
-				tmp = strtok(NULL," ");
-				newline.commands[i].irdr = malloc((strlen(tmp)+1)*sizeof(char));
-				strcpy(newline.commands[i].irdr,tmp);
+			if (tmp[0]=='<'){
+				if (strcmp(tmp,"<")==0){
+					tmp = strtok(NULL," ");
+					newline.commands[i].irdr = malloc((strlen(tmp)+1)*sizeof(char));
+					strcpy(newline.commands[i].irdr,tmp);
+					tmp = strtok(NULL," ");
+					continue;
+				}
+				char *tmpp = tmp+1;
+				newline.commands[i].irdr = malloc((strlen(tmpp)+1)*sizeof(char));
+				strcpy(newline.commands[i].irdr,tmpp);
 				tmp = strtok(NULL," ");
 				continue;
 			}
-			if ((strcmp(tmp,">")==0)||(strcmp(tmp,">>")==0)){
-				if (strcmp(tmp,">>")==0) newline.commands[i].append_o=1;
-				tmp = strtok(NULL," ");
-				newline.commands[i].ordr = malloc((strlen(tmp)+1)*sizeof(char));
-				strcpy(newline.commands[i].ordr,tmp);
+			if (tmp[0]=='>'){
+				if ((strcmp(tmp,">")==0)||(strcmp(tmp,">>")==0)){
+					if (strcmp(tmp,">>")==0) newline.commands[i].append_o=1;
+					tmp = strtok(NULL," ");
+					newline.commands[i].ordr = malloc((strlen(tmp)+1)*sizeof(char));
+					strcpy(newline.commands[i].ordr,tmp);
+					tmp = strtok(NULL," ");
+					continue;
+				}
+				int flag = 1;
+				if (tmp[1]=='>') {
+					newline.commands[i].append_o=1;
+					flag=2;
+				}
+				char *tmpp = tmp+flag;
+				newline.commands[i].ordr = malloc((strlen(tmpp)+1)*sizeof(char));
+				strcpy(newline.commands[i].ordr,tmpp);
 				tmp = strtok(NULL," ");
 				continue;
 			}
