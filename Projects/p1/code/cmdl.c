@@ -65,10 +65,41 @@ cmdl parse(char* str){
 				tmp = strtok(NULL," ");
 				continue;
 			}
+			char *inr = strstr(tmp,"<");
+			char *outr = strstr(tmp,">");
+			if (inr) *inr=0;
+			if (outr) *outr=0;
 			newline.commands[i].argc++;
 			newline.commands[i].argv = realloc(newline.commands[i].argv,newline.commands[i].argc*sizeof(char*));
 			newline.commands[i].argv[newline.commands[i].argc-1]=malloc((strlen(tmp)+1)*sizeof(char));
 			strcpy(newline.commands[i].argv[newline.commands[i].argc-1],tmp);
+			if (inr){
+				if (inr[1]==0){
+					tmp = strtok(NULL," ");
+					newline.commands[i].irdr = malloc((strlen(tmp)+1)*sizeof(char));
+					strcpy(newline.commands[i].irdr,tmp);
+				}
+				else{
+					newline.commands[i].irdr = malloc((strlen(inr+1)+1)*sizeof(char));
+					strcpy(newline.commands[i].irdr,inr+1);
+				}
+			}
+			if (outr){
+				if (outr[1]=='>'){
+					outr++;
+					newline.commands[i].append_o=1;
+				}
+				if (outr[1]==0){
+					tmp = strtok(NULL," ");
+					newline.commands[i].ordr = malloc((strlen(tmp)+1)*sizeof(char));
+					strcpy(newline.commands[i].ordr,tmp);
+				}
+				else{
+					newline.commands[i].ordr = malloc((strlen(outr+1)+1)*sizeof(char));
+					strcpy(newline.commands[i].ordr,outr+1);
+			
+				}
+			}
 			tmp = strtok(NULL," ");
 		}
 		newline.commands[i].argv = realloc(newline.commands[i].argv,(newline.commands[i].argc+1)*sizeof(char*));
@@ -132,12 +163,6 @@ void exec_cmdl(cmdl line){
 				dup2(fout,STDOUT_FILENO);
 				close(fout);
 			}
-		/*	if ((flag==1)&&(line.cmdc>1)){
-				for (int i=0;i<line.cmdc-1;i++) close(pipegroup[i][0]);
-			}
-			if ((flag==line.cmdc)&&(flag>1)){
-				for (int i=0;i<line.cmdc-1;i++) close(pipegroup[i][1]);
-			}*/
 			break;
 		}
 
@@ -158,17 +183,6 @@ void exec_cmdl(cmdl line){
 		char dir[] = "/bin/";
 		strcpy(dir,line.commands[flag-1].argv[0]);
 		execvp(dir,line.commands[flag-1].argv);
-		/*ppid[flag-1] = fork();
-		if (ppid[flag-1]==0) {
-			execvp(dir,line.commands[flag-1].argv);
-			exit(0);
-		}
-		else{
-			printf("%d\n",ppid[flag-1]);
-			waitpid(ppid[flag-1],NULL,0);
-			if ((line.cmdc>1)&&(flag<line.cmdc)) close(pipegroup[flag-1][1]);
-			if ((line.cmdc>1)&&(flag>1)) close(pipegroup[flag-2][0]);
-		}*/
 	}
 	exit(0);
 }
