@@ -31,7 +31,7 @@ cmdl parse(char* str){
 		newline.commands[i].append_o=0;
 		newline.commands[i].irdr=newline.commands[i].ordr=NULL;
 		while (tmp){
-			if (tmp[0]=='<'){
+			/*if (tmp[0]=='<'){
 				if (strcmp(tmp,"<")==0){
 					tmp = strtok(NULL," ");
 					newline.commands[i].irdr = malloc((strlen(tmp)+1)*sizeof(char));
@@ -64,15 +64,17 @@ cmdl parse(char* str){
 				strcpy(newline.commands[i].ordr,tmpp);
 				tmp = strtok(NULL," ");
 				continue;
-			}
+			}*/
 			char *inr = strstr(tmp,"<");
 			char *outr = strstr(tmp,">");
 			if (inr) *inr=0;
 			if (outr) *outr=0;
-			newline.commands[i].argc++;
-			newline.commands[i].argv = realloc(newline.commands[i].argv,newline.commands[i].argc*sizeof(char*));
-			newline.commands[i].argv[newline.commands[i].argc-1]=malloc((strlen(tmp)+1)*sizeof(char));
-			strcpy(newline.commands[i].argv[newline.commands[i].argc-1],tmp);
+			if ((tmp!=inr)&&(tmp!=outr)){
+				newline.commands[i].argc++;
+				newline.commands[i].argv = realloc(newline.commands[i].argv,newline.commands[i].argc*sizeof(char*));
+				newline.commands[i].argv[newline.commands[i].argc-1]=malloc((strlen(tmp)+1)*sizeof(char));
+				strcpy(newline.commands[i].argv[newline.commands[i].argc-1],tmp);
+			}
 			if (inr){
 				if (inr[1]==0){
 					tmp = strtok(NULL," ");
