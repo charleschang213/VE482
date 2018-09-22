@@ -28,5 +28,6 @@ int main(){
 		else waitpid(pid,NULL,0);
 		cmdl_clean(line_parsed);
 	}
+	printf("exit\n");
 	return 0;
 }
