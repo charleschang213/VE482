@@ -1,0 +1,35 @@
+\documentclass{article}
+\usepackage{bookmark}
+\usepackage{color}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+\begin{document}
+\begin{itemize}
+\item {\bf Ex. 1}\\
+They have several differences. First, stack follows the last in first out requirement while heap follows the heap property(parent always larger/smaller than children). Second, in implementation, stack can be implemented using arrays or linked lists while heaps are implemented using trees in most cases. Third, stack only supports pop(), push(), top() several operation while heaps often support a wide range of operations such as merge and delete/insert random node.
+\item {\bf EX. 2}\\
+(1). When starting up, the CPU will first will first trigger the BIOS start-up program. BIOS will check whether the devices on the computer are normal and then it will boot those devices. When all devices are booted, the operating system will be loaded.\\
+BIOS works to start up the devices and connect the devices with the operating system. It offers several input/output functions on peripherals the OS and the system uses these functions to interact with the devices.\\
+(2). Hybrid kernels are kernels with the microkernel structure, while the implementation of kernel behaviour is in the monolithic kernel style.\\
+Exokernel is a kernel model that reduces the abstraction of harwares. The users will have more direct operations on the harware and more runtime library are needed to have different functions.
+\item {\bf Ex. 3}\\
+(1). The operations a,c and d should be only allowed in kernel mode because they will all modify the hardware or connection mode between harware and software, so it cannot be privileged to normal users.\\
+(2). It will be completed in 20ms. One thread process on the P2 and another on P0 and P1.
+\item {\bf Ex. 4}\\
+For $25\times 80$ monochrome screen: $25\times 80=2000\ bit = 250\ byte$ is needed.\\
+For $1024\times 768$ 24-bit screen: $1024\times 768\times 24 = 18874368\ bit = 18MB$ is needed.\\
+In 1980 the cost for those two are $\$1.25$ and $\$92160$. Now a $16GB$ RAM costs about $\$150$
+\item Take out the CPU, rotate it and try to plug it back in a different position, is that working?\\
+It does not work. The CPU cannot fit into the socket.
+\item Explain what overclocking is?\\
+Overclocking is the action that makes computer run faster than it is supposed to run.
+\item What are pins on a PCI/PCI-e card and what are they used for?\\
+They are connector pinout and they serves to create communication between the computer and the peripherals connected.
+\item Before PCI-e became a common standard many graphics cards were using Accelerated Graphics Port (AGP), explain why. \\
+It connects graphic card and system main memory directly so higher speed can be reached. What's more, it can use system main memory to help if the memory in graphic card is not enough.
+\end{itemize}
+\end{document}
