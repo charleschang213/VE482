@@ -12,18 +12,46 @@
 #include<unistd.h>
 #include<sys/wait.h>
 #include "cmdl.h"
+#include "funcs.h"
 
 int main(){
 	while (1){
+		char a;
+		clearerr(stdin);
+		fseek(stdin,0,SEEK_SET);
+		setbuf(stdin,NULL);
 		printf("mumsh $ ");
 		fflush(stdout);
 		char command[1024]={0};
-	    fgets(command,1024,stdin);
+		int flag=0;
+		a = getchar();	
+		if (feof(stdin)) {
+			printf("\n");
+			break;
+		}
+		//fflush(stdin);
+		while ((a!='\n')&&(!feof(stdin))){
+			command[flag]=a;
+			flag++;
+			a = getchar();
+			while (a==EOF){
+				clearerr(stdin);
+				a = getchar();
+			}
+			fflush(stdin);
+		}
 		const char *esc="exit";
+		const char *cdd = "cd";
+		if (feof(stdin)) break;
 		if (strcmp(command,"\n")==0) continue;
-		command[strlen(command)-1]=0;
+		//command[strlen(command)-1]=0;
 		if (strcmp(command,esc)==0) break;
 		cmdl line_parsed = parse(command);
+		if (strcmp(line_parsed.commands[0].argv[0],cdd)==0){
+			chdir(line_parsed.commands[0].argv[1]);
+			cmdl_clean(line_parsed);
+			continue;
+		}
 		pid_t pid = fork();
 		if (pid==0) exec_cmdl(line_parsed);
 		else waitpid(pid,NULL,0);

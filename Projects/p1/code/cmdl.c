@@ -140,14 +140,30 @@ void exec_cmdl(cmdl line){
 				close(pipegroup[i][0]);
 				close(pipegroup[i][1]);
 		}
-		waitpid(pid[line.cmdc-1],NULL,0);
+		while (waitpid(pid[line.cmdc-1],NULL,WNOHANG)==0){
+			while (feof(stdin)) {
+				printf("hi\n");
+				clearerr(stdin);
+				setbuf(stdin,NULL);
+				getchar();
+			}
+		}
 		free(pid);
 		for (int i=0;i<line.cmdc-1;i++) free(pipegroup[i]);
 		if (line.cmdc>1) free(pipegroup);
 		cmdl_clean(line);
+		setbuf(stdin,NULL);
 		exit(0);
 	}
 	else{
+		if (strcmp(line.commands[flag-1].argv[0],"pwd")==0){
+			printf("%s\n",pwd());
+			exit(0);
+		}
+		if (strcmp(line.commands[flag-1].argv[0],"cd")==0){
+			cd(line.commands[flag-1].argv[1]);
+			exit(0);
+		}
 		char dir[] = "/bin/";
 		strcpy(dir,line.commands[flag-1].argv[0]);
 		execvp(dir,line.commands[flag-1].argv);

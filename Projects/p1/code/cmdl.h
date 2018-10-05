@@ -13,7 +13,7 @@
 #include<string.h>
 #include<sys/wait.h>
 #include<stdlib.h>
-
+#include "funcs.h"
 typedef struct _cmd_{
 	int argc;
 	char **argv;
