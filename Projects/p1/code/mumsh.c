@@ -45,6 +45,7 @@ int main(){
 			}
 			const char *esc="exit";
 			const char *cdd = "cd";
+			printf("%s\n",command);
 			if (feof(stdin)) break;
 			if (strcmp(command,"\n")==0) exit(0);
 			//command[strlen(command)-1]=0;
@@ -66,11 +67,11 @@ int main(){
 			waitpid(son,status,0);
 			if (*status!=0) {
 				free(status);
-				break;
+				printf("exit\n");
+				exit(0);
 			}
 			free(status);
 		}
 	}
-	printf("exit\n");
 	return 0;
 }
