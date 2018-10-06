@@ -9,15 +9,23 @@
 #include<stdlib.h>
 #include<fcntl.h>
 #include<string.h>
+#include<signal.h>
 #include<unistd.h>
 #include<sys/wait.h>
 #include "cmdl.h"
 #include "funcs.h"
-
-	
+static pid_t son;
+void handler(int sig){
+	if ((sig==SIGINT)&&(son==0)){
+		printf("\n");
+		exit(0);
+	}
+	signal(SIGINT,handler);
+}
 int main(){
+	signal(SIGINT,handler);
 	while (1){
-		pid_t son = fork();
+		son = fork();
 		if (son==0){
 			char a;
 			clearerr(stdin);
