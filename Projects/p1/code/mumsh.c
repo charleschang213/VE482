@@ -32,9 +32,13 @@ int main(){
 			if (feof(stdin)) {
 				exit(1);
 			}
+			const char *cdd = "cd";
 			//fflush(stdin);
 			while ((a!='\n')&&(!feof(stdin))){
 				command[flag]=a;
+				if (strcmp(command,cdd)==0){
+					exit(2);
+				}
 				flag++;
 				a = getchar();
 				while (a==EOF){
@@ -44,17 +48,16 @@ int main(){
 				fflush(stdin);
 			}
 			const char *esc="exit";
-			const char *cdd = "cd";
-			if (feof(stdin)) break;
+			if (feof(stdin)) exit(1);
 			if (strcmp(command,"\n")==0) exit(0);
 			//command[strlen(command)-1]=0;
 			if (strcmp(command,esc)==0) exit(1);
 			cmdl line_parsed = parse(command);
-			if (strcmp(line_parsed.commands[0].argv[0],cdd)==0){
+			/* if (strcmp(line_parsed.commands[0].argv[0],cdd)==0){
 				chdir(line_parsed.commands[0].argv[1]);
 				cmdl_clean(line_parsed);
-				continue;
-			}
+				exit(0);
+			}*/
 			pid_t pid = fork();
 			if (pid==0) exec_cmdl(line_parsed);
 			else waitpid(pid,NULL,0);
@@ -64,10 +67,15 @@ int main(){
 		else {
 			int *status=malloc(sizeof(int));
 			waitpid(son,status,0);
-			if (*status!=0) {
+			if (*status==256) {
 				free(status);
 				printf("exit\n");
 				exit(0);
+			}
+			else if (*status==512) {
+				char *address = malloc(100*sizeof(char));
+				scanf("%s",address);
+				chdir(address);
 			}
 			free(status);
 		}
