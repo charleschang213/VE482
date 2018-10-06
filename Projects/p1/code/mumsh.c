@@ -66,7 +66,7 @@ int main(){
 			waitpid(son,status,0);
 			if (*status!=0) {
 				free(status);
-				printf("exit");
+				printf("exit\n");
 				exit(0);
 			}
 			free(status);
