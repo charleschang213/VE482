@@ -26,7 +26,6 @@ int main(){
 		int flag=0;
 		a = getchar();	
 		if (feof(stdin)) {
-			printf("\n");
 			break;
 		}
 		//fflush(stdin);
