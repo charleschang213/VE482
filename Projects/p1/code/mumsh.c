@@ -89,6 +89,7 @@ int main(){
 				char *address = malloc(100*sizeof(char));
 				scanf("%s",address);
 				chdir(address);
+				free(address);
 			}
 			free(status);
 		}
