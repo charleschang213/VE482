@@ -64,7 +64,7 @@ int main(){
 		else {
 			int *status=malloc(sizeof(int));
 			waitpid(son,status,0);
-			if (*status==256) {
+			if (*status!=0) {
 				free(status);
 				break;
 			}
