@@ -19,13 +19,16 @@ static pid_t pid;
 void handler(int sig){
 	if ((sig==SIGINT)&&(son==0)){
 	    if (pid!=0) printf("\n");
+		fflush(stdout);
 		exit(0);
 	}
+	waitpid(son,NULL,0);
 	signal(SIGINT,handler);
 }
 int main(){
 	signal(SIGINT,handler);
 	while (1){
+		fflush(stdout);
 		pid = -1;
 		son = fork();
 		if (son==0){
