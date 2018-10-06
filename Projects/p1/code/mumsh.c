@@ -17,7 +17,7 @@
 static pid_t son;
 void handler(int sig){
 	if ((sig==SIGINT)&&(son==0)){
-		printf("\n");
+	//	printf("\n");
 		exit(0);
 	}
 	signal(SIGINT,handler);
