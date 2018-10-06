@@ -15,9 +15,10 @@
 #include "cmdl.h"
 #include "funcs.h"
 static pid_t son;
+static pid_t pid=-1;
 void handler(int sig){
 	if ((sig==SIGINT)&&(son==0)){
-	//	printf("\n");
+	    if (pid!=0) printf("\n");
 		exit(0);
 	}
 	signal(SIGINT,handler);
@@ -25,6 +26,7 @@ void handler(int sig){
 int main(){
 	signal(SIGINT,handler);
 	while (1){
+		pid = -1;
 		son = fork();
 		if (son==0){
 			char a;
@@ -66,7 +68,7 @@ int main(){
 				cmdl_clean(line_parsed);
 				exit(0);
 			}*/
-			pid_t pid = fork();
+			pid = fork();
 			if (pid==0) exec_cmdl(line_parsed);
 			else waitpid(pid,NULL,0);
 			cmdl_clean(line_parsed);
