@@ -25,6 +25,7 @@ int main(){
 		char command[1024]={0};
 		int flag=0;
 		a = getchar();	
+		if (a=='\n') continue;
 		if (feof(stdin)) {
 			break;
 		}
