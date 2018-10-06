@@ -157,7 +157,8 @@ void exec_cmdl(cmdl line){
 			cd(line.commands[flag-1].argv[1]);
 			exit(0);
 		}
-		char dir[] = "/bin/";
+		char dir[100]={0};
+		strcpy(dir,"/bin/");
 		strcpy(dir,line.commands[flag-1].argv[0]);
 		execvp(dir,line.commands[flag-1].argv);
 	}
