@@ -140,14 +140,7 @@ void exec_cmdl(cmdl line){
 				close(pipegroup[i][0]);
 				close(pipegroup[i][1]);
 		}
-		while (waitpid(pid[line.cmdc-1],NULL,WNOHANG)==0){
-			while (feof(stdin)) {
-				printf("hi\n");
-				clearerr(stdin);
-				setbuf(stdin,NULL);
-				getchar();
-			}
-		}
+		for (int xx=0;xx<line.cmdc;xx++) waitpid(pid[xx],NULL,0);
 		free(pid);
 		for (int i=0;i<line.cmdc-1;i++) free(pipegroup[i]);
 		if (line.cmdc>1) free(pipegroup);

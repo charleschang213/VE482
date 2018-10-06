@@ -15,7 +15,7 @@
 #include "cmdl.h"
 #include "funcs.h"
 static pid_t son;
-static pid_t pid=-1;
+static pid_t pid;
 void handler(int sig){
 	if ((sig==SIGINT)&&(son==0)){
 	    if (pid!=0) printf("\n");
