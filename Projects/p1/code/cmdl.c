@@ -7,7 +7,8 @@
 
 #include "cmdl.h"
 
-cmdl parse(char* str){
+cmdl parse(char* str,char** quotelist){
+	int quoteflag = -1;
 	char* ttmp = malloc((strlen(str)+1)*sizeof(char));
 	strcpy(ttmp,str);
 	cmdl newline;
@@ -31,15 +32,41 @@ cmdl parse(char* str){
 		newline.commands[i].append_o=0;
 		newline.commands[i].irdr=newline.commands[i].ordr=NULL;
 		while (tmp){
+			char *innerend;
 			char *inr = strstr(tmp,"<");
 			char *outr = strstr(tmp,">");
 			if (inr) *inr=0;
 			if (outr) *outr=0;
 			if ((tmp!=inr)&&(tmp!=outr)){
+				int quotemode = 0;
+				if (tmp[0]=='\''){
+					innerend = strstr(tmp+1,"\'");
+					if (!innerend) {
+						inr = outr = NULL;
+						quotemode = 1;
+					}
+					quoteflag++;
+					tmp = quotelist[quoteflag];
+				}
+				else if (tmp[0]=='\"'){
+					innerend = strstr(tmp+1,"\"");
+					if (!innerend){
+						inr = outr = NULL;
+						quotemode = 2;
+					}
+					quoteflag++;
+					tmp = quotelist[quoteflag];
+				}
 				newline.commands[i].argc++;
 				newline.commands[i].argv = realloc(newline.commands[i].argv,newline.commands[i].argc*sizeof(char*));
 				newline.commands[i].argv[newline.commands[i].argc-1]=malloc((strlen(tmp)+1)*sizeof(char));
 				strcpy(newline.commands[i].argv[newline.commands[i].argc-1],tmp);
+				if (quotemode==1){
+					tmp = strtok(NULL,"\'");
+				}
+				else if (quotemode==2){
+					tmp = strtok(NULL,"\"");
+				}
 			}
 			if (inr){
 				if (inr[1]==0){
@@ -159,7 +186,7 @@ void exec_cmdl(cmdl line){
 		}
 		char dir[100]={0};
 		strcpy(dir,"/bin/");
-		strcpy(dir,line.commands[flag-1].argv[0]);
+	    strcpy(dir,line.commands[flag-1].argv[0]);
 		execvp(dir,line.commands[flag-1].argv);
 	}
 	exit(0);

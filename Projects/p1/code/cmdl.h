@@ -26,7 +26,7 @@ typedef struct _cmdl_{
 	cmd *commands;
 }cmdl;
 
-cmdl parse(char* str);
+cmdl parse(char* str,char** quotelist);
 void cmdl_clean(cmdl line);
 void exec_cmdl(cmdl line);
 #endif

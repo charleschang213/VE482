@@ -14,8 +14,10 @@
 #include<sys/wait.h>
 #include "cmdl.h"
 #include "funcs.h"
+#include "backtab.h"
 static pid_t son;
 static pid_t pid;
+static backtab table;
 void handler(int sig){
 	if ((sig==SIGINT)&&(son==0)){
 	    if (pid!=0) printf("\n");
@@ -26,13 +28,26 @@ void handler(int sig){
 	signal(SIGINT,handler);
 }
 int main(){
+	bt_init(&table);
+	int fd[2];
+	int fd2[2];
 	signal(SIGINT,handler);
 	while (1){
 		fflush(stdout);
 		pid = -1;
+		pipe(fd);
+		pipe(fd2);
 		son = fork();
 		if (son==0){
+			bt_clean(&table);
+			close(fd[0]);
+			close(fd2[0]);
 			char a;
+			char **quotelist = malloc(20*sizeof(char*));
+			for (int i=0;i<20;i++) {
+				quotelist[i] = malloc(20*sizeof(char));
+				for (int j=0;j<20;j++) quotelist[i][j]=0;
+			}
 			clearerr(stdin);
 			fseek(stdin,0,SEEK_SET);
 			setbuf(stdin,NULL);
@@ -41,13 +56,30 @@ int main(){
 			char command[1024]={0};
 			int flag=0;
 			a = getchar();	
-			if (a=='\n') exit(0);
+			if (a=='\n') {
+				command[0] = a;
+				int send = 1;
+				write(fd[1],&send,4);
+				write(fd[1],command,1);
+				close(fd[1]);
+				close(fd2[1]);
+				exit(0);
+			}
 			if (feof(stdin)) {
+				int send = -1;
+				write(fd[1],&send,4);
+				close(fd[1]);
+				close(fd2[1]);
 				exit(1);
 			}
 			const char *cdd = "cd";
+			const char *jobs = "jobs";
+			int quotemode = 0;
+			int backmode = 0;
+			int waitmode = 0;
+			int quoteflag = -1;
 			//fflush(stdin);
-			while ((a!='\n')&&(!feof(stdin))){
+			/*while ((a!='\n')&&(!feof(stdin))){
 				command[flag]=a;
 				if (strcmp(command,cdd)==0){
 					exit(2);
@@ -59,39 +91,136 @@ int main(){
 					a = getchar();
 				}
 				fflush(stdin);
+			}*/
+			while ((!feof(stdin))){
+				command[flag]=a;
+				if (strcmp(command,cdd)==0){
+					int send = -2;
+					write(fd[1],&send,4);
+					close(fd[1]);
+					close(fd2[1]);
+					exit(2);
+				}
+				if (strcmp(command,jobs)==0){
+					int send = -3;
+					write(fd[1],&send,4);
+					close(fd[1]);
+					close(fd2[1]);
+					exit(3);
+				}
+				flag++;
+				a = getchar();
+				int init=0;
+				while (a==EOF){
+					clearerr(stdin);
+					a = getchar();
+				}
+				if ((quotemode==0)&&(a=='\"')) {
+					quotemode = 1;
+					init = 1;
+					quoteflag++;
+					command[flag]=' ';
+					flag++;
+				}
+				else if ((quotemode==0)&&(a=='\'')) {
+					quotemode = 2;
+					init = 1;
+					quoteflag++;
+					command[flag]=' ';
+					flag++;
+				}
+				else if (((quotemode==1)&&(a=='\"'))||((quotemode==2)&&(a=='\''))) {
+					quotemode = 0;
+					command[flag]=a;
+					flag++;
+					a = ' ';
+				}
+				if ((quotemode!=0)&&(init==0)) quotelist[quoteflag][strlen(quotelist[quoteflag])] = a;
+				if ((a=='>')||(a=='<')||(a=='|')){
+					if (quotemode==0) waitmode = 1;
+				}
+				else if (a=='\n'){
+					if ((waitmode==0)&&(quotemode==0)) break;
+					printf("> ");
+					fflush(stdout);
+					if (quotemode==0) a = ' ';
+				}
+				else if (a!=' ') waitmode=0;
 			}
 			const char *esc="exit";
-			if (feof(stdin)) exit(1);
-			if (strcmp(command,"\n")==0) exit(0);
+			//if (feof(stdin)) exit(1);
+			//if (strcmp(command,"\n")==0) exit(0);
 			//command[strlen(command)-1]=0;
-			if (strcmp(command,esc)==0) exit(1);
-			cmdl line_parsed = parse(command);
+			if (strcmp(command,esc)==0) {
+				int send = -1;
+				write(fd[1],&send,4);
+				close(fd[1]);
+				close(fd2[1]);
+				exit(1);
+			}
+			int send = strlen(command);	
+			write(fd[1],&send,4);	
+			close(fd[1]);
+			if (command[strlen(command)-1]=='&') {
+				backmode = 1;
+				command[strlen(command)-1]=0;
+			}
+			cmdl line_parsed = parse(command,quotelist);
+			for (int i=0;i<20;i++) free(quotelist[i]);
+			free(quotelist);
 			/* if (strcmp(line_parsed.commands[0].argv[0],cdd)==0){
 				chdir(line_parsed.commands[0].argv[1]);
 				cmdl_clean(line_parsed);
 				exit(0);
-			}*/
+			}*/	
+			if (backmode==1) command[strlen(command)] = '&';
+			write(fd2[1],command,strlen(command));
+			close(fd2[1]);
 			pid = fork();
 			if (pid==0) exec_cmdl(line_parsed);
-			else waitpid(pid,NULL,0);
+			else {
+				waitpid(pid,NULL,0);
+			}
 			cmdl_clean(line_parsed);
 			exit(0);
 		}
 		else {
+			close(fd[1]);
+			close(fd2[1]);
 			int *status=malloc(sizeof(int));
-			waitpid(son,status,0);
-			if (*status==256) {
+			read(fd[0],status,4);
+			if (*status<0){
+				close(fd[0]);
+				close(fd2[0]);
+				waitpid(son,status,0);
+				if (*status==256) {
+					free(status);
+					close(fd[0]);
+					printf("exit\n");
+					bt_clean(&table);
+					exit(0);
+				}
+				else if (*status==512) {
+					char *address = malloc(100*sizeof(char));
+					scanf("%s",address);
+					chdir(address);
+					free(address);
+					free(status);
+				}
+				else if (*status==768) {
+					bt_show(&table);
+					free(status);
+				}
+			}
+			else{
+				close(fd[0]);
+				char command[1024]={0};
+				read(fd2[0],command,*status);
+				close(fd2[0]);
+				if (command[strlen(command)-1]=='&') bt_append(&table,son,command);
+				else waitpid(son,status,0);
 				free(status);
-				printf("exit\n");
-				exit(0);
 			}
-			else if (*status==512) {
-				char *address = malloc(100*sizeof(char));
-				scanf("%s",address);
-				chdir(address);
-				free(address);
-			}
-			free(status);
 		}
 	}
 	return 0;
