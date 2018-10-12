@@ -89,7 +89,10 @@ int main(){
 			int quoteflag = -1;
 			int init=0;
 			if ((a=='>')||(a=='<')) waitmode=1;
-			if ((a=='\"')||(a=='\'')) quotemode=1;
+			if ((a=='\"')||(a=='\'')) {
+				quoteflag++;
+				quotemode=1;
+			}
 			//fflush(stdin);
 			/*while ((a!='\n')&&(!feof(stdin))){
 				command[flag]=a;
