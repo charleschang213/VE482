@@ -87,6 +87,9 @@ int main(){
 			int backmode = 0;
 			int waitmode = 0;
 			int quoteflag = -1;
+			int init=0;
+			if ((a=='>')||(a=='<')) waitmode=1;
+			if ((a=='\"')||(a=='\'')) quotemode=1;
 			//fflush(stdin);
 			/*while ((a!='\n')&&(!feof(stdin))){
 				command[flag]=a;
@@ -122,7 +125,7 @@ int main(){
 				}
 				flag++;
 				a = getchar();
-				int init=0;
+				init=0;
 				while (a==EOF){
 					clearerr(stdin);
 					a = getchar();
