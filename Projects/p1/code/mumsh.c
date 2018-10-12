@@ -144,7 +144,12 @@ int main(){
 				if ((quotemode!=0)&&(init==0)) quotelist[quoteflag][strlen(quotelist[quoteflag])] = a;
 				if ((a=='>')||(a=='<')||(a=='|')){
 					if ((waitmode==1)&&(quotemode==0)){
-						printf("syntax error near unexpected token `%c\'\n",a);
+						int find;
+						for (find=flag;command[find]==' ';find--);
+						if ((command[find]=='|')&&(a=='|'))
+							printf("error: missing program\n");
+						else 
+							printf("syntax error near unexpected token `%c\'\n",a);
 						fflush(stdout);
 						while (a!='\n') a = getchar();
 						int send = -4;
