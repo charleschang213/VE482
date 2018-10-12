@@ -236,7 +236,11 @@ int main(){
 				else if (*status==512) {
 					char *address = malloc(100*sizeof(char));
 					scanf("%s",address);
-					chdir(address);
+					int result = chdir(address);
+					if (result==-1) {
+						printf("%s: No such file or directory\n",address);
+						fflush(stdout);
+					}
 					free(address);
 					free(status);
 				}
