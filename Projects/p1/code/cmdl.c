@@ -133,6 +133,15 @@ void cmdl_clean(cmdl line){
 
 void exec_cmdl(cmdl line,int backmode,int num,char *command,int *fd3){
 	if (line.cmdc==0) return;
+	if (line.commands[0].irdr){
+			int fin = open(line.commands[0].irdr,O_RDWR,0666);
+			if (fin==-1){
+				printf("%s: No such file or directory\n",line.commands[0].irdr);
+				fflush(stdout);
+				exit(0);
+			}
+			close(fin);
+	}
 	if (backmode==1) {
 		printf("[%d] ",num+1);
 		printf("%s\n",command);
