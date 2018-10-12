@@ -211,7 +211,13 @@ void exec_cmdl(cmdl line,int backmode,int num,char *command,int *fd3){
 				close(pipegroup[i][0]);
 				close(pipegroup[i][1]);
 		}
-		for (int xx=0;xx<line.cmdc;xx++) waitpid(pid[xx],NULL,0);
+		for (int xx=0;xx<line.cmdc;xx++) {
+			int rv;
+			waitpid(pid[xx],&rv,0);
+			if (rv==256){
+				printf("%s: command not found\n",line.commands[xx].argv[0]);
+			}
+		}
 		free(pid);
 		for (int i=0;i<line.cmdc-1;i++) free(pipegroup[i]);
 		if (line.cmdc>1) free(pipegroup);
@@ -232,6 +238,7 @@ void exec_cmdl(cmdl line,int backmode,int num,char *command,int *fd3){
 		strcpy(dir,"/bin/");
 	    strcpy(dir,line.commands[flag-1].argv[0]);
 		execvp(dir,line.commands[flag-1].argv);
+		exit(1);
 	}
 	exit(0);
 }
