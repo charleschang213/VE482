@@ -141,6 +141,21 @@ int main(){
 					quoteflag++;
 				}
 				else if (((quotemode==1)&&(a=='\"'))||((quotemode==2)&&(a=='\''))) {
+					int nospace=0;
+					int where;
+					for (where = flag-1;command[where]!=a;where--){
+						if (command[where]==' ') nospace=1;
+					}
+					if (nospace==0){
+						for (int i=where;i<flag-1;i++) command[i] = command[i+1];
+						a = command[flag-2];
+						command[flag-2]  = 0;
+						command[flag-1] = 0;
+						flag-=2;
+						int len = strlen(quotelist[quoteflag]);
+						for (int i=0;i<len;i++) quotelist[quoteflag][i]=0;
+						quoteflag--;
+					}
 					quotemode = 0;
 					continue;
 				}
