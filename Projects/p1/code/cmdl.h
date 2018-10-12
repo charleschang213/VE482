@@ -23,6 +23,7 @@ typedef struct _cmd_{
 
 typedef struct _cmdl_{
 	int cmdc;
+	int indup,outdup;
 	cmd *commands;
 }cmdl;
 

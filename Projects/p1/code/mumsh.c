@@ -190,13 +190,20 @@ int main(){
 				command[strlen(command)-1]=0;
 			}
 			cmdl line_parsed = parse(command,quotelist);
-			for (int i=0;i<line_parsed.cmdc;i++){
+			if (line_parsed.outdup==1){
+				printf("error: duplicated output redirection\n");
+				cmdl_clean(line_parsed);
+				write(fd2[1],command,strlen(command));
+				close(fd2[1]);
+				exit(0);
+			}
+			/*for (int i=0;i<line_parsed.cmdc;i++){
 				if (line_parsed.commands[i].argc==0){
 					printf("error: missing program\n");
 					fflush(stdout);
 					exit(0);
 				}
-			}
+			}*/
 			for (int i=0;i<20;i++) free(quotelist[i]);
 			free(quotelist);
 			/* if (strcmp(line_parsed.commands[0].argv[0],cdd)==0){

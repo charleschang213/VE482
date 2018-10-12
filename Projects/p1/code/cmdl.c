@@ -15,6 +15,7 @@ cmdl parse(char* str,char** quotelist){
 	char **command_group;
 	newline.cmdc = 0;
 	newline.commands=NULL;
+	newline.indup = newline.outdup = 0;
 	command_group = malloc(sizeof(char*));
 	char *tmp=strtok(ttmp,"|");
 	while (tmp){
@@ -80,6 +81,13 @@ cmdl parse(char* str,char** quotelist){
 				}
 			}
 			if (outr){
+				if (newline.commands[i].ordr){
+					newline.outdup = 1;
+					for (int i=0;i<newline.cmdc;i++) free(command_group[i]);
+					free(command_group);
+					free(ttmp);
+					return newline;
+				}
 				if (outr[1]=='>'){
 					outr++;
 					newline.commands[i].append_o=1;
