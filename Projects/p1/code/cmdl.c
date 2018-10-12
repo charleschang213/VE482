@@ -147,7 +147,7 @@ void exec_cmdl(cmdl line,int backmode,int num,char *command,int *fd3){
 			if (line.commands[line.cmdc-1].append_o==0) fout = open(line.commands[line.cmdc-1].ordr,O_RDWR|O_CREAT|O_TRUNC,0666);
 			else fout = open(line.commands[line.cmdc-1].ordr,O_RDWR|O_CREAT|O_APPEND,0666);
 			if (fout==-1){
-				printf("%s: Permission Denied\n",line.commands[line.cmdc-1].ordr);
+				printf("%s: Permission denied\n",line.commands[line.cmdc-1].ordr);
 				fflush(stdout);
 				exit(0);
 			}
