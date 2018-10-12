@@ -118,6 +118,14 @@ void cmdl_clean(cmdl line){
 
 void exec_cmdl(cmdl line,int backmode,int num,char *command,int *fd3){
 	if (line.cmdc==0) return;
+	if (backmode==1) {
+		printf("[%d] ",num+1);
+		printf("%s\n",command);
+		write(fd3[1],&num,4);
+		close(fd3[1]);
+	}
+	else close(fd3[1]);
+	fflush(stdout);
 	int **pipegroup = NULL;
 	pid_t *pid = malloc(line.cmdc*sizeof(pid_t));
 	for (int i=0;i<line.cmdc;i++) pid[i]=0xffff;
@@ -167,14 +175,6 @@ void exec_cmdl(cmdl line,int backmode,int num,char *command,int *fd3){
 				close(pipegroup[i][0]);
 				close(pipegroup[i][1]);
 		}
-		if (backmode==1) {
-			printf("[%d] ",num+1);
-			for (int i=0;i<line.cmdc;i++) printf("(%d) ",pid[i]);
-			printf("%s\n",command);
-			write(fd3[1],&num,4);
-			close(fd3[1]);
-		}
-		else close(fd3[1]);
 		for (int xx=0;xx<line.cmdc;xx++) waitpid(pid[xx],NULL,0);
 		free(pid);
 		for (int i=0;i<line.cmdc-1;i++) free(pipegroup[i]);
