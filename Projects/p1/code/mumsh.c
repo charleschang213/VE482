@@ -145,7 +145,7 @@ int main(){
 				if ((a=='>')||(a=='<')||(a=='|')){
 					if ((waitmode==1)&&(quotemode==0)){
 						int find;
-						for (find=flag;command[find]==' ';find--);
+						for (find=flag-1;command[find]==' ';find--);
 						if ((command[find]=='|')&&(a=='|'))
 							printf("error: missing program\n");
 						else 
