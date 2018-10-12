@@ -143,6 +143,17 @@ int main(){
 				}
 				if ((quotemode!=0)&&(init==0)) quotelist[quoteflag][strlen(quotelist[quoteflag])] = a;
 				if ((a=='>')||(a=='<')||(a=='|')){
+					if ((waitmode==1)&&(quotemode==0)){
+						printf("syntax error near unexpected token `%c\'\n",a);
+						fflush(stdout);
+						while (a!='\n') a = getchar();
+						int send = -4;
+						write(fd[1],&send,4);
+						close(fd[1]);
+						close(fd2[1]);
+						close(fd3[1]);
+						exit(4);
+					}
 					if (quotemode==0) waitmode = 1;
 				}
 				else if (a=='\n'){
@@ -213,7 +224,6 @@ int main(){
 				waitpid(son,status,0);
 				if (*status==256) {
 					free(status);
-					close(fd[0]);
 					printf("exit\n");
 					bt_clean(&table);
 					exit(0);
