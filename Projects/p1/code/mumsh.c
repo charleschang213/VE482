@@ -27,21 +27,26 @@ void handler(int sig){
 	waitpid(son,NULL,0);
 	signal(SIGINT,handler);
 }
+
+
 int main(){
 	bt_init(&table);
 	int fd[2];
 	int fd2[2];
+	int fd3[2];
 	signal(SIGINT,handler);
 	while (1){
 		fflush(stdout);
 		pid = -1;
 		pipe(fd);
 		pipe(fd2);
+		pipe(fd3);
 		son = fork();
 		if (son==0){
 			bt_clean(&table);
 			close(fd[0]);
 			close(fd2[0]);
+			close(fd3[0]);
 			char a;
 			char **quotelist = malloc(20*sizeof(char*));
 			for (int i=0;i<20;i++) {
@@ -63,6 +68,7 @@ int main(){
 				write(fd[1],command,1);
 				close(fd[1]);
 				close(fd2[1]);
+				close(fd3[1]);
 				exit(0);
 			}
 			if (feof(stdin)) {
@@ -70,6 +76,7 @@ int main(){
 				write(fd[1],&send,4);
 				close(fd[1]);
 				close(fd2[1]);
+				close(fd3[1]);
 				exit(1);
 			}
 			const char *cdd = "cd";
@@ -99,6 +106,7 @@ int main(){
 					write(fd[1],&send,4);
 					close(fd[1]);
 					close(fd2[1]);
+					close(fd3[1]);
 					exit(2);
 				}
 				if (strcmp(command,jobs)==0){
@@ -106,6 +114,8 @@ int main(){
 					write(fd[1],&send,4);
 					close(fd[1]);
 					close(fd2[1]);
+					close(fd3[1]);
+					getchar();
 					exit(3);
 				}
 				flag++;
@@ -156,6 +166,7 @@ int main(){
 				write(fd[1],&send,4);
 				close(fd[1]);
 				close(fd2[1]);
+				close(fd3[1]);
 				exit(1);
 			}
 			int send = strlen(command);	
@@ -177,8 +188,9 @@ int main(){
 			write(fd2[1],command,strlen(command));
 			close(fd2[1]);
 			pid = fork();
-			if (pid==0) exec_cmdl(line_parsed);
+			if (pid==0) exec_cmdl(line_parsed,backmode,table.num,command,fd3);
 			else {
+				close(fd3[1]);
 				waitpid(pid,NULL,0);
 			}
 			cmdl_clean(line_parsed);
@@ -187,11 +199,13 @@ int main(){
 		else {
 			close(fd[1]);
 			close(fd2[1]);
+			close(fd3[1]);
 			int *status=malloc(sizeof(int));
 			read(fd[0],status,4);
 			if (*status<0){
 				close(fd[0]);
 				close(fd2[0]);
+				close(fd3[0]);
 				waitpid(son,status,0);
 				if (*status==256) {
 					free(status);
@@ -217,8 +231,16 @@ int main(){
 				char command[1024]={0};
 				read(fd2[0],command,*status);
 				close(fd2[0]);
-				if (command[strlen(command)-1]=='&') bt_append(&table,son,command);
-				else waitpid(son,status,0);
+				if (command[strlen(command)-1]=='&') {
+					int tt;
+					read(fd3[0],&tt,4);
+					close(fd3[0]);
+					bt_append(&table,son,command);
+				}
+				else {
+					close(fd3[0]);
+					waitpid(son,status,0);
+				}
 				free(status);
 			}
 		}

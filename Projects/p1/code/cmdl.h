@@ -28,5 +28,5 @@ typedef struct _cmdl_{
 
 cmdl parse(char* str,char** quotelist);
 void cmdl_clean(cmdl line);
-void exec_cmdl(cmdl line);
+void exec_cmdl(cmdl line,int backmode,int num,char *command,int *fd3);
 #endif
