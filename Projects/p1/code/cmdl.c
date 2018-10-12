@@ -70,6 +70,13 @@ cmdl parse(char* str,char** quotelist){
 				}
 			}
 			if (inr){
+				if ((newline.commands[i].irdr)||(i!=0)){
+					newline.indup = 1;
+					for (int i=0;i<newline.cmdc;i++) free(command_group[i]);
+					free(command_group);
+					free(ttmp);
+					return newline;
+				}
 				if (inr[1]==0){
 					tmp = strtok(NULL," ");
 					newline.commands[i].irdr = malloc((strlen(tmp)+1)*sizeof(char));

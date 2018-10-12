@@ -197,6 +197,13 @@ int main(){
 				close(fd2[1]);
 				exit(0);
 			}
+			if (line_parsed.indup==1){
+				printf("error: duplicated input redirection\n");
+				cmdl_clean(line_parsed);
+				write(fd2[1],command,strlen(command));
+				close(fd2[1]);
+				exit(0);
+			}
 			/*for (int i=0;i<line_parsed.cmdc;i++){
 				if (line_parsed.commands[i].argc==0){
 					printf("error: missing program\n");
