@@ -142,13 +142,13 @@ int main(){
 					continue;
 				}
 				if ((quotemode!=0)&&(init==0)) quotelist[quoteflag][strlen(quotelist[quoteflag])] = a;
-				if ((a=='>')||(a=='<')||(a=='|')){
+				if (((a=='>')||(a=='<')||(a=='|'))&&(!((a=='>')&&(command[flag-1]=='>')))){
 					if ((waitmode==1)&&(quotemode==0)){
 						int find;
 						for (find=flag-1;command[find]==' ';find--);
 						if ((command[find]=='|')&&(a=='|'))
 							printf("error: missing program\n");
-						else 
+						else
 							printf("syntax error near unexpected token `%c\'\n",a);
 						fflush(stdout);
 						while (a!='\n') a = getchar();
