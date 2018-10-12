@@ -34,8 +34,10 @@ int main(){
 	int fd[2];
 	int fd2[2];
 	int fd3[2];
+	int lastquote;
 	signal(SIGINT,handler);
 	while (1){
+		lastquote = 0;
 		fflush(stdout);
 		pid = -1;
 		pipe(fd);
@@ -129,21 +131,15 @@ int main(){
 					quotemode = 1;
 					init = 1;
 					quoteflag++;
-					command[flag]=' ';
-					flag++;
 				}
 				else if ((quotemode==0)&&(a=='\'')) {
 					quotemode = 2;
 					init = 1;
 					quoteflag++;
-					command[flag]=' ';
-					flag++;
 				}
 				else if (((quotemode==1)&&(a=='\"'))||((quotemode==2)&&(a=='\''))) {
 					quotemode = 0;
-					command[flag]=a;
-					flag++;
-					a = ' ';
+					continue;
 				}
 				if ((quotemode!=0)&&(init==0)) quotelist[quoteflag][strlen(quotelist[quoteflag])] = a;
 				if ((a=='>')||(a=='<')||(a=='|')){
@@ -156,6 +152,7 @@ int main(){
 					if (quotemode==0) a = ' ';
 				}
 				else if (a!=' ') waitmode=0;
+				//printf("%s - %d\n",command,quotemode);
 			}
 			const char *esc="exit";
 			//if (feof(stdin)) exit(1);
@@ -177,6 +174,13 @@ int main(){
 				command[strlen(command)-1]=0;
 			}
 			cmdl line_parsed = parse(command,quotelist);
+			for (int i=0;i<line_parsed.cmdc;i++){
+				if (line_parsed.commands[i].argc==0){
+					printf("error: missing program\n");
+					fflush(stdout);
+					exit(0);
+				}
+			}
 			for (int i=0;i<20;i++) free(quotelist[i]);
 			free(quotelist);
 			/* if (strcmp(line_parsed.commands[0].argv[0],cdd)==0){
