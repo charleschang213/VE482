@@ -181,6 +181,13 @@ int main(){
 						exit(4);
 					}
 					if (quotemode==0) waitmode = 1;
+					if (quotemode==1) {
+						command[flag] = '\\';
+						flag++;
+						command[flag] = 's';
+						flag++;
+						a = (a=='<')?'1':((a=='>')?'2':'3');
+					}
 				}
 				else if (a=='\n'){
 					if ((waitmode==0)&&(quotemode==0)) break;

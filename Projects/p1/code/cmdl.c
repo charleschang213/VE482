@@ -39,6 +39,21 @@ cmdl parse(char* str,char** quotelist){
 			if (inr) *inr=0;
 			if (outr) *outr=0;
 			if ((tmp!=inr)&&(tmp!=outr)){
+				char *s1 = strstr(tmp,"\\s1");
+				if (s1){
+					s1[0] = '<';
+					for (unsigned long i=1;i<strlen(s1)-1;i++) s1[i] = s1[i+2];
+				}
+				char *s2 = strstr(tmp,"\\s2");
+				if (s2){
+					s2[0] = '>';
+					for (unsigned long i=1;i<strlen(s2)-1;i++) s2[i] = s2[i+2];
+				}
+				char *s3 = strstr(tmp,"\\s3");
+				if (s3){
+					s3[0] = '|';
+					for (unsigned long i=1;i<strlen(s3)-1;i++) s3[i] = s3[i+2];
+				}
 				int quotemode = 0;
 				if (tmp[0]=='\''){
 					innerend = strstr(tmp+1,"\'");
