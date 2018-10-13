@@ -105,6 +105,7 @@ cmdl parse(char* str,char** quotelist){
 			if (outr){
 				if ((newline.commands[i].ordr)||(i!=newline.cmdc-1)){
 					newline.outdup = 1;
+					newline.commands[i].irdr = malloc(sizeof(char));
 					for (int i=0;i<newline.cmdc;i++) free(command_group[i]);
 					free(command_group);
 					free(ttmp);
