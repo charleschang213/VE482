@@ -22,14 +22,25 @@ static backtab table;
 static pid_t father;
 
 void handler(int sig){
+	if (son==0) {
+		printf("\n");
+		fflush(stdout);
+	}
+	if (getpid()==father){
+		pid_t killsleep = fork();
+		if (killsleep==0){
+			char *ags[] = {"pkill","sleep",NULL};
+			execvp("pkill",ags);
+		}
+		else waitpid(killsleep,NULL,0);
+	}
 	if ((sig==SIGINT)&&(son==0)){
-		if (getppid()==father) printf("\n");
 		youexit=1;
 		fflush(stdout);
 		signal(SIGINT,handler);
 		exit(0);
 	}
-	//waitpid(son,NULL,0)
+	waitpid(son,NULL,0);
 	signal(SIGINT,handler);
 }
 
@@ -273,7 +284,6 @@ int main(){
 			if (backmode==1) command[strlen(command)] = '&';
 			write(fd2[1],command,strlen(command));
 			close(fd2[1]);
-			pid = -1;
 			exit(exec_cmdl(line_parsed,backmode,table.num,command,fd3));
 		}
 		else {
@@ -323,7 +333,7 @@ int main(){
 				}
 				else {
 					close(fd3[0]);
-					while(waitpid(son,status,WNOHANG)==0);
+					waitpid(son,NULL,0);
 				}
 				free(status);
 			}

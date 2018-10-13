@@ -6,9 +6,6 @@
  ************************************************************************/
 
 #include "cmdl.h"
-void myhandle(int sig){
-	if (sig==SIGINT) exit(0);
-}
 cmdl parse(char* str,char** quotelist){
 	int quoteflag = -1;
 	char* ttmp = malloc((strlen(str)+1)*sizeof(char));
@@ -205,7 +202,6 @@ int exec_cmdl(cmdl line,int backmode,int num,char *command,int *fd3){
 			pid[i] = fork();
 		}
 		if (pid[i]==0) {
-			signal(SIGINT,myhandle);
 			flag = i+1;
 			if (flag!=1) {
 				dup2(pipegroup[flag-2][0],STDIN_FILENO);
@@ -241,19 +237,10 @@ int exec_cmdl(cmdl line,int backmode,int num,char *command,int *fd3){
 		}
 		for (int xx=0;xx<line.cmdc;xx++) {
 			int rv;
-			if (youexit==1) return 0;
-			while(waitpid(pid[xx],&rv,WNOHANG)==0){
-				pid_t killsleep = fork();
-				if (killsleep==0){
-					char *ags[] = {"pkill","sleep",NULL};
-					execvp("pkill",ags);
-				}
-				else waitpid(killsleep,NULL,0);
-				if (youexit==1) {
-					for (int i=0;i<line.cmdc-1;i++) kill(pid[i],SIGINT);
-					return 0;
-				}
+			if (youexit==1) {	
+							return 0;
 			}
+			while(waitpid(pid[xx],&rv,WNOHANG)==0);
 			if (rv==256){
 				printf("%s: command not found\n",line.commands[xx].argv[0]);
 			}
