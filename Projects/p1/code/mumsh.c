@@ -19,12 +19,11 @@ static pid_t son;
 static pid_t pid;
 static backtab table;
 void handler(int sig){
-
 	if ((sig==SIGINT)&&(son==0)){
-	    if (pid!=0) printf("\n");
-		fflush(stdout);
 		exit(0);
 	}
+	printf("\n");
+	fflush(stdout);
 	pid_t killsleep = fork();
 	if (killsleep==0){
 		char *ags[] = {"pkill","sleep",NULL};
@@ -44,14 +43,16 @@ int main(){
 	int lastquote;
 	signal(SIGINT,handler);
 	while (1){
+		
 		lastquote = 0;
 		fflush(stdout);
-		pid = -1;
 		pipe(fd);
 		pipe(fd2);
 		pipe(fd3);
 		son = fork();
 		if (son==0){
+			signal(SIGINT,handler);
+			pid = -1;
 			bt_clean(&table);
 			close(fd[0]);
 			close(fd2[0]);
