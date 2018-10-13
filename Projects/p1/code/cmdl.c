@@ -6,6 +6,7 @@
  ************************************************************************/
 
 #include "cmdl.h"
+
 cmdl parse(char* str,char** quotelist){
 	int quoteflag = -1;
 	char* ttmp = malloc((strlen(str)+1)*sizeof(char));
@@ -154,15 +155,14 @@ void cmdl_clean(cmdl line){
 	free(line.commands);
 }
 
-int exec_cmdl(cmdl line,int backmode,int num,char *command,int *fd3){
-	youexit = 0;
-	if (line.cmdc==0) return 0;
+void exec_cmdl(cmdl line,int backmode,int num,char *command,int *fd3){
+	if (line.cmdc==0) return;
 	if (line.commands[0].irdr){
 			int fin = open(line.commands[0].irdr,O_RDWR,0666);
 			if (fin==-1){
 				printf("%s: No such file or directory\n",line.commands[0].irdr);
 				fflush(stdout);
-				return 0;
+				exit(0);
 			}
 			close(fin);
 	}
@@ -173,7 +173,7 @@ int exec_cmdl(cmdl line,int backmode,int num,char *command,int *fd3){
 			if (fout==-1){
 				printf("%s: Permission denied\n",line.commands[line.cmdc-1].ordr);
 				fflush(stdout);
-				return 0;
+				exit(0);
 			}
 			close(fout);
 	}
@@ -237,10 +237,7 @@ int exec_cmdl(cmdl line,int backmode,int num,char *command,int *fd3){
 		}
 		for (int xx=0;xx<line.cmdc;xx++) {
 			int rv;
-			if (youexit==1) {	
-							return 0;
-			}
-			while(waitpid(pid[xx],&rv,WNOHANG)==0);
+			waitpid(pid[xx],&rv,0);
 			if (rv==256){
 				printf("%s: command not found\n",line.commands[xx].argv[0]);
 			}
@@ -250,22 +247,22 @@ int exec_cmdl(cmdl line,int backmode,int num,char *command,int *fd3){
 		if (line.cmdc>1) free(pipegroup);
 		cmdl_clean(line);
 		setbuf(stdin,NULL);
-		return 0;
+		exit(0);
 	}
 	else{
 		if (strcmp(line.commands[flag-1].argv[0],"pwd")==0){
 			printf("%s\n",pwd());
-			return 0;
+			exit(0);
 		}
 		if (strcmp(line.commands[flag-1].argv[0],"cd")==0){
 			cd(line.commands[flag-1].argv[1]);
-			return 0;
+			exit(0);
 		}
 		char dir[100]={0};
 		strcpy(dir,"/bin/");
 	    strcpy(dir,line.commands[flag-1].argv[0]);
 		execvp(dir,line.commands[flag-1].argv);
-		return 1;
+		exit(1);
 	}
-	return 0;
+	exit(0);
 }

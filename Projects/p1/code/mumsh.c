@@ -5,7 +5,6 @@
     > Created Time: 2018-09-16 18:23:13
  ************************************************************************/
 
-#define _POSIX_SOURCE
 #include<stdio.h>
 #include<stdlib.h>
 #include<fcntl.h>
@@ -19,46 +18,35 @@
 static pid_t son;
 static pid_t pid;
 static backtab table;
-static pid_t father;
-
 void handler(int sig){
-	if (son==0) {
-		printf("\n");
-		fflush(stdout);
-	}
-	if (getpid()==father){
-		pid_t killsleep = fork();
-		if (killsleep==0){
-			char *ags[] = {"pkill","sleep",NULL};
-			execvp("pkill",ags);
-		}
-		else waitpid(killsleep,NULL,0);
-	}
+
 	if ((sig==SIGINT)&&(son==0)){
-		youexit=1;
+	    if (pid!=0) printf("\n");
 		fflush(stdout);
-		signal(SIGINT,handler);
 		exit(0);
 	}
+	pid_t killsleep = fork();
+	if (killsleep==0){
+		char *ags[] = {"pkill","sleep",NULL};
+		execvp("pkill",ags);
+	}
+	else waitpid(killsleep,NULL,0);
 	waitpid(son,NULL,0);
 	signal(SIGINT,handler);
 }
 
 
-
-
 int main(){
 	bt_init(&table);
+	int fd[2];
+	int fd2[2];
+	int fd3[2];
 	int lastquote;
 	signal(SIGINT,handler);
 	while (1){
-		father = getpid();
 		lastquote = 0;
 		fflush(stdout);
 		pid = -1;
-		int fd[2];
-		int fd2[2];
-		int fd3[2];
 		pipe(fd);
 		pipe(fd2);
 		pipe(fd3);
@@ -284,7 +272,14 @@ int main(){
 			if (backmode==1) command[strlen(command)] = '&';
 			write(fd2[1],command,strlen(command));
 			close(fd2[1]);
-			exit(exec_cmdl(line_parsed,backmode,table.num,command,fd3));
+			pid = fork();
+			if (pid==0) exec_cmdl(line_parsed,backmode,table.num,command,fd3);
+			else {
+				close(fd3[1]);
+				waitpid(pid,NULL,0);
+			}
+			cmdl_clean(line_parsed);
+			exit(0);
 		}
 		else {
 			close(fd[1]);
@@ -333,7 +328,7 @@ int main(){
 				}
 				else {
 					close(fd3[0]);
-					waitpid(son,NULL,0);
+					waitpid(son,status,0);
 				}
 				free(status);
 			}
