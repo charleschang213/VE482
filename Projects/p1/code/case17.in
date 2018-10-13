@@ -1,2 +1,2 @@
-WRITELN echo abc > /dev/permission_denied
-WRITELN exit
+CTRL C
+CTRL C

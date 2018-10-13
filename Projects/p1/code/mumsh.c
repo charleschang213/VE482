@@ -18,19 +18,13 @@
 static pid_t son;
 static pid_t pid;
 static backtab table;
-static int fd[2];
-static int fd2[2];
-static int fd3[2];
 void handler(int sig){
 	if ((sig==SIGINT)&&(son==0)){
 		if (pid!=0) printf("\n");
-		else {
-			close(fd3[1]);			
-		}
 		fflush(stdout);
 		exit(0);
 	}
-	waitpid(son,NULL,0);
+	//waitpid(son,NULL,0);
 	signal(SIGINT,handler);
 }
 
@@ -43,6 +37,9 @@ int main(){
 		lastquote = 0;
 		fflush(stdout);
 		pid = -1;
+		int fd[2];
+		int fd2[2];
+		int fd3[2];
 		pipe(fd);
 		pipe(fd2);
 		pipe(fd3);
@@ -324,7 +321,7 @@ int main(){
 				}
 				else {
 					close(fd3[0]);
-					waitpid(son,status,0);
+					while(waitpid(son,status,WNOHANG)==0);
 				}
 				free(status);
 			}
