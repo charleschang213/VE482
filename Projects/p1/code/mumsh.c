@@ -306,7 +306,7 @@ int main(){
 					bt_show(&table);
 					free(status);
 				}
-				free(status);
+				else free(status);
 			}
 			else{
 				close(fd[0]);
