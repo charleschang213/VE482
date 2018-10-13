@@ -1,0 +1,136 @@
+\documentclass{article}
+\usepackage{bookmark}
+\usepackage{color}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+\begin{document}
+\begin{itemize}
+\item What should be the first line of a Bash script?\\
+\# !/bin/bash
+\item What are the main differences between sh, bash, csh, and zsh?\\
+sh is the original shell Unix systems use. bash is the default shell that Linux systems use. csh is a shell tht includes many C language sytaxes. zsh is an improvement of bash which has many new features. 
+\item How to define and access variables?\\
+Define: a=1\\
+Access: \$a
+\item What is the meaning of \$0, \$1,…, \$?, \$!?\\
+\$0.\$1 are for the first, second,... input argument. \$? represents the return value of the previous command. \$! is the process id for the previous command.
+\item How to define arrays and access or assign elements?\\
+Define: A=(v1 v2 v3 ...)\\
+Access: \$\{A[0]\},\$\{A[1]\}...\\
+Assign: A[0]=1
+\item How to perform if and switch statements? Provide an example.\\
+{\bf If:} \\
+a=1
+
+if [ a -gt 0 ]; then
+
+    \qquad echo \$a\\
+else
+
+    \qquad echo no\\
+fi\\
+
+{\bf Switch:}  \\
+a=1
+
+case \$a in
+
+\qquad 1 )
+
+\qquad \qquad echo foo ;;
+
+\qquad 2 )
+
+\qquad \qquad echo bar ;;
+
+esac
+\item What are the various syntaxes of a for loop? For each type write a sample code.\\
+{\bf 1. }\\
+for a in abc bca bcb 
+
+do 
+
+\qquad echo \$a
+
+done
+
+{\bf 2. }\\
+for f in *
+
+do
+
+\qquad echo \$f
+
+done
+
+{\bf 3. }\\
+for ((i=0; i<10; ++i))
+
+do
+
+\qquad echo \$i 
+
+done
+
+
+\item How to write a while loop? \\
+while [ condition ]
+
+do
+
+\qquad operations 
+
+done
+
+\item What is the use of the PS3 variable? Provide a short code example.\\
+PS3 variable is for those users' selection mode.
+
+PS3="Select a day (1-4): "
+
+select i in mon tue wed exit
+
+do
+
+    \qquad case \$i in
+
+        \qquad \qquad mon) echo "Monday";;
+
+        \qquad \qquad tue) echo "Tuesday";;
+
+        \qquad \qquad wed) echo "Wednesday";;
+
+        \qquad \qquad exit) exit;;
+
+    \qquad esac
+
+done
+\item What is the purpose of the iconv command, and why is it useful?\\
+iconv is a command that trasfers the encoding of a string to another. It is useful because in many cases we will not only use ASCII characters and different computers/users might have different encodings.
+\item Given a variable \$temp what is the effect of \$\{\#temp\}, \$\{temp\%\%word\}, \$\{temp/pattern/string\}.\\
+\$\{\#temp\} will count the number of characters, \$\{temp\%\%word\} will delete "word" at the end of temp.  \$\{temp/pattern/string\} will replace "pattern" in temp by "string"
+
+\item Provide a brief introduction to both of them, explaining how to use them and when they reveal to be the most helpful.\\
+sed is a command which operates on the input line by line with a given pattern. awk is a command which divides a line into several blocks and do operations on blocks.
+
+\item Using curl or wget retrieve information on shanghai air quality and pipe it to sed which should
+parse the output in order to display the information in the terminal following the format below
+AQ: value Temp: value ºC (e.g. AQ: 55 Temp: $24^{\circ}C$).
+\begin{lstlisting}[language=bash]
+curl --silent 'http://aqicn.org/?city=Shanghai&widgetscript
+&size=large&id=52b39d71decf07.20261781' | sed -e "s/<[^>]*
+>//g" -e "s/.*Air Quality.\([0-9]*\).*Temp. \([0-9]*\).*/
+AQ: \1 Temp: \2 C/g" -e "s/^[^A].*//g"
+\end{lstlisting}
+
+\item Pipelining the output of ifconfig to awk return only the ip address of your current active network connection (the active network interface can be passed to ifconfig).
+
+\begin{lstlisting}[language=bash]
+    ifconfig | awk '/^[^ ]/{net=$1}/inet /&&net!="lo:"
+    {print net"\t"$2}'
+\end{lstlisting}
+\end{itemize}
+\end{document}
