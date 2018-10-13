@@ -254,7 +254,6 @@ int exec_cmdl(cmdl line,int backmode,int num,char *command,int *fd3){
 		return 0;
 	}
 	else{
-		printf("%d\n",getpid());
 		if (strcmp(line.commands[flag-1].argv[0],"pwd")==0){
 			printf("%s\n",pwd());
 			return 0;
