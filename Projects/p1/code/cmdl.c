@@ -239,7 +239,6 @@ int exec_cmdl(cmdl line,int backmode,int num,char *command,int *fd3){
 			int rv;
 			if (youexit==1) return 0;
 			while(waitpid(pid[xx],&rv,WNOHANG)==0){
-				for (int i=0;i<1000;i++);
 				if (youexit==1) return 0;
 			}
 			if (rv==256){
