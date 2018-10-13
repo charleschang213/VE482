@@ -71,6 +71,8 @@ int main(){
 				close(fd[1]);
 				close(fd2[1]);
 				close(fd3[1]);
+				for (int i=0;i<20;i++) free(quotelist[i]);
+				free(quotelist);
 				exit(0);
 			}
 			if (feof(stdin)) {
@@ -79,6 +81,8 @@ int main(){
 				close(fd[1]);
 				close(fd2[1]);
 				close(fd3[1]);
+				for (int i=0;i<20;i++) free(quotelist[i]);
+				free(quotelist);
 				exit(1);
 			}
 			const char *cdd = "cd";
@@ -115,6 +119,8 @@ int main(){
 					close(fd[1]);
 					close(fd2[1]);
 					close(fd3[1]);
+					for (int i=0;i<20;i++) free(quotelist[i]);
+					free(quotelist);
 					exit(2);
 				}
 				if (strcmp(command,jobs)==0){
@@ -124,6 +130,8 @@ int main(){
 					close(fd2[1]);
 					close(fd3[1]);
 					getchar();
+					for (int i=0;i<20;i++) free(quotelist[i]);
+					free(quotelist);
 					exit(3);
 				}
 				flag++;
@@ -178,6 +186,8 @@ int main(){
 						close(fd[1]);
 						close(fd2[1]);
 						close(fd3[1]);
+						for (int i=0;i<20;i++) free(quotelist[i]);
+						free(quotelist);
 						exit(4);
 					}
 					if (quotemode==0) waitmode = 1;
@@ -208,6 +218,8 @@ int main(){
 				close(fd[1]);
 				close(fd2[1]);
 				close(fd3[1]);
+				for (int i=0;i<20;i++) free(quotelist[i]);
+				free(quotelist);
 				exit(1);
 			}
 			int send = strlen(command);	
@@ -223,6 +235,8 @@ int main(){
 				cmdl_clean(line_parsed);
 				write(fd2[1],command,strlen(command));
 				close(fd2[1]);
+				for (int i=0;i<20;i++) free(quotelist[i]);
+				free(quotelist);
 				exit(0);
 			}
 			if (line_parsed.indup==1){
@@ -230,6 +244,8 @@ int main(){
 				cmdl_clean(line_parsed);
 				write(fd2[1],command,strlen(command));
 				close(fd2[1]);
+				for (int i=0;i<20;i++) free(quotelist[i]);
+				free(quotelist);
 				exit(0);
 			}
 			/*for (int i=0;i<line_parsed.cmdc;i++){
