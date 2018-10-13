@@ -138,8 +138,7 @@ cmdl parse(char* str,char** quotelist){
 
 void cmdl_clean(cmdl line){
 	for (int i=0;i<line.cmdc;i++){
-		printf("%d %p\n",i,(void*)line.commands[i].irdr);
-		if (line.commands[i].irdr) free(line.commands[i].irdr);
+		if (line.commands[i].irdr!=0) free(line.commands[i].irdr);
 		if (line.commands[i].ordr) free(line.commands[i].ordr);
 		if (line.commands[i].argv){
 			for (int j=0;j<line.commands[i].argc;j++) if (line.commands[i].argv[j]) free(line.commands[i].argv[j]);
