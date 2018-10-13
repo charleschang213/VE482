@@ -7,6 +7,7 @@
 
 #ifndef CMDL_H
 #define CMDL_H
+#define _DEFAULT_SOURCE
 #define _POSIX_SOURCE
 #include<sys/types.h>
 #include <signal.h>

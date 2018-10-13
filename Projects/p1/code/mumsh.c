@@ -5,6 +5,7 @@
     > Created Time: 2018-09-16 18:23:13
  ************************************************************************/
 
+#define _POSIX_SOURCE
 #include<stdio.h>
 #include<stdlib.h>
 #include<fcntl.h>
@@ -15,7 +16,6 @@
 #include "cmdl.h"
 #include "funcs.h"
 #include "backtab.h"
-
 static pid_t son;
 static pid_t pid;
 static backtab table;
@@ -29,7 +29,7 @@ void handler(int sig){
 		signal(SIGINT,handler);
 		exit(0);
 	}
-	//waitpid(son,NULL,0);
+	//waitpid(son,NULL,0)
 	signal(SIGINT,handler);
 }
 
