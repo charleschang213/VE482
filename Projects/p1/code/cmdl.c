@@ -239,7 +239,10 @@ int exec_cmdl(cmdl line,int backmode,int num,char *command,int *fd3){
 			int rv;
 			if (youexit==1) return 0;
 			while(waitpid(pid[xx],&rv,WNOHANG)==0){
-				if (youexit==1) return 0;
+				if (youexit==1) {
+					kill(-1,SIGKILL);
+					return 0;
+				}
 			}
 			if (rv==256){
 				printf("%s: command not found\n",line.commands[xx].argv[0]);
