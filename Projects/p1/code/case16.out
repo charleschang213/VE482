@@ -1,2 +1,23 @@
-mumsh $ non-existing.txt: No such file or directory
-mumsh $ exit
+mumsh $ 123
+I exit
+
+==703==LeakSanitizer has encountered a fatal error.
+==703==HINT: For debugging, try setting environment variable LSAN_OPTIONS=verbosity=1:log_threads=1
+==703==HINT: LeakSanitizer does not work under ptrace (strace, gdb, etc)
+mumsh $ I exit
+==704==LeakSanitizer has encountered a fatal error.
+==704==HINT: For debugging, try setting environment variable LSAN_OPTIONS=verbosity=1:log_threads=1
+==704==HINT: LeakSanitizer does not work under ptrace (strace, gdb, etc)
+success
+==714==LeakSanitizer has encountered a fatal error.
+==714==HINT: For debugging, try setting environment variable LSAN_OPTIONS=verbosity=1:log_threads=1
+==714==HINT: LeakSanitizer does not work under ptrace (strace, gdb, etc)
+==711==LeakSanitizer has encountered a fatal error.
+==711==HINT: For debugging, try setting environment variable LSAN_OPTIONS=verbosity=1:log_threads=1
+==711==HINT: LeakSanitizer does not work under ptrace (strace, gdb, etc)
+mumsh $ ==718==LeakSanitizer has encountered a fatal error.
+==718==HINT: For debugging, try setting environment variable LSAN_OPTIONS=verbosity=1:log_threads=1
+==718==HINT: LeakSanitizer does not work under ptrace (strace, gdb, etc)
+==701==LeakSanitizer has encountered a fatal error.
+==701==HINT: For debugging, try setting environment variable LSAN_OPTIONS=verbosity=1:log_threads=1
+==701==HINT: LeakSanitizer does not work under ptrace (strace, gdb, etc)

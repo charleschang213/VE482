@@ -20,7 +20,8 @@ static pid_t pid;
 static backtab table;
 void handler(int sig){
 	if ((sig==SIGINT)&&(son==0)){
-	    if (pid!=0) printf("\n");
+	    printf("I exit\n");
+		if (pid!=0) printf("\n");
 		fflush(stdout);
 		exit(0);
 	}
