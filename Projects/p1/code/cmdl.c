@@ -26,6 +26,7 @@ cmdl parse(char* str,char** quotelist){
 		tmp = strtok(NULL,"|");
 	}
 	newline.commands = malloc(newline.cmdc*sizeof(cmd));
+	for (int i=0;i<newline.cmdc;i++) newline.commands[i].argv=NULL;
 	for (int i=0;i<newline.cmdc;i++){
 		tmp = strtok(command_group[i]," ");
 		newline.commands[i].argv = malloc(sizeof(char*));
