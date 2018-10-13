@@ -15,13 +15,18 @@
 #include "cmdl.h"
 #include "funcs.h"
 #include "backtab.h"
+
 static pid_t son;
 static pid_t pid;
 static backtab table;
+static pid_t father;
+
 void handler(int sig){
 	if ((sig==SIGINT)&&(son==0)){
-		if (pid!=0) printf("\n");
+		if (getppid()==father) printf("\n");
+		youexit=1;
 		fflush(stdout);
+		signal(SIGINT,handler);
 		exit(0);
 	}
 	//waitpid(son,NULL,0);
@@ -29,11 +34,14 @@ void handler(int sig){
 }
 
 
+
+
 int main(){
 	bt_init(&table);
 	int lastquote;
 	signal(SIGINT,handler);
 	while (1){
+		father = getpid();
 		lastquote = 0;
 		fflush(stdout);
 		pid = -1;
@@ -265,14 +273,8 @@ int main(){
 			if (backmode==1) command[strlen(command)] = '&';
 			write(fd2[1],command,strlen(command));
 			close(fd2[1]);
-			pid = fork();
-			if (pid==0) exec_cmdl(line_parsed,backmode,table.num,command,fd3);
-			else {
-				close(fd3[1]);
-				waitpid(pid,NULL,0);
-			}
-			cmdl_clean(line_parsed);
-			exit(0);
+			pid = -1;
+			exit(exec_cmdl(line_parsed,backmode,table.num,command,fd3));
 		}
 		else {
 			close(fd[1]);

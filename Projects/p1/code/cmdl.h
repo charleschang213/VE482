@@ -7,6 +7,7 @@
 
 #ifndef CMDL_H
 #define CMDL_H
+#include <signal.h>
 #include<stdio.h>
 #include<unistd.h>
 #include<fcntl.h>
@@ -14,6 +15,7 @@
 #include<sys/wait.h>
 #include<stdlib.h>
 #include "funcs.h"
+#include "backtab.h"
 typedef struct _cmd_{
 	int argc;
 	char **argv;
@@ -21,13 +23,13 @@ typedef struct _cmd_{
 	int append_o;
 }cmd;
 
+static int youexit;
 typedef struct _cmdl_{
 	int cmdc;
 	int indup,outdup;
 	cmd *commands;
 }cmdl;
-
 cmdl parse(char* str,char** quotelist);
 void cmdl_clean(cmdl line);
-void exec_cmdl(cmdl line,int backmode,int num,char *command,int *fd3);
+int exec_cmdl(cmdl line,int backmode,int num,char *command,int *fd3);
 #endif
