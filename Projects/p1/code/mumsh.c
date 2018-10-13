@@ -312,7 +312,7 @@ int main(){
 				char command[1024]={0};
 				read(fd2[0],command,*status);
 				close(fd2[0]);
-				if (command[strlen(command)-1]=='&') {
+				if ((strlen(command)!=0)&&(command[strlen(command)-1]=='&')) {
 					int tt;
 					read(fd3[0],&tt,4);
 					close(fd3[0]);
