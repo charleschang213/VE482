@@ -18,10 +18,15 @@
 static pid_t son;
 static pid_t pid;
 static backtab table;
+static int fd[2];
+static int fd2[2];
+static int fd3[2];
 void handler(int sig){
 	if ((sig==SIGINT)&&(son==0)){
-	    printf("I exit\n");
 		if (pid!=0) printf("\n");
+		else {
+			close(fd3[1]);			
+		}
 		fflush(stdout);
 		exit(0);
 	}
@@ -32,9 +37,6 @@ void handler(int sig){
 
 int main(){
 	bt_init(&table);
-	int fd[2];
-	int fd2[2];
-	int fd3[2];
 	int lastquote;
 	signal(SIGINT,handler);
 	while (1){
