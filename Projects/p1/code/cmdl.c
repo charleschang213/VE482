@@ -105,7 +105,7 @@ cmdl parse(char* str,char** quotelist){
 			if (outr){
 				if ((newline.commands[i].ordr)||(i!=newline.cmdc-1)){
 					newline.outdup = 1;
-					newline.commands[i].irdr = malloc(sizeof(char));
+					newline.commands[i].ordr = malloc(sizeof(char));
 					for (int i=0;i<newline.cmdc;i++) free(command_group[i]);
 					free(command_group);
 					free(ttmp);
@@ -139,7 +139,7 @@ cmdl parse(char* str,char** quotelist){
 
 void cmdl_clean(cmdl line){
 	for (int i=0;i<line.cmdc;i++){
-		if (i!=0) free(line.commands[i].irdr);
+		if (line.commands[i].irdr) free(line.commands[i].irdr);
 		if (line.commands[i].ordr) free(line.commands[i].ordr);
 		if (line.commands[i].argv){
 			for (int j=0;j<line.commands[i].argc;j++) if (line.commands[i].argv[j]) free(line.commands[i].argv[j]);
