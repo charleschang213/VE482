@@ -141,7 +141,7 @@ void cmdl_clean(cmdl line){
 		if (line.commands[i].irdr) free(line.commands[i].irdr);
 		if (line.commands[i].ordr) free(line.commands[i].ordr);
 		if (line.commands[i].argv){
-			for (int j=0;j<line.commands[i].argc;j++) free(line.commands[i].argv[j]);
+			for (int j=0;j<line.commands[i].argc;j++) if (line.commands[i].argv[j]) free(line.commands[i].argv[j]);
 			free(line.commands[i].argv);
 		}
 	}
