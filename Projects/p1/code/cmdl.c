@@ -87,7 +87,10 @@ cmdl parse(char* str,char** quotelist){
 			if (inr){
 				if ((newline.commands[i].irdr)||(i!=0)){
 					newline.indup = 1;
-					for (int i=0;i<newline.cmdc;i++) free(command_group[i]);
+					for (int j=0;j<newline.cmdc;j++){
+						if (j>i) newline.commands[j].irdr = newline.commands[j].ordr=NULL;
+						free(command_group[j]);
+					}
 					free(command_group);
 					free(ttmp);
 					return newline;
@@ -105,7 +108,10 @@ cmdl parse(char* str,char** quotelist){
 			if (outr){
 				if ((newline.commands[i].ordr)||(i!=newline.cmdc-1)){
 					newline.outdup = 1;
-					for (int i=0;i<newline.cmdc;i++) free(command_group[i]);
+					for (int j=0;j<newline.cmdc;j++) {
+						if (j>i) newline.commands[j].irdr = newline.commands[j].ordr = NULL;
+						free(command_group[j]);
+					}
 					free(command_group);
 					free(ttmp);
 					return newline;
