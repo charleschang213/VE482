@@ -2,6 +2,7 @@
 #include "ex3_sorter.h"
 
 int main(int argc,char *argv[]){
-    sorter(argv);
+    if (argc!=3) printf("Incorrect arguments\n");
+	else sorter(argv);
     return 0;
 }

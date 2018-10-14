@@ -28,7 +28,7 @@ typedef struct _list_t_ {
 	node_t *head,*tail;
 }list_t;
 
-int ll_init(list_t *L,type_t t);
+void ll_init(list_t *L,type_t t);
 void ll_clean(list_t *L);
 
 int ll_isempty(list_t *L);

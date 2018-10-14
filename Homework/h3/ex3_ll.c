@@ -1,6 +1,6 @@
 #include "ex3_ll.h"
 
-int ll_init(list_t *L,type_t t){
+void ll_init(list_t *L,type_t t){
 	L->size = 0;
 	L->type = t;
 	L->head = L->tail = NULL;
@@ -59,7 +59,7 @@ void string_cpy(void **dst,void *src){
 	strcpy((char*)(*dst),(char*)(src));
 }
 int value_cpy(void **dst,void *src,type_t t){
-	int (*cpys[LL_VALUE_TYPES])(void **dst,void *src) = {int_cpy,double_cpy,string_cpy};
+	void (*cpys[LL_VALUE_TYPES])(void **dst,void *src) = {int_cpy,double_cpy,string_cpy};
 	if ((LL_INT<=t)&&(LL_STRING>=t)) {
 		cpys[t](dst,src);
 		return 0;
