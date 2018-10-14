@@ -1,0 +1,60 @@
+\documentclass{article}
+\usepackage{bookmark}
+\usepackage{color}
+\usepackage{listings}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{
+  basicstyle=\footnotesize, 
+  numbers=left, 
+  numberstyle=\tiny\color{gray}, 
+  stepnumber=1,
+  numbersep=5pt, 
+  backgroundcolor=\color{white},
+  showspaces=false,
+  showstringspaces=false,
+  showtabs=false,
+  frame=shadowbox,
+  rulecolor=\color{black},
+  tabsize=2,
+  captionpos=b,
+  breaklines=true, 
+  breakatwhitespace=false, 
+  title=\lstname,
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  escapeinside={\%*}{*)}, 
+  morekeywords={*,...} 
+}
+
+\begin{document}
+\begin{itemize}
+\item {\bf Ex. 1}\\
+{\noindent 1. POSIX is a family of standards issued by IEEE, ANSI and ISO on the implementation, application program interfaces and shell programs for UNIX operating systems.}
+
+The idea of defining such a group of standards origins from the intension to easing cross-platform software development. Different operating systems might have differences in some ways, but as long as they comply the POSIX standard, programs written in one system will be also compatible on the other, so that the programmers only need to write code once for compability for all UNIX systems.
+
+The standards include: process creation/control, signal types and their control/handling, file operation, pipe operation, I/O device control(synchronous and asynchronous), scheduling, thread control, clocks and timers and the basic C library.\\ 
+
+
+\item {\bf EX. 2}\\
+
+{\noindent 1. Because different from processes, the implementation of threads does not allow it to be interrupted and made to release memory, so it is necessary to make it release CPU voluntarily to let the other threads run, so that the pallarel running among threads can be achioeved. \\}
+
+{\noindent 2. The biggest advantage is that the user-level thread packages is compatible in operating systems whose kernel does not support threads. Programs will be more cross-platform. The biggest disadvantage is that it is difficult to prevent a blocked thread from influencing the normal running of other threads.\\}
+
+{\noindent 3. No because different processes does not share data among each other. So the blocking of one process will not affect the other.\\}
+
+{\noindent 4. The program will not be compatible because there is no necessary system call functions which are supposed to be there in POSIX. So the program cannot run.}
+
+
+\end{itemize}
+\end{document}
