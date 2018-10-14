@@ -108,6 +108,32 @@ void ll_insert(list_t *L,char *k,void *v){
 	return;
 }
 
+
+void ll_remove(list_t *L,int k,FILE *stream){
+	node_t *flag = L->head;
+	for (int i=0;i<k;i++) flag = flag->next;
+	L->size--;
+	if (L->size==0){
+		L->head = L->tail = NULL;
+	}
+	else if (flag==L->head){
+		L->head = flag->next;
+		L->head->prev = NULL;
+	}
+	else if (flag==L->tail){
+		L->tail = flag->prev;
+		L->tail->next = NULL;
+	}
+	else {
+		flag->prev->next = flag->next;
+		flag->next->prev = flag->prev;
+	}
+	free(flag->value);
+	free(flag->key);
+	free(flag);
+	return;
+}
+
 void ll_print(list_t *L,print_t t){
 	char fname[100] = {0};
 	char *prefixes[LL_PRINT_TYPES] = {"inc","dec"};
@@ -134,7 +160,7 @@ void ll_print(list_t *L,print_t t){
 			flag = flag->prev;
 		}
 	}
-	else{
+	else if (t==LL_DEC){
 		node_t *flag = L->head;
 		while (flag){
 			fprintf(fout,"%s=",flag->key);
@@ -150,6 +176,12 @@ void ll_print(list_t *L,print_t t){
 					break;
 			}
 			flag = flag->next;
+		}
+	}
+	else {
+		while (!ll_isempty(&L)){
+			int randk = rand()%(L->size);
+			ll_remove(&L,randk,fout);
 		}
 	}
 	fclose(fout);

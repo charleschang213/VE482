@@ -10,7 +10,8 @@
 #define print_t int
 #define LL_INC 0
 #define LL_DEC 1
-#define LL_PRINT_TYPES 2
+#define LL_RAND 2
+#define LL_PRINT_TYPES 3
 
 #include <stdlib.h>
 #include <string.h>
@@ -46,6 +47,7 @@ int value_cpy(void **dst,void *src,type_t t);
 node_t *ll_search(list_t *L,void *v);
 
 void ll_insert(list_t *L,char* k,void* v);
+void ll_remove(list_t *L,int k,FILE *stream);
 
 void ll_print(list_t *L,print_t t);
 
