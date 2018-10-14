@@ -11,7 +11,7 @@ void sorter(char* argv[]){
     type_t vtype = (strcmp(tname,"int")==0)?LL_INT:((strcmp(tname,"double")==0)?LL_DOUBLE:LL_STRING);
     print_t ptype = (strcmp(modename,"inc")==0)?LL_INC:((strcmp(modename,"dec")==0)?LL_DEC:LL_RAND);
     ll_init(&L,vtype);
-    printf("reading %s\n",filename);
+    printf("reading %s\n",fname);
     FILE *fin = fopen(fname,"r+");
     printf("sorting elements\n");
     while (1){

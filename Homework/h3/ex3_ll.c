@@ -112,6 +112,18 @@ void ll_insert(list_t *L,char *k,void *v){
 void ll_remove(list_t *L,int k,FILE *stream){
 	node_t *flag = L->head;
 	for (int i=0;i<k;i++) flag = flag->next;
+	fprintf(stream,"%s=",flag->key);
+	switch (L->type){
+		case LL_INT:
+			fprintf(stream,"%d\n",*((int*)flag->value));
+			break;
+		case LL_DOUBLE:
+			fprintf(stream,"%f\n",*((double*)flag->value));
+			break;
+		default:
+			fprintf(stream,"%s\n",(char*)flag->value);
+			break;
+	}
 	L->size--;
 	if (L->size==0){
 		L->head = L->tail = NULL;
@@ -136,7 +148,7 @@ void ll_remove(list_t *L,int k,FILE *stream){
 
 void ll_print(list_t *L,print_t t){
 	char fname[100] = {0};
-	char *prefixes[LL_PRINT_TYPES] = {"inc","dec"};
+	char *prefixes[LL_PRINT_TYPES] = {"inc","dec","rand"};
 	char *postfixes[LL_VALUE_TYPES] = {"_int.txt","_double.txt","_string.txt"};
 	strcpy(fname,prefixes[t]);
 	strcat(fname,postfixes[L->type]);
@@ -179,9 +191,9 @@ void ll_print(list_t *L,print_t t){
 		}
 	}
 	else {
-		while (!ll_isempty(&L)){
+		while (!ll_isempty(L)){
 			int randk = rand()%(L->size);
-			ll_remove(&L,randk,fout);
+			ll_remove(L,randk,fout);
 		}
 	}
 	fclose(fout);
