@@ -10,18 +10,20 @@
 class Query {
 public:
     typedef std::unique_ptr<Query> Ptr;
-    virtual QueryResult::Ptr execute() = 0;
-    virtual std::string      toString() = 0;
+    virtual QueryResult::Ptr execute() = 0;// Perform query and return query result
+    virtual std::string      toString() = 0;//Print result in a string
     virtual ~Query() = default;
 };
 
 struct QueryCondition {
+    //Consition Statement in the form of "( field op value )"
     std::string field;
     std::string op;
     std::string value;
 };
 
 class NopQuery : public Query {
+    //???
 public:
     QueryResult::Ptr execute() override {
         return std::make_unique<NullQueryResult>();
@@ -36,7 +38,7 @@ public:
 class ConditionedQuery : public Query {
 protected:
     bool evalCondition(const std::vector<QueryCondition>& conditions,
-                       const Table::Object& object);
+                       const Table::Object& object);//Judge whether a tuple matches a condition
 };
 
 

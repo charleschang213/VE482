@@ -25,6 +25,7 @@ do {\
         );\
     }\
 } while(0)
+//Database access macro through name (with exception)
 
 #define _DBTABLE_ACCESS_WITH_INDEX_EXCEPTION(index)\
 do {\
@@ -37,6 +38,7 @@ do {\
         );\
     }\
 } while(0)
+//Database access macro through index (with exception)
 
 class Table;
 class Table {
@@ -49,8 +51,10 @@ public:
 private:
     struct Datum {
         KeyType key;
-        std::unordered_map<FieldID, ValueType> datum;
+        //Tuple main key
 
+        std::unordered_map<FieldID, ValueType> datum;
+        //Tuple attributes
         Datum()             = default;
         Datum(const Datum&) = default;
         template<class FieldIDContainer>
@@ -59,7 +63,9 @@ private:
                     datum.emplace(FieldID, ValueType());
                 }
             }
+            //Dump a list of attributes into a tuple
     };
+    // Struct containing one tuple
 
     typedef std::list<Datum>::iterator       DataIterator;
     typedef std::list<Datum>::const_iterator ConstDataIterator;
