@@ -1,6 +1,5 @@
 #ifndef SRC_DB_TABLE_H
 #define SRC_DB_TABLE_H
-
 #include <string>
 #include <memory>
 #include <fstream>
