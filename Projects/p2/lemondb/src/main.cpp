@@ -15,7 +15,10 @@ std::string extractQueryString() {
     std::string buf;
     do {
         int ch = cin.get();
-        if (ch == ';') return buf;
+        if (ch == ';') {
+			cin.get();
+			return buf;
+		}
         if (ch == EOF) throw std::ios_base::failure("End of input");
         buf.push_back(ch);
     } while(1);
@@ -48,6 +51,7 @@ int main() {
         } catch (const std::exception& e) {
             cerr << e.what() << endl;
         }
+    
     }
     return 0;
 }

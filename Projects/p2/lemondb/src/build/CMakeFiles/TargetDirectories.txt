@@ -1,0 +1,4 @@
+/home/charles/VE482/Projects/p2/lemondb/src/build/CMakeFiles/rebuild_cache.dir
+/home/charles/VE482/Projects/p2/lemondb/src/build/CMakeFiles/edit_cache.dir
+/home/charles/VE482/Projects/p2/lemondb/src/build/CMakeFiles/src.dir
+/home/charles/VE482/Projects/p2/lemondb/src/build/CMakeFiles/table_test.dir
