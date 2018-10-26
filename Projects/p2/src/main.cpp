@@ -56,7 +56,10 @@ std::string extractQueryString(std::istream &is) {
     std::string buf;
     do {
         int ch = is.get();
-        if (ch == ';') return buf;
+        if (ch == ';') {
+            is.get();
+            return buf;
+        }
         if (ch == EOF) throw std::ios_base::failure("End of input");
         buf.push_back((char) ch);
     } while (true);
