@@ -90,6 +90,27 @@ BasicQueryBuilderClass(ManageTable);
 ComplexQueryBuilderClass(UpdateTable);
 ComplexQueryBuilderClass(Insert);
 ComplexQueryBuilderClass(Delete);
-
+ComplexQueryBuilderClass(Select);
+ComplexQueryBuilderClass(Swap);
+ComplexQueryBuilderClass(Duplicate);
+ComplexQueryBuilderClass(Sum);
+ComplexQueryBuilderClass(Count);
+ComplexQueryBuilderClass(Min);
+ComplexQueryBuilderClass(Max);
+ComplexQueryBuilderClass(Add);
+ComplexQueryBuilderClass(Sub);
+/* TODO:
+* Insert
+* Delete
+* Select
+* Swap
+* DUPLICATE
+* SUM
+* COUNT
+* MIN
+* MAX
+* ADD
+* SUB
+*/
 
 #endif //SRC_QUERY_BUILDERS_H

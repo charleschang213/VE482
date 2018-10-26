@@ -29,6 +29,16 @@ int main() {
     QueryParser p;
     //p.registerQueryBuilder(std::make_unique<FakeQueryBuilder>());
     p.registerQueryBuilder(std::make_unique<QueryBuilder(UpdateTable)>());
+    p.registerQueryBuilder(std::make_unique<QueryBuilder(Insert)>());
+    p.registerQueryBuilder(std::make_unique<QueryBuilder(Delete)>());
+    p.registerQueryBuilder(std::make_unique<QueryBuilder(Select)>());
+    p.registerQueryBuilder(std::make_unique<QueryBuilder(Swap)>());
+    p.registerQueryBuilder(std::make_unique<QueryBuilder(Duplicate)>());
+    p.registerQueryBuilder(std::make_unique<QueryBuilder(Min)>());
+    p.registerQueryBuilder(std::make_unique<QueryBuilder(Max)>());
+    p.registerQueryBuilder(std::make_unique<QueryBuilder(Count)>());
+    p.registerQueryBuilder(std::make_unique<QueryBuilder(Add)>());
+    p.registerQueryBuilder(std::make_unique<QueryBuilder(Sub)>());
     p.registerQueryBuilder(std::make_unique<QueryBuilder(Debug)>());
     p.registerQueryBuilder(std::make_unique<QueryBuilder(ManageTable)>());
     while (cin) {

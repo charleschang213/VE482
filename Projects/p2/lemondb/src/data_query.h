@@ -55,6 +55,16 @@ public:
     QueryResult::Ptr execute() override;
     std::string toString() override;
 };
+/* TODO: 
+* SWAP
+* DUPLICATE
+* SUM
+* COUNT
+* MIN
+* MAX
+* ADD
+* SUB
+*/
 
 
 #endif //SRC_DATA_QUERY_H
