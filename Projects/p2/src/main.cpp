@@ -10,6 +10,23 @@
 #include <iostream>
 #include <string>
 
+/* TODO:
+** Management Query
+* COPYTABLE
+* TRUNCATE
+** Data Query
+* DELETE
+* SELECT
+* DUPLICATE
+* COUNT
+* SUM
+* MIN
+* MAX
+* ADD
+* SUB
+* SWAP
+*/
+
 struct {
     std::string listen;
     long threads = 0;
