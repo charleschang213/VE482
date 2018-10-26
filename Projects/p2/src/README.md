@@ -5,7 +5,7 @@
 
 ## Task 0: Task Distribution for Task 1
 1. The task 1 goals have been listed on main.cpp
-2. If you want to do one of these, put your name with a bracketsd
+2. If you want to do one of these, put your name with a bracket after it
 3. There are 12 goals so 3 per 1 person is reasonable
 ## Task 1: Query Implementation
 ### Management Query
@@ -29,3 +29,4 @@
 
 ## Reminder  
 + Do not submit a version that cannot compile successfully onto server
++ There is a very very small testcase .tbl file (just same as the example in p2.pdf)
