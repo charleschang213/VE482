@@ -2,6 +2,7 @@
 ## To-do List
 0. Task Distribution for Task 1
 1. Implement all management/data queries
+2. Suggested query combination: (TRUNCATE, DELETE), (MIN,MAX), (ADD,SUB)
 
 ## Task 0: Task Distribution for Task 1
 1. The task 1 goals have been listed on main.cpp
@@ -29,4 +30,10 @@
 
 ## Reminder  
 + Do not submit a version that cannot compile successfully onto server
-+ There is a very very small testcase .tbl file (just same as the example in p2.pdf)
++ There is a very very small testcase .tbl file (just same as the example in p2.pdf) in build
++ Normal git server submit process:
+  1. get into your own branch(for the first time, use git checkout -b xxx to create and afterwards just use git checkout xxx)
+  2. Do modifications, add and commit
+  3. get a copy from server using git pull origin master
+  4. (if not appear in step 3) merge master use git merge master
+  5. push using git push origin xxx:master 
