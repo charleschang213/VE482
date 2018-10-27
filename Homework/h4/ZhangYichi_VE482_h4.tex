@@ -1,0 +1,52 @@
+\documentclass{article}
+\usepackage{bookmark}
+\usepackage{color}
+\usepackage{listings}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{
+  basicstyle=\footnotesize, 
+  numbers=left, 
+  numberstyle=\tiny\color{gray}, 
+  stepnumber=1,
+  numbersep=5pt, 
+  backgroundcolor=\color{white},
+  showspaces=false,
+  showstringspaces=false,
+  showtabs=false,
+  frame=shadowbox,
+  rulecolor=\color{black},
+  tabsize=2,
+  captionpos=b,
+  breaklines=true, 
+  breakatwhitespace=false, 
+  title=\lstname,
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  escapeinside={\%*}{*)}, 
+  morekeywords={*,...} 
+}
+
+\begin{document}
+\begin{itemize}
+\item {\bf Ex. 1}\\
+{\noindent 1. It might happen that all threads will be blocked by this interrupt. Maybe system calls such as select can be used to inform the threads that here might be a block}\\ 
+
+{\noindent 2. It can be implemented. Before interrupt happens, give every thread an alarm clock so they can avoid being blocked.}
+
+
+\item {\bf EX. 2}\\
+
+{\noindent It can not solve complex situations where maybe more than two threads and there are several different waiting policies. Another drawback is that the boolean expression will be calculated again and again, which is time and memory consuming.}
+
+
+\end{itemize}
+\end{document}
