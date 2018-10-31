@@ -19,6 +19,7 @@ set(SOURCE_FILES
         query/management/DumpTableQuery.cpp query/management/DumpTableQuery.h
         query/management/ListTableQuery.cpp query/management/ListTableQuery.h
         query/management/CopyTableQuery.cpp query/management/CopyTableQuery.h
+        query/management/TruncateTableQuery.cpp query/management/TruncateTableQuery.h
         query/management/QuitQuery.cpp query/management/QuitQuery.h
         query/management/PrintTableQuery.cpp query/management/PrintTableQuery.h
 
