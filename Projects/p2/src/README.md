@@ -1,13 +1,7 @@
 # Project2 Instruction  
 ## To-do List
-0. Task Distribution for Task 1
 1. Implement all management/data queries
-2. Suggested query combination: (TRUNCATE, DELETE), (MIN,MAX), (ADD,SUB)
 
-## Task 0: Task Distribution for Task 1
-1. The task 1 goals have been listed on main.cpp
-2. If you want to do one of these, put your name with a bracket after it
-3. There are 12 goals so 3 per 1 person is reasonable
 ## Task 1: Query Implementation
 ### Management Query
 1. Go to ./query/management and create xxxQuery.cpp/.h ("xxxQuery" is the ./query/QueryBuilders.cpp:line49,line61 inside <>)

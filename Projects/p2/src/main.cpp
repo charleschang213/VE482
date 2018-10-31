@@ -12,19 +12,19 @@
 
 /* TODO:
 ** Management Query
-* COPYTABLE
-* TRUNCATE
+* COPYTABLE (ZYC)
+* TRUNCATE (ZYC)
 ** Data Query
-* DELETE
-* SELECT
-* DUPLICATE
-* COUNT
-* SUM
-* MIN
-* MAX
-* ADD
-* SUB
-* SWAP
+* DELETE (ZYC)
+* SELECT (ZRQ)
+* DUPLICATE (ZRQ)
+* COUNT (ZRQ)
+* SUM (ZYK)
+* MIN (ZYK)
+* MAX (ZYK)
+* ADD (ZWH)
+* SUB (ZWH)
+* SWAP (ZWH)
 */
 
 struct {
