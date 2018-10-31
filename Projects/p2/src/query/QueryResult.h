@@ -124,6 +124,7 @@ public:
 protected:
     std::ostream &output(std::ostream &os) const override {
         return os << "Affected " << affectedRows <<  "rows." << "\n";
+        os.flush();
     }
 };
 
