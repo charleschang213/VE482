@@ -27,7 +27,7 @@ QueryResult::Ptr DeleteQuery::execute() {
         }
     }
     db[this->targetTable] = newtable;
-    return std::make_unique<SuccessMsgResult>(qname, targetTable);
+    return std::make_unique<RecordCountResult>(counter);
 
 }
 
