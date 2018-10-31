@@ -103,10 +103,14 @@ management/DumpTableQuery.h
 /home/charles/VE482/Projects/p2/src/query/management/DumpTableQuery.h
 management/ListTableQuery.h
 /home/charles/VE482/Projects/p2/src/query/management/ListTableQuery.h
+management/CopyTableQuery.h
+/home/charles/VE482/Projects/p2/src/query/management/CopyTableQuery.h
 management/QuitQuery.h
 /home/charles/VE482/Projects/p2/src/query/management/QuitQuery.h
 management/PrintTableQuery.h
 /home/charles/VE482/Projects/p2/src/query/management/PrintTableQuery.h
+management/TruncateTableQuery.h
+/home/charles/VE482/Projects/p2/src/query/management/TruncateTableQuery.h
 data/InsertQuery.h
 /home/charles/VE482/Projects/p2/src/query/data/InsertQuery.h
 data/UpdateQuery.h
@@ -182,6 +186,16 @@ UpdateQuery.h
 ../Query.h
 /home/charles/VE482/Projects/p2/src/query/Query.h
 
+/home/charles/VE482/Projects/p2/src/query/management/CopyTableQuery.cpp
+CopyTableQuery.h
+/home/charles/VE482/Projects/p2/src/query/management/CopyTableQuery.h
+../../db/Database.h
+/home/charles/VE482/Projects/p2/src/db/Database.h
+
+/home/charles/VE482/Projects/p2/src/query/management/CopyTableQuery.h
+../Query.h
+/home/charles/VE482/Projects/p2/src/query/Query.h
+
 /home/charles/VE482/Projects/p2/src/query/management/DropTableQuery.cpp
 DropTableQuery.h
 /home/charles/VE482/Projects/p2/src/query/management/DropTableQuery.h
@@ -245,6 +259,16 @@ QuitQuery.h
 /home/charles/VE482/Projects/p2/src/db/Database.h
 
 /home/charles/VE482/Projects/p2/src/query/management/QuitQuery.h
+../Query.h
+/home/charles/VE482/Projects/p2/src/query/Query.h
+
+/home/charles/VE482/Projects/p2/src/query/management/TruncateTableQuery.cpp
+TruncateTableQuery.h
+/home/charles/VE482/Projects/p2/src/query/management/TruncateTableQuery.h
+../../db/Database.h
+/home/charles/VE482/Projects/p2/src/db/Database.h
+
+/home/charles/VE482/Projects/p2/src/query/management/TruncateTableQuery.h
 ../Query.h
 /home/charles/VE482/Projects/p2/src/query/Query.h
 

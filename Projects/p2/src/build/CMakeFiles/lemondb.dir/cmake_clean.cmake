@@ -10,6 +10,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/lemondb.dir/query/management/DropTableQuery.cpp.o"
   "CMakeFiles/lemondb.dir/query/management/DumpTableQuery.cpp.o"
   "CMakeFiles/lemondb.dir/query/management/ListTableQuery.cpp.o"
+  "CMakeFiles/lemondb.dir/query/management/CopyTableQuery.cpp.o"
+  "CMakeFiles/lemondb.dir/query/management/TruncateTableQuery.cpp.o"
   "CMakeFiles/lemondb.dir/query/management/QuitQuery.cpp.o"
   "CMakeFiles/lemondb.dir/query/management/PrintTableQuery.cpp.o"
   "CMakeFiles/lemondb.dir/query/data/InsertQuery.cpp.o"

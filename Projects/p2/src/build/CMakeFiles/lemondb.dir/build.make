@@ -321,9 +321,57 @@ CMakeFiles/lemondb.dir/query/management/ListTableQuery.cpp.o.provides: CMakeFile
 CMakeFiles/lemondb.dir/query/management/ListTableQuery.cpp.o.provides.build: CMakeFiles/lemondb.dir/query/management/ListTableQuery.cpp.o
 
 
+CMakeFiles/lemondb.dir/query/management/CopyTableQuery.cpp.o: CMakeFiles/lemondb.dir/flags.make
+CMakeFiles/lemondb.dir/query/management/CopyTableQuery.cpp.o: ../query/management/CopyTableQuery.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/charles/VE482/Projects/p2/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/lemondb.dir/query/management/CopyTableQuery.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lemondb.dir/query/management/CopyTableQuery.cpp.o -c /home/charles/VE482/Projects/p2/src/query/management/CopyTableQuery.cpp
+
+CMakeFiles/lemondb.dir/query/management/CopyTableQuery.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lemondb.dir/query/management/CopyTableQuery.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/charles/VE482/Projects/p2/src/query/management/CopyTableQuery.cpp > CMakeFiles/lemondb.dir/query/management/CopyTableQuery.cpp.i
+
+CMakeFiles/lemondb.dir/query/management/CopyTableQuery.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lemondb.dir/query/management/CopyTableQuery.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/charles/VE482/Projects/p2/src/query/management/CopyTableQuery.cpp -o CMakeFiles/lemondb.dir/query/management/CopyTableQuery.cpp.s
+
+CMakeFiles/lemondb.dir/query/management/CopyTableQuery.cpp.o.requires:
+
+.PHONY : CMakeFiles/lemondb.dir/query/management/CopyTableQuery.cpp.o.requires
+
+CMakeFiles/lemondb.dir/query/management/CopyTableQuery.cpp.o.provides: CMakeFiles/lemondb.dir/query/management/CopyTableQuery.cpp.o.requires
+	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/management/CopyTableQuery.cpp.o.provides.build
+.PHONY : CMakeFiles/lemondb.dir/query/management/CopyTableQuery.cpp.o.provides
+
+CMakeFiles/lemondb.dir/query/management/CopyTableQuery.cpp.o.provides.build: CMakeFiles/lemondb.dir/query/management/CopyTableQuery.cpp.o
+
+
+CMakeFiles/lemondb.dir/query/management/TruncateTableQuery.cpp.o: CMakeFiles/lemondb.dir/flags.make
+CMakeFiles/lemondb.dir/query/management/TruncateTableQuery.cpp.o: ../query/management/TruncateTableQuery.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/charles/VE482/Projects/p2/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/lemondb.dir/query/management/TruncateTableQuery.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lemondb.dir/query/management/TruncateTableQuery.cpp.o -c /home/charles/VE482/Projects/p2/src/query/management/TruncateTableQuery.cpp
+
+CMakeFiles/lemondb.dir/query/management/TruncateTableQuery.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lemondb.dir/query/management/TruncateTableQuery.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/charles/VE482/Projects/p2/src/query/management/TruncateTableQuery.cpp > CMakeFiles/lemondb.dir/query/management/TruncateTableQuery.cpp.i
+
+CMakeFiles/lemondb.dir/query/management/TruncateTableQuery.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lemondb.dir/query/management/TruncateTableQuery.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/charles/VE482/Projects/p2/src/query/management/TruncateTableQuery.cpp -o CMakeFiles/lemondb.dir/query/management/TruncateTableQuery.cpp.s
+
+CMakeFiles/lemondb.dir/query/management/TruncateTableQuery.cpp.o.requires:
+
+.PHONY : CMakeFiles/lemondb.dir/query/management/TruncateTableQuery.cpp.o.requires
+
+CMakeFiles/lemondb.dir/query/management/TruncateTableQuery.cpp.o.provides: CMakeFiles/lemondb.dir/query/management/TruncateTableQuery.cpp.o.requires
+	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/management/TruncateTableQuery.cpp.o.provides.build
+.PHONY : CMakeFiles/lemondb.dir/query/management/TruncateTableQuery.cpp.o.provides
+
+CMakeFiles/lemondb.dir/query/management/TruncateTableQuery.cpp.o.provides.build: CMakeFiles/lemondb.dir/query/management/TruncateTableQuery.cpp.o
+
+
 CMakeFiles/lemondb.dir/query/management/QuitQuery.cpp.o: CMakeFiles/lemondb.dir/flags.make
 CMakeFiles/lemondb.dir/query/management/QuitQuery.cpp.o: ../query/management/QuitQuery.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/charles/VE482/Projects/p2/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/lemondb.dir/query/management/QuitQuery.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/charles/VE482/Projects/p2/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/lemondb.dir/query/management/QuitQuery.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lemondb.dir/query/management/QuitQuery.cpp.o -c /home/charles/VE482/Projects/p2/src/query/management/QuitQuery.cpp
 
 CMakeFiles/lemondb.dir/query/management/QuitQuery.cpp.i: cmake_force
@@ -347,7 +395,7 @@ CMakeFiles/lemondb.dir/query/management/QuitQuery.cpp.o.provides.build: CMakeFil
 
 CMakeFiles/lemondb.dir/query/management/PrintTableQuery.cpp.o: CMakeFiles/lemondb.dir/flags.make
 CMakeFiles/lemondb.dir/query/management/PrintTableQuery.cpp.o: ../query/management/PrintTableQuery.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/charles/VE482/Projects/p2/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/lemondb.dir/query/management/PrintTableQuery.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/charles/VE482/Projects/p2/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/lemondb.dir/query/management/PrintTableQuery.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lemondb.dir/query/management/PrintTableQuery.cpp.o -c /home/charles/VE482/Projects/p2/src/query/management/PrintTableQuery.cpp
 
 CMakeFiles/lemondb.dir/query/management/PrintTableQuery.cpp.i: cmake_force
@@ -371,7 +419,7 @@ CMakeFiles/lemondb.dir/query/management/PrintTableQuery.cpp.o.provides.build: CM
 
 CMakeFiles/lemondb.dir/query/data/InsertQuery.cpp.o: CMakeFiles/lemondb.dir/flags.make
 CMakeFiles/lemondb.dir/query/data/InsertQuery.cpp.o: ../query/data/InsertQuery.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/charles/VE482/Projects/p2/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/lemondb.dir/query/data/InsertQuery.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/charles/VE482/Projects/p2/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/lemondb.dir/query/data/InsertQuery.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lemondb.dir/query/data/InsertQuery.cpp.o -c /home/charles/VE482/Projects/p2/src/query/data/InsertQuery.cpp
 
 CMakeFiles/lemondb.dir/query/data/InsertQuery.cpp.i: cmake_force
@@ -395,7 +443,7 @@ CMakeFiles/lemondb.dir/query/data/InsertQuery.cpp.o.provides.build: CMakeFiles/l
 
 CMakeFiles/lemondb.dir/query/data/UpdateQuery.cpp.o: CMakeFiles/lemondb.dir/flags.make
 CMakeFiles/lemondb.dir/query/data/UpdateQuery.cpp.o: ../query/data/UpdateQuery.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/charles/VE482/Projects/p2/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/lemondb.dir/query/data/UpdateQuery.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/charles/VE482/Projects/p2/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/lemondb.dir/query/data/UpdateQuery.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lemondb.dir/query/data/UpdateQuery.cpp.o -c /home/charles/VE482/Projects/p2/src/query/data/UpdateQuery.cpp
 
 CMakeFiles/lemondb.dir/query/data/UpdateQuery.cpp.i: cmake_force
@@ -430,6 +478,8 @@ lemondb_OBJECTS = \
 "CMakeFiles/lemondb.dir/query/management/DropTableQuery.cpp.o" \
 "CMakeFiles/lemondb.dir/query/management/DumpTableQuery.cpp.o" \
 "CMakeFiles/lemondb.dir/query/management/ListTableQuery.cpp.o" \
+"CMakeFiles/lemondb.dir/query/management/CopyTableQuery.cpp.o" \
+"CMakeFiles/lemondb.dir/query/management/TruncateTableQuery.cpp.o" \
 "CMakeFiles/lemondb.dir/query/management/QuitQuery.cpp.o" \
 "CMakeFiles/lemondb.dir/query/management/PrintTableQuery.cpp.o" \
 "CMakeFiles/lemondb.dir/query/data/InsertQuery.cpp.o" \
@@ -449,13 +499,15 @@ lemondb: CMakeFiles/lemondb.dir/query/management/LoadTableQuery.cpp.o
 lemondb: CMakeFiles/lemondb.dir/query/management/DropTableQuery.cpp.o
 lemondb: CMakeFiles/lemondb.dir/query/management/DumpTableQuery.cpp.o
 lemondb: CMakeFiles/lemondb.dir/query/management/ListTableQuery.cpp.o
+lemondb: CMakeFiles/lemondb.dir/query/management/CopyTableQuery.cpp.o
+lemondb: CMakeFiles/lemondb.dir/query/management/TruncateTableQuery.cpp.o
 lemondb: CMakeFiles/lemondb.dir/query/management/QuitQuery.cpp.o
 lemondb: CMakeFiles/lemondb.dir/query/management/PrintTableQuery.cpp.o
 lemondb: CMakeFiles/lemondb.dir/query/data/InsertQuery.cpp.o
 lemondb: CMakeFiles/lemondb.dir/query/data/UpdateQuery.cpp.o
 lemondb: CMakeFiles/lemondb.dir/build.make
 lemondb: CMakeFiles/lemondb.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/charles/VE482/Projects/p2/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Linking CXX executable lemondb"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/charles/VE482/Projects/p2/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Linking CXX executable lemondb"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/lemondb.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -474,6 +526,8 @@ CMakeFiles/lemondb.dir/requires: CMakeFiles/lemondb.dir/query/management/LoadTab
 CMakeFiles/lemondb.dir/requires: CMakeFiles/lemondb.dir/query/management/DropTableQuery.cpp.o.requires
 CMakeFiles/lemondb.dir/requires: CMakeFiles/lemondb.dir/query/management/DumpTableQuery.cpp.o.requires
 CMakeFiles/lemondb.dir/requires: CMakeFiles/lemondb.dir/query/management/ListTableQuery.cpp.o.requires
+CMakeFiles/lemondb.dir/requires: CMakeFiles/lemondb.dir/query/management/CopyTableQuery.cpp.o.requires
+CMakeFiles/lemondb.dir/requires: CMakeFiles/lemondb.dir/query/management/TruncateTableQuery.cpp.o.requires
 CMakeFiles/lemondb.dir/requires: CMakeFiles/lemondb.dir/query/management/QuitQuery.cpp.o.requires
 CMakeFiles/lemondb.dir/requires: CMakeFiles/lemondb.dir/query/management/PrintTableQuery.cpp.o.requires
 CMakeFiles/lemondb.dir/requires: CMakeFiles/lemondb.dir/query/data/InsertQuery.cpp.o.requires

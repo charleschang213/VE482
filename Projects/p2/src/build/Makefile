@@ -366,6 +366,33 @@ query/data/UpdateQuery.cpp.s:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/data/UpdateQuery.cpp.s
 .PHONY : query/data/UpdateQuery.cpp.s
 
+query/management/CopyTableQuery.o: query/management/CopyTableQuery.cpp.o
+
+.PHONY : query/management/CopyTableQuery.o
+
+# target to build an object file
+query/management/CopyTableQuery.cpp.o:
+	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/management/CopyTableQuery.cpp.o
+.PHONY : query/management/CopyTableQuery.cpp.o
+
+query/management/CopyTableQuery.i: query/management/CopyTableQuery.cpp.i
+
+.PHONY : query/management/CopyTableQuery.i
+
+# target to preprocess a source file
+query/management/CopyTableQuery.cpp.i:
+	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/management/CopyTableQuery.cpp.i
+.PHONY : query/management/CopyTableQuery.cpp.i
+
+query/management/CopyTableQuery.s: query/management/CopyTableQuery.cpp.s
+
+.PHONY : query/management/CopyTableQuery.s
+
+# target to generate assembly for a file
+query/management/CopyTableQuery.cpp.s:
+	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/management/CopyTableQuery.cpp.s
+.PHONY : query/management/CopyTableQuery.cpp.s
+
 query/management/DropTableQuery.o: query/management/DropTableQuery.cpp.o
 
 .PHONY : query/management/DropTableQuery.o
@@ -528,6 +555,33 @@ query/management/QuitQuery.cpp.s:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/management/QuitQuery.cpp.s
 .PHONY : query/management/QuitQuery.cpp.s
 
+query/management/TruncateTableQuery.o: query/management/TruncateTableQuery.cpp.o
+
+.PHONY : query/management/TruncateTableQuery.o
+
+# target to build an object file
+query/management/TruncateTableQuery.cpp.o:
+	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/management/TruncateTableQuery.cpp.o
+.PHONY : query/management/TruncateTableQuery.cpp.o
+
+query/management/TruncateTableQuery.i: query/management/TruncateTableQuery.cpp.i
+
+.PHONY : query/management/TruncateTableQuery.i
+
+# target to preprocess a source file
+query/management/TruncateTableQuery.cpp.i:
+	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/management/TruncateTableQuery.cpp.i
+.PHONY : query/management/TruncateTableQuery.cpp.i
+
+query/management/TruncateTableQuery.s: query/management/TruncateTableQuery.cpp.s
+
+.PHONY : query/management/TruncateTableQuery.s
+
+# target to generate assembly for a file
+query/management/TruncateTableQuery.cpp.s:
+	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/management/TruncateTableQuery.cpp.s
+.PHONY : query/management/TruncateTableQuery.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -564,6 +618,9 @@ help:
 	@echo "... query/data/UpdateQuery.o"
 	@echo "... query/data/UpdateQuery.i"
 	@echo "... query/data/UpdateQuery.s"
+	@echo "... query/management/CopyTableQuery.o"
+	@echo "... query/management/CopyTableQuery.i"
+	@echo "... query/management/CopyTableQuery.s"
 	@echo "... query/management/DropTableQuery.o"
 	@echo "... query/management/DropTableQuery.i"
 	@echo "... query/management/DropTableQuery.s"
@@ -582,6 +639,9 @@ help:
 	@echo "... query/management/QuitQuery.o"
 	@echo "... query/management/QuitQuery.i"
 	@echo "... query/management/QuitQuery.s"
+	@echo "... query/management/TruncateTableQuery.o"
+	@echo "... query/management/TruncateTableQuery.i"
+	@echo "... query/management/TruncateTableQuery.s"
 .PHONY : help
 
 

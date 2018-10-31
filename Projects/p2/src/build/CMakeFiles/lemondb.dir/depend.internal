@@ -39,12 +39,14 @@ CMakeFiles/lemondb.dir/query/QueryBuilders.cpp.o
  /home/charles/VE482/Projects/p2/src/query/QueryResult.h
  /home/charles/VE482/Projects/p2/src/query/data/InsertQuery.h
  /home/charles/VE482/Projects/p2/src/query/data/UpdateQuery.h
+ /home/charles/VE482/Projects/p2/src/query/management/CopyTableQuery.h
  /home/charles/VE482/Projects/p2/src/query/management/DropTableQuery.h
  /home/charles/VE482/Projects/p2/src/query/management/DumpTableQuery.h
  /home/charles/VE482/Projects/p2/src/query/management/ListTableQuery.h
  /home/charles/VE482/Projects/p2/src/query/management/LoadTableQuery.h
  /home/charles/VE482/Projects/p2/src/query/management/PrintTableQuery.h
  /home/charles/VE482/Projects/p2/src/query/management/QuitQuery.h
+ /home/charles/VE482/Projects/p2/src/query/management/TruncateTableQuery.h
  /home/charles/VE482/Projects/p2/src/utils/formatter.h
  /home/charles/VE482/Projects/p2/src/utils/uexception.h
 CMakeFiles/lemondb.dir/query/QueryParser.cpp.o
@@ -76,6 +78,15 @@ CMakeFiles/lemondb.dir/query/data/UpdateQuery.cpp.o
  /home/charles/VE482/Projects/p2/src/query/QueryResult.h
  /home/charles/VE482/Projects/p2/src/query/data/UpdateQuery.cpp
  /home/charles/VE482/Projects/p2/src/query/data/UpdateQuery.h
+ /home/charles/VE482/Projects/p2/src/utils/formatter.h
+ /home/charles/VE482/Projects/p2/src/utils/uexception.h
+CMakeFiles/lemondb.dir/query/management/CopyTableQuery.cpp.o
+ /home/charles/VE482/Projects/p2/src/db/Database.h
+ /home/charles/VE482/Projects/p2/src/db/Table.h
+ /home/charles/VE482/Projects/p2/src/query/Query.h
+ /home/charles/VE482/Projects/p2/src/query/QueryResult.h
+ /home/charles/VE482/Projects/p2/src/query/management/CopyTableQuery.cpp
+ /home/charles/VE482/Projects/p2/src/query/management/CopyTableQuery.h
  /home/charles/VE482/Projects/p2/src/utils/formatter.h
  /home/charles/VE482/Projects/p2/src/utils/uexception.h
 CMakeFiles/lemondb.dir/query/management/DropTableQuery.cpp.o
@@ -130,5 +141,14 @@ CMakeFiles/lemondb.dir/query/management/QuitQuery.cpp.o
  /home/charles/VE482/Projects/p2/src/query/QueryResult.h
  /home/charles/VE482/Projects/p2/src/query/management/QuitQuery.cpp
  /home/charles/VE482/Projects/p2/src/query/management/QuitQuery.h
+ /home/charles/VE482/Projects/p2/src/utils/formatter.h
+ /home/charles/VE482/Projects/p2/src/utils/uexception.h
+CMakeFiles/lemondb.dir/query/management/TruncateTableQuery.cpp.o
+ /home/charles/VE482/Projects/p2/src/db/Database.h
+ /home/charles/VE482/Projects/p2/src/db/Table.h
+ /home/charles/VE482/Projects/p2/src/query/Query.h
+ /home/charles/VE482/Projects/p2/src/query/QueryResult.h
+ /home/charles/VE482/Projects/p2/src/query/management/TruncateTableQuery.cpp
+ /home/charles/VE482/Projects/p2/src/query/management/TruncateTableQuery.h
  /home/charles/VE482/Projects/p2/src/utils/formatter.h
  /home/charles/VE482/Projects/p2/src/utils/uexception.h

@@ -38,12 +38,14 @@ CMakeFiles/lemondb.dir/query/QueryBuilders.cpp.o: ../query/QueryParser.h
 CMakeFiles/lemondb.dir/query/QueryBuilders.cpp.o: ../query/QueryResult.h
 CMakeFiles/lemondb.dir/query/QueryBuilders.cpp.o: ../query/data/InsertQuery.h
 CMakeFiles/lemondb.dir/query/QueryBuilders.cpp.o: ../query/data/UpdateQuery.h
+CMakeFiles/lemondb.dir/query/QueryBuilders.cpp.o: ../query/management/CopyTableQuery.h
 CMakeFiles/lemondb.dir/query/QueryBuilders.cpp.o: ../query/management/DropTableQuery.h
 CMakeFiles/lemondb.dir/query/QueryBuilders.cpp.o: ../query/management/DumpTableQuery.h
 CMakeFiles/lemondb.dir/query/QueryBuilders.cpp.o: ../query/management/ListTableQuery.h
 CMakeFiles/lemondb.dir/query/QueryBuilders.cpp.o: ../query/management/LoadTableQuery.h
 CMakeFiles/lemondb.dir/query/QueryBuilders.cpp.o: ../query/management/PrintTableQuery.h
 CMakeFiles/lemondb.dir/query/QueryBuilders.cpp.o: ../query/management/QuitQuery.h
+CMakeFiles/lemondb.dir/query/QueryBuilders.cpp.o: ../query/management/TruncateTableQuery.h
 CMakeFiles/lemondb.dir/query/QueryBuilders.cpp.o: ../utils/formatter.h
 CMakeFiles/lemondb.dir/query/QueryBuilders.cpp.o: ../utils/uexception.h
 
@@ -77,6 +79,15 @@ CMakeFiles/lemondb.dir/query/data/UpdateQuery.cpp.o: ../query/data/UpdateQuery.c
 CMakeFiles/lemondb.dir/query/data/UpdateQuery.cpp.o: ../query/data/UpdateQuery.h
 CMakeFiles/lemondb.dir/query/data/UpdateQuery.cpp.o: ../utils/formatter.h
 CMakeFiles/lemondb.dir/query/data/UpdateQuery.cpp.o: ../utils/uexception.h
+
+CMakeFiles/lemondb.dir/query/management/CopyTableQuery.cpp.o: ../db/Database.h
+CMakeFiles/lemondb.dir/query/management/CopyTableQuery.cpp.o: ../db/Table.h
+CMakeFiles/lemondb.dir/query/management/CopyTableQuery.cpp.o: ../query/Query.h
+CMakeFiles/lemondb.dir/query/management/CopyTableQuery.cpp.o: ../query/QueryResult.h
+CMakeFiles/lemondb.dir/query/management/CopyTableQuery.cpp.o: ../query/management/CopyTableQuery.cpp
+CMakeFiles/lemondb.dir/query/management/CopyTableQuery.cpp.o: ../query/management/CopyTableQuery.h
+CMakeFiles/lemondb.dir/query/management/CopyTableQuery.cpp.o: ../utils/formatter.h
+CMakeFiles/lemondb.dir/query/management/CopyTableQuery.cpp.o: ../utils/uexception.h
 
 CMakeFiles/lemondb.dir/query/management/DropTableQuery.cpp.o: ../db/Database.h
 CMakeFiles/lemondb.dir/query/management/DropTableQuery.cpp.o: ../db/Table.h
@@ -131,4 +142,13 @@ CMakeFiles/lemondb.dir/query/management/QuitQuery.cpp.o: ../query/management/Qui
 CMakeFiles/lemondb.dir/query/management/QuitQuery.cpp.o: ../query/management/QuitQuery.h
 CMakeFiles/lemondb.dir/query/management/QuitQuery.cpp.o: ../utils/formatter.h
 CMakeFiles/lemondb.dir/query/management/QuitQuery.cpp.o: ../utils/uexception.h
+
+CMakeFiles/lemondb.dir/query/management/TruncateTableQuery.cpp.o: ../db/Database.h
+CMakeFiles/lemondb.dir/query/management/TruncateTableQuery.cpp.o: ../db/Table.h
+CMakeFiles/lemondb.dir/query/management/TruncateTableQuery.cpp.o: ../query/Query.h
+CMakeFiles/lemondb.dir/query/management/TruncateTableQuery.cpp.o: ../query/QueryResult.h
+CMakeFiles/lemondb.dir/query/management/TruncateTableQuery.cpp.o: ../query/management/TruncateTableQuery.cpp
+CMakeFiles/lemondb.dir/query/management/TruncateTableQuery.cpp.o: ../query/management/TruncateTableQuery.h
+CMakeFiles/lemondb.dir/query/management/TruncateTableQuery.cpp.o: ../utils/formatter.h
+CMakeFiles/lemondb.dir/query/management/TruncateTableQuery.cpp.o: ../utils/uexception.h
 
