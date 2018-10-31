@@ -16,6 +16,7 @@
 
 #include "data/InsertQuery.h"
 #include "data/UpdateQuery.h"
+#include "data/DeleteQuery.h"
 
 #include <iomanip>
 #include <iostream>
