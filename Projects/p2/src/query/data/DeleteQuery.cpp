@@ -11,7 +11,7 @@ QueryResult::Ptr DeleteQuery::execute() {
     Database &db = Database::getInstance();
     auto &table = db[this->targetTable];
     auto result = initCondition(table);
-    Table newtable(table.name,table.field);
+    Table newtable(table.name(),table.field);
     Table::SizeType counter = 0;
     if (result.second){
         for (auto it = table.begin();it!=table.end();it++){
