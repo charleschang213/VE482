@@ -13,7 +13,6 @@
 /* TODO:
 ** Management Query
 ** Data Query
-* DELETE (ZYC)
 * SELECT (ZRQ)
 * DUPLICATE (ZRQ)
 * COUNT (ZRQ)
