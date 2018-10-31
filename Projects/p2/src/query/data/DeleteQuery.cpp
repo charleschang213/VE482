@@ -19,7 +19,7 @@ QueryResult::Ptr DeleteQuery::execute() {
                 counter++;
             }
             else {
-                newtable.insertByIndex(it->key,table[it->key]);
+                newtable.insertByIndex(it->key(),table[it->key()]);
             }
         }
     }
