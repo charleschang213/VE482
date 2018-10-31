@@ -12,7 +12,6 @@
 
 /* TODO:
 ** Management Query
-* TRUNCATE (ZYC)
 ** Data Query
 * DELETE (ZYC)
 * SELECT (ZRQ)
