@@ -7,7 +7,7 @@ QueryResult::Ptr TruncateTableQuery::execute() {
     using namespace std;
     Database &db = Database::getInstance();
     db[targetTable].clear();
-    return make_unique<NullQueryResult>;
+    return make_unique<NullQueryResult>();
 }
 
 std::string TruncateTableQuery::toString() {
