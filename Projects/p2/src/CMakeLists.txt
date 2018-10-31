@@ -25,6 +25,7 @@ set(SOURCE_FILES
 
         query/data/InsertQuery.cpp query/data/InsertQuery.h
         query/data/UpdateQuery.cpp query/data/UpdateQuery.h
+        query/data/DeleteQuery.cpp query/data/DeleteQuery.h
         )
 add_executable(lemondb main.cpp ${SOURCE_FILES})
 target_link_libraries(lemondb pthread)
