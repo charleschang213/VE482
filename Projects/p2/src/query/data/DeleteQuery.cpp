@@ -3,6 +3,7 @@
 #include "../QueryResult.h"
 
 #include <algorithm>
+#include<vector>
 
 constexpr const char *DeleteQuery::qname;
 
@@ -19,7 +20,9 @@ QueryResult::Ptr DeleteQuery::execute() {
                 counter++;
             }
             else {
-                newtable.insertByIndex(it->key(),table[it->key()]);
+                vector<int> data;
+                for (auto i: table.field()) data.push_back((*it)[i]);
+                newtable.insertByIndex(it->key(),move(data));
             }
         }
     }
