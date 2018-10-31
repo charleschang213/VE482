@@ -9,7 +9,7 @@ QueryResult::Ptr CopyTableQuery::execute() {
     auto &target = db[this->targetTable];
     auto table = std::make_unique<Table>(NewTable, target);
     db.registerTable(std::move(table));
-    return make_unique<SuccessMsgResult>(qname, targetTable);
+    return make_unique<NullQueryResult>(qname, targetTable);
 
 }
 
