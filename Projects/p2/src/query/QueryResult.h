@@ -89,7 +89,7 @@ public:
         for (auto result : results) {
             ss << result << " ";
         }
-        ss << ")";
+        ss << ") ";
         this->msg = ss.str();
     }
 
