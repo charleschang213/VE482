@@ -32,6 +32,9 @@ set(SOURCE_FILES
 	  query/data/CountQuery.cpp query/data/CountQuery.h
         query/data/SelectQuery.cpp query/data/SelectQuery.h
         query/data/DuplicateQuery.cpp query/data/DuplicateQuery.h
+        query/data/SumQuery.cpp query/data/SumQuery.h
+        query/data/MaxQuery.cpp query/data/MaxQuery.h
+        query/data/MinQuery.cpp query/data/MinQuery.h
         )
 add_executable(lemondb main.cpp ${SOURCE_FILES})
 target_link_libraries(lemondb pthread)

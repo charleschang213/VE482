@@ -47,7 +47,7 @@ public:
 
 protected:
     std::ostream &output(std::ostream &os) const override {
-        return os << "";
+        return os << "\n";
     }
 };
 
@@ -112,6 +112,12 @@ protected:
     std::ostream &output(std::ostream &os) const override {
         return os << msg << "\n";
     }
+};
+        
+class SuccessMsgResultDerv : public SuccessMsgResult {
+public:
+    bool display() override { return true; }
+    explicit SuccessMsgResultDerv(std::vector<int> results) : SuccessMsgResult(results){}
 };
 
 class RecordCountResult : public SuceededQueryResult {
