@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/peterism/Desktop/ve482/p2/master/p2
+CMAKE_SOURCE_DIR = /home/charles/VE482/Projects/p2/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/peterism/Desktop/ve482/p2/master/p2/build
+CMAKE_BINARY_DIR = /home/charles/VE482/Projects/p2/src/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/peterism/Desktop/ve482/p2/master/p2/build/CMakeFiles /home/peterism/Desktop/ve482/p2/master/p2/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/charles/VE482/Projects/p2/src/build/CMakeFiles /home/charles/VE482/Projects/p2/src/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/peterism/Desktop/ve482/p2/master/p2/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/charles/VE482/Projects/p2/src/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -339,6 +339,33 @@ query/data/AddQuery.cpp.s:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/data/AddQuery.cpp.s
 .PHONY : query/data/AddQuery.cpp.s
 
+query/data/CountQuery.o: query/data/CountQuery.cpp.o
+
+.PHONY : query/data/CountQuery.o
+
+# target to build an object file
+query/data/CountQuery.cpp.o:
+	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/data/CountQuery.cpp.o
+.PHONY : query/data/CountQuery.cpp.o
+
+query/data/CountQuery.i: query/data/CountQuery.cpp.i
+
+.PHONY : query/data/CountQuery.i
+
+# target to preprocess a source file
+query/data/CountQuery.cpp.i:
+	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/data/CountQuery.cpp.i
+.PHONY : query/data/CountQuery.cpp.i
+
+query/data/CountQuery.s: query/data/CountQuery.cpp.s
+
+.PHONY : query/data/CountQuery.s
+
+# target to generate assembly for a file
+query/data/CountQuery.cpp.s:
+	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/data/CountQuery.cpp.s
+.PHONY : query/data/CountQuery.cpp.s
+
 query/data/DeleteQuery.o: query/data/DeleteQuery.cpp.o
 
 .PHONY : query/data/DeleteQuery.o
@@ -366,6 +393,33 @@ query/data/DeleteQuery.cpp.s:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/data/DeleteQuery.cpp.s
 .PHONY : query/data/DeleteQuery.cpp.s
 
+query/data/DuplicateQuery.o: query/data/DuplicateQuery.cpp.o
+
+.PHONY : query/data/DuplicateQuery.o
+
+# target to build an object file
+query/data/DuplicateQuery.cpp.o:
+	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/data/DuplicateQuery.cpp.o
+.PHONY : query/data/DuplicateQuery.cpp.o
+
+query/data/DuplicateQuery.i: query/data/DuplicateQuery.cpp.i
+
+.PHONY : query/data/DuplicateQuery.i
+
+# target to preprocess a source file
+query/data/DuplicateQuery.cpp.i:
+	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/data/DuplicateQuery.cpp.i
+.PHONY : query/data/DuplicateQuery.cpp.i
+
+query/data/DuplicateQuery.s: query/data/DuplicateQuery.cpp.s
+
+.PHONY : query/data/DuplicateQuery.s
+
+# target to generate assembly for a file
+query/data/DuplicateQuery.cpp.s:
+	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/data/DuplicateQuery.cpp.s
+.PHONY : query/data/DuplicateQuery.cpp.s
+
 query/data/InsertQuery.o: query/data/InsertQuery.cpp.o
 
 .PHONY : query/data/InsertQuery.o
@@ -392,6 +446,33 @@ query/data/InsertQuery.s: query/data/InsertQuery.cpp.s
 query/data/InsertQuery.cpp.s:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/data/InsertQuery.cpp.s
 .PHONY : query/data/InsertQuery.cpp.s
+
+query/data/SelectQuery.o: query/data/SelectQuery.cpp.o
+
+.PHONY : query/data/SelectQuery.o
+
+# target to build an object file
+query/data/SelectQuery.cpp.o:
+	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/data/SelectQuery.cpp.o
+.PHONY : query/data/SelectQuery.cpp.o
+
+query/data/SelectQuery.i: query/data/SelectQuery.cpp.i
+
+.PHONY : query/data/SelectQuery.i
+
+# target to preprocess a source file
+query/data/SelectQuery.cpp.i:
+	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/data/SelectQuery.cpp.i
+.PHONY : query/data/SelectQuery.cpp.i
+
+query/data/SelectQuery.s: query/data/SelectQuery.cpp.s
+
+.PHONY : query/data/SelectQuery.s
+
+# target to generate assembly for a file
+query/data/SelectQuery.cpp.s:
+	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/data/SelectQuery.cpp.s
+.PHONY : query/data/SelectQuery.cpp.s
 
 query/data/SubQuery.o: query/data/SubQuery.cpp.o
 
@@ -723,12 +804,21 @@ help:
 	@echo "... query/data/AddQuery.o"
 	@echo "... query/data/AddQuery.i"
 	@echo "... query/data/AddQuery.s"
+	@echo "... query/data/CountQuery.o"
+	@echo "... query/data/CountQuery.i"
+	@echo "... query/data/CountQuery.s"
 	@echo "... query/data/DeleteQuery.o"
 	@echo "... query/data/DeleteQuery.i"
 	@echo "... query/data/DeleteQuery.s"
+	@echo "... query/data/DuplicateQuery.o"
+	@echo "... query/data/DuplicateQuery.i"
+	@echo "... query/data/DuplicateQuery.s"
 	@echo "... query/data/InsertQuery.o"
 	@echo "... query/data/InsertQuery.i"
 	@echo "... query/data/InsertQuery.s"
+	@echo "... query/data/SelectQuery.o"
+	@echo "... query/data/SelectQuery.i"
+	@echo "... query/data/SelectQuery.s"
 	@echo "... query/data/SubQuery.o"
 	@echo "... query/data/SubQuery.i"
 	@echo "... query/data/SubQuery.s"

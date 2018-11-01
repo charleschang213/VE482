@@ -1,0 +1,4 @@
+LOAD test.tbl;
+DUPLICATE ( ) FROM Test;
+SHOWTABLE Test;
+QUIT;

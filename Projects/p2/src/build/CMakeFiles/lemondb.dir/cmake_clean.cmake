@@ -20,6 +20,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/lemondb.dir/query/data/AddQuery.cpp.o"
   "CMakeFiles/lemondb.dir/query/data/SubQuery.cpp.o"
   "CMakeFiles/lemondb.dir/query/data/SwapQuery.cpp.o"
+  "CMakeFiles/lemondb.dir/query/data/CountQuery.cpp.o"
+  "CMakeFiles/lemondb.dir/query/data/SelectQuery.cpp.o"
+  "CMakeFiles/lemondb.dir/query/data/DuplicateQuery.cpp.o"
   "lemondb.pdb"
   "lemondb"
 )
