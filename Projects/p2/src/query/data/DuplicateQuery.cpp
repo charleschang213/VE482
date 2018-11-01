@@ -21,6 +21,7 @@ QueryResult::Ptr DuplicateQuery::execute() {
 
     auto &table = db[this->targetTable];
     auto result = initCondition(table);
+    int counter = 0;
     if (result.second) {
         auto it = table.begin();
         auto si = table.size();
@@ -29,7 +30,11 @@ QueryResult::Ptr DuplicateQuery::execute() {
             if (this->evalCondition(*it)) {
                 auto newkey = (it->key());
                 newkey+="_copy";
-                while (table[newkey]!=nullptr) newkey+="_copy";
+                if (table[newkey]!=nullptr) {
+                    ++it;
+                    continue;
+                }
+                counter++;
                 vector<Table::ValueType> data;
                 data.reserve(table.field().size());
                 for (size_t j = 0; j < table.field().size(); ++j) {
@@ -42,7 +47,7 @@ QueryResult::Ptr DuplicateQuery::execute() {
             ++it;
         }
     }
-    return make_unique<NullQueryResult>();
+    return make_unique<RecordCountResult>(counter);
 }
 
 
