@@ -22,8 +22,9 @@ QueryResult::Ptr DuplicateQuery::execute() {
     auto &table = db[this->targetTable];
     auto result = initCondition(table);
     if (result.second) {
-
-        for (auto it = table.begin(); it != table.end(); ++it) {
+        auto it = table.begin();
+        auto si = table.size();
+        for (auto i=0; i!=si; ++i) {
             if (this->evalCondition(*it)) {
                 auto newkey = (it->key());
                 newkey+="_copy";
@@ -38,6 +39,7 @@ QueryResult::Ptr DuplicateQuery::execute() {
                 }
                 table.insertByIndex(newkey, move(data));
             }
+            ++it;
         }
     }
     return make_unique<NullQueryResult>();
