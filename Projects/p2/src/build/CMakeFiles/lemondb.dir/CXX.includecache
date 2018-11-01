@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/charles/VE482/Projects/p2/src/db/Database.cpp
+/home/peterism/Desktop/ve482/p2/master/p2/db/Database.cpp
 Database.h
-/home/charles/VE482/Projects/p2/src/db/Database.h
+/home/peterism/Desktop/ve482/p2/master/p2/db/Database.h
 Table.h
-/home/charles/VE482/Projects/p2/src/db/Table.h
+/home/peterism/Desktop/ve482/p2/master/p2/db/Table.h
 deque
 -
 fstream
@@ -20,19 +20,19 @@ iostream
 iomanip
 -
 
-/home/charles/VE482/Projects/p2/src/db/Database.h
+/home/peterism/Desktop/ve482/p2/master/p2/db/Database.h
 memory
 -
 unordered_map
 -
 Table.h
-/home/charles/VE482/Projects/p2/src/db/Table.h
+/home/peterism/Desktop/ve482/p2/master/p2/db/Table.h
 
-/home/charles/VE482/Projects/p2/src/db/Table.cpp
+/home/peterism/Desktop/ve482/p2/master/p2/db/Table.cpp
 Database.h
-/home/charles/VE482/Projects/p2/src/db/Database.h
+/home/peterism/Desktop/ve482/p2/master/p2/db/Database.h
 Table.h
-/home/charles/VE482/Projects/p2/src/db/Table.h
+/home/peterism/Desktop/ve482/p2/master/p2/db/Table.h
 iomanip
 -
 iostream
@@ -40,11 +40,11 @@ iostream
 sstream
 -
 
-/home/charles/VE482/Projects/p2/src/db/Table.h
+/home/peterism/Desktop/ve482/p2/master/p2/db/Table.h
 ../utils/uexception.h
-/home/charles/VE482/Projects/p2/src/utils/uexception.h
+/home/peterism/Desktop/ve482/p2/master/p2/utils/uexception.h
 ../utils/formatter.h
-/home/charles/VE482/Projects/p2/src/utils/formatter.h
+/home/peterism/Desktop/ve482/p2/master/p2/utils/formatter.h
 limits
 -
 memory
@@ -58,11 +58,11 @@ unordered_map
 utility
 -
 
-/home/charles/VE482/Projects/p2/src/main.cpp
+/home/peterism/Desktop/ve482/p2/master/p2/main.cpp
 query/QueryParser.h
-/home/charles/VE482/Projects/p2/src/query/QueryParser.h
+/home/peterism/Desktop/ve482/p2/master/p2/query/QueryParser.h
 query/QueryBuilders.h
-/home/charles/VE482/Projects/p2/src/query/QueryBuilders.h
+/home/peterism/Desktop/ve482/p2/master/p2/query/QueryBuilders.h
 getopt.h
 -
 fstream
@@ -72,17 +72,17 @@ iostream
 string
 -
 
-/home/charles/VE482/Projects/p2/src/query/Query.cpp
+/home/peterism/Desktop/ve482/p2/master/p2/query/Query.cpp
 Query.h
-/home/charles/VE482/Projects/p2/src/query/Query.h
+/home/peterism/Desktop/ve482/p2/master/p2/query/Query.h
 cassert
 -
 
-/home/charles/VE482/Projects/p2/src/query/Query.h
+/home/peterism/Desktop/ve482/p2/master/p2/query/Query.h
 QueryResult.h
-/home/charles/VE482/Projects/p2/src/query/QueryResult.h
+/home/peterism/Desktop/ve482/p2/master/p2/query/QueryResult.h
 ../db/Table.h
-/home/charles/VE482/Projects/p2/src/db/Table.h
+/home/peterism/Desktop/ve482/p2/master/p2/db/Table.h
 functional
 -
 memory
@@ -90,63 +90,63 @@ memory
 string
 -
 
-/home/charles/VE482/Projects/p2/src/query/QueryBuilders.cpp
+/home/peterism/Desktop/ve482/p2/master/p2/query/QueryBuilders.cpp
 QueryBuilders.h
-/home/charles/VE482/Projects/p2/src/query/QueryBuilders.h
+/home/peterism/Desktop/ve482/p2/master/p2/query/QueryBuilders.h
 ../db/Database.h
-/home/charles/VE482/Projects/p2/src/db/Database.h
+/home/peterism/Desktop/ve482/p2/master/p2/db/Database.h
 management/LoadTableQuery.h
-/home/charles/VE482/Projects/p2/src/query/management/LoadTableQuery.h
+/home/peterism/Desktop/ve482/p2/master/p2/query/management/LoadTableQuery.h
 management/DropTableQuery.h
-/home/charles/VE482/Projects/p2/src/query/management/DropTableQuery.h
+/home/peterism/Desktop/ve482/p2/master/p2/query/management/DropTableQuery.h
 management/DumpTableQuery.h
-/home/charles/VE482/Projects/p2/src/query/management/DumpTableQuery.h
+/home/peterism/Desktop/ve482/p2/master/p2/query/management/DumpTableQuery.h
 management/ListTableQuery.h
-/home/charles/VE482/Projects/p2/src/query/management/ListTableQuery.h
+/home/peterism/Desktop/ve482/p2/master/p2/query/management/ListTableQuery.h
 management/CopyTableQuery.h
-/home/charles/VE482/Projects/p2/src/query/management/CopyTableQuery.h
+/home/peterism/Desktop/ve482/p2/master/p2/query/management/CopyTableQuery.h
 management/QuitQuery.h
-/home/charles/VE482/Projects/p2/src/query/management/QuitQuery.h
+/home/peterism/Desktop/ve482/p2/master/p2/query/management/QuitQuery.h
 management/PrintTableQuery.h
-/home/charles/VE482/Projects/p2/src/query/management/PrintTableQuery.h
+/home/peterism/Desktop/ve482/p2/master/p2/query/management/PrintTableQuery.h
 management/TruncateTableQuery.h
-/home/charles/VE482/Projects/p2/src/query/management/TruncateTableQuery.h
+/home/peterism/Desktop/ve482/p2/master/p2/query/management/TruncateTableQuery.h
 data/InsertQuery.h
-/home/charles/VE482/Projects/p2/src/query/data/InsertQuery.h
+/home/peterism/Desktop/ve482/p2/master/p2/query/data/InsertQuery.h
 data/UpdateQuery.h
-/home/charles/VE482/Projects/p2/src/query/data/UpdateQuery.h
+/home/peterism/Desktop/ve482/p2/master/p2/query/data/UpdateQuery.h
 data/DeleteQuery.h
-/home/charles/VE482/Projects/p2/src/query/data/DeleteQuery.h
+/home/peterism/Desktop/ve482/p2/master/p2/query/data/DeleteQuery.h
 data/AddQuery.h
-/home/charles/VE482/Projects/p2/src/query/data/AddQuery.h
+/home/peterism/Desktop/ve482/p2/master/p2/query/data/AddQuery.h
 data/SubQuery.h
-/home/charles/VE482/Projects/p2/src/query/data/SubQuery.h
+/home/peterism/Desktop/ve482/p2/master/p2/query/data/SubQuery.h
 data/SwapQuery.h
-/home/charles/VE482/Projects/p2/src/query/data/SwapQuery.h
+/home/peterism/Desktop/ve482/p2/master/p2/query/data/SwapQuery.h
 iomanip
 -
 iostream
 -
 
-/home/charles/VE482/Projects/p2/src/query/QueryBuilders.h
+/home/peterism/Desktop/ve482/p2/master/p2/query/QueryBuilders.h
 QueryParser.h
-/home/charles/VE482/Projects/p2/src/query/QueryParser.h
+/home/peterism/Desktop/ve482/p2/master/p2/query/QueryParser.h
 ../db/Table.h
-/home/charles/VE482/Projects/p2/src/db/Table.h
+/home/peterism/Desktop/ve482/p2/master/p2/db/Table.h
 
-/home/charles/VE482/Projects/p2/src/query/QueryParser.cpp
+/home/peterism/Desktop/ve482/p2/master/p2/query/QueryParser.cpp
 Query.h
-/home/charles/VE482/Projects/p2/src/query/Query.h
+/home/peterism/Desktop/ve482/p2/master/p2/query/Query.h
 QueryParser.h
-/home/charles/VE482/Projects/p2/src/query/QueryParser.h
+/home/peterism/Desktop/ve482/p2/master/p2/query/QueryParser.h
 QueryBuilders.h
-/home/charles/VE482/Projects/p2/src/query/QueryBuilders.h
+/home/peterism/Desktop/ve482/p2/master/p2/query/QueryBuilders.h
 sstream
 -
 
-/home/charles/VE482/Projects/p2/src/query/QueryParser.h
+/home/peterism/Desktop/ve482/p2/master/p2/query/QueryParser.h
 Query.h
-/home/charles/VE482/Projects/p2/src/query/Query.h
+/home/peterism/Desktop/ve482/p2/master/p2/query/Query.h
 string
 -
 memory
@@ -154,13 +154,13 @@ memory
 vector
 -
 
-/home/charles/VE482/Projects/p2/src/query/QueryResult.cpp
+/home/peterism/Desktop/ve482/p2/master/p2/query/QueryResult.cpp
 QueryResult.h
-/home/charles/VE482/Projects/p2/src/query/QueryResult.h
+/home/peterism/Desktop/ve482/p2/master/p2/query/QueryResult.h
 
-/home/charles/VE482/Projects/p2/src/query/QueryResult.h
+/home/peterism/Desktop/ve482/p2/master/p2/query/QueryResult.h
 ../utils/formatter.h
-/home/charles/VE482/Projects/p2/src/utils/formatter.h
+/home/peterism/Desktop/ve482/p2/master/p2/utils/formatter.h
 memory
 -
 sstream
@@ -170,169 +170,169 @@ string
 vector
 -
 
-/home/charles/VE482/Projects/p2/src/query/data/AddQuery.cpp
+/home/peterism/Desktop/ve482/p2/master/p2/query/data/AddQuery.cpp
 AddQuery.h
-/home/charles/VE482/Projects/p2/src/query/data/AddQuery.h
+/home/peterism/Desktop/ve482/p2/master/p2/query/data/AddQuery.h
 ../../db/Database.h
-/home/charles/VE482/Projects/p2/src/db/Database.h
+/home/peterism/Desktop/ve482/p2/master/p2/db/Database.h
 
-/home/charles/VE482/Projects/p2/src/query/data/AddQuery.h
+/home/peterism/Desktop/ve482/p2/master/p2/query/data/AddQuery.h
 ../Query.h
-/home/charles/VE482/Projects/p2/src/query/Query.h
+/home/peterism/Desktop/ve482/p2/master/p2/query/Query.h
 
-/home/charles/VE482/Projects/p2/src/query/data/DeleteQuery.cpp
+/home/peterism/Desktop/ve482/p2/master/p2/query/data/DeleteQuery.cpp
 DeleteQuery.h
-/home/charles/VE482/Projects/p2/src/query/data/DeleteQuery.h
+/home/peterism/Desktop/ve482/p2/master/p2/query/data/DeleteQuery.h
 ../../db/Database.h
-/home/charles/VE482/Projects/p2/src/db/Database.h
+/home/peterism/Desktop/ve482/p2/master/p2/db/Database.h
 ../QueryResult.h
-/home/charles/VE482/Projects/p2/src/query/QueryResult.h
+/home/peterism/Desktop/ve482/p2/master/p2/query/QueryResult.h
 algorithm
 -
 vector
 -
 
-/home/charles/VE482/Projects/p2/src/query/data/DeleteQuery.h
+/home/peterism/Desktop/ve482/p2/master/p2/query/data/DeleteQuery.h
 ../Query.h
-/home/charles/VE482/Projects/p2/src/query/Query.h
+/home/peterism/Desktop/ve482/p2/master/p2/query/Query.h
 
-/home/charles/VE482/Projects/p2/src/query/data/InsertQuery.cpp
+/home/peterism/Desktop/ve482/p2/master/p2/query/data/InsertQuery.cpp
 InsertQuery.h
-/home/charles/VE482/Projects/p2/src/query/data/InsertQuery.h
+/home/peterism/Desktop/ve482/p2/master/p2/query/data/InsertQuery.h
 ../../db/Database.h
-/home/charles/VE482/Projects/p2/src/db/Database.h
+/home/peterism/Desktop/ve482/p2/master/p2/db/Database.h
 ../QueryResult.h
-/home/charles/VE482/Projects/p2/src/query/QueryResult.h
+/home/peterism/Desktop/ve482/p2/master/p2/query/QueryResult.h
 algorithm
 -
 
-/home/charles/VE482/Projects/p2/src/query/data/InsertQuery.h
+/home/peterism/Desktop/ve482/p2/master/p2/query/data/InsertQuery.h
 ../Query.h
-/home/charles/VE482/Projects/p2/src/query/Query.h
+/home/peterism/Desktop/ve482/p2/master/p2/query/Query.h
 
-/home/charles/VE482/Projects/p2/src/query/data/SubQuery.cpp
+/home/peterism/Desktop/ve482/p2/master/p2/query/data/SubQuery.cpp
 SubQuery.h
-/home/charles/VE482/Projects/p2/src/query/data/SubQuery.h
+/home/peterism/Desktop/ve482/p2/master/p2/query/data/SubQuery.h
 ../../db/Database.h
-/home/charles/VE482/Projects/p2/src/db/Database.h
+/home/peterism/Desktop/ve482/p2/master/p2/db/Database.h
 
-/home/charles/VE482/Projects/p2/src/query/data/SubQuery.h
+/home/peterism/Desktop/ve482/p2/master/p2/query/data/SubQuery.h
 ../Query.h
-/home/charles/VE482/Projects/p2/src/query/Query.h
+/home/peterism/Desktop/ve482/p2/master/p2/query/Query.h
 
-/home/charles/VE482/Projects/p2/src/query/data/SwapQuery.cpp
+/home/peterism/Desktop/ve482/p2/master/p2/query/data/SwapQuery.cpp
 SwapQuery.h
-/home/charles/VE482/Projects/p2/src/query/data/SwapQuery.h
+/home/peterism/Desktop/ve482/p2/master/p2/query/data/SwapQuery.h
 ../../db/Database.h
-/home/charles/VE482/Projects/p2/src/db/Database.h
+/home/peterism/Desktop/ve482/p2/master/p2/db/Database.h
 
-/home/charles/VE482/Projects/p2/src/query/data/SwapQuery.h
+/home/peterism/Desktop/ve482/p2/master/p2/query/data/SwapQuery.h
 ../Query.h
-/home/charles/VE482/Projects/p2/src/query/Query.h
+/home/peterism/Desktop/ve482/p2/master/p2/query/Query.h
 
-/home/charles/VE482/Projects/p2/src/query/data/UpdateQuery.cpp
+/home/peterism/Desktop/ve482/p2/master/p2/query/data/UpdateQuery.cpp
 UpdateQuery.h
-/home/charles/VE482/Projects/p2/src/query/data/UpdateQuery.h
+/home/peterism/Desktop/ve482/p2/master/p2/query/data/UpdateQuery.h
 ../../db/Database.h
-/home/charles/VE482/Projects/p2/src/db/Database.h
+/home/peterism/Desktop/ve482/p2/master/p2/db/Database.h
 
-/home/charles/VE482/Projects/p2/src/query/data/UpdateQuery.h
+/home/peterism/Desktop/ve482/p2/master/p2/query/data/UpdateQuery.h
 ../Query.h
-/home/charles/VE482/Projects/p2/src/query/Query.h
+/home/peterism/Desktop/ve482/p2/master/p2/query/Query.h
 
-/home/charles/VE482/Projects/p2/src/query/management/CopyTableQuery.cpp
+/home/peterism/Desktop/ve482/p2/master/p2/query/management/CopyTableQuery.cpp
 CopyTableQuery.h
-/home/charles/VE482/Projects/p2/src/query/management/CopyTableQuery.h
+/home/peterism/Desktop/ve482/p2/master/p2/query/management/CopyTableQuery.h
 ../../db/Database.h
-/home/charles/VE482/Projects/p2/src/db/Database.h
+/home/peterism/Desktop/ve482/p2/master/p2/db/Database.h
 
-/home/charles/VE482/Projects/p2/src/query/management/CopyTableQuery.h
+/home/peterism/Desktop/ve482/p2/master/p2/query/management/CopyTableQuery.h
 ../Query.h
-/home/charles/VE482/Projects/p2/src/query/Query.h
+/home/peterism/Desktop/ve482/p2/master/p2/query/Query.h
 
-/home/charles/VE482/Projects/p2/src/query/management/DropTableQuery.cpp
+/home/peterism/Desktop/ve482/p2/master/p2/query/management/DropTableQuery.cpp
 DropTableQuery.h
-/home/charles/VE482/Projects/p2/src/query/management/DropTableQuery.h
+/home/peterism/Desktop/ve482/p2/master/p2/query/management/DropTableQuery.h
 ../../db/Database.h
-/home/charles/VE482/Projects/p2/src/db/Database.h
+/home/peterism/Desktop/ve482/p2/master/p2/db/Database.h
 
-/home/charles/VE482/Projects/p2/src/query/management/DropTableQuery.h
+/home/peterism/Desktop/ve482/p2/master/p2/query/management/DropTableQuery.h
 ../Query.h
-/home/charles/VE482/Projects/p2/src/query/Query.h
+/home/peterism/Desktop/ve482/p2/master/p2/query/Query.h
 
-/home/charles/VE482/Projects/p2/src/query/management/DumpTableQuery.cpp
+/home/peterism/Desktop/ve482/p2/master/p2/query/management/DumpTableQuery.cpp
 DumpTableQuery.h
-/home/charles/VE482/Projects/p2/src/query/management/DumpTableQuery.h
+/home/peterism/Desktop/ve482/p2/master/p2/query/management/DumpTableQuery.h
 ../../db/Database.h
-/home/charles/VE482/Projects/p2/src/db/Database.h
+/home/peterism/Desktop/ve482/p2/master/p2/db/Database.h
 fstream
 -
 
-/home/charles/VE482/Projects/p2/src/query/management/DumpTableQuery.h
+/home/peterism/Desktop/ve482/p2/master/p2/query/management/DumpTableQuery.h
 ../Query.h
-/home/charles/VE482/Projects/p2/src/query/Query.h
+/home/peterism/Desktop/ve482/p2/master/p2/query/Query.h
 
-/home/charles/VE482/Projects/p2/src/query/management/ListTableQuery.cpp
+/home/peterism/Desktop/ve482/p2/master/p2/query/management/ListTableQuery.cpp
 ListTableQuery.h
-/home/charles/VE482/Projects/p2/src/query/management/ListTableQuery.h
+/home/peterism/Desktop/ve482/p2/master/p2/query/management/ListTableQuery.h
 ../../db/Database.h
-/home/charles/VE482/Projects/p2/src/db/Database.h
+/home/peterism/Desktop/ve482/p2/master/p2/db/Database.h
 
-/home/charles/VE482/Projects/p2/src/query/management/ListTableQuery.h
+/home/peterism/Desktop/ve482/p2/master/p2/query/management/ListTableQuery.h
 ../Query.h
-/home/charles/VE482/Projects/p2/src/query/Query.h
+/home/peterism/Desktop/ve482/p2/master/p2/query/Query.h
 
-/home/charles/VE482/Projects/p2/src/query/management/LoadTableQuery.cpp
+/home/peterism/Desktop/ve482/p2/master/p2/query/management/LoadTableQuery.cpp
 LoadTableQuery.h
-/home/charles/VE482/Projects/p2/src/query/management/LoadTableQuery.h
+/home/peterism/Desktop/ve482/p2/master/p2/query/management/LoadTableQuery.h
 ../../db/Database.h
-/home/charles/VE482/Projects/p2/src/db/Database.h
+/home/peterism/Desktop/ve482/p2/master/p2/db/Database.h
 fstream
 -
 
-/home/charles/VE482/Projects/p2/src/query/management/LoadTableQuery.h
+/home/peterism/Desktop/ve482/p2/master/p2/query/management/LoadTableQuery.h
 ../Query.h
-/home/charles/VE482/Projects/p2/src/query/Query.h
+/home/peterism/Desktop/ve482/p2/master/p2/query/Query.h
 
-/home/charles/VE482/Projects/p2/src/query/management/PrintTableQuery.cpp
+/home/peterism/Desktop/ve482/p2/master/p2/query/management/PrintTableQuery.cpp
 PrintTableQuery.h
-/home/charles/VE482/Projects/p2/src/query/management/PrintTableQuery.h
+/home/peterism/Desktop/ve482/p2/master/p2/query/management/PrintTableQuery.h
 ../../db/Database.h
-/home/charles/VE482/Projects/p2/src/db/Database.h
+/home/peterism/Desktop/ve482/p2/master/p2/db/Database.h
 iostream
 -
 
-/home/charles/VE482/Projects/p2/src/query/management/PrintTableQuery.h
+/home/peterism/Desktop/ve482/p2/master/p2/query/management/PrintTableQuery.h
 ../Query.h
-/home/charles/VE482/Projects/p2/src/query/Query.h
+/home/peterism/Desktop/ve482/p2/master/p2/query/Query.h
 
-/home/charles/VE482/Projects/p2/src/query/management/QuitQuery.cpp
+/home/peterism/Desktop/ve482/p2/master/p2/query/management/QuitQuery.cpp
 QuitQuery.h
-/home/charles/VE482/Projects/p2/src/query/management/QuitQuery.h
+/home/peterism/Desktop/ve482/p2/master/p2/query/management/QuitQuery.h
 ../../db/Database.h
-/home/charles/VE482/Projects/p2/src/db/Database.h
+/home/peterism/Desktop/ve482/p2/master/p2/db/Database.h
 
-/home/charles/VE482/Projects/p2/src/query/management/QuitQuery.h
+/home/peterism/Desktop/ve482/p2/master/p2/query/management/QuitQuery.h
 ../Query.h
-/home/charles/VE482/Projects/p2/src/query/Query.h
+/home/peterism/Desktop/ve482/p2/master/p2/query/Query.h
 
-/home/charles/VE482/Projects/p2/src/query/management/TruncateTableQuery.cpp
+/home/peterism/Desktop/ve482/p2/master/p2/query/management/TruncateTableQuery.cpp
 TruncateTableQuery.h
-/home/charles/VE482/Projects/p2/src/query/management/TruncateTableQuery.h
+/home/peterism/Desktop/ve482/p2/master/p2/query/management/TruncateTableQuery.h
 ../../db/Database.h
-/home/charles/VE482/Projects/p2/src/db/Database.h
+/home/peterism/Desktop/ve482/p2/master/p2/db/Database.h
 
-/home/charles/VE482/Projects/p2/src/query/management/TruncateTableQuery.h
+/home/peterism/Desktop/ve482/p2/master/p2/query/management/TruncateTableQuery.h
 ../Query.h
-/home/charles/VE482/Projects/p2/src/query/Query.h
+/home/peterism/Desktop/ve482/p2/master/p2/query/Query.h
 
-/home/charles/VE482/Projects/p2/src/utils/formatter.h
+/home/peterism/Desktop/ve482/p2/master/p2/utils/formatter.h
 vector
 -
 string
 -
 
-/home/charles/VE482/Projects/p2/src/utils/uexception.h
+/home/peterism/Desktop/ve482/p2/master/p2/utils/uexception.h
 exception
 -
 stdexcept
@@ -340,5 +340,5 @@ stdexcept
 string
 -
 formatter.h
-/home/charles/VE482/Projects/p2/src/utils/formatter.h
+/home/peterism/Desktop/ve482/p2/master/p2/utils/formatter.h
 
