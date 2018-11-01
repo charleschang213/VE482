@@ -277,6 +277,8 @@ SelectQuery.h
 /home/charles/VE482/Projects/p2/src/db/Database.h
 iostream
 -
+algorithm
+-
 
 /home/charles/VE482/Projects/p2/src/query/data/SelectQuery.h
 ../Query.h
