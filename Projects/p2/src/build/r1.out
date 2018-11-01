@@ -16497,19 +16497,19 @@ Affected 1 rows.
 ( rFFF7 392 -588 -195 -588 392 )
 ( rFFF9 -370 830 929 830 -370 )
 50
-ANSWER = 31
+Answer = 31
 51
 Affected 0 rows.
 52
-ANSWER = 31
+Answer = 31
 53
 Affected 17 rows.
 54
-ANSWER = 48
+Answer = 48
 55
 Affected 12 rows.
 56
-ANSWER = 60
+Answer = 60
 57
 ( r1 -7 11 )
 ( r10 12 -24 )
@@ -16635,7 +16635,7 @@ Affected 26 rows.
 ( rF 12 18 )
 ( rF_copy 12 18 )
 60
-ANSWER = 18108
+Answer = 18108
 61
 Answer = ( 101811 -116121 82056 212606 120568 )
 62
@@ -16697,19 +16697,19 @@ Answer = ( 43 30 0 30 30 )
 102
 103
 104
-ANSWER = 23
+Answer = 23
 105
 Affected 0 rows.
 106
-ANSWER = 23
+Answer = 23
 107
 Affected 12 rows.
 108
-ANSWER = 35
+Answer = 35
 109
 Affected 8 rows.
 110
-ANSWER = 43
+Answer = 43
 111
 ( r11 -10 -6 )
 ( r11_copy -10 -6 )
@@ -16801,7 +16801,7 @@ Affected 19 rows.
 ( r27 26 -2 )
 ( r27_copy 26 -2 )
 114
-ANSWER = 18108
+Answer = 18108
 115
 Answer = ( 203883 -116121 82056 212606 120568 )
 116
