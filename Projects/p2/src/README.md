@@ -1,4 +1,7 @@
 # Project2 Instruction  
+
+Zhang Yichi
+
 ## To-do List
 1. Implement all management/data queries
 
@@ -33,3 +36,4 @@
   3. get a copy from server using git pull origin master
   4. (if not appear in step 3) merge master use git merge master
   5. push using git push origin xxx:master 
++ The return value of the execute() of each determines how the message (not the tostring() function) will be printed if the query is successful. Please refer to query/QueryResult.h ato choose the proper return type

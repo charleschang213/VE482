@@ -36,7 +36,11 @@ CMakeFiles/lemondb.dir/query/QueryBuilders.cpp.o: ../query/QueryBuilders.cpp
 CMakeFiles/lemondb.dir/query/QueryBuilders.cpp.o: ../query/QueryBuilders.h
 CMakeFiles/lemondb.dir/query/QueryBuilders.cpp.o: ../query/QueryParser.h
 CMakeFiles/lemondb.dir/query/QueryBuilders.cpp.o: ../query/QueryResult.h
+CMakeFiles/lemondb.dir/query/QueryBuilders.cpp.o: ../query/data/AddQuery.h
+CMakeFiles/lemondb.dir/query/QueryBuilders.cpp.o: ../query/data/DeleteQuery.h
 CMakeFiles/lemondb.dir/query/QueryBuilders.cpp.o: ../query/data/InsertQuery.h
+CMakeFiles/lemondb.dir/query/QueryBuilders.cpp.o: ../query/data/SubQuery.h
+CMakeFiles/lemondb.dir/query/QueryBuilders.cpp.o: ../query/data/SwapQuery.h
 CMakeFiles/lemondb.dir/query/QueryBuilders.cpp.o: ../query/data/UpdateQuery.h
 CMakeFiles/lemondb.dir/query/QueryBuilders.cpp.o: ../query/management/CopyTableQuery.h
 CMakeFiles/lemondb.dir/query/QueryBuilders.cpp.o: ../query/management/DropTableQuery.h
@@ -62,6 +66,24 @@ CMakeFiles/lemondb.dir/query/QueryResult.cpp.o: ../query/QueryResult.cpp
 CMakeFiles/lemondb.dir/query/QueryResult.cpp.o: ../query/QueryResult.h
 CMakeFiles/lemondb.dir/query/QueryResult.cpp.o: ../utils/formatter.h
 
+CMakeFiles/lemondb.dir/query/data/AddQuery.cpp.o: ../db/Database.h
+CMakeFiles/lemondb.dir/query/data/AddQuery.cpp.o: ../db/Table.h
+CMakeFiles/lemondb.dir/query/data/AddQuery.cpp.o: ../query/Query.h
+CMakeFiles/lemondb.dir/query/data/AddQuery.cpp.o: ../query/QueryResult.h
+CMakeFiles/lemondb.dir/query/data/AddQuery.cpp.o: ../query/data/AddQuery.cpp
+CMakeFiles/lemondb.dir/query/data/AddQuery.cpp.o: ../query/data/AddQuery.h
+CMakeFiles/lemondb.dir/query/data/AddQuery.cpp.o: ../utils/formatter.h
+CMakeFiles/lemondb.dir/query/data/AddQuery.cpp.o: ../utils/uexception.h
+
+CMakeFiles/lemondb.dir/query/data/DeleteQuery.cpp.o: ../db/Database.h
+CMakeFiles/lemondb.dir/query/data/DeleteQuery.cpp.o: ../db/Table.h
+CMakeFiles/lemondb.dir/query/data/DeleteQuery.cpp.o: ../query/Query.h
+CMakeFiles/lemondb.dir/query/data/DeleteQuery.cpp.o: ../query/QueryResult.h
+CMakeFiles/lemondb.dir/query/data/DeleteQuery.cpp.o: ../query/data/DeleteQuery.cpp
+CMakeFiles/lemondb.dir/query/data/DeleteQuery.cpp.o: ../query/data/DeleteQuery.h
+CMakeFiles/lemondb.dir/query/data/DeleteQuery.cpp.o: ../utils/formatter.h
+CMakeFiles/lemondb.dir/query/data/DeleteQuery.cpp.o: ../utils/uexception.h
+
 CMakeFiles/lemondb.dir/query/data/InsertQuery.cpp.o: ../db/Database.h
 CMakeFiles/lemondb.dir/query/data/InsertQuery.cpp.o: ../db/Table.h
 CMakeFiles/lemondb.dir/query/data/InsertQuery.cpp.o: ../query/Query.h
@@ -70,6 +92,24 @@ CMakeFiles/lemondb.dir/query/data/InsertQuery.cpp.o: ../query/data/InsertQuery.c
 CMakeFiles/lemondb.dir/query/data/InsertQuery.cpp.o: ../query/data/InsertQuery.h
 CMakeFiles/lemondb.dir/query/data/InsertQuery.cpp.o: ../utils/formatter.h
 CMakeFiles/lemondb.dir/query/data/InsertQuery.cpp.o: ../utils/uexception.h
+
+CMakeFiles/lemondb.dir/query/data/SubQuery.cpp.o: ../db/Database.h
+CMakeFiles/lemondb.dir/query/data/SubQuery.cpp.o: ../db/Table.h
+CMakeFiles/lemondb.dir/query/data/SubQuery.cpp.o: ../query/Query.h
+CMakeFiles/lemondb.dir/query/data/SubQuery.cpp.o: ../query/QueryResult.h
+CMakeFiles/lemondb.dir/query/data/SubQuery.cpp.o: ../query/data/SubQuery.cpp
+CMakeFiles/lemondb.dir/query/data/SubQuery.cpp.o: ../query/data/SubQuery.h
+CMakeFiles/lemondb.dir/query/data/SubQuery.cpp.o: ../utils/formatter.h
+CMakeFiles/lemondb.dir/query/data/SubQuery.cpp.o: ../utils/uexception.h
+
+CMakeFiles/lemondb.dir/query/data/SwapQuery.cpp.o: ../db/Database.h
+CMakeFiles/lemondb.dir/query/data/SwapQuery.cpp.o: ../db/Table.h
+CMakeFiles/lemondb.dir/query/data/SwapQuery.cpp.o: ../query/Query.h
+CMakeFiles/lemondb.dir/query/data/SwapQuery.cpp.o: ../query/QueryResult.h
+CMakeFiles/lemondb.dir/query/data/SwapQuery.cpp.o: ../query/data/SwapQuery.cpp
+CMakeFiles/lemondb.dir/query/data/SwapQuery.cpp.o: ../query/data/SwapQuery.h
+CMakeFiles/lemondb.dir/query/data/SwapQuery.cpp.o: ../utils/formatter.h
+CMakeFiles/lemondb.dir/query/data/SwapQuery.cpp.o: ../utils/uexception.h
 
 CMakeFiles/lemondb.dir/query/data/UpdateQuery.cpp.o: ../db/Database.h
 CMakeFiles/lemondb.dir/query/data/UpdateQuery.cpp.o: ../db/Table.h

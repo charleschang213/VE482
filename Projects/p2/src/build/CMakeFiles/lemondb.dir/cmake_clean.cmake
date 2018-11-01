@@ -16,6 +16,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/lemondb.dir/query/management/PrintTableQuery.cpp.o"
   "CMakeFiles/lemondb.dir/query/data/InsertQuery.cpp.o"
   "CMakeFiles/lemondb.dir/query/data/UpdateQuery.cpp.o"
+  "CMakeFiles/lemondb.dir/query/data/DeleteQuery.cpp.o"
+  "CMakeFiles/lemondb.dir/query/data/AddQuery.cpp.o"
+  "CMakeFiles/lemondb.dir/query/data/SubQuery.cpp.o"
+  "CMakeFiles/lemondb.dir/query/data/SwapQuery.cpp.o"
   "lemondb.pdb"
   "lemondb"
 )

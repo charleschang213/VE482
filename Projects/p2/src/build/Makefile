@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/charles/VE482/Projects/p2/src
+CMAKE_SOURCE_DIR = /home/peterism/Desktop/ve482/p2/master/p2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/charles/VE482/Projects/p2/src/build
+CMAKE_BINARY_DIR = /home/peterism/Desktop/ve482/p2/master/p2/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/charles/VE482/Projects/p2/src/build/CMakeFiles /home/charles/VE482/Projects/p2/src/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/peterism/Desktop/ve482/p2/master/p2/build/CMakeFiles /home/peterism/Desktop/ve482/p2/master/p2/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/charles/VE482/Projects/p2/src/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/peterism/Desktop/ve482/p2/master/p2/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -312,6 +312,60 @@ query/QueryResult.cpp.s:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/QueryResult.cpp.s
 .PHONY : query/QueryResult.cpp.s
 
+query/data/AddQuery.o: query/data/AddQuery.cpp.o
+
+.PHONY : query/data/AddQuery.o
+
+# target to build an object file
+query/data/AddQuery.cpp.o:
+	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/data/AddQuery.cpp.o
+.PHONY : query/data/AddQuery.cpp.o
+
+query/data/AddQuery.i: query/data/AddQuery.cpp.i
+
+.PHONY : query/data/AddQuery.i
+
+# target to preprocess a source file
+query/data/AddQuery.cpp.i:
+	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/data/AddQuery.cpp.i
+.PHONY : query/data/AddQuery.cpp.i
+
+query/data/AddQuery.s: query/data/AddQuery.cpp.s
+
+.PHONY : query/data/AddQuery.s
+
+# target to generate assembly for a file
+query/data/AddQuery.cpp.s:
+	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/data/AddQuery.cpp.s
+.PHONY : query/data/AddQuery.cpp.s
+
+query/data/DeleteQuery.o: query/data/DeleteQuery.cpp.o
+
+.PHONY : query/data/DeleteQuery.o
+
+# target to build an object file
+query/data/DeleteQuery.cpp.o:
+	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/data/DeleteQuery.cpp.o
+.PHONY : query/data/DeleteQuery.cpp.o
+
+query/data/DeleteQuery.i: query/data/DeleteQuery.cpp.i
+
+.PHONY : query/data/DeleteQuery.i
+
+# target to preprocess a source file
+query/data/DeleteQuery.cpp.i:
+	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/data/DeleteQuery.cpp.i
+.PHONY : query/data/DeleteQuery.cpp.i
+
+query/data/DeleteQuery.s: query/data/DeleteQuery.cpp.s
+
+.PHONY : query/data/DeleteQuery.s
+
+# target to generate assembly for a file
+query/data/DeleteQuery.cpp.s:
+	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/data/DeleteQuery.cpp.s
+.PHONY : query/data/DeleteQuery.cpp.s
+
 query/data/InsertQuery.o: query/data/InsertQuery.cpp.o
 
 .PHONY : query/data/InsertQuery.o
@@ -338,6 +392,60 @@ query/data/InsertQuery.s: query/data/InsertQuery.cpp.s
 query/data/InsertQuery.cpp.s:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/data/InsertQuery.cpp.s
 .PHONY : query/data/InsertQuery.cpp.s
+
+query/data/SubQuery.o: query/data/SubQuery.cpp.o
+
+.PHONY : query/data/SubQuery.o
+
+# target to build an object file
+query/data/SubQuery.cpp.o:
+	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/data/SubQuery.cpp.o
+.PHONY : query/data/SubQuery.cpp.o
+
+query/data/SubQuery.i: query/data/SubQuery.cpp.i
+
+.PHONY : query/data/SubQuery.i
+
+# target to preprocess a source file
+query/data/SubQuery.cpp.i:
+	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/data/SubQuery.cpp.i
+.PHONY : query/data/SubQuery.cpp.i
+
+query/data/SubQuery.s: query/data/SubQuery.cpp.s
+
+.PHONY : query/data/SubQuery.s
+
+# target to generate assembly for a file
+query/data/SubQuery.cpp.s:
+	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/data/SubQuery.cpp.s
+.PHONY : query/data/SubQuery.cpp.s
+
+query/data/SwapQuery.o: query/data/SwapQuery.cpp.o
+
+.PHONY : query/data/SwapQuery.o
+
+# target to build an object file
+query/data/SwapQuery.cpp.o:
+	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/data/SwapQuery.cpp.o
+.PHONY : query/data/SwapQuery.cpp.o
+
+query/data/SwapQuery.i: query/data/SwapQuery.cpp.i
+
+.PHONY : query/data/SwapQuery.i
+
+# target to preprocess a source file
+query/data/SwapQuery.cpp.i:
+	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/data/SwapQuery.cpp.i
+.PHONY : query/data/SwapQuery.cpp.i
+
+query/data/SwapQuery.s: query/data/SwapQuery.cpp.s
+
+.PHONY : query/data/SwapQuery.s
+
+# target to generate assembly for a file
+query/data/SwapQuery.cpp.s:
+	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/data/SwapQuery.cpp.s
+.PHONY : query/data/SwapQuery.cpp.s
 
 query/data/UpdateQuery.o: query/data/UpdateQuery.cpp.o
 
@@ -612,9 +720,21 @@ help:
 	@echo "... query/QueryResult.o"
 	@echo "... query/QueryResult.i"
 	@echo "... query/QueryResult.s"
+	@echo "... query/data/AddQuery.o"
+	@echo "... query/data/AddQuery.i"
+	@echo "... query/data/AddQuery.s"
+	@echo "... query/data/DeleteQuery.o"
+	@echo "... query/data/DeleteQuery.i"
+	@echo "... query/data/DeleteQuery.s"
 	@echo "... query/data/InsertQuery.o"
 	@echo "... query/data/InsertQuery.i"
 	@echo "... query/data/InsertQuery.s"
+	@echo "... query/data/SubQuery.o"
+	@echo "... query/data/SubQuery.i"
+	@echo "... query/data/SubQuery.s"
+	@echo "... query/data/SwapQuery.o"
+	@echo "... query/data/SwapQuery.i"
+	@echo "... query/data/SwapQuery.s"
 	@echo "... query/data/UpdateQuery.o"
 	@echo "... query/data/UpdateQuery.i"
 	@echo "... query/data/UpdateQuery.s"

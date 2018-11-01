@@ -1,4 +1,4 @@
-# Install script for directory: /home/charles/VE482/Projects/p2/src
+# Install script for directory: /home/peterism/Desktop/ve482/p2/master/p2
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/charles/VE482/Projects/p2/src/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/peterism/Desktop/ve482/p2/master/p2/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
