@@ -13,9 +13,9 @@
 
 class MaxQuery : public ComplexQuery {
     static constexpr const char *qname = "MAX";
-    Table::ValueType fieldValue;// = (operands[0]=="KEY")? 0 :std::stoi(operands[1]);
-    Table::FieldIndex fieldId;
-    Table::KeyType keyValue;
+    //Table::ValueType fieldValue;// = (operands[0]=="KEY")? 0 :std::stoi(operands[1]);
+    //Table::FieldIndex fieldId;
+    //Table::KeyType keyValue;
 public:
     using ComplexQuery::ComplexQuery;
     

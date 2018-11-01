@@ -5,6 +5,7 @@
 #include "SelectQuery.h"
 #include "../../db/Database.h"
 #include <iostream>
+#include <algorithm>
 
 constexpr const char *SelectQuery::qname;
 
@@ -20,22 +21,28 @@ QueryResult::Ptr SelectQuery::execute() {
     Database &db = Database::getInstance();
 
     auto &table = db[this->targetTable];
+    vector <Table::KeyType> answer;
     auto result = initCondition(table);
     if (result.second) {
         for (auto it = table.begin(); it != table.end(); ++it) {
             if (this->evalCondition(*it)) {
-                cout.flush();
-                cout << "( " << it->key();
-                cout.flush();
-                for (size_t i = 1; i < operands.size(); i++) {
-                    cout.flush();
-                    cout << " " << (*it)[operands[i]];
-                    cout.flush();
-                }
-                cout.flush();
-                cout << " )\n";
-                cout.flush();
+                answer.push_back(it->key());
             }
+        }
+        sort(answer.begin(),answer.end());
+        for (auto ob:answer){
+            cout.flush();
+            cout << "( " << ob;
+            cout.flush();
+            auto tuple = table[ob];
+             for (size_t i = 1; i < operands.size(); i++) {
+                    cout.flush();
+                    cout << " " << (*tuple)[operands[i]];
+                    cout.flush();
+            }
+            cout.flush();
+            cout << " )\n";
+            cout.flush();
         }
     }
 

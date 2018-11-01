@@ -118,8 +118,8 @@ int main(int argc, char *argv[]) {
             // REPL: Read-Evaluate-Print-Loop
             std::string queryStr = extractQueryString(is);
             Query::Ptr query = p.parseQuery(queryStr);
-            QueryResult::Ptr result = query->execute();
             std::cout << ++counter << "\n";
+            QueryResult::Ptr result = query->execute();
             if (result->success()) {
                 if (result->display()) {
                     std::cout << *result;
