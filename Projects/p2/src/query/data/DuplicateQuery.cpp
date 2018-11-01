@@ -25,6 +25,7 @@ QueryResult::Ptr DuplicateQuery::execute() {
         auto it = table.begin();
         auto si = table.size();
         for (size_t i=0; i!=si; ++i) {
+            auto oldkey = (it->key());
             if (this->evalCondition(*it)) {
                 auto newkey = (it->key());
                 newkey+="_copy";
@@ -37,6 +38,7 @@ QueryResult::Ptr DuplicateQuery::execute() {
                 }
                 table.insertByIndex(newkey, move(data));
             }
+            for (it=table.begin();it->key()!=oldkey;++it);
             ++it;
         }
     }
