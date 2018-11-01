@@ -24,7 +24,7 @@ QueryResult::Ptr DuplicateQuery::execute() {
     if (result.second) {
         auto it = table.begin();
         auto si = table.size();
-        for (auto i=0; i!=si; ++i) {
+        for (size_t i=0; i!=si; ++i) {
             if (this->evalCondition(*it)) {
                 auto newkey = (it->key());
                 newkey+="_copy";
