@@ -85,7 +85,7 @@ public:
 
     explicit SuccessMsgResult(std::vector<int> results) {
         std::stringstream ss;
-        ss << "Answer = ( ";
+        ss << "ANSWER = ( ";
         for (auto result : results) {
             ss << result << " ";
         }
