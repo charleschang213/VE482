@@ -31,7 +31,7 @@ QueryResult::Ptr CountQuery::execute() {
         }
     }
     cout.flush();
-    cout<<"ANSWER = "<<counter<<endl;
+    cout<<"Answer = "<<counter<<endl;
     cout.flush();
     return make_unique<NullQueryResult>();
 }
