@@ -633,6 +633,78 @@ CMakeFiles/lemondb.dir/query/data/DuplicateQuery.cpp.o.provides: CMakeFiles/lemo
 CMakeFiles/lemondb.dir/query/data/DuplicateQuery.cpp.o.provides.build: CMakeFiles/lemondb.dir/query/data/DuplicateQuery.cpp.o
 
 
+CMakeFiles/lemondb.dir/query/data/SumQuery.cpp.o: CMakeFiles/lemondb.dir/flags.make
+CMakeFiles/lemondb.dir/query/data/SumQuery.cpp.o: ../query/data/SumQuery.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/charles/VE482/Projects/p2/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/lemondb.dir/query/data/SumQuery.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lemondb.dir/query/data/SumQuery.cpp.o -c /home/charles/VE482/Projects/p2/src/query/data/SumQuery.cpp
+
+CMakeFiles/lemondb.dir/query/data/SumQuery.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lemondb.dir/query/data/SumQuery.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/charles/VE482/Projects/p2/src/query/data/SumQuery.cpp > CMakeFiles/lemondb.dir/query/data/SumQuery.cpp.i
+
+CMakeFiles/lemondb.dir/query/data/SumQuery.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lemondb.dir/query/data/SumQuery.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/charles/VE482/Projects/p2/src/query/data/SumQuery.cpp -o CMakeFiles/lemondb.dir/query/data/SumQuery.cpp.s
+
+CMakeFiles/lemondb.dir/query/data/SumQuery.cpp.o.requires:
+
+.PHONY : CMakeFiles/lemondb.dir/query/data/SumQuery.cpp.o.requires
+
+CMakeFiles/lemondb.dir/query/data/SumQuery.cpp.o.provides: CMakeFiles/lemondb.dir/query/data/SumQuery.cpp.o.requires
+	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/data/SumQuery.cpp.o.provides.build
+.PHONY : CMakeFiles/lemondb.dir/query/data/SumQuery.cpp.o.provides
+
+CMakeFiles/lemondb.dir/query/data/SumQuery.cpp.o.provides.build: CMakeFiles/lemondb.dir/query/data/SumQuery.cpp.o
+
+
+CMakeFiles/lemondb.dir/query/data/MaxQuery.cpp.o: CMakeFiles/lemondb.dir/flags.make
+CMakeFiles/lemondb.dir/query/data/MaxQuery.cpp.o: ../query/data/MaxQuery.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/charles/VE482/Projects/p2/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/lemondb.dir/query/data/MaxQuery.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lemondb.dir/query/data/MaxQuery.cpp.o -c /home/charles/VE482/Projects/p2/src/query/data/MaxQuery.cpp
+
+CMakeFiles/lemondb.dir/query/data/MaxQuery.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lemondb.dir/query/data/MaxQuery.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/charles/VE482/Projects/p2/src/query/data/MaxQuery.cpp > CMakeFiles/lemondb.dir/query/data/MaxQuery.cpp.i
+
+CMakeFiles/lemondb.dir/query/data/MaxQuery.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lemondb.dir/query/data/MaxQuery.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/charles/VE482/Projects/p2/src/query/data/MaxQuery.cpp -o CMakeFiles/lemondb.dir/query/data/MaxQuery.cpp.s
+
+CMakeFiles/lemondb.dir/query/data/MaxQuery.cpp.o.requires:
+
+.PHONY : CMakeFiles/lemondb.dir/query/data/MaxQuery.cpp.o.requires
+
+CMakeFiles/lemondb.dir/query/data/MaxQuery.cpp.o.provides: CMakeFiles/lemondb.dir/query/data/MaxQuery.cpp.o.requires
+	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/data/MaxQuery.cpp.o.provides.build
+.PHONY : CMakeFiles/lemondb.dir/query/data/MaxQuery.cpp.o.provides
+
+CMakeFiles/lemondb.dir/query/data/MaxQuery.cpp.o.provides.build: CMakeFiles/lemondb.dir/query/data/MaxQuery.cpp.o
+
+
+CMakeFiles/lemondb.dir/query/data/MinQuery.cpp.o: CMakeFiles/lemondb.dir/flags.make
+CMakeFiles/lemondb.dir/query/data/MinQuery.cpp.o: ../query/data/MinQuery.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/charles/VE482/Projects/p2/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/lemondb.dir/query/data/MinQuery.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lemondb.dir/query/data/MinQuery.cpp.o -c /home/charles/VE482/Projects/p2/src/query/data/MinQuery.cpp
+
+CMakeFiles/lemondb.dir/query/data/MinQuery.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lemondb.dir/query/data/MinQuery.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/charles/VE482/Projects/p2/src/query/data/MinQuery.cpp > CMakeFiles/lemondb.dir/query/data/MinQuery.cpp.i
+
+CMakeFiles/lemondb.dir/query/data/MinQuery.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lemondb.dir/query/data/MinQuery.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/charles/VE482/Projects/p2/src/query/data/MinQuery.cpp -o CMakeFiles/lemondb.dir/query/data/MinQuery.cpp.s
+
+CMakeFiles/lemondb.dir/query/data/MinQuery.cpp.o.requires:
+
+.PHONY : CMakeFiles/lemondb.dir/query/data/MinQuery.cpp.o.requires
+
+CMakeFiles/lemondb.dir/query/data/MinQuery.cpp.o.provides: CMakeFiles/lemondb.dir/query/data/MinQuery.cpp.o.requires
+	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/data/MinQuery.cpp.o.provides.build
+.PHONY : CMakeFiles/lemondb.dir/query/data/MinQuery.cpp.o.provides
+
+CMakeFiles/lemondb.dir/query/data/MinQuery.cpp.o.provides.build: CMakeFiles/lemondb.dir/query/data/MinQuery.cpp.o
+
+
 # Object files for target lemondb
 lemondb_OBJECTS = \
 "CMakeFiles/lemondb.dir/main.cpp.o" \
@@ -658,7 +730,10 @@ lemondb_OBJECTS = \
 "CMakeFiles/lemondb.dir/query/data/SwapQuery.cpp.o" \
 "CMakeFiles/lemondb.dir/query/data/CountQuery.cpp.o" \
 "CMakeFiles/lemondb.dir/query/data/SelectQuery.cpp.o" \
-"CMakeFiles/lemondb.dir/query/data/DuplicateQuery.cpp.o"
+"CMakeFiles/lemondb.dir/query/data/DuplicateQuery.cpp.o" \
+"CMakeFiles/lemondb.dir/query/data/SumQuery.cpp.o" \
+"CMakeFiles/lemondb.dir/query/data/MaxQuery.cpp.o" \
+"CMakeFiles/lemondb.dir/query/data/MinQuery.cpp.o"
 
 # External object files for target lemondb
 lemondb_EXTERNAL_OBJECTS =
@@ -687,9 +762,12 @@ lemondb: CMakeFiles/lemondb.dir/query/data/SwapQuery.cpp.o
 lemondb: CMakeFiles/lemondb.dir/query/data/CountQuery.cpp.o
 lemondb: CMakeFiles/lemondb.dir/query/data/SelectQuery.cpp.o
 lemondb: CMakeFiles/lemondb.dir/query/data/DuplicateQuery.cpp.o
+lemondb: CMakeFiles/lemondb.dir/query/data/SumQuery.cpp.o
+lemondb: CMakeFiles/lemondb.dir/query/data/MaxQuery.cpp.o
+lemondb: CMakeFiles/lemondb.dir/query/data/MinQuery.cpp.o
 lemondb: CMakeFiles/lemondb.dir/build.make
 lemondb: CMakeFiles/lemondb.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/charles/VE482/Projects/p2/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Linking CXX executable lemondb"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/charles/VE482/Projects/p2/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Linking CXX executable lemondb"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/lemondb.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -721,6 +799,9 @@ CMakeFiles/lemondb.dir/requires: CMakeFiles/lemondb.dir/query/data/SwapQuery.cpp
 CMakeFiles/lemondb.dir/requires: CMakeFiles/lemondb.dir/query/data/CountQuery.cpp.o.requires
 CMakeFiles/lemondb.dir/requires: CMakeFiles/lemondb.dir/query/data/SelectQuery.cpp.o.requires
 CMakeFiles/lemondb.dir/requires: CMakeFiles/lemondb.dir/query/data/DuplicateQuery.cpp.o.requires
+CMakeFiles/lemondb.dir/requires: CMakeFiles/lemondb.dir/query/data/SumQuery.cpp.o.requires
+CMakeFiles/lemondb.dir/requires: CMakeFiles/lemondb.dir/query/data/MaxQuery.cpp.o.requires
+CMakeFiles/lemondb.dir/requires: CMakeFiles/lemondb.dir/query/data/MinQuery.cpp.o.requires
 
 .PHONY : CMakeFiles/lemondb.dir/requires
 

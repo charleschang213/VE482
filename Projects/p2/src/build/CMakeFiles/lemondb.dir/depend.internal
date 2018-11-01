@@ -42,8 +42,11 @@ CMakeFiles/lemondb.dir/query/QueryBuilders.cpp.o
  /home/charles/VE482/Projects/p2/src/query/data/DeleteQuery.h
  /home/charles/VE482/Projects/p2/src/query/data/DuplicateQuery.h
  /home/charles/VE482/Projects/p2/src/query/data/InsertQuery.h
+ /home/charles/VE482/Projects/p2/src/query/data/MaxQuery.h
+ /home/charles/VE482/Projects/p2/src/query/data/MinQuery.h
  /home/charles/VE482/Projects/p2/src/query/data/SelectQuery.h
  /home/charles/VE482/Projects/p2/src/query/data/SubQuery.h
+ /home/charles/VE482/Projects/p2/src/query/data/SumQuery.h
  /home/charles/VE482/Projects/p2/src/query/data/SwapQuery.h
  /home/charles/VE482/Projects/p2/src/query/data/UpdateQuery.h
  /home/charles/VE482/Projects/p2/src/query/management/CopyTableQuery.h
@@ -114,6 +117,24 @@ CMakeFiles/lemondb.dir/query/data/InsertQuery.cpp.o
  /home/charles/VE482/Projects/p2/src/query/data/InsertQuery.h
  /home/charles/VE482/Projects/p2/src/utils/formatter.h
  /home/charles/VE482/Projects/p2/src/utils/uexception.h
+CMakeFiles/lemondb.dir/query/data/MaxQuery.cpp.o
+ /home/charles/VE482/Projects/p2/src/db/Database.h
+ /home/charles/VE482/Projects/p2/src/db/Table.h
+ /home/charles/VE482/Projects/p2/src/query/Query.h
+ /home/charles/VE482/Projects/p2/src/query/QueryResult.h
+ /home/charles/VE482/Projects/p2/src/query/data/MaxQuery.cpp
+ /home/charles/VE482/Projects/p2/src/query/data/MaxQuery.h
+ /home/charles/VE482/Projects/p2/src/utils/formatter.h
+ /home/charles/VE482/Projects/p2/src/utils/uexception.h
+CMakeFiles/lemondb.dir/query/data/MinQuery.cpp.o
+ /home/charles/VE482/Projects/p2/src/db/Database.h
+ /home/charles/VE482/Projects/p2/src/db/Table.h
+ /home/charles/VE482/Projects/p2/src/query/Query.h
+ /home/charles/VE482/Projects/p2/src/query/QueryResult.h
+ /home/charles/VE482/Projects/p2/src/query/data/MinQuery.cpp
+ /home/charles/VE482/Projects/p2/src/query/data/MinQuery.h
+ /home/charles/VE482/Projects/p2/src/utils/formatter.h
+ /home/charles/VE482/Projects/p2/src/utils/uexception.h
 CMakeFiles/lemondb.dir/query/data/SelectQuery.cpp.o
  /home/charles/VE482/Projects/p2/src/db/Database.h
  /home/charles/VE482/Projects/p2/src/db/Table.h
@@ -130,6 +151,15 @@ CMakeFiles/lemondb.dir/query/data/SubQuery.cpp.o
  /home/charles/VE482/Projects/p2/src/query/QueryResult.h
  /home/charles/VE482/Projects/p2/src/query/data/SubQuery.cpp
  /home/charles/VE482/Projects/p2/src/query/data/SubQuery.h
+ /home/charles/VE482/Projects/p2/src/utils/formatter.h
+ /home/charles/VE482/Projects/p2/src/utils/uexception.h
+CMakeFiles/lemondb.dir/query/data/SumQuery.cpp.o
+ /home/charles/VE482/Projects/p2/src/db/Database.h
+ /home/charles/VE482/Projects/p2/src/db/Table.h
+ /home/charles/VE482/Projects/p2/src/query/Query.h
+ /home/charles/VE482/Projects/p2/src/query/QueryResult.h
+ /home/charles/VE482/Projects/p2/src/query/data/SumQuery.cpp
+ /home/charles/VE482/Projects/p2/src/query/data/SumQuery.h
  /home/charles/VE482/Projects/p2/src/utils/formatter.h
  /home/charles/VE482/Projects/p2/src/utils/uexception.h
 CMakeFiles/lemondb.dir/query/data/SwapQuery.cpp.o

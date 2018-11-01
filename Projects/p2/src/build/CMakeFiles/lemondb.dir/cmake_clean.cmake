@@ -23,6 +23,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/lemondb.dir/query/data/CountQuery.cpp.o"
   "CMakeFiles/lemondb.dir/query/data/SelectQuery.cpp.o"
   "CMakeFiles/lemondb.dir/query/data/DuplicateQuery.cpp.o"
+  "CMakeFiles/lemondb.dir/query/data/SumQuery.cpp.o"
+  "CMakeFiles/lemondb.dir/query/data/MaxQuery.cpp.o"
+  "CMakeFiles/lemondb.dir/query/data/MinQuery.cpp.o"
   "lemondb.pdb"
   "lemondb"
 )

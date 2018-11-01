@@ -447,6 +447,60 @@ query/data/InsertQuery.cpp.s:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/data/InsertQuery.cpp.s
 .PHONY : query/data/InsertQuery.cpp.s
 
+query/data/MaxQuery.o: query/data/MaxQuery.cpp.o
+
+.PHONY : query/data/MaxQuery.o
+
+# target to build an object file
+query/data/MaxQuery.cpp.o:
+	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/data/MaxQuery.cpp.o
+.PHONY : query/data/MaxQuery.cpp.o
+
+query/data/MaxQuery.i: query/data/MaxQuery.cpp.i
+
+.PHONY : query/data/MaxQuery.i
+
+# target to preprocess a source file
+query/data/MaxQuery.cpp.i:
+	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/data/MaxQuery.cpp.i
+.PHONY : query/data/MaxQuery.cpp.i
+
+query/data/MaxQuery.s: query/data/MaxQuery.cpp.s
+
+.PHONY : query/data/MaxQuery.s
+
+# target to generate assembly for a file
+query/data/MaxQuery.cpp.s:
+	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/data/MaxQuery.cpp.s
+.PHONY : query/data/MaxQuery.cpp.s
+
+query/data/MinQuery.o: query/data/MinQuery.cpp.o
+
+.PHONY : query/data/MinQuery.o
+
+# target to build an object file
+query/data/MinQuery.cpp.o:
+	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/data/MinQuery.cpp.o
+.PHONY : query/data/MinQuery.cpp.o
+
+query/data/MinQuery.i: query/data/MinQuery.cpp.i
+
+.PHONY : query/data/MinQuery.i
+
+# target to preprocess a source file
+query/data/MinQuery.cpp.i:
+	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/data/MinQuery.cpp.i
+.PHONY : query/data/MinQuery.cpp.i
+
+query/data/MinQuery.s: query/data/MinQuery.cpp.s
+
+.PHONY : query/data/MinQuery.s
+
+# target to generate assembly for a file
+query/data/MinQuery.cpp.s:
+	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/data/MinQuery.cpp.s
+.PHONY : query/data/MinQuery.cpp.s
+
 query/data/SelectQuery.o: query/data/SelectQuery.cpp.o
 
 .PHONY : query/data/SelectQuery.o
@@ -500,6 +554,33 @@ query/data/SubQuery.s: query/data/SubQuery.cpp.s
 query/data/SubQuery.cpp.s:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/data/SubQuery.cpp.s
 .PHONY : query/data/SubQuery.cpp.s
+
+query/data/SumQuery.o: query/data/SumQuery.cpp.o
+
+.PHONY : query/data/SumQuery.o
+
+# target to build an object file
+query/data/SumQuery.cpp.o:
+	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/data/SumQuery.cpp.o
+.PHONY : query/data/SumQuery.cpp.o
+
+query/data/SumQuery.i: query/data/SumQuery.cpp.i
+
+.PHONY : query/data/SumQuery.i
+
+# target to preprocess a source file
+query/data/SumQuery.cpp.i:
+	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/data/SumQuery.cpp.i
+.PHONY : query/data/SumQuery.cpp.i
+
+query/data/SumQuery.s: query/data/SumQuery.cpp.s
+
+.PHONY : query/data/SumQuery.s
+
+# target to generate assembly for a file
+query/data/SumQuery.cpp.s:
+	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/data/SumQuery.cpp.s
+.PHONY : query/data/SumQuery.cpp.s
 
 query/data/SwapQuery.o: query/data/SwapQuery.cpp.o
 
@@ -816,12 +897,21 @@ help:
 	@echo "... query/data/InsertQuery.o"
 	@echo "... query/data/InsertQuery.i"
 	@echo "... query/data/InsertQuery.s"
+	@echo "... query/data/MaxQuery.o"
+	@echo "... query/data/MaxQuery.i"
+	@echo "... query/data/MaxQuery.s"
+	@echo "... query/data/MinQuery.o"
+	@echo "... query/data/MinQuery.i"
+	@echo "... query/data/MinQuery.s"
 	@echo "... query/data/SelectQuery.o"
 	@echo "... query/data/SelectQuery.i"
 	@echo "... query/data/SelectQuery.s"
 	@echo "... query/data/SubQuery.o"
 	@echo "... query/data/SubQuery.i"
 	@echo "... query/data/SubQuery.s"
+	@echo "... query/data/SumQuery.o"
+	@echo "... query/data/SumQuery.i"
+	@echo "... query/data/SumQuery.s"
 	@echo "... query/data/SwapQuery.o"
 	@echo "... query/data/SwapQuery.i"
 	@echo "... query/data/SwapQuery.s"

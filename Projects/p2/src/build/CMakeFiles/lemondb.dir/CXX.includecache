@@ -129,6 +129,12 @@ data/SelectQuery.h
 /home/charles/VE482/Projects/p2/src/query/data/SelectQuery.h
 data/CountQuery.h
 /home/charles/VE482/Projects/p2/src/query/data/CountQuery.h
+data/MinQuery.h
+/home/charles/VE482/Projects/p2/src/query/data/MinQuery.h
+data/MaxQuery.h
+/home/charles/VE482/Projects/p2/src/query/data/MaxQuery.h
+data/SumQuery.h
+/home/charles/VE482/Projects/p2/src/query/data/SumQuery.h
 iomanip
 -
 iostream
@@ -240,6 +246,30 @@ algorithm
 ../Query.h
 /home/charles/VE482/Projects/p2/src/query/Query.h
 
+/home/charles/VE482/Projects/p2/src/query/data/MaxQuery.cpp
+vector
+-
+MaxQuery.h
+/home/charles/VE482/Projects/p2/src/query/data/MaxQuery.h
+../../db/Database.h
+/home/charles/VE482/Projects/p2/src/db/Database.h
+
+/home/charles/VE482/Projects/p2/src/query/data/MaxQuery.h
+../Query.h
+/home/charles/VE482/Projects/p2/src/query/Query.h
+
+/home/charles/VE482/Projects/p2/src/query/data/MinQuery.cpp
+vector
+-
+MinQuery.h
+/home/charles/VE482/Projects/p2/src/query/data/MinQuery.h
+../../db/Database.h
+/home/charles/VE482/Projects/p2/src/db/Database.h
+
+/home/charles/VE482/Projects/p2/src/query/data/MinQuery.h
+../Query.h
+/home/charles/VE482/Projects/p2/src/query/Query.h
+
 /home/charles/VE482/Projects/p2/src/query/data/SelectQuery.cpp
 SelectQuery.h
 /home/charles/VE482/Projects/p2/src/query/data/SelectQuery.h
@@ -259,6 +289,18 @@ SubQuery.h
 /home/charles/VE482/Projects/p2/src/db/Database.h
 
 /home/charles/VE482/Projects/p2/src/query/data/SubQuery.h
+../Query.h
+/home/charles/VE482/Projects/p2/src/query/Query.h
+
+/home/charles/VE482/Projects/p2/src/query/data/SumQuery.cpp
+vector
+-
+SumQuery.h
+/home/charles/VE482/Projects/p2/src/query/data/SumQuery.h
+../../db/Database.h
+/home/charles/VE482/Projects/p2/src/db/Database.h
+
+/home/charles/VE482/Projects/p2/src/query/data/SumQuery.h
 ../Query.h
 /home/charles/VE482/Projects/p2/src/query/Query.h
 
