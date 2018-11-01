@@ -28,9 +28,7 @@ QueryResult::Ptr DuplicateQuery::execute() {
             if (this->evalCondition(*it)) {
                 auto newkey = (it->key());
                 newkey+="_copy";
-                for (auto itt = it + 1; itt != table.end(); ++itt) {
-                    if (newkey == itt->key())newkey += "_copy";
-                }
+                while (table[newkey]!=nullptr) newkey+="_copy";
                 vector<Table::ValueType> data;
                 data.reserve(table.field().size());
                 for (size_t i = 0; i < table.field().size(); ++i) {
