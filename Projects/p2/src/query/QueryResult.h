@@ -47,7 +47,7 @@ public:
 
 protected:
     std::ostream &output(std::ostream &os) const override {
-        return os << "\n";
+        return os << "";
     }
 };
 
