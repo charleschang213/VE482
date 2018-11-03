@@ -1,0 +1,2 @@
+/usr/bin/ar qc liblist_static.a  CMakeFiles/list_static.dir/list.c.o
+/usr/bin/ranlib liblist_static.a

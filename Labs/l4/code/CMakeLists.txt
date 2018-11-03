@@ -13,7 +13,7 @@ add_library(list_dynamic SHARED list.c)
 add_library(api_dynamic SHARED api.c)
 target_link_libraries(api_dynamic list_dynamic)
 
-add_executable(user_d user.c inteface.c)
+add_executable(user_d user.c interface.c)
 target_link_libraries(user_d api_dynamic list_dynamic)
 
 add_executable(cli_s cli.c interface.c)

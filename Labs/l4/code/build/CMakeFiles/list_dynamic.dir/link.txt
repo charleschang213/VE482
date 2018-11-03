@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC   -shared -Wl,-soname,liblist_dynamic.so -o liblist_dynamic.so CMakeFiles/list_dynamic.dir/list.c.o 

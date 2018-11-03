@@ -1,0 +1,10 @@
+/home/charles/VE482/Labs/l4/code/build/CMakeFiles/rebuild_cache.dir
+/home/charles/VE482/Labs/l4/code/build/CMakeFiles/cli_s.dir
+/home/charles/VE482/Labs/l4/code/build/CMakeFiles/user_d.dir
+/home/charles/VE482/Labs/l4/code/build/CMakeFiles/user.dir
+/home/charles/VE482/Labs/l4/code/build/CMakeFiles/list_static.dir
+/home/charles/VE482/Labs/l4/code/build/CMakeFiles/api_static.dir
+/home/charles/VE482/Labs/l4/code/build/CMakeFiles/list_dynamic.dir
+/home/charles/VE482/Labs/l4/code/build/CMakeFiles/edit_cache.dir
+/home/charles/VE482/Labs/l4/code/build/CMakeFiles/cli.dir
+/home/charles/VE482/Labs/l4/code/build/CMakeFiles/api_dynamic.dir

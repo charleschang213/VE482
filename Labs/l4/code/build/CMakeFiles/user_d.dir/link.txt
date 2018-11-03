@@ -1,0 +1,1 @@
+/usr/bin/cc   -rdynamic CMakeFiles/user_d.dir/user.c.o CMakeFiles/user_d.dir/interface.c.o  -o user_d -Wl,-rpath,/home/charles/VE482/Labs/l4/code/build libapi_dynamic.so liblist_dynamic.so 
