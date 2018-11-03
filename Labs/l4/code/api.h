@@ -4,10 +4,10 @@
 // Data type stored in the dlist
 typedef enum dlistValueType_t
 {
-    DLIST_INT = 0x01,    // list contains int values
-    DLIST_DOUBLE = 0x02,    // list contains char* values
-    DLIST_STR = 0x03, // list contains double values
-    DLIST_UNKOWN = 0x00
+    DLIST_INT = 0x00,    // list contains int values
+    DLIST_DOUBLE = 0x01,    // list contains char* values
+    DLIST_STR = 0x02, // list contains double values
+    DLIST_UNKOWN = 0x03
 } dlistValueType;
 
 // Different options for sorting

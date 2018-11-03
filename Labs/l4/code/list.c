@@ -75,7 +75,7 @@ node_t *ll_search(list_t *L,void *v){
 	return flag;
 }
 
-void ll_insert(list_t *L,char *k,void *v){
+void ll_insert(list_t *L,const char *k,void *v){
 	node_t *newnode = malloc(sizeof(node_t));
 	newnode->key = malloc((strlen(k)+1)*sizeof(char));
 	strcpy(newnode->key,k);

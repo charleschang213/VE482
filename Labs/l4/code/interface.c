@@ -4,17 +4,21 @@ void user(){
     while (ex==0){
         char *argv[3] = {malloc(STRING_MAX_LENGTH*sizeof(char)),malloc(STRING_MAX_LENGTH*sizeof(char)),malloc(STRING_MAX_LENGTH*sizeof(char))};
         strcpy(argv[0],"./cli");
-        printf("Input the name of file:\n>");
+        printf("Input the name of file(input exit to exit):\n> ");
         scanf("%s",argv[1]);
-        printf("Input the sorting method:\n>");
+		if (strcmp(argv[1],"exit")==0){
+			for (int i=0;i<3;i++) free(argv[i]);
+			break;
+		}
+        printf("Input the sorting method:\n> ");
         scanf("%s",argv[2]);
         cli(3,argv);
         for (int i=0;i<3;i++) free(argv[i]);
     }
-    printf("Bye!");
+    printf("Bye!\n");
 }
 void cli(int argc,char *argv[]){
-    dlist L;
+    dlist L,sortedL;
     char fname[STRING_MAX_LENGTH] = {0};
 	char *filename = argv[1];
 	strcpy(fname,filename);
@@ -24,11 +28,12 @@ void cli(int argc,char *argv[]){
     dlistValueType vtype = (strcmp(tname,"int")==0)?DLIST_INT:((strcmp(tname,"double")==0)?DLIST_DOUBLE:DLIST_STR);
     dlistSortMethod ptype = (strcmp(modename,"inc")==0)?DLIST_SORT_INC:((strcmp(modename,"dec")==0)?DLIST_SORT_DEC:DLIST_SORT_RAND);
     L = createDlist(vtype);
+	sortedL = createDlist(vtype);
     printf("reading %s\n",fname);
     FILE *fin = fopen(fname,"r+");
     printf("sorting elements\n");
     while (1){
-	    char *k;
+	    char *k = malloc(STRING_MAX_LENGTH*sizeof(char));
 		unsigned long int msize = STRING_MAX_LENGTH;
    		dlistValue v;
         int end = 0;
@@ -47,10 +52,16 @@ void cli(int argc,char *argv[]){
                 break;
         }
         if (end==1){
-            break;
+            free(k);
+			break;
         }
 		k[strlen(k)-1] = 0;
+		dlistAppend(L,k,v);
+		free(k);
     }
     fclose(fin);
-    dlistPrint(L);
+	dlistSort(L,sortedL,ptype);
+    dlistPrint(sortedL);
+	dlistFree(L);
+	dlistFree(sortedL);
 }

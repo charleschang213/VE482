@@ -47,7 +47,7 @@ int value_cpy(void **dst,void *src,type_t t);
 
 node_t *ll_search(list_t *L,void *v);
 
-void ll_insert(list_t *L,char* k,void* v);
+void ll_insert(list_t *L,const char* k,void* v);
 void ll_remove(list_t *L,int k,FILE *stream);
 
 void ll_print(list_t *L);
