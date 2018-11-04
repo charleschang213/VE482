@@ -1,0 +1,35 @@
+\documentclass{article}
+\usepackage{bookmark}
+\usepackage{color}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+\begin{document}
+\begin{itemize}
+\item The program can be divided into three layers, what are they?
+
+The first is the implementation of linked list, the second is the implementation of file reading and data processing, and the third is the cli or user interface implementation
+
+\item What are the three stages performed when compiling a file? Briefly describe each of them.
+
+The three main stages are: Preprocessing(process macros, defined compiling conditions and so on), assembling(turn the file into machine code) and linking (link the libraries)
+
+\item Search more details on how to generate static and dynamic libraries.
+
+In Cmake, the task can be accomplished through those commands: 
+
+\begin{lstlisting}
+    add_library(api_static STATIC api.c)
+    add_library(list_dynamic SHARED list.c)
+\end{lstlisting}
+
+\item What is the difference between a library and the API.
+
+API is implemented for operating systems, but library are specified for C programming.
+\end{itemize}
+
+For the code implementation, please refer to the attached "code" directory
+\end{document}

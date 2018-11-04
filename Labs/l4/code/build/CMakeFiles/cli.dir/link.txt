@@ -1,1 +1,0 @@
-/usr/bin/cc   -rdynamic CMakeFiles/cli.dir/cli.c.o CMakeFiles/cli.dir/interface.c.o CMakeFiles/cli.dir/api.c.o CMakeFiles/cli.dir/list.c.o  -o cli 

@@ -1,1 +1,0 @@
-/usr/bin/cc   -rdynamic CMakeFiles/user.dir/user.c.o CMakeFiles/user.dir/interface.c.o CMakeFiles/user.dir/api.c.o CMakeFiles/user.dir/list.c.o  -o user 

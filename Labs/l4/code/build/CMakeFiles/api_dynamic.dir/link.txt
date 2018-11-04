@@ -1,1 +1,0 @@
-/usr/bin/cc -fPIC   -shared -Wl,-soname,libapi_dynamic.so -o libapi_dynamic.so CMakeFiles/api_dynamic.dir/api.c.o -Wl,-rpath,/home/charles/VE482/Labs/l4/code/build liblist_dynamic.so 

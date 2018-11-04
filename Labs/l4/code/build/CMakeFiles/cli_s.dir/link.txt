@@ -1,1 +1,0 @@
-/usr/bin/cc   -rdynamic CMakeFiles/cli_s.dir/cli.c.o CMakeFiles/cli_s.dir/interface.c.o  -o cli_s libapi_static.a liblist_static.a 

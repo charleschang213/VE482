@@ -1,2 +1,0 @@
-/usr/bin/ar qc libapi_static.a  CMakeFiles/api_static.dir/api.c.o
-/usr/bin/ranlib libapi_static.a
