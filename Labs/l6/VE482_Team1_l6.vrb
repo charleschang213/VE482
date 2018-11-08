@@ -1,0 +1,22 @@
+\frametitle{Virtual Function Usage}
+\begin{lstlisting}[language=C++]
+class A {
+    ...
+    void func1(){std::cout << "A::func1";}
+    virtual void func2(){std::cout << "A::func2";}
+    ...
+}
+class B: public A {
+    ...
+    void func1(){std::cout << "B::func1";}
+    void func2(){std::cout << "B::func2";}
+    ...
+}
+int main(){
+    std::unique_ptr<A> pt = std::make_unique<B>();
+    pt->func1(); //Outputs "A::func1"
+    pt->func2(); //Outputs "B::func2"
+}
+\end{lstlisting}
+
+

@@ -1,0 +1,7 @@
+\beamer@endinputifotherversion {3.14pt}
+\beamer@sectionintoc {1}{Virtual Function}{3}{0}{1}
+\beamer@sectionintoc {2}{Abstract Class}{5}{0}{2}
+\beamer@sectionintoc {3}{Friend Keyword}{6}{0}{3}
+\beamer@sectionintoc {4}{Override Specifier}{7}{0}{4}
+\beamer@sectionintoc {5}{Final Specifier}{8}{0}{5}
+\beamer@sectionintoc {6}{References}{10}{0}{6}

@@ -1,0 +1,167 @@
+\documentclass{beamer}
+\usepackage{bookmark}
+\usepackage{beamerthemeBerkeley}
+\usepackage{color}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\hypersetup{colorlinks,linkcolor=blue,citecolor=blue}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+\usecolortheme{default}
+\usetheme{Berkeley}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{
+  basicstyle=\footnotesize, 
+  numbers=left, 
+  numberstyle=\tiny\color{gray}, 
+  stepnumber=1,
+  numbersep=5pt, 
+  backgroundcolor=\color{white},
+  showspaces=false,
+  showstringspaces=false,
+  showtabs=false,
+  frame=shadowbox,
+  rulecolor=\color{black},
+  tabsize=2,
+  captionpos=b,
+  breaklines=true, 
+  breakatwhitespace=false, 
+  title=\lstname,
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  escapeinside={\%*}{*)}, 
+  morekeywords={*,...} 
+}
+\title{Lab Presentation \\Question 2.10}
+\author{VE482 Team 1}
+\institute{UM-SJTU Joint Institute}
+\date{\today}
+
+\begin{document}
+\begin{frame}
+	\titlepage
+\end{frame}
+
+\begin{frame}
+	\tableofcontents
+\end{frame}
+
+
+\begin{frame}
+	\section{Virtual Function}
+	\frametitle{Virtual Function}
+	Specify a member function as {\color{blue} virtual} for a base class will guarantee the triggering of {\color{blue} dynamic dispatch} in run time if the function is overridden in derived classes
+	\begin{block}{Definition}
+		{\color{blue} Dynamic dispatch} is the process of selecting which implementation of a polymorphic operation to call at run time.
+	\end{block}
+	Virtualness of a function can be inherited in a derived class.
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Virtual Function Usage}
+	\begin{lstlisting}[language=C++]
+	class A {
+	    ...
+	    void func1(){std::cout << "A::func1";}
+	    virtual void func2(){std::cout << "A::func2";}
+	    ...
+	}
+	class B: public A {
+	    ...
+	    void func1(){std::cout << "B::func1";}
+	    void func2(){std::cout << "B::func2";}
+	    ...
+	}
+	int main(){
+	    std::unique_ptr<A> pt = std::make_unique<B>();
+	    pt->func1(); //Outputs "A::func1"
+	    pt->func2(); //Outputs "B::func2"
+	}
+	\end{lstlisting}
+
+	
+\end{frame}
+
+\begin{frame}
+	\section{Abstract Class}
+	\frametitle{Abstract Class}
+	\begin{block}{Definition}
+		An {\color{blue} abstract class} is a generic class used as a basis for creating different objects that conform to its protocol, or the set of operations it supports.
+	\end{block}
+	An abstract class usually contains 
+	\begin{itemize}
+		\item Some member data and methods which are commonly shared by its derived objects
+		\item Some methods declared but are not implemented(abstract function,usually declared as {\color{blue} virtual type fname(args)=0}) 
+	\end{itemize}
+	{\color{blue} Note: }An abstract class cannot be instantiated but a pointer to it can own an instance of its derived class, through which polymorphism is achieved.
+\end{frame}
+
+\begin{frame}
+	\section{Friend Keyword}
+	\frametitle{Friend Keyword}
+	The keyword "friend" is used to grant access of private members of a class. Usually it can be used in two diferent aspects.
+	\begin{itemize}
+		\item Declare a non-member function in a class as a friend.(Often in operator overloading)
+		\item Declare another class as a friend.
+	\end{itemize}
+	\begin{block}{Risk of Using Friend}
+		Using a friend keyword means that something outside a specific class can access the "internal" world of a class, which might violates the principle of {\color{blue} encapsulation}.
+	\end{block}
+	
+\end{frame}
+
+\begin{frame}
+	\section{Override Specifier}
+	\frametitle{Override Specifier}
+	Features
+	\begin{itemize}
+		\item Override specifier should be added right after the function declaration in a derived class ({\color{blue}type funcname() override;})
+		\item This keyword will guarantee that this function will be virtual and will override a virtual function in base class
+		\item If any of the requirements is not satisfied, the program will not compile
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\section{Final Specifier}
+	\frametitle{Final Specifier}
+	Features
+	\begin{itemize}
+		\item Override specifier should be added right after the function declaration in a derived class ({\color{blue}type funcname() final;})
+		\item This keyword will guarantee that this function will override a virtual function in base class {\color{blue} but cannot be overridden again}
+		\item If any of the requirements is not satisfied, the program will not compile
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	
+	\begin{block}{Purpose of the two specifiers}
+		1. Avoid potential mistakes of developers who might forget to implement an override or have something wrong in overriding.\\
+
+		\vskip 2em
+
+		2. Make the implementation more explicit to possible readers.
+	\end{block}
+\end{frame}
+
+
+\begin{frame}
+	\section{References}
+	\frametitle{References}
+	\begin{itemize}
+		\item \url{web.mit.edu/merolish/ticpp/Chapter15.html}
+		\item \url{en.wikipedia.org/wiki/Dynamic_dispatch}
+		\item \url{www.techopedia.com/definition/17408/abstract-class}
+		\item \url{en.cppreference.com/w/cpp/keyword/friend}
+		\item \url{www.cprogramming.com/tutorial/friends.html}
+		\item \url{en.cppreference.com/w/cpp/language/override}
+		\item \url{en.cppreference.com/w/cpp/language/final}
+	\end{itemize}
+\end{frame}
+
+\end{document}
