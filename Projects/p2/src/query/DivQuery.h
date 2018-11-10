@@ -19,7 +19,7 @@ class DivQuery{
         DivQuery(Query *query,Table *target,int counter):query(query),target(target),counter(counter){}
         DivQuery(Query *query,Table *target,int counter,Table::Iterator begin, Table::Iterator end):query(query),target(target),counter(counter),begin(begin),end(end){}
         ~DivQuery()=default;
-        virtual void execute(){query->execute();}
+        virtual void execute(){}
         int getcounter(){return counter;}
 };
 
