@@ -103,7 +103,7 @@ class DividableQuery: public Query {
         void AddOne(Database &db, Table *table){
             auto task = std::unique_ptr<TaskType>(new TaskType(this, table));
             auto t = task.get();
-            tasks.emplace_back(std::move(task));
+            Tasks.emplace_back(std::move(task));
             db.InsertDivQuery(t);
         }
         void SetDivNum(const int x){DivNum=x;}
