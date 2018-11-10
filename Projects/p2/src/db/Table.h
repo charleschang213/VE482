@@ -51,7 +51,39 @@ public:
     static constexpr const ValueType ValueTypeMax = std::numeric_limits<ValueType>::max();
     static constexpr const ValueType ValueTypeMin = std::numeric_limits<ValueType>::min();
     typedef size_t SizeType;
+    void Sem_Up(Query* query){
+        while(true){
+            SemMutex.lock();
+            if (query->isupdate()){
+                if ((Sem<0)&&(WriteId==query)){
+                    Sem--;
+                    SemMutex.unlock();
+                    break;
+                }
+                if (Sem==0){
+                    WriteId=query;
+                    Sem--;
+                    SemMutex.unlock();
+                    break;
+                }
+            }
+            else{
+                if (Sem>=0){
+                    Sem++;
+                    SemMutex.unlock();
+                    break;
+                }
+            }
+            SemMutex.unlock();
+        }
+    }
 
+    void Sem_Down(Query* query){
+        SemMutex.lock();
+        if (query->isupdate()) Sem++;
+        else Sem--;
+        SemMutex.unlock();
+    }
 private:
     /** A row in the table */
     struct Datum {
@@ -102,42 +134,7 @@ private:
     Query *WriteId=nullptr;
     std::mutex SemMutex;
 
-public:
-
-    void Sem_Up(Query* query){
-        while(true){
-            SemMutex.lock();
-            if (query->isupdate()){
-                if ((Sem<0)&&(WriteId==query)){
-                    Sem--;
-                    SemMutex.unlock();
-                    break;
-                }
-                if (Sem==0){
-                    WriteId=query;
-                    Sem--;
-                    SemMutex.unlock();
-                    break;
-                }
-            }
-            else{
-                if (Sem>=0){
-                    Sem++;
-                    SemMutex.unlock();
-                    break;
-                }
-            }
-            SemMutex.unlock();
-        }
-    }
-
-    void Sem_Down(Query* query){
-        SemMutex.lock();
-        if (query->isupdate()) Sem++;
-        else Sem--;
-        SemMutex.unlock();
-    }
-
+public:  
     typedef std::unique_ptr<Table> Ptr;
 
     /**
