@@ -92,8 +92,8 @@ class DividableQuery: public Query {
                     }
                     auto task = std::unique_ptr<DivType>(new DivType(this, &table, begin, end));
                     auto t = task.get();
-                    tasks.emplace_back(std::move(task));
-                    db.addTask(t);
+                    Tasks.emplace_back(std::move(task));
+                    db.InsertDivQuery(t);
                     begin = end;
                 }
             }
