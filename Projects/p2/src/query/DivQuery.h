@@ -6,6 +6,7 @@
 #include "QueryResult.h"
 
 class Query;
+class Table;
 
 class DivQuery{
     private:
