@@ -5,6 +5,8 @@
 #include "../db/Database.h"
 #include "QueryResult.h"
 
+class Query;
+
 class DivQuery{
     private:
         Query *query;
