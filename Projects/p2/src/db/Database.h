@@ -15,6 +15,9 @@
 #include "../query/Query.h"
 #include "../query/DivQuery.h"
 
+class Query;
+class DivQuery;
+
 class Database {
 private:
     /**
