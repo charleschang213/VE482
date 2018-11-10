@@ -90,7 +90,7 @@ class DividableQuery: public Query {
                         size=0;
                         end = table.end();
                     }
-                    auto task = std::unique_ptr<TaskType>(new TaskType(this, &table, begin, end));
+                    auto task = std::unique_ptr<DivType>(new DivType(this, &table, begin, end));
                     auto t = task.get();
                     tasks.emplace_back(std::move(task));
                     db.addTask(t);
@@ -101,7 +101,7 @@ class DividableQuery: public Query {
         }
         template<class DivType>
         void AddOne(Database &db, Table *table){
-            auto task = std::unique_ptr<TaskType>(new TaskType(this, table));
+            auto task = std::unique_ptr<DivType>(new DivType(this, table));
             auto t = task.get();
             Tasks.emplace_back(std::move(task));
             db.InsertDivQuery(t);
