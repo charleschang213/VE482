@@ -12,7 +12,7 @@
 
 std::unique_ptr<Database> Database::instance = nullptr;
 
-void Database::InsertQuery(Query::Ptr &&query) {
+void Database::InsertQuery(std::unique_ptr<Query> &&query) {
     auto qry = query.get();
     ResultMutex.lock();
     qry->setid(results.size());
