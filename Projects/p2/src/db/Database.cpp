@@ -12,6 +12,52 @@
 
 std::unique_ptr<Database> Database::instance = nullptr;
 
+void Database::InsertQuery(Query::Ptr &&query) {
+    auto qry = query.get();
+    ResultMutex.lock();
+    qry->setid(results.size());
+    results.emplace_back(std::move(qry),nullptr);
+    ResultMutex.unlock();
+}
+
+void Database::InsertDivQuery(DivQuery* task){
+    TaskMutex.lock();
+    tasks.push(task);
+    TaskMutex.unlock();
+}
+
+void Database::InsertResult(Query *query,QueryResult::Ptr result){
+    ResultMutex.lock();
+    results.at(query->getid()).second = std::move(result);
+    ResultMutex.unlock();
+}
+
+void Database::DisplayResult(){
+    DisplayMutex.lock();
+    for (auto it = results.begin()+DoneQuery;it!=results.end()&&it->second!=nullptr;++it){
+        std::cout<< it->first->getid();
+        it->second->print();
+        DoneQuery++;
+    }
+}
+
+void Database::runthread(Database *db){
+    while(true){
+        db->TaskMutex.lock();
+        if (db->threadlist.empty()){
+            db->TaskMutex.unlock();
+            if (db->TimeToExit()) return;
+            std::this_thread::yield;
+        }
+        else {
+            auto task = db->tasks.front();
+            db->tasks.pop();
+            db->TaskMutex.unlock();
+            task->execute();
+        }
+    }
+}
+
 void Database::testDuplicate(const std::string &tableName) {
     auto it = this->tables.find(tableName);
     if (it != this->tables.end()) {
@@ -78,6 +124,9 @@ void Database::printAllTable() {
 Database &Database::getInstance() {
     if (Database::instance == nullptr) {
         instance = std::unique_ptr<Database>(new Database);
+        for (int i=0;i<instance->threadNum;i++){
+            instance->threadlist.emplace(instance->threadlist.end(),runthread,instance.get());
+        }
     }
     return *instance;
 }

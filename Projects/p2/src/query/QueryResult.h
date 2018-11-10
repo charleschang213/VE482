@@ -24,6 +24,9 @@ public:
 
     friend std::ostream &operator<<(std::ostream &os, const QueryResult &table);
 
+    void print(){output(std::cout);}
+
+
 protected:
     virtual std::ostream &output(std::ostream &os) const = 0;
 };

@@ -7,8 +7,12 @@
 
 #include <memory>
 #include <unordered_map>
+#include <thread>
+#include <mutex>
+#include <queue>
 
 #include "Table.h"
+#include "../query/DivQuery.h"
 
 class Database {
 private:
@@ -30,9 +34,36 @@ private:
     /**
      * The default constructor is made private for singleton instance
      */
+    
     Database() = default;
 
+    std::mutex ResultMutex;
+    std::vector<std::pair<Query::Ptr,QueryResult::Ptr> > results;
+
+    std::queue<DivQuery*> tasks;
+    std::mutex TaskMutex;
+
+    std::mutex DisplayMutex;
+
+    std::vector<std::thread> threadlist;
+    static void runthread(Database *db);
+    int DoneQuery = 0;
+    bool nowexit = false;
+    int threadNum=8;
+
+
 public:
+    bool TimeToExit(){return nowexit;}
+
+    bool SetExit(){nowexit = true;}
+
+    void InsertQuery(Query::Ptr &&query);
+
+    void InsertDivQuery(DivQuery* task);
+
+    void InsertResult(Query *query,QueryResult::Ptr result);
+
+    void DisplayResult();
     void testDuplicate(const std::string &tableName);
 
     Table &registerTable(Table::Ptr &&table);
