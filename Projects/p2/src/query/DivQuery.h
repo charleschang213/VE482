@@ -11,8 +11,8 @@ class DivQuery{
     private:
         Query *query;
         Table *target;
-        Table::Iterator begin,end;
         int counter;
+        Table::Iterator begin,end;
     public:
         friend class Database;
         typedef std::unique_ptr<DivQuery> Ptr;
