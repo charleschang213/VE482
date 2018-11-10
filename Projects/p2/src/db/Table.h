@@ -42,6 +42,8 @@ do {\
     }\
 } while(0)
 
+class Query;
+
 class Table {
 public:
     typedef std::string KeyType;
@@ -306,7 +308,7 @@ public:
         else Sem--;
         SemMutex.unlock();
     }
-    
+
     template<class FieldIDContainer>
     Table(const std::string &name, const FieldIDContainer &fields);
 
