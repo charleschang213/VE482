@@ -107,7 +107,7 @@ class DividableQuery: public Query {
             db.InsertDivQuery(t);
         }
         void SetDivNum(const int x){DivNum=x;}
-}
+};
 
 class ComplexQuery : public DividableQuery {
 protected:
