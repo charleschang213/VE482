@@ -275,10 +275,10 @@ public:
      * 
      */
 
-     void Sem_Up(Query* query){
+     void Sem_Up(Query* query,bool isupdate){
         while(true){
             SemMutex.lock();
-            if (query->isupdate()){
+            if (isupdate){
                 if ((Sem<0)&&(WriteId==query)){
                     Sem--;
                     SemMutex.unlock();
@@ -302,9 +302,9 @@ public:
         }
     }
 
-    void Sem_Down(Query* query){
+    void Sem_Down(Query* query,bool isupdate){
         SemMutex.lock();
-        if (query->isupdate()) Sem++;
+        if (isupdate) Sem++;
         else Sem--;
         SemMutex.unlock();
     }
