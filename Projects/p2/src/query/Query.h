@@ -68,8 +68,8 @@ class DividableQuery: public Query {
         QueryResult::Ptr combine(int counter);
         template<class DivType>
         void AddDiv(Database &db, Table &table){
-            auto begin = table->begin();
-            auto size = table->size();
+            auto begin = table.begin();
+            auto size = table.size();
             decltype(begin) end;
             TaskMutex.lock();
             if (size==0){
