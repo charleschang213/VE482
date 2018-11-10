@@ -7,7 +7,7 @@
 
 #include "../utils/uexception.h"
 #include "../utils/formatter.h"
-#include "../query/query.h"
+#include "../query/Query.h"
 
 #include <limits>
 #include <memory>
