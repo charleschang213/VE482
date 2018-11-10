@@ -17,6 +17,7 @@
 
 class Query;
 class DivQuery;
+class Table;
 
 class Database {
 private:
