@@ -151,7 +151,7 @@ public:
     ComplexQuery(std::string targetTable,
                  std::vector<std::string> operands,
                  std::vector<QueryCondition> condition)
-            : Query(std::move(targetTable)),
+            : DividableQuery(std::move(targetTable)),
               operands(std::move(operands)),
               condition(std::move(condition)) {
     }
