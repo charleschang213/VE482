@@ -42,7 +42,7 @@ private:
     Database() = default;
 
     std::mutex ResultMutex;
-    std::vector<std::pair<Query::Ptr,QueryResult::Ptr> > results;
+    std::vector<std::pair<std::unique_ptr<Query>,QueryResult::Ptr> > results;
 
     std::queue<DivQuery*> tasks;
     std::mutex TaskMutex;
@@ -59,7 +59,7 @@ private:
 public:
     bool TimeToExit(){return nowexit;}
 
-    bool SetExit(){nowexit = true;}
+    void SetExit(){nowexit = true;}
 
     void InsertQuery(Query::Ptr &&query);
 
