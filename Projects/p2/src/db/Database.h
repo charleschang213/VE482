@@ -61,7 +61,7 @@ public:
 
     void SetExit(){nowexit = true;}
 
-    void InsertQuery(Query::Ptr &&query);
+    void InsertQuery(std::unique_ptr<Query> &&query);
 
     void InsertDivQuery(DivQuery* task);
 
