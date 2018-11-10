@@ -8,6 +8,7 @@
 #include "../utils/uexception.h"
 #include "../utils/formatter.h"
 #include "../query/Query.h"
+#include "../query/DivQuery.h"
 
 #include <limits>
 #include <memory>
@@ -45,6 +46,8 @@ do {\
 class Table;
 
 class Query;
+
+class DivQuery;
 
 class Table {
 public:
