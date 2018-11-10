@@ -42,6 +42,8 @@ do {\
     }\
 } while(0)
 
+class Table;
+
 class Query;
 
 class Table {
