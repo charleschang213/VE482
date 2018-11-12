@@ -1,0 +1,93 @@
+\documentclass{article}
+\usepackage{bookmark}
+\usepackage{color}
+\usepackage{listings}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{
+  basicstyle=\footnotesize, 
+  numbers=left, 
+  numberstyle=\tiny\color{gray}, 
+  stepnumber=1,
+  numbersep=5pt, 
+  backgroundcolor=\color{white},
+  showspaces=false,
+  showstringspaces=false,
+  showtabs=false,
+  frame=shadowbox,
+  rulecolor=\color{black},
+  tabsize=2,
+  captionpos=b,
+  breaklines=true, 
+  breakatwhitespace=false, 
+  title=\lstname,
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  escapeinside={\%*}{*)}, 
+  morekeywords={*,...} 
+}
+
+\begin{document}
+\begin{itemize}
+\item {\bf Ex. 1}\\
+{\noindent 1. There should not be deadlock happening because as there are three resouces, there should always enough resource for one process to have two.}\\ 
+
+{\noindent 2. n should be at most 5, which can guarantee that at least one process can get the second resource.\\}
+
+{\noindent 3. $x\leq (1000-20\times 35ms-10\times 20ms-5\times 10ms)/4 = 12.5ms$\\}
+
+{\noindent 4. It means that the process will be triggered twice in the whole cycle. It might make sense in the implementing scheduling of processes with different priorities.\\}
+
+{\noindent 5. From the source code it can be done. If a program operates data together with inputing and outputing them, then it might be I/O bound. In the runtime, maybe syscalls such as top which reveals the running status of CPU and I/O devices can help.\\}
+
+
+
+
+\item {\bf EX. 2}\\
+
+{\noindent 1. It should be $$\left[\begin{matrix}7&4&3\\1&2&2\\6&0&0\\0&1&1\\4&3&1\end{matrix}\right]$$}
+
+{\noindent 2. It is in a safe state. Run process as 2,4,5,1,3 can help.\\}
+
+{\noindent 3. Yes, the order above can help.}\\
+
+\item {\bf Ex. 4}\\
+This can be done by searching the word "scheduling" in the derictory usr/src. And it can be found in minix/kernel/main.c. In teh code, what I found is that the kernel will check whether certain process is schedulable on startup, and if it is , the kernel will reset its priority and run it. And it can also been seen that root commands and syscalls have higher priority than other processes.
+
+\item {\bf Ex. 5}\\
+
+{\noindent 1. This should be done using count\_lock. Use this to access the counter and change it for reading.}
+
+\begin{lstlisting}[language=C]
+void read_lock(){
+    down(count_lock);
+    if (counter==0) down(db_lock);
+    counter++;
+    up(count_lock);      
+}
+
+void read_lock(){
+    down(count_lock);
+    if (counter==1) up(db_lock);
+    counter--;
+    up(count_lock);      
+}
+
+
+\end{lstlisting}
+{\noindent 2. It means that the writer cannot find time to write on the db, bercause readers are coming continuously.\\}
+
+{\noindent 3. This can be done by adding down(read\_lock) and up(read\_lock) in both read\_lock() and write\_lock()\\}
+
+{\noindent 4. No as the writer still has higher priority, so the problem should not be regarded as solved.}
+
+\end{itemize}
+\end{document}
