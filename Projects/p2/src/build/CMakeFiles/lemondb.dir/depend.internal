@@ -5,17 +5,25 @@ CMakeFiles/lemondb.dir/db/Database.cpp.o
  /home/charles/VE482/Projects/p2/src/db/Database.cpp
  /home/charles/VE482/Projects/p2/src/db/Database.h
  /home/charles/VE482/Projects/p2/src/db/Table.h
+ /home/charles/VE482/Projects/p2/src/query/DivQuery.h
+ /home/charles/VE482/Projects/p2/src/query/Query.h
+ /home/charles/VE482/Projects/p2/src/query/QueryResult.h
  /home/charles/VE482/Projects/p2/src/utils/formatter.h
  /home/charles/VE482/Projects/p2/src/utils/uexception.h
 CMakeFiles/lemondb.dir/db/Table.cpp.o
  /home/charles/VE482/Projects/p2/src/db/Database.h
  /home/charles/VE482/Projects/p2/src/db/Table.cpp
  /home/charles/VE482/Projects/p2/src/db/Table.h
+ /home/charles/VE482/Projects/p2/src/query/DivQuery.h
+ /home/charles/VE482/Projects/p2/src/query/Query.h
+ /home/charles/VE482/Projects/p2/src/query/QueryResult.h
  /home/charles/VE482/Projects/p2/src/utils/formatter.h
  /home/charles/VE482/Projects/p2/src/utils/uexception.h
 CMakeFiles/lemondb.dir/main.cpp.o
+ /home/charles/VE482/Projects/p2/src/db/Database.h
  /home/charles/VE482/Projects/p2/src/db/Table.h
  /home/charles/VE482/Projects/p2/src/main.cpp
+ /home/charles/VE482/Projects/p2/src/query/DivQuery.h
  /home/charles/VE482/Projects/p2/src/query/Query.h
  /home/charles/VE482/Projects/p2/src/query/QueryBuilders.h
  /home/charles/VE482/Projects/p2/src/query/QueryParser.h
@@ -23,7 +31,9 @@ CMakeFiles/lemondb.dir/main.cpp.o
  /home/charles/VE482/Projects/p2/src/utils/formatter.h
  /home/charles/VE482/Projects/p2/src/utils/uexception.h
 CMakeFiles/lemondb.dir/query/Query.cpp.o
+ /home/charles/VE482/Projects/p2/src/db/Database.h
  /home/charles/VE482/Projects/p2/src/db/Table.h
+ /home/charles/VE482/Projects/p2/src/query/DivQuery.h
  /home/charles/VE482/Projects/p2/src/query/Query.cpp
  /home/charles/VE482/Projects/p2/src/query/Query.h
  /home/charles/VE482/Projects/p2/src/query/QueryResult.h
@@ -32,6 +42,7 @@ CMakeFiles/lemondb.dir/query/Query.cpp.o
 CMakeFiles/lemondb.dir/query/QueryBuilders.cpp.o
  /home/charles/VE482/Projects/p2/src/db/Database.h
  /home/charles/VE482/Projects/p2/src/db/Table.h
+ /home/charles/VE482/Projects/p2/src/query/DivQuery.h
  /home/charles/VE482/Projects/p2/src/query/Query.h
  /home/charles/VE482/Projects/p2/src/query/QueryBuilders.cpp
  /home/charles/VE482/Projects/p2/src/query/QueryBuilders.h
@@ -60,7 +71,9 @@ CMakeFiles/lemondb.dir/query/QueryBuilders.cpp.o
  /home/charles/VE482/Projects/p2/src/utils/formatter.h
  /home/charles/VE482/Projects/p2/src/utils/uexception.h
 CMakeFiles/lemondb.dir/query/QueryParser.cpp.o
+ /home/charles/VE482/Projects/p2/src/db/Database.h
  /home/charles/VE482/Projects/p2/src/db/Table.h
+ /home/charles/VE482/Projects/p2/src/query/DivQuery.h
  /home/charles/VE482/Projects/p2/src/query/Query.h
  /home/charles/VE482/Projects/p2/src/query/QueryBuilders.h
  /home/charles/VE482/Projects/p2/src/query/QueryParser.cpp
@@ -75,6 +88,7 @@ CMakeFiles/lemondb.dir/query/QueryResult.cpp.o
 CMakeFiles/lemondb.dir/query/data/AddQuery.cpp.o
  /home/charles/VE482/Projects/p2/src/db/Database.h
  /home/charles/VE482/Projects/p2/src/db/Table.h
+ /home/charles/VE482/Projects/p2/src/query/DivQuery.h
  /home/charles/VE482/Projects/p2/src/query/Query.h
  /home/charles/VE482/Projects/p2/src/query/QueryResult.h
  /home/charles/VE482/Projects/p2/src/query/data/AddQuery.cpp
@@ -84,6 +98,7 @@ CMakeFiles/lemondb.dir/query/data/AddQuery.cpp.o
 CMakeFiles/lemondb.dir/query/data/CountQuery.cpp.o
  /home/charles/VE482/Projects/p2/src/db/Database.h
  /home/charles/VE482/Projects/p2/src/db/Table.h
+ /home/charles/VE482/Projects/p2/src/query/DivQuery.h
  /home/charles/VE482/Projects/p2/src/query/Query.h
  /home/charles/VE482/Projects/p2/src/query/QueryResult.h
  /home/charles/VE482/Projects/p2/src/query/data/CountQuery.cpp
@@ -93,6 +108,7 @@ CMakeFiles/lemondb.dir/query/data/CountQuery.cpp.o
 CMakeFiles/lemondb.dir/query/data/DeleteQuery.cpp.o
  /home/charles/VE482/Projects/p2/src/db/Database.h
  /home/charles/VE482/Projects/p2/src/db/Table.h
+ /home/charles/VE482/Projects/p2/src/query/DivQuery.h
  /home/charles/VE482/Projects/p2/src/query/Query.h
  /home/charles/VE482/Projects/p2/src/query/QueryResult.h
  /home/charles/VE482/Projects/p2/src/query/data/DeleteQuery.cpp
@@ -102,6 +118,7 @@ CMakeFiles/lemondb.dir/query/data/DeleteQuery.cpp.o
 CMakeFiles/lemondb.dir/query/data/DuplicateQuery.cpp.o
  /home/charles/VE482/Projects/p2/src/db/Database.h
  /home/charles/VE482/Projects/p2/src/db/Table.h
+ /home/charles/VE482/Projects/p2/src/query/DivQuery.h
  /home/charles/VE482/Projects/p2/src/query/Query.h
  /home/charles/VE482/Projects/p2/src/query/QueryResult.h
  /home/charles/VE482/Projects/p2/src/query/data/DuplicateQuery.cpp
@@ -111,6 +128,7 @@ CMakeFiles/lemondb.dir/query/data/DuplicateQuery.cpp.o
 CMakeFiles/lemondb.dir/query/data/InsertQuery.cpp.o
  /home/charles/VE482/Projects/p2/src/db/Database.h
  /home/charles/VE482/Projects/p2/src/db/Table.h
+ /home/charles/VE482/Projects/p2/src/query/DivQuery.h
  /home/charles/VE482/Projects/p2/src/query/Query.h
  /home/charles/VE482/Projects/p2/src/query/QueryResult.h
  /home/charles/VE482/Projects/p2/src/query/data/InsertQuery.cpp
@@ -120,6 +138,7 @@ CMakeFiles/lemondb.dir/query/data/InsertQuery.cpp.o
 CMakeFiles/lemondb.dir/query/data/MaxQuery.cpp.o
  /home/charles/VE482/Projects/p2/src/db/Database.h
  /home/charles/VE482/Projects/p2/src/db/Table.h
+ /home/charles/VE482/Projects/p2/src/query/DivQuery.h
  /home/charles/VE482/Projects/p2/src/query/Query.h
  /home/charles/VE482/Projects/p2/src/query/QueryResult.h
  /home/charles/VE482/Projects/p2/src/query/data/MaxQuery.cpp
@@ -129,6 +148,7 @@ CMakeFiles/lemondb.dir/query/data/MaxQuery.cpp.o
 CMakeFiles/lemondb.dir/query/data/MinQuery.cpp.o
  /home/charles/VE482/Projects/p2/src/db/Database.h
  /home/charles/VE482/Projects/p2/src/db/Table.h
+ /home/charles/VE482/Projects/p2/src/query/DivQuery.h
  /home/charles/VE482/Projects/p2/src/query/Query.h
  /home/charles/VE482/Projects/p2/src/query/QueryResult.h
  /home/charles/VE482/Projects/p2/src/query/data/MinQuery.cpp
@@ -138,6 +158,7 @@ CMakeFiles/lemondb.dir/query/data/MinQuery.cpp.o
 CMakeFiles/lemondb.dir/query/data/SelectQuery.cpp.o
  /home/charles/VE482/Projects/p2/src/db/Database.h
  /home/charles/VE482/Projects/p2/src/db/Table.h
+ /home/charles/VE482/Projects/p2/src/query/DivQuery.h
  /home/charles/VE482/Projects/p2/src/query/Query.h
  /home/charles/VE482/Projects/p2/src/query/QueryResult.h
  /home/charles/VE482/Projects/p2/src/query/data/SelectQuery.cpp
@@ -147,6 +168,7 @@ CMakeFiles/lemondb.dir/query/data/SelectQuery.cpp.o
 CMakeFiles/lemondb.dir/query/data/SubQuery.cpp.o
  /home/charles/VE482/Projects/p2/src/db/Database.h
  /home/charles/VE482/Projects/p2/src/db/Table.h
+ /home/charles/VE482/Projects/p2/src/query/DivQuery.h
  /home/charles/VE482/Projects/p2/src/query/Query.h
  /home/charles/VE482/Projects/p2/src/query/QueryResult.h
  /home/charles/VE482/Projects/p2/src/query/data/SubQuery.cpp
@@ -156,6 +178,7 @@ CMakeFiles/lemondb.dir/query/data/SubQuery.cpp.o
 CMakeFiles/lemondb.dir/query/data/SumQuery.cpp.o
  /home/charles/VE482/Projects/p2/src/db/Database.h
  /home/charles/VE482/Projects/p2/src/db/Table.h
+ /home/charles/VE482/Projects/p2/src/query/DivQuery.h
  /home/charles/VE482/Projects/p2/src/query/Query.h
  /home/charles/VE482/Projects/p2/src/query/QueryResult.h
  /home/charles/VE482/Projects/p2/src/query/data/SumQuery.cpp
@@ -165,6 +188,7 @@ CMakeFiles/lemondb.dir/query/data/SumQuery.cpp.o
 CMakeFiles/lemondb.dir/query/data/SwapQuery.cpp.o
  /home/charles/VE482/Projects/p2/src/db/Database.h
  /home/charles/VE482/Projects/p2/src/db/Table.h
+ /home/charles/VE482/Projects/p2/src/query/DivQuery.h
  /home/charles/VE482/Projects/p2/src/query/Query.h
  /home/charles/VE482/Projects/p2/src/query/QueryResult.h
  /home/charles/VE482/Projects/p2/src/query/data/SwapQuery.cpp
@@ -174,6 +198,7 @@ CMakeFiles/lemondb.dir/query/data/SwapQuery.cpp.o
 CMakeFiles/lemondb.dir/query/data/UpdateQuery.cpp.o
  /home/charles/VE482/Projects/p2/src/db/Database.h
  /home/charles/VE482/Projects/p2/src/db/Table.h
+ /home/charles/VE482/Projects/p2/src/query/DivQuery.h
  /home/charles/VE482/Projects/p2/src/query/Query.h
  /home/charles/VE482/Projects/p2/src/query/QueryResult.h
  /home/charles/VE482/Projects/p2/src/query/data/UpdateQuery.cpp
@@ -183,6 +208,7 @@ CMakeFiles/lemondb.dir/query/data/UpdateQuery.cpp.o
 CMakeFiles/lemondb.dir/query/management/CopyTableQuery.cpp.o
  /home/charles/VE482/Projects/p2/src/db/Database.h
  /home/charles/VE482/Projects/p2/src/db/Table.h
+ /home/charles/VE482/Projects/p2/src/query/DivQuery.h
  /home/charles/VE482/Projects/p2/src/query/Query.h
  /home/charles/VE482/Projects/p2/src/query/QueryResult.h
  /home/charles/VE482/Projects/p2/src/query/management/CopyTableQuery.cpp
@@ -192,6 +218,7 @@ CMakeFiles/lemondb.dir/query/management/CopyTableQuery.cpp.o
 CMakeFiles/lemondb.dir/query/management/DropTableQuery.cpp.o
  /home/charles/VE482/Projects/p2/src/db/Database.h
  /home/charles/VE482/Projects/p2/src/db/Table.h
+ /home/charles/VE482/Projects/p2/src/query/DivQuery.h
  /home/charles/VE482/Projects/p2/src/query/Query.h
  /home/charles/VE482/Projects/p2/src/query/QueryResult.h
  /home/charles/VE482/Projects/p2/src/query/management/DropTableQuery.cpp
@@ -201,6 +228,7 @@ CMakeFiles/lemondb.dir/query/management/DropTableQuery.cpp.o
 CMakeFiles/lemondb.dir/query/management/DumpTableQuery.cpp.o
  /home/charles/VE482/Projects/p2/src/db/Database.h
  /home/charles/VE482/Projects/p2/src/db/Table.h
+ /home/charles/VE482/Projects/p2/src/query/DivQuery.h
  /home/charles/VE482/Projects/p2/src/query/Query.h
  /home/charles/VE482/Projects/p2/src/query/QueryResult.h
  /home/charles/VE482/Projects/p2/src/query/management/DumpTableQuery.cpp
@@ -210,6 +238,7 @@ CMakeFiles/lemondb.dir/query/management/DumpTableQuery.cpp.o
 CMakeFiles/lemondb.dir/query/management/ListTableQuery.cpp.o
  /home/charles/VE482/Projects/p2/src/db/Database.h
  /home/charles/VE482/Projects/p2/src/db/Table.h
+ /home/charles/VE482/Projects/p2/src/query/DivQuery.h
  /home/charles/VE482/Projects/p2/src/query/Query.h
  /home/charles/VE482/Projects/p2/src/query/QueryResult.h
  /home/charles/VE482/Projects/p2/src/query/management/ListTableQuery.cpp
@@ -219,6 +248,7 @@ CMakeFiles/lemondb.dir/query/management/ListTableQuery.cpp.o
 CMakeFiles/lemondb.dir/query/management/LoadTableQuery.cpp.o
  /home/charles/VE482/Projects/p2/src/db/Database.h
  /home/charles/VE482/Projects/p2/src/db/Table.h
+ /home/charles/VE482/Projects/p2/src/query/DivQuery.h
  /home/charles/VE482/Projects/p2/src/query/Query.h
  /home/charles/VE482/Projects/p2/src/query/QueryResult.h
  /home/charles/VE482/Projects/p2/src/query/management/LoadTableQuery.cpp
@@ -228,6 +258,7 @@ CMakeFiles/lemondb.dir/query/management/LoadTableQuery.cpp.o
 CMakeFiles/lemondb.dir/query/management/PrintTableQuery.cpp.o
  /home/charles/VE482/Projects/p2/src/db/Database.h
  /home/charles/VE482/Projects/p2/src/db/Table.h
+ /home/charles/VE482/Projects/p2/src/query/DivQuery.h
  /home/charles/VE482/Projects/p2/src/query/Query.h
  /home/charles/VE482/Projects/p2/src/query/QueryResult.h
  /home/charles/VE482/Projects/p2/src/query/management/PrintTableQuery.cpp
@@ -237,6 +268,7 @@ CMakeFiles/lemondb.dir/query/management/PrintTableQuery.cpp.o
 CMakeFiles/lemondb.dir/query/management/QuitQuery.cpp.o
  /home/charles/VE482/Projects/p2/src/db/Database.h
  /home/charles/VE482/Projects/p2/src/db/Table.h
+ /home/charles/VE482/Projects/p2/src/query/DivQuery.h
  /home/charles/VE482/Projects/p2/src/query/Query.h
  /home/charles/VE482/Projects/p2/src/query/QueryResult.h
  /home/charles/VE482/Projects/p2/src/query/management/QuitQuery.cpp
@@ -246,6 +278,7 @@ CMakeFiles/lemondb.dir/query/management/QuitQuery.cpp.o
 CMakeFiles/lemondb.dir/query/management/TruncateTableQuery.cpp.o
  /home/charles/VE482/Projects/p2/src/db/Database.h
  /home/charles/VE482/Projects/p2/src/db/Table.h
+ /home/charles/VE482/Projects/p2/src/query/DivQuery.h
  /home/charles/VE482/Projects/p2/src/query/Query.h
  /home/charles/VE482/Projects/p2/src/query/QueryResult.h
  /home/charles/VE482/Projects/p2/src/query/management/TruncateTableQuery.cpp
