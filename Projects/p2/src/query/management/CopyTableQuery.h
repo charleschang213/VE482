@@ -9,7 +9,7 @@ public:
     bool iscreate(){return true;}
     std::string getname(){return "COPYTABLE";}
     explicit CopyTableQuery(std::string table, std::string NewTable) :
-            Query(std::move(table)), NewTable(std::move(NewTable)) {}
+            Query(std::move(NewTable)), NewTable(std::move(table)) {}
 
     QueryResult::Ptr execute() override;
 

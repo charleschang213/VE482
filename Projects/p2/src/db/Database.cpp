@@ -9,6 +9,7 @@
 #include <deque>
 #include <fstream>
 #include <iostream>
+#include <algorithm>
 #include <iomanip>
 
 std::unique_ptr<Database> Database::instance = nullptr;
@@ -81,6 +82,9 @@ void Database::insertQuery(std::unique_ptr<Query> &&query)
         taskMutex.lock();
         tasks.push(std::make_unique<DivQuery>(id, tablename, 0));
         taskMutex.unlock();
+        waitingMutex.lock();
+        waiting.push_back(q->getTableName());
+        waitingMutex.unlock();
     }
 }
 
@@ -105,12 +109,9 @@ void Database::runthread(Database *db)
             db->taskMutex.unlock();
             while (true){
                 bool a = false;
-                try{
-                    (*db)[task->target];
-                }
-                catch(TableNameNotFound){
-                    a = true;
-                }
+                db->waitingMutex.lock();
+                a = (std::count(db->waiting.begin(),db->waiting.end(),query->getTableName()))==0;
+                db->waitingMutex.unlock();
                 if (!a) break;
             }
             auto &table = (*db)[task->target];
@@ -156,6 +157,13 @@ void Database::runthread(Database *db)
                 task->execute();
             else
                 query->execute();
+            if (query->iscreate()){
+                for (std::vector<std::string>::iterator it = waiting.begin();it < waiting.end();it++ )
+                if (*it==query->getTableName()){
+                    waiting.erase(it);
+                    break;
+                }
+            }
             table.tlock();
             table.downactive();
             if (table.getactive() == 0)

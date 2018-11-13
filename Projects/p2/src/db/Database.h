@@ -62,6 +62,8 @@ private:
 
 public:
     friend class DivQuery; 
+    static std::vector<std::string> waiting;
+    std::mutex waitingMutex;
     void insertQuery(std::unique_ptr<Query> &&query);
     void testDuplicate(const std::string &tableName);
     void setExit(){timetoexit=true;}
