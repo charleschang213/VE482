@@ -65,13 +65,13 @@ void Database::runthread(Database *db){
         if (db->tasks.empty()){
             db->taskMutex.unlock();
             if (db->ExitTime()) return;
-            std::this_thread_yield();
+            std::this_thread::yield();
         }
         else {
             auto &task = db->tasks.front();
             db->tasks.pop();
             db->taskMutex.unlock();
-            auto table = (*db)[task->target];
+            auto &table = (*db)[task->target];
             while (true){
                 bool a = false;
                 table.tlock();
