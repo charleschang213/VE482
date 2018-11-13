@@ -1,9 +1,9 @@
 //
 // Created by liu on 18-10-25.
 //
-
-#include "QueryBuilders.h"
 #include "../db/Database.h"
+#include "QueryBuilders.h"
+
 
 #include "management/LoadTableQuery.h"
 #include "management/DropTableQuery.h"
