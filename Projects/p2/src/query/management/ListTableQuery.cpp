@@ -1,9 +1,9 @@
 //
 // Created by liu on 18-10-25.
 //
-
-#include "ListTableQuery.h"
 #include "../../db/Database.h"
+#include "ListTableQuery.h"
+
 
 constexpr const char *ListTableQuery::qname;
 

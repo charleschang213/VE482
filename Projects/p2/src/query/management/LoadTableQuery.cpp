@@ -1,9 +1,9 @@
 //
 // Created by liu on 18-10-25.
 //
-
-#include "LoadTableQuery.h"
 #include "../../db/Database.h"
+#include "LoadTableQuery.h"
+
 
 #include <fstream>
 

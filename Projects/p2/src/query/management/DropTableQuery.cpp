@@ -1,9 +1,9 @@
 //
 // Created by liu on 18-10-25.
 //
-
-#include "DropTableQuery.h"
 #include "../../db/Database.h"
+#include "DropTableQuery.h"
+
 
 constexpr const char *DropTableQuery::qname;
 

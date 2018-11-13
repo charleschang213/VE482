@@ -1,5 +1,6 @@
-#include "TruncateTableQuery.h"
 #include "../../db/Database.h"
+#include "TruncateTableQuery.h"
+
 
 constexpr const char *TruncateTableQuery::qname;
 

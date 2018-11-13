@@ -1,5 +1,6 @@
-#include "CopyTableQuery.h"
 #include "../../db/Database.h"
+#include "CopyTableQuery.h"
+
 
 constexpr const char *CopyTableQuery::qname;
 
