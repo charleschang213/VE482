@@ -4,6 +4,7 @@
 
 #include <algorithm>
 #include<vector>
+#include<utility>
 
 constexpr const char *DeleteQuery::qname;
 
@@ -14,6 +15,7 @@ QueryResult::Ptr DeleteQuery::execute() {
     auto result = initCondition(table);
     Table newtable(table.name(),table.field());
     Table::SizeType counter = 0;
+    vector<pair<string, vector<int> > > kvp;
     if (result.second){
         for (auto it = table.begin();it!=table.end();it++){
             if (this->evalCondition(*it)){
@@ -22,11 +24,14 @@ QueryResult::Ptr DeleteQuery::execute() {
             else {
                 vector<int> data;
                 for (auto i: table.field()) data.push_back((*it)[i]);
-                newtable.insertByIndex(it->key(),move(data));
+                kvp.emplace_back(it->key(),data);
             }
         }
     }
-    db[this->targetTable] = newtable;
+    table.clear();
+    for (auto it: kvp){
+        table.insertByIndex(it.first,std::move(it.second));
+    }
     return std::make_unique<RecordCountResult>(counter);
 
 }
