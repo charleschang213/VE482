@@ -7,7 +7,7 @@
 #include "DivQuery.h"
 #include "QueryResult.h"
 #include "../db/Table.h"
-//#include "../db/Database.h"
+#include "../db/Database.h"
 
 #include <functional>
 #include <memory>
