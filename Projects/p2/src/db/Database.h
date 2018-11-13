@@ -10,7 +10,7 @@
 #include <vector>
 #include <utility>
 #include <mutex>
-#include <pthread>
+#include <thread>
 
 #include "Table.h"
 #include "../query/Query.h"
