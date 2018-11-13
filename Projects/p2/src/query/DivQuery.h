@@ -1,6 +1,7 @@
 #ifndef DIVQUERY_H
 #define DIVQUERY_H
 #include "../db/Database.h"
+#include "QueryResult.h"
 
 class Database;
 
