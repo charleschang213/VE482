@@ -24,9 +24,9 @@ void Database::testDuplicate(const std::string &tableName) {
 void Database::insertQuery(Query::Ptr &&query){
     auto q = query.get();
     auto &table = (*this)[q->getTableName()];
-    int groups;
-    int size;
-    int id;
+    int groups=0;
+    int size=0;
+    int id=-1;
     bool dividable = q->dividable();
     std::string tablename = q->getTableName();
     resultMutex.lock();
