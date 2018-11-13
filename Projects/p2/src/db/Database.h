@@ -7,8 +7,12 @@
 
 #include <memory>
 #include <unordered_map>
+#include <vector>
+#include <utility>
 
 #include "Table.h"
+#include "Query.h"
+#include "QueryResult.h"
 
 class Database {
 private:
@@ -26,6 +30,8 @@ private:
      * The map of fileName -> tableName
      */
     std::unordered_map<std::string, std::string> fileTableNameMap;
+
+    std::vector<std::pair<Query::Ptr,QueryResult::Ptr> > results;
 
     /**
      * The default constructor is made private for singleton instance
