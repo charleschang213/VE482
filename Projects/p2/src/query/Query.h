@@ -13,10 +13,6 @@
 #include <memory>
 #include <string>
 
-#define DUMP(a) void dump(){\
-    db = Database::getInstance();\
-    db.insert
-}
 
 struct QueryCondition {
     std::string field;
