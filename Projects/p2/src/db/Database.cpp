@@ -67,7 +67,20 @@ void Database::insertQuery(std::unique_ptr<Query> &&query)
         {
             taskMutex.lock();
             tasks.push(std::make_unique<DivQuery>(id, tablename, 0));
+            taskMutex.unlock();
         }
+    }else{
+        auto q = query.get();
+        std::string tablename = q->getTableName();
+        resultMutex.lock();
+        q->setId(results.size());
+        int id = -1;
+        id = q->getId();
+        results.emplace_back(std::move(query), nullptr);
+        resultMutex.unlock();
+        taskMutex.lock();
+        tasks.push(std::make_unique<DivQuery>(id, tablename, 0));
+        taskMutex.unlock();
     }
 }
 
@@ -90,6 +103,16 @@ void Database::runthread(Database *db)
             auto &query = db->results[task->getid()].first;
             db->tasks.pop();
             db->taskMutex.unlock();
+            while (true){
+                bool a = false;
+                try{
+                    auto &table = (*db)[task->target];
+                }
+                catch(TableNameNotFound){
+                    a = true;
+                }
+                if (!a) break;
+            }
             auto &table = (*db)[task->target];
             while (true)
             {
