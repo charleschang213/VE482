@@ -3,7 +3,7 @@
 #include "../db/Database.h"
 #include "QueryResult.h"
 
-class Database;
+//class Database;
 
 static const int Partnumber = 100;
 
