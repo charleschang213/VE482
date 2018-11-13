@@ -23,7 +23,7 @@ set(SOURCE_FILES
         query/management/QuitQuery.cpp query/management/QuitQuery.h
         query/management/PrintTableQuery.cpp query/management/PrintTableQuery.h
 		
-		query/DivQuery.h
+		query/DivQuery.h query/DivQuery.cpp
 
         query/data/InsertQuery.cpp query/data/InsertQuery.h
         query/data/UpdateQuery.cpp query/data/UpdateQuery.h
