@@ -57,11 +57,13 @@ private:
     Database() = default;
 
 public:
+    friend class DivQuery; 
     void insertQuery(Query::Ptr &&query);
     void testDuplicate(const std::string &tableName);
     void setExit(){timetoexit=true;}
     bool ExitTime(){return timetoexit;}
     Table &registerTable(Table::Ptr &&table);
+    std::string getqueryname(int id){return results[id].first->getname();}
 
     void dropTable(const std::string &tableName);
 

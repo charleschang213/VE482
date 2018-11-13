@@ -119,8 +119,9 @@ int main(int argc, char *argv[]) {
             std::string queryStr = extractQueryString(is);
             Query::Ptr query = p.parseQuery(queryStr);
             if (queryStr[0]!='Q') std::cout << ++counter << "\n";
-            QueryResult::Ptr result = query->execute();
-            if (result->success()) {
+            auto &db = Database::getInstance();
+            db.insertQuery(query);
+            /*if (result->success()) {
                 if (result->display()) {
                     std::cout << *result;
                     std::cout.flush();
@@ -133,7 +134,7 @@ int main(int argc, char *argv[]) {
             } else {
                 std::cout.flush();
                 std::cerr << "QUERY FAILED:\n\t" << *result;
-            }
+            }*/
         }  catch (const std::ios_base::failure& e) {
             // End of input
             break;

@@ -4,13 +4,19 @@
 
 #ifndef PROJECT_QUERY_H
 #define PROJECT_QUERY_H
-
+#include "DivQuery.h"
 #include "QueryResult.h"
 #include "../db/Table.h"
+#include "../db/Database.h"
 
 #include <functional>
 #include <memory>
 #include <string>
+
+#define DUMP(a) void dump(){\
+    db = Database::getInstance();\
+    db.insert
+}
 
 struct QueryCondition {
     std::string field;
@@ -26,11 +32,18 @@ protected:
     std::string targetTable;
     int id = -1;
     int groups = 0;
+    QueryResult::Ptr result = nullptr;
 
 public:
+    std::string getname(){return "";}
+    virtual void dump(){}
     virtual bool dividable(){return false;}
     virtual bool iswrite(){return false;}
     Query() = default;
+
+    virtual void combine(DivQuery *div){result = std::make_unique<NullQueryResult>();}
+
+    virtual void finish(){}
 
     void setId(int x){id=x;}
     int getId(){return id;}

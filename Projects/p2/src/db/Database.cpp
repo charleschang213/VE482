@@ -46,7 +46,7 @@ void Database::insertQuery(Query::Ptr &&query){
         if (jo==true) break;
     }
     if (dividable){
-        groups = size/100+1;
+        groups = size/Partnumber+1;
         taskMutex.lock();
         for (int i=0;i<groups;i++){
             tasks.push(std::make_unique<DivQuery>(id,tablename,i));
@@ -69,6 +69,7 @@ void Database::runthread(Database *db){
         }
         else {
             auto &task = db->tasks.front();
+            auto &query = db->results[task->getid()].first;
             db->tasks.pop();
             db->taskMutex.unlock();
             auto &table = (*db)[task->target];
@@ -83,7 +84,6 @@ void Database::runthread(Database *db){
                 }
                 else if (table.getstatus()==0){
                     a = true;
-                    auto &query = db->results[task->getid()].first;
                     if (query->iswrite()) {
                         table.setstatus(0-task->getid());
                         table.upactive();
@@ -102,7 +102,9 @@ void Database::runthread(Database *db){
                 table.tunlock();
                 if (a) break;
             }
-            task->execute();
+            if (query->dividable())
+                task->execute();
+            else query->execute();
             table.tlock();
             table.downactive();
             if (table.getactive()==0) table.setstatus(0);
