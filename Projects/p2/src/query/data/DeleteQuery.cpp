@@ -1,5 +1,6 @@
-#include "DeleteQuery.h"
 #include "../../db/Database.h"
+#include "DeleteQuery.h"
+
 #include "../QueryResult.h"
 
 #include <algorithm>

@@ -2,8 +2,8 @@
 // Created by cat on 18-11-1.
 //
 
-#include "SelectQuery.h"
 #include "../../db/Database.h"
+#include "SelectQuery.h"
 #include <iostream>
 #include <algorithm>
 

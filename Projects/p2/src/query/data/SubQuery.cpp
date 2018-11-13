@@ -1,5 +1,6 @@
-#include "SubQuery.h"
+
 #include "../../db/Database.h"
+#include "SubQuery.h"
 
 constexpr const char *SubQuery::qname;
 

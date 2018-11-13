@@ -2,8 +2,8 @@
 // Created by liu on 18-10-25.
 //
 
-#include "UpdateQuery.h"
 #include "../../db/Database.h"
+#include "UpdateQuery.h"
 
 constexpr const char *UpdateQuery::qname;
 

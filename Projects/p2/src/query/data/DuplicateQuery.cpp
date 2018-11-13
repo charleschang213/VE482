@@ -2,8 +2,8 @@
 // Created by cat on 18-11-1.
 //
 
-#include "DuplicateQuery.h"
 #include "../../db/Database.h"
+#include "DuplicateQuery.h"
 #include <iostream>
 
 constexpr const char *DuplicateQuery::qname;

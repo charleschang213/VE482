@@ -1,5 +1,6 @@
-#include "AddQuery.h"
 #include "../../db/Database.h"
+#include "AddQuery.h"
+
 
 constexpr const char *AddQuery::qname;
 

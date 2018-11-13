@@ -6,9 +6,9 @@
 //
 //
 
+#include "../../db/Database.h"
 #include <vector>
 #include "MaxQuery.h"
-#include "../../db/Database.h"
 
 constexpr const char *MaxQuery::qname;
 

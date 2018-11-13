@@ -3,8 +3,8 @@
 //
 
 
-#include "CountQuery.h"
 #include "../../db/Database.h"
+#include "CountQuery.h"
 #include <iostream>
 
 constexpr const char *CountQuery::qname;

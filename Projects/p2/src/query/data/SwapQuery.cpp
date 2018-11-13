@@ -1,5 +1,6 @@
-#include "SwapQuery.h"
+
 #include "../../db/Database.h"
+#include "SwapQuery.h"
 
 constexpr const char *SwapQuery::qname;
 

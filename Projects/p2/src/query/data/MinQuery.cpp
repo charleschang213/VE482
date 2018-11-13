@@ -6,9 +6,9 @@
 //
 //
 
+#include "../../db/Database.h"
 #include <vector>
 #include "MinQuery.h"
-#include "../../db/Database.h"
 
 constexpr const char *MinQuery::qname;
 

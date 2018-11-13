@@ -2,8 +2,8 @@
 // Created by liu on 18-10-25.
 //
 
-#include "InsertQuery.h"
 #include "../../db/Database.h"
+#include "InsertQuery.h"
 #include "../QueryResult.h"
 
 #include <algorithm>
