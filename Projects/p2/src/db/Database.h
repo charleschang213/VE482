@@ -60,7 +60,7 @@ private:
 
 public:
     friend class DivQuery; 
-    void insertQuery(Query::Ptr &&query);
+    void insertQuery(std::unique_ptr<Query> &&query);
     void testDuplicate(const std::string &tableName);
     void setExit(){timetoexit=true;}
     bool ExitTime(){return timetoexit;}

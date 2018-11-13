@@ -21,7 +21,7 @@ void Database::testDuplicate(const std::string &tableName) {
     }
 }
 
-void Database::insertQuery(Query::Ptr &&query){
+void Database::insertQuery(std::unique_ptr<Query> &&query){
     auto q = query.get();
     auto &table = (*this)[q->getTableName()];
     int groups=0;
