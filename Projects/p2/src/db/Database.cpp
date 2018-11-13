@@ -21,6 +21,14 @@ void Database::testDuplicate(const std::string &tableName) {
     }
 }
 
+void Database::insertQuery(Query::Ptr &&query){
+    auto q = query.get();
+    resultMutex.lock();
+    q->setId(results.size());
+    results.emplace_back(std::move(query),nullptr);
+    resultMutex.unlock();
+}
+
 Table &Database::registerTable(Table::Ptr &&table) {
     auto name = table->name();
     this->testDuplicate(table->name());

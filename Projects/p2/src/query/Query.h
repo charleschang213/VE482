@@ -29,6 +29,8 @@ protected:
 public:
     Query() = default;
 
+    void setId(int x){id=x;}
+
     explicit Query(std::string targetTable) : targetTable(std::move(targetTable)) {}
 
     typedef std::unique_ptr<Query> Ptr;

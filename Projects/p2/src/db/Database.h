@@ -9,6 +9,7 @@
 #include <unordered_map>
 #include <vector>
 #include <utility>
+#include <mutex>
 
 #include "Table.h"
 #include "../query/Query.h"
@@ -32,6 +33,7 @@ private:
     std::unordered_map<std::string, std::string> fileTableNameMap;
 
     std::vector<std::pair<Query::Ptr,QueryResult::Ptr> > results;
+    std::mutex resultMutex;
 
     /**
      * The default constructor is made private for singleton instance
@@ -39,6 +41,7 @@ private:
     Database() = default;
 
 public:
+    void insertQuery(Query::Ptr &&query);
     void testDuplicate(const std::string &tableName);
 
     Table &registerTable(Table::Ptr &&table);
