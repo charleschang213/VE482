@@ -59,6 +59,10 @@ void Database::insertQuery(Query::Ptr &&query){
     }
 }
 
+void Database::runthread(Database *db){
+
+}
+
 Table &Database::registerTable(Table::Ptr &&table) {
     auto name = table->name();
     this->testDuplicate(table->name());
@@ -116,6 +120,8 @@ void Database::printAllTable() {
 Database &Database::getInstance() {
     if (Database::instance == nullptr) {
         instance = std::unique_ptr<Database>(new Database);
+        for (int i=0;i<threadnum;i++)
+            threads.emplace_back(runthread,instance.get());
     }
     return *instance;
 }

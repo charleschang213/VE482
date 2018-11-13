@@ -10,6 +10,7 @@
 #include <vector>
 #include <utility>
 #include <mutex>
+#include <pthread>
 
 #include "Table.h"
 #include "../query/Query.h"
@@ -24,6 +25,10 @@ private:
      * A unique pointer to the global database object
      */
     static std::unique_ptr<Database> instance;
+
+    std::vector<std::thread> threads;
+
+    const threadnum=8;
 
     /**
      * The map of tableName -> table unique ptr
@@ -40,6 +45,8 @@ private:
 
     std::vector<std::pair<Query::Ptr,QueryResult::Ptr> > results;
     std::mutex resultMutex;
+
+    void runthread(Database *db);
 
     /**
      * The default constructor is made private for singleton instance
