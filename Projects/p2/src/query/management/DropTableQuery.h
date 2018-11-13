@@ -9,7 +9,8 @@
 
 class DropTableQuery : public Query {
     static constexpr const char *qname = "DROP";
-public:
+public: 
+    std::string getname(){return "DROP";}
     using Query::Query;
 
     QueryResult::Ptr execute() override;

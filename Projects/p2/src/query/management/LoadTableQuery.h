@@ -12,6 +12,7 @@ class LoadTableQuery : public Query {
     static constexpr const char *qname = "LOAD";
     const std::string fileName;
 public:
+    std::string getname(){return "LOAD";}
 
     explicit LoadTableQuery(std::string table, std::string fileName) :
             Query(std::move(table)), fileName(std::move(fileName)) {}

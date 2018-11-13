@@ -13,6 +13,7 @@ class UpdateQuery : public ComplexQuery {
     Table::FieldIndex fieldId;
     Table::KeyType keyValue;
 public:
+    std::string getname(){return "UPDATE";}
     using ComplexQuery::ComplexQuery;
 
     QueryResult::Ptr execute() override;

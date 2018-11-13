@@ -11,6 +11,7 @@ class CountQuery : public ComplexQuery {
     //Table::FieldIndex fieldId;
     // Table::KeyType keyValue;
 public:
+    std::string getname(){return "COUNT";}
     using ComplexQuery::ComplexQuery;
 
     QueryResult::Ptr execute() override;

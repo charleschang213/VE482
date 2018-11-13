@@ -10,6 +10,7 @@
 class QuitQuery : public Query {
     static constexpr const char *qname = "QUIT";
 public:
+    std::string getname(){return "QUIT";}
     QuitQuery() = default;
 
     QueryResult::Ptr execute() override;

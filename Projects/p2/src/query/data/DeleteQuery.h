@@ -5,6 +5,7 @@
 class DeleteQuery : public ComplexQuery {
     static constexpr const char *qname = "DELETE";
 public:
+    std::string getname(){return "DELETE";}
     using ComplexQuery::ComplexQuery;
 
     QueryResult::Ptr execute() override;

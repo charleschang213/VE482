@@ -6,6 +6,7 @@ class CopyTableQuery : public Query {
     static constexpr const char *qname = "COPYTABLE";
     const std::string NewTable;
 public:
+    std::string getname(){return "COPYTABLE";}
     explicit CopyTableQuery(std::string table, std::string NewTable) :
             Query(std::move(table)), NewTable(std::move(NewTable)) {}
 

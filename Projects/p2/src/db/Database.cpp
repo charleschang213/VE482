@@ -61,6 +61,7 @@ void Database::insertQuery(std::unique_ptr<Query> &&query){
 }
 
 void Database::runthread(Database *db){
+    std::cout << "Hi" << std::endl;
     while (true) {
         db->taskMutex.lock();
         if (db->tasks.empty()){

@@ -6,8 +6,9 @@
 #include "../Query.h"
 
 class SwapQuery : public ComplexQuery {
-    static constexpr const char *qname = "ADD";
+    static constexpr const char *qname = "SWAP";
 public:
+    std::string getname(){return "SWAP";}
     using ComplexQuery::ComplexQuery;
 
     QueryResult::Ptr execute() override;

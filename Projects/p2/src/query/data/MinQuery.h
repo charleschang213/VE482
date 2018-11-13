@@ -17,6 +17,7 @@ class MinQuery : public ComplexQuery {
     //Table::FieldIndex fieldId;
     //Table::KeyType keyValue;
 public:
+    std::string getname(){return "MIN";}
     using ComplexQuery::ComplexQuery;
     
     QueryResult::Ptr execute() override;

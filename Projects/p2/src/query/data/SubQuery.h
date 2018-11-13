@@ -8,6 +8,7 @@
 class SubQuery : public ComplexQuery {
     static constexpr const char *qname = "SUB";
 public:
+    std::string getname(){return "SUB";}
     using ComplexQuery::ComplexQuery;
 
     QueryResult::Ptr execute() override;

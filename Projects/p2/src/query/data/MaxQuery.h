@@ -17,6 +17,7 @@ class MaxQuery : public ComplexQuery {
     //Table::FieldIndex fieldId;
     //Table::KeyType keyValue;
 public:
+    std::string getname(){return "MAX";}
     using ComplexQuery::ComplexQuery;
     
     QueryResult::Ptr execute() override;

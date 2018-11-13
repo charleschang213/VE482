@@ -10,6 +10,7 @@
 class InsertQuery : public ComplexQuery {
     static constexpr const char *qname = "INSERT";
 public:
+    std::string getname(){return "INSERT";}
     using ComplexQuery::ComplexQuery;
 
     QueryResult::Ptr execute() override;

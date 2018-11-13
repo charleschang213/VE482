@@ -11,6 +11,7 @@ class DuplicateQuery : public ComplexQuery {
     //Table::FieldIndex fieldId;
     //Table::KeyType keyValue;
 public:
+    std::string getname(){return "DUPLICATE";}
     using ComplexQuery::ComplexQuery;
 
     QueryResult::Ptr execute() override;

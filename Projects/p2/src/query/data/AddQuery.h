@@ -8,6 +8,7 @@
 class AddQuery : public ComplexQuery {
     static constexpr const char *qname = "ADD";
 public:
+    std::string getname(){return "ADD";}
     using ComplexQuery::ComplexQuery;
 
     QueryResult::Ptr execute() override;

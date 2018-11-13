@@ -17,6 +17,7 @@ class SumQuery : public ComplexQuery {
     //Table::FieldIndex fieldId;
     //Table::KeyType keyValue;
 public:
+    std::string getname(){return "SUM";}
     using ComplexQuery::ComplexQuery;
     
     QueryResult::Ptr execute() override;
