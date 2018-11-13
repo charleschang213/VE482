@@ -175,6 +175,10 @@ Table &Database::registerTable(Table::Ptr &&table)
 
 Table &Database::operator[](const std::string &tableName)
 {
+    if (this->tables.empty()){
+        throw TableNameNotFound(
+            "Error accesing table \"" + tableName + "\". Table not found.");
+    }
     auto it = this->tables.find(tableName);
     if (it == this->tables.end())
     {
