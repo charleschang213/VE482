@@ -15,8 +15,8 @@
 
 #include "Table.h"
 #include "../query/Query.h"
-#include "../query/QueryResult.h"
 #include "../query/DivQuery.h"
+#include "../query/QueryResult.h"
 
 class DivQuery;
 
