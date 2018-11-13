@@ -8,7 +8,7 @@
 class DivQuery{
     private:
         int id;
-        Table *target;
+        std::string target;
         int counter;
     public:
         friend class Database;
