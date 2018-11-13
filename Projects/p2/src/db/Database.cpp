@@ -4,6 +4,7 @@
 
 #include "Database.h"
 #include "Table.h"
+#include "../query/Query.h"
 
 #include <deque>
 #include <fstream>
