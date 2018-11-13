@@ -1,7 +1,7 @@
 //
 // Created by liu on 18-10-25.
 //
-
+#include "Database.h"
 #include "Query.h"
 
 #include <cassert>
