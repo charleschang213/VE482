@@ -28,7 +28,7 @@ private:
 
     std::vector<std::thread> threads;
 
-    const int threadnum=8;
+    int threadnum=8;
 
     /**
      * The map of tableName -> table unique ptr

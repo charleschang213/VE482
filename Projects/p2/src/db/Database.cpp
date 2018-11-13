@@ -120,8 +120,8 @@ void Database::printAllTable() {
 Database &Database::getInstance() {
     if (Database::instance == nullptr) {
         instance = std::unique_ptr<Database>(new Database);
-        for (int i=0;i<threadnum;i++)
-            threads.emplace_back(runthread,instance.get());
+        for (int i=0;i<instance->threadnum;i++)
+            instance->threads.emplace_back(runthread,instance.get());
     }
     return *instance;
 }
