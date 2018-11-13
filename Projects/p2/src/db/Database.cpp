@@ -5,6 +5,7 @@
 #include "Database.h"
 #include "Table.h"
 #include "../query/Query.h"
+#include "../query/DivQuery.h"
 
 #include <deque>
 #include <fstream>
