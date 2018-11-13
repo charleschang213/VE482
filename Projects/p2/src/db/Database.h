@@ -13,9 +13,11 @@
 #include <mutex>
 #include <thread>
 
-#include "Table.h"
+
 #include "../query/Query.h"
 #include "../query/DivQuery.h"
+
+#include "Table.h"
 #include "../query/QueryResult.h"
 
 class DivQuery;
