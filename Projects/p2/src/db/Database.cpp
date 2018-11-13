@@ -23,10 +23,40 @@ void Database::testDuplicate(const std::string &tableName) {
 
 void Database::insertQuery(Query::Ptr &&query){
     auto q = query.get();
+    auto &table = (*this)[q->getTableName()];
+    int groups;
+    int size;
+    int id;
+    bool dividable = q->dividable();
+    std::string tablename = q->getTableName();
     resultMutex.lock();
     q->setId(results.size());
+    id = q->getId();
     results.emplace_back(std::move(query),nullptr);
+    results.back().first->setGroups(groups);
     resultMutex.unlock();
+    while (true){
+        bool jo = false;
+        table.tlock();
+        if (table.getstatus()>=0) {
+            jo=true;
+            size = table.size();
+        }
+        table.tunlock();
+        if (jo==true) break;
+    }
+    if (dividable){
+        groups = size/100+1;
+        taskMutex.lock();
+        for (int i=0;i<groups;i++){
+            tasks.emplace_back(std::make_unique<DivQuery>(id,tablename,i));
+        }
+        taskMutex.unlock();
+    }
+    else {
+        taskMutex.lock();
+        tasks.emplace_back(std::make_unique<DivQuery>(id,tablename,0));
+    }
 }
 
 Table &Database::registerTable(Table::Ptr &&table) {

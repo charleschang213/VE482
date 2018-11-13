@@ -25,6 +25,7 @@ class Query {
 protected:
     std::string targetTable;
     int id = -1;
+    int groups = 0;
 
 public:
     virtual bool dividable(){return false;}
@@ -32,10 +33,15 @@ public:
     Query() = default;
 
     void setId(int x){id=x;}
+    int getId(){return id;}
+    void setGroups(int x){groups=x;}
+    int getGroups(){return groups;}
 
     explicit Query(std::string targetTable) : targetTable(std::move(targetTable)) {}
 
     typedef std::unique_ptr<Query> Ptr;
+
+    std::string getTableName(){return targetTable;}
 
     virtual QueryResult::Ptr execute() = 0;
 

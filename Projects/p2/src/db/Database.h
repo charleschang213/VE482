@@ -14,6 +14,7 @@
 #include "Table.h"
 #include "../query/Query.h"
 #include "../query/QueryResult.h"
+#include "../query/DivQuery.h"
 
 class Database {
 private:
@@ -31,6 +32,9 @@ private:
      * The map of fileName -> tableName
      */
     std::unordered_map<std::string, std::string> fileTableNameMap;
+
+    std::vector<DivQuery::Ptr> tasks;
+    std::mutex taskMutex;
 
     std::vector<std::pair<Query::Ptr,QueryResult::Ptr> > results;
     std::mutex resultMutex;

@@ -99,6 +99,9 @@ private:
     int active;
 
 public:
+    void tlock(){statusMutex.lock();}
+    void tunlock(){statusMutex.unlock();}
+    int getstatus(){return status;}
     typedef std::unique_ptr<Table> Ptr;
 
     /**
