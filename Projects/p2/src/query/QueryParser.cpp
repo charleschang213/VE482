@@ -1,3 +1,4 @@
+#include "../db/Database.h"
 #include "Query.h"
 #include "QueryParser.h"
 #include "QueryBuilders.h"
