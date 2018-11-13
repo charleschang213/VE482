@@ -31,6 +31,7 @@ protected:
     QueryResult::Ptr result = nullptr;
 
 public:
+    virtual bool iscreate(){return false;}
     virtual std::string getname(){return "";}
     virtual void dump(){}
     virtual bool dividable(){return false;}
