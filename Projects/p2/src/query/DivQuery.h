@@ -1,9 +1,6 @@
 #ifndef DIVQUERY_H
 #define DIVQUERY_H
-#include "Query.h"
-#include "../db/Table.h"
 #include "../db/Database.h"
-#include "QueryResult.h"
 
 static const int Partnumber = 100;
 
