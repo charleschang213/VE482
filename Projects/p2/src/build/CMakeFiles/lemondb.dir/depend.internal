@@ -5,12 +5,16 @@ CMakeFiles/lemondb.dir/db/Database.cpp.o
  /root/VE482/Projects/p2/src/db/Database.cpp
  /root/VE482/Projects/p2/src/db/Database.h
  /root/VE482/Projects/p2/src/db/Table.h
+ /root/VE482/Projects/p2/src/query/Query.h
+ /root/VE482/Projects/p2/src/query/QueryResult.h
  /root/VE482/Projects/p2/src/utils/formatter.h
  /root/VE482/Projects/p2/src/utils/uexception.h
 CMakeFiles/lemondb.dir/db/Table.cpp.o
  /root/VE482/Projects/p2/src/db/Database.h
  /root/VE482/Projects/p2/src/db/Table.cpp
  /root/VE482/Projects/p2/src/db/Table.h
+ /root/VE482/Projects/p2/src/query/Query.h
+ /root/VE482/Projects/p2/src/query/QueryResult.h
  /root/VE482/Projects/p2/src/utils/formatter.h
  /root/VE482/Projects/p2/src/utils/uexception.h
 CMakeFiles/lemondb.dir/main.cpp.o

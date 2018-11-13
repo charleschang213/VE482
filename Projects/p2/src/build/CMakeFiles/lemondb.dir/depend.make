@@ -4,12 +4,16 @@
 CMakeFiles/lemondb.dir/db/Database.cpp.o: ../db/Database.cpp
 CMakeFiles/lemondb.dir/db/Database.cpp.o: ../db/Database.h
 CMakeFiles/lemondb.dir/db/Database.cpp.o: ../db/Table.h
+CMakeFiles/lemondb.dir/db/Database.cpp.o: ../query/Query.h
+CMakeFiles/lemondb.dir/db/Database.cpp.o: ../query/QueryResult.h
 CMakeFiles/lemondb.dir/db/Database.cpp.o: ../utils/formatter.h
 CMakeFiles/lemondb.dir/db/Database.cpp.o: ../utils/uexception.h
 
 CMakeFiles/lemondb.dir/db/Table.cpp.o: ../db/Database.h
 CMakeFiles/lemondb.dir/db/Table.cpp.o: ../db/Table.cpp
 CMakeFiles/lemondb.dir/db/Table.cpp.o: ../db/Table.h
+CMakeFiles/lemondb.dir/db/Table.cpp.o: ../query/Query.h
+CMakeFiles/lemondb.dir/db/Table.cpp.o: ../query/QueryResult.h
 CMakeFiles/lemondb.dir/db/Table.cpp.o: ../utils/formatter.h
 CMakeFiles/lemondb.dir/db/Table.cpp.o: ../utils/uexception.h
 

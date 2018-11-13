@@ -25,8 +25,18 @@ memory
 -
 unordered_map
 -
+vector
+-
+utility
+-
+mutex
+-
 Table.h
 /root/VE482/Projects/p2/src/db/Table.h
+../query/Query.h
+/root/VE482/Projects/p2/src/query/Query.h
+../query/QueryResult.h
+/root/VE482/Projects/p2/src/query/QueryResult.h
 
 /root/VE482/Projects/p2/src/db/Table.cpp
 Database.h

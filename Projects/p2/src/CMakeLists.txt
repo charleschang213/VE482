@@ -22,6 +22,8 @@ set(SOURCE_FILES
         query/management/TruncateTableQuery.cpp query/management/TruncateTableQuery.h
         query/management/QuitQuery.cpp query/management/QuitQuery.h
         query/management/PrintTableQuery.cpp query/management/PrintTableQuery.h
+		
+		query/DivQuery.h
 
         query/data/InsertQuery.cpp query/data/InsertQuery.h
         query/data/UpdateQuery.cpp query/data/UpdateQuery.h
