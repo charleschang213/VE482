@@ -9,6 +9,7 @@
 #include <unordered_map>
 #include <vector>
 #include <utility>
+#include <queue>
 #include <mutex>
 #include <thread>
 
@@ -30,6 +31,8 @@ private:
 
     int threadnum=8;
 
+    bool timetoexit = false;
+
     /**
      * The map of tableName -> table unique ptr
      */
@@ -40,7 +43,7 @@ private:
      */
     std::unordered_map<std::string, std::string> fileTableNameMap;
 
-    std::vector<std::unique_ptr<DivQuery> > tasks;
+    std::queue<std::unique_ptr<DivQuery> > tasks;
     std::mutex taskMutex;
 
     std::vector<std::pair<Query::Ptr,QueryResult::Ptr> > results;
@@ -56,7 +59,8 @@ private:
 public:
     void insertQuery(Query::Ptr &&query);
     void testDuplicate(const std::string &tableName);
-
+    void setExit(){timetoexit=true;}
+    bool ExitTime(){return timetoexit;}
     Table &registerTable(Table::Ptr &&table);
 
     void dropTable(const std::string &tableName);

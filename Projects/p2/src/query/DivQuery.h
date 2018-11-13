@@ -17,6 +17,7 @@ class DivQuery{
         ~DivQuery()=default;
         virtual void execute(){}
         int getcounter(){return counter;}
+        int getid(){return id;}
 };
 
 

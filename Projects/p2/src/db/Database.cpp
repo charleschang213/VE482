@@ -49,18 +49,66 @@ void Database::insertQuery(Query::Ptr &&query){
         groups = size/100+1;
         taskMutex.lock();
         for (int i=0;i<groups;i++){
-            tasks.emplace_back(std::make_unique<DivQuery>(id,tablename,i));
+            tasks.push(std::make_unique<DivQuery>(id,tablename,i));
         }
         taskMutex.unlock();
     }
     else {
         taskMutex.lock();
-        tasks.emplace_back(std::make_unique<DivQuery>(id,tablename,0));
+        tasks.push(std::make_unique<DivQuery>(id,tablename,0));
     }
 }
 
 void Database::runthread(Database *db){
-
+    while (true) {
+        db->taskMutex.lock();
+        if (db->tasks.empty()){
+            db->taskMutex.unlock();
+            if (db->ExitTime()) return;
+            std::this_thread_yield();
+        }
+        else {
+            auto &task = db->tasks.front();
+            db->tasks.pop();
+            db->taskMutex.unlock();
+            auto table = (*db)[task->target];
+            while (true){
+                bool a = false;
+                table.tlock();
+                if (table.getstatus()<0){
+                    if (table.getstatus()+task->getid()==0){
+                        a = true;
+                        table.upactive();
+                    }
+                }
+                else if (table.getstatus()==0){
+                    a = true;
+                    auto &query = db->results[task->getid()].first;
+                    if (query->iswrite()) {
+                        table.setstatus(0-task->getid());
+                        table.upactive();
+                    }
+                    else {
+                        table.setstatus(task->getid());
+                        table.upactive();
+                    }
+                }
+                else {
+                    if (task->getid()>0){
+                        a = true;
+                        table.upactive();
+                    }
+                }
+                table.tunlock();
+                if (a) break;
+            }
+            task->execute();
+            table.tlock();
+            table.downactive();
+            if (table.getactive()==0) table.setstatus(0);
+            table.tunlock();
+        }
+    }
 }
 
 Table &Database::registerTable(Table::Ptr &&table) {

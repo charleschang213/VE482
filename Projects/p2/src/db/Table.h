@@ -102,6 +102,10 @@ public:
     void tlock(){statusMutex.lock();}
     void tunlock(){statusMutex.unlock();}
     int getstatus(){return status;}
+    void setstatus(int x){status=x;}
+    void upactive(){active++;}
+    void downactive(){active--;}
+    int getactive(){return active;}
     typedef std::unique_ptr<Table> Ptr;
 
     /**
