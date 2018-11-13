@@ -122,7 +122,7 @@ int main(int argc, char *argv[]) {
             Query::Ptr query = p.parseQuery(queryStr);
             if (queryStr[0]!='Q') std::cout << ++counter << "\n";
             auto &db = Database::getInstance();
-            db.insertQuery(query);
+            db.insertQuery(std::move(query));
             /*if (result->success()) {
                 if (result->display()) {
                     std::cout << *result;
