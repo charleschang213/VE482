@@ -27,6 +27,8 @@ protected:
     int id = -1;
 
 public:
+    virtual bool dividable(){return false;}
+    virtual bool iswrite(){return false;}
     Query() = default;
 
     void setId(int x){id=x;}
@@ -60,8 +62,6 @@ protected:
     /** The function used in where clause */
     std::vector<QueryCondition> condition;
 public:
-    virtual bool dividable(){return false;}
-    virtual bool iswrite(){return false;}
     typedef std::unique_ptr<ComplexQuery> Ptr;
 
     /**
