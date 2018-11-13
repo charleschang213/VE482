@@ -93,6 +93,10 @@ private:
     /** The name of table */
     std::string tableName;
 
+    std::mutex statusMutex;
+    int status;
+    int active;
+
 public:
     typedef std::unique_ptr<Table> Ptr;
 
