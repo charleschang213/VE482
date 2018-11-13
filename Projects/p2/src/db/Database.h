@@ -35,7 +35,7 @@ private:
      */
     std::unordered_map<std::string, std::string> fileTableNameMap;
 
-    std::vector<DivQuery::Ptr> tasks;
+    std::vector<std::unique_ptr<DivQuery> > tasks;
     std::mutex taskMutex;
 
     std::vector<std::pair<Query::Ptr,QueryResult::Ptr> > results;
