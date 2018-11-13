@@ -36,7 +36,7 @@ private:
     /**
      * The map of tableName -> table unique ptr
      */
-    std::unordered_map<std::string, Table::Ptr> tables;
+    std::unordered_map<std::string, std::unique_ptr<Table> > tables;
 
     /**
      * The map of fileName -> tableName
@@ -46,7 +46,7 @@ private:
     std::queue<std::unique_ptr<DivQuery> > tasks;
     std::mutex taskMutex;
 
-    std::vector<std::pair<Query::Ptr,QueryResult::Ptr> > results;
+    std::vector<std::pair<std::unique_ptr<Query>,std::unique_ptr<QueryResult> > > results;
     std::mutex resultMutex;
 
     static void runthread(Database *db);
