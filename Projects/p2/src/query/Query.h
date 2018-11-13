@@ -4,14 +4,15 @@
 
 #ifndef PROJECT_QUERY_H
 #define PROJECT_QUERY_H
+#include "../db/Database.h"
 #include "QueryResult.h"
 #include "../db/Table.h"
-#include "../db/Database.h"
 
 #include <functional>
 #include <memory>
 #include <string>
 
+class DivQuery;
 
 struct QueryCondition {
     std::string field;
