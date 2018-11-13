@@ -4,7 +4,6 @@
 
 #ifndef PROJECT_QUERY_H
 #define PROJECT_QUERY_H
-#include "DivQuery.h"
 #include "QueryResult.h"
 #include "../db/Table.h"
 #include "../db/Database.h"
@@ -124,7 +123,5 @@ public:
     const std::vector<QueryCondition> &getCondition() { return condition; }
 };
 
-class DivQuery;
-class Database;
 
 #endif //PROJECT_QUERY_H
