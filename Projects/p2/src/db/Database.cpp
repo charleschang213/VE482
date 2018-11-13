@@ -106,7 +106,7 @@ void Database::runthread(Database *db)
             while (true){
                 bool a = false;
                 try{
-                    auto &table = (*db)[task->target];
+                    (*db)[task->target];
                 }
                 catch(TableNameNotFound){
                     a = true;
