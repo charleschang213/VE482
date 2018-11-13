@@ -13,7 +13,7 @@ class DivQuery{
     public:
         friend class Database;
         typedef std::unique_ptr<DivQuery> Ptr;
-        DivQuery(int id,Table *target,int counter):id(id),target(target),counter(counter){}
+        DivQuery(int id,std::string target,int counter):id(id),target(target),counter(counter){}
         ~DivQuery()=default;
         virtual void execute(){}
         int getcounter(){return counter;}
