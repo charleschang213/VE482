@@ -4,6 +4,8 @@
 
 #include "query/QueryParser.h"
 #include "query/QueryBuilders.h"
+#include "db/Database.h"
+#include "query/Query.h"
 
 #include <getopt.h>
 #include <fstream>
