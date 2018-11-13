@@ -11,8 +11,8 @@
 #include <utility>
 
 #include "Table.h"
-#include "Query.h"
-#include "QueryResult.h"
+#include "../query/Query.h"
+#include "../query/QueryResult.h"
 
 class Database {
 private:
