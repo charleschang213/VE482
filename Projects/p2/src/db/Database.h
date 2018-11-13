@@ -20,6 +20,8 @@
 
 class DivQuery;
 
+class Query;
+
 class Database {
 private:
     /**
