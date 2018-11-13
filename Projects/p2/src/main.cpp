@@ -2,10 +2,10 @@
 // Created by liu on 18-10-21.
 //
 
-#include "query/QueryParser.h"
-#include "query/QueryBuilders.h"
 #include "db/Database.h"
 #include "query/Query.h"
+#include "query/QueryParser.h"
+#include "query/QueryBuilders.h"
 
 #include <getopt.h>
 #include <fstream>
