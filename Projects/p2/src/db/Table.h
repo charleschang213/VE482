@@ -7,8 +7,6 @@
 
 #include "../utils/uexception.h"
 #include "../utils/formatter.h"
-#include "../query/Query.h"
-#include "../query/DivQuery.h"
 
 #include <limits>
 #include <memory>
@@ -16,8 +14,6 @@
 #include <vector>
 #include <unordered_map>
 #include <utility>
-#include <thread>
-#include <mutex>
 
 
 #define _DBTABLE_ACCESS_WITH_NAME_EXCEPTION(field)\
@@ -43,12 +39,6 @@ do {\
     }\
 } while(0)
 
-class Table;
-
-class Query;
-
-class DivQuery;
-
 class Table {
 public:
     typedef std::string KeyType;
@@ -58,7 +48,7 @@ public:
     static constexpr const ValueType ValueTypeMax = std::numeric_limits<ValueType>::max();
     static constexpr const ValueType ValueTypeMin = std::numeric_limits<ValueType>::min();
     typedef size_t SizeType;
-   
+
 private:
     /** A row in the table */
     struct Datum {
@@ -103,13 +93,7 @@ private:
     /** The name of table */
     std::string tableName;
 
-    int threadNum;
-    std::vector<std::thread> threadList;
-    int Sem=0;
-    Query *WriteId=nullptr;
-    std::mutex SemMutex;
-
-public:  
+public:
     typedef std::unique_ptr<Table> Ptr;
 
     /**
@@ -276,44 +260,7 @@ public:
      * @tparam FieldIDContainer
      * @param name: the table name (must be unique in the database)
      * @param fields: an iterable container with fields
-     * 
-     * 
      */
-
-     void Sem_Up(Query* query,bool isupdate){
-        while(true){
-            SemMutex.lock();
-            if (isupdate){
-                if ((Sem<0)&&(WriteId==query)){
-                    Sem--;
-                    SemMutex.unlock();
-                    break;
-                }
-                if (Sem==0){
-                    WriteId=query;
-                    Sem--;
-                    SemMutex.unlock();
-                    break;
-                }
-            }
-            else{
-                if (Sem>=0){
-                    Sem++;
-                    SemMutex.unlock();
-                    break;
-                }
-            }
-            SemMutex.unlock();
-        }
-    }
-
-    void Sem_Down(Query* query,bool isupdate){
-        SemMutex.lock();
-        if (isupdate) Sem++;
-        else Sem--;
-        SemMutex.unlock();
-    }
-
     template<class FieldIDContainer>
     Table(const std::string &name, const FieldIDContainer &fields);
 

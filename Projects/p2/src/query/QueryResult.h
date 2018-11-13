@@ -11,7 +11,6 @@
 #include <sstream>
 #include <string>
 #include <vector>
-#include <iostream>
 
 class QueryResult {
 public:
@@ -24,9 +23,6 @@ public:
     virtual ~QueryResult() = default;
 
     friend std::ostream &operator<<(std::ostream &os, const QueryResult &table);
-
-    void print(){output(std::cout);}
-
 
 protected:
     virtual std::ostream &output(std::ostream &os) const = 0;

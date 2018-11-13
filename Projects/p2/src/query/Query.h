@@ -7,7 +7,6 @@
 
 #include "QueryResult.h"
 #include "../db/Table.h"
-#include "DivQuery.h"
 
 #include <functional>
 #include <memory>
@@ -28,12 +27,7 @@ protected:
     int id = -1;
 
 public:
-    virtual bool isupdate(){return false;}
     Query() = default;
-
-    void setid(const int x){id = x;}
-
-    int getid(){return id;}
 
     explicit Query(std::string targetTable) : targetTable(std::move(targetTable)) {}
 
@@ -57,59 +51,7 @@ public:
     }
 };
 
-class DividableQuery: public Query {
-    private:
-        int DivNum = 0;
-        std::vector<DivQuery::Ptr> Tasks;
-        std::mutex TaskMutex;
-    public:
-        explicit DividableQuery(std::string targetTable) : Query(std::move(targetTable)) {}
-        virtual bool Dividable(){return true;}
-        QueryResult::Ptr combine(int counter);
-        template<class DivType>
-        void AddDiv(Database &db, Table &table){
-            auto begin = table.begin();
-            auto size = table.size();
-            decltype(begin) end;
-            TaskMutex.lock();
-            if (size==0){
-                auto task = std::unique_ptr<DivType>(new DivType(this,&table,begin,begin));
-                auto t = task.get();
-                Tasks.emplace_back(std::move(task));
-                db.InsertDivQuery(t);
-            }
-            else{
-                const int onediv = 100;
-                DivNum = (size-1)/onediv+1;
-                while (size>0){
-                    if (size>=onediv){
-                        size-=onediv;
-                        end = begin+onediv;
-                    }
-                    else{
-                        size=0;
-                        end = table.end();
-                    }
-                    auto task = std::unique_ptr<DivType>(new DivType(this, &table, begin, end));
-                    auto t = task.get();
-                    Tasks.emplace_back(std::move(task));
-                    db.InsertDivQuery(t);
-                    begin = end;
-                }
-            }
-            TaskMutex.unlock();
-        }
-        template<class DivType>
-        void AddOne(Database &db, Table *table){
-            auto task = std::unique_ptr<DivType>(new DivType(this, table));
-            auto t = task.get();
-            Tasks.emplace_back(std::move(task));
-            db.InsertDivQuery(t);
-        }
-        void SetDivNum(const int x){DivNum=x;}
-};
-
-class ComplexQuery : public DividableQuery {
+class ComplexQuery : public Query {
 protected:
     /** The field names in the first () */
     std::vector<std::string> operands;
@@ -151,7 +93,7 @@ public:
     ComplexQuery(std::string targetTable,
                  std::vector<std::string> operands,
                  std::vector<QueryCondition> condition)
-            : DividableQuery(std::move(targetTable)),
+            : Query(std::move(targetTable)),
               operands(std::move(operands)),
               condition(std::move(condition)) {
     }
