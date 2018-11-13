@@ -2,6 +2,8 @@
 #define DIVQUERY_H
 #include "../db/Database.h"
 
+class Database;
+
 static const int Partnumber = 100;
 
 class DivQuery{
