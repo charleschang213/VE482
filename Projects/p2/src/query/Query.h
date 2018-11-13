@@ -124,4 +124,7 @@ public:
     const std::vector<QueryCondition> &getCondition() { return condition; }
 };
 
+class DivQuery;
+class Database;
+
 #endif //PROJECT_QUERY_H
