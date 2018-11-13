@@ -46,7 +46,7 @@ private:
     std::vector<std::pair<Query::Ptr,QueryResult::Ptr> > results;
     std::mutex resultMutex;
 
-    void runthread(Database *db);
+    static void runthread(Database *db);
 
     /**
      * The default constructor is made private for singleton instance
