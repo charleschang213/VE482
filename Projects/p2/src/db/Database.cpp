@@ -112,7 +112,7 @@ void Database::runthread(Database *db)
                 db->waitingMutex.lock();
                 a = (std::count(db->waiting.begin(),db->waiting.end(),query->getTableName()))==0;
                 db->waitingMutex.unlock();
-                if (!a) break;
+                if (a) break;
             }
             auto &table = (*db)[task->target];
             while (true)
@@ -157,13 +157,7 @@ void Database::runthread(Database *db)
                 task->execute();
             else
                 query->execute();
-            if (query->iscreate()){
-                for (std::vector<std::string>::iterator it = waiting.begin();it < waiting.end();it++ )
-                if (*it==query->getTableName()){
-                    waiting.erase(it);
-                    break;
-                }
-            }
+            db->deletewaiting(query->getTableName());
             table.tlock();
             table.downactive();
             if (table.getactive() == 0)

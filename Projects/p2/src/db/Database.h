@@ -59,15 +59,26 @@ private:
      * The default constructor is made private for singleton instance
      */
     Database() = default;
+    
+    std::vector<std::string> waiting;
+    std::mutex waitingMutex;
 
 public:
     friend class DivQuery; 
-    static std::vector<std::string> waiting;
-    std::mutex waitingMutex;
     void insertQuery(std::unique_ptr<Query> &&query);
     void testDuplicate(const std::string &tableName);
     void setExit(){timetoexit=true;}
     bool ExitTime(){return timetoexit;}
+    bool deltewaiting(std::string tablename){
+        waitingMutex.lock();
+        for (auto it=waiting.begin();it<waiting.end();it++){
+            if (*it==tablename){
+                waiting.erase(it);
+                break;
+            }
+        }
+        waitingMutex.unlock();
+    }
     Table &registerTable(Table::Ptr &&table);
     std::string getqueryname(int id){return results[id].first->getname();}
 
