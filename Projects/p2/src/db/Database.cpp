@@ -33,7 +33,7 @@ void Database::insertQuery(std::unique_ptr<Query> &&query)
         q->setId(results.size());
         results.emplace_back(std::move(query), nullptr);
         taskMutex.lock();
-        tasks.push(std::make_unique<DivQuery>(id, "", 0));
+        tasks.emplace(id, "", 0);
         std::cout << "Added" << std::endl;
         taskMutex.unlock();
         return;
@@ -70,7 +70,7 @@ void Database::insertQuery(std::unique_ptr<Query> &&query)
             taskMutex.lock();
             for (int i = 0; i < groups; i++)
             {
-                tasks.push(std::make_unique<DivQuery>(id, tablename, i));
+                tasks.emplace(id, tablename, i);
             }
             taskMutex.unlock();
             resultMutex.lock();
@@ -80,7 +80,7 @@ void Database::insertQuery(std::unique_ptr<Query> &&query)
         else
         {
             taskMutex.lock();
-            tasks.push(std::make_unique<DivQuery>(id, tablename, 0));
+            tasks.emplace(id, tablename, 0);
             taskMutex.unlock();
         }
     }else{
@@ -93,7 +93,7 @@ void Database::insertQuery(std::unique_ptr<Query> &&query)
         results.emplace_back(std::move(query), nullptr);
         resultMutex.unlock();
         taskMutex.lock();
-        tasks.push(std::make_unique<DivQuery>(id, tablename, 0));
+        tasks.emplace(id, tablename, 0);
         taskMutex.unlock();
         waitingMutex.lock();
         waiting.push_back(q->getTableName());
@@ -117,7 +117,7 @@ void Database::runthread(Database *db)
         else
         {
             auto &task = db->tasks.front();
-            auto &query = db->results[task->getid()].first;
+            auto &query = db->results[task.getid()].first;
             db->tasks.pop();
             db->taskMutex.unlock();
             if (query->iscreate()){
@@ -131,14 +131,14 @@ void Database::runthread(Database *db)
                 db->waitingMutex.unlock();
                 if (a) break;
             }
-            auto &table = (*db)[task->target];
+            auto &table = (*db)[task.target];
             while (true)
             {
                 bool a = false;
                 table.tlock();
                 if (table.getstatus() < 0)
                 {
-                    if (table.getstatus() + task->getid() == 0)
+                    if (table.getstatus() + task.getid() == 0)
                     {
                         a = true;
                         table.upactive();
@@ -149,18 +149,18 @@ void Database::runthread(Database *db)
                     a = true;
                     if (query->iswrite())
                     {
-                        table.setstatus(0 - task->getid());
+                        table.setstatus(0 - task.getid());
                         table.upactive();
                     }
                     else
                     {
-                        table.setstatus(task->getid());
+                        table.setstatus(task.getid());
                         table.upactive();
                     }
                 }
                 else
                 {
-                    if (task->getid() > 0)
+                    if (task.getid() > 0)
                     {
                         a = true;
                         table.upactive();
@@ -171,7 +171,7 @@ void Database::runthread(Database *db)
                     break;
             }
             if (query->dividable())
-                task->execute();
+                task.execute();
             else
                 query->execute();
             db->deletewaiting(query->getTableName());
