@@ -48,11 +48,11 @@ void Database::insertQuery(std::unique_ptr<Query> &&query)
         int id = -1;
         bool dividable = q->dividable();
         std::string tablename = q->getTableName();
+        std::cout << "Adding" << std::endl;
         resultMutex.lock();
         q->setId(results.size());
         results.emplace_back(std::move(query), nullptr);
         resultMutex.unlock();
-        std::cout << "Added" << std::endl;
         if (dividable)
         {
             while (true)
