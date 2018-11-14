@@ -1,4 +1,4 @@
-#include "../../db/database.h"
+#include "../../db/Database.h"
 #include "../data/UpdateQuery.h"
 
 QueryResult::Ptr DivQuery::UpdateDivExe(){
