@@ -52,8 +52,11 @@ void Database::insertQuery(std::unique_ptr<Query> &&query)
         q->setId(results.size());
         results.emplace_back(std::move(query), nullptr);
         resultMutex.unlock();
-        while (true)
+        std::cout << "Added" << std::endl;
+        if (dividable)
         {
+            while (true)
+            {
             bool jo = false;
             table.tlock();
             if (table.getstatus() >= 0)
@@ -64,9 +67,7 @@ void Database::insertQuery(std::unique_ptr<Query> &&query)
             table.tunlock();
             if (jo == true)
                 break;
-        }
-        if (dividable)
-        {
+            }
             groups = size / Partnumber + 1;
             taskMutex.lock();
             for (int i = 0; i < groups; i++)
