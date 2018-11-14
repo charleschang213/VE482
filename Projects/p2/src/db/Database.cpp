@@ -127,6 +127,7 @@ void Database::runthread(Database *db)
                 db->deletewaiting(query->getTableName());
                 continue;
             }
+            std::cout << "Wait for table Creation" << std::cout;
             while (true){
                 bool a = false;
                 db->waitingMutex.lock();
@@ -135,6 +136,7 @@ void Database::runthread(Database *db)
                 if (a) break;
             }
             auto &table = (*db)[task.target];
+            std::cout << "Wait for table operations" << std::endl;
             while (true)
             {
                 bool a = false;
