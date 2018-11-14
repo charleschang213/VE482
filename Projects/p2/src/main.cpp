@@ -146,6 +146,8 @@ int main(int argc, char *argv[]) {
             std::cerr << e.what() << std::endl;
         }
     }
+    auto &db = Database::getInstance();
+    db.jointhread();
 
     return 0;
 }
