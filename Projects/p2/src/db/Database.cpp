@@ -107,6 +107,10 @@ void Database::runthread(Database *db)
             auto &query = db->results[task->getid()].first;
             db->tasks.pop();
             db->taskMutex.unlock();
+            if (query->iscreate()){
+                query->execute();
+                continue;
+            }
             while (true){
                 bool a = false;
                 db->waitingMutex.lock();
