@@ -5,6 +5,7 @@
 class TruncateTableQuery : public Query {
     static constexpr const char *qname = "TRUNCATE";
 public:
+    bool iswrite(){return true;}
     std::string getname(){return "TRUNCATE";}
     using Query::Query;
 

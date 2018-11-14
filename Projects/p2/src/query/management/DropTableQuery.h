@@ -10,6 +10,7 @@
 class DropTableQuery : public Query {
     static constexpr const char *qname = "DROP";
 public: 
+    bool iswrite(){return true;}
     std::string getname(){return "DROP";}
     using Query::Query;
 
