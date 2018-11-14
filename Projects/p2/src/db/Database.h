@@ -69,7 +69,7 @@ public:
     void testDuplicate(const std::string &tableName);
     void setExit(){timetoexit=true;}
     bool ExitTime(){return timetoexit;}
-    void deltewaiting(std::string tablename){
+    void deletewaiting(std::string tablename){
         waitingMutex.lock();
         for (auto it=waiting.begin();it<waiting.end();it++){
             if (*it==tablename){
