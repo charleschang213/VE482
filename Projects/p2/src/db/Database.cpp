@@ -121,6 +121,7 @@ void Database::runthread(Database *db)
             auto &query = db->results[task.getid()].first;
             db->tasks.pop();
             db->taskMutex.unlock();
+            std::cout << "Getit" << std::endl;
             if (query->iscreate()||query->uniquery()){
                 query->execute();
                 continue;
@@ -171,6 +172,7 @@ void Database::runthread(Database *db)
                 if (a)
                     break;
             }
+            std::cout << "work" << std::endl;
             if (query->dividable())
                 task.execute();
             else
