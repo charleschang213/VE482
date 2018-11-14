@@ -34,12 +34,14 @@ public:
     virtual bool uniquery(){return false;}
     virtual bool iscreate(){return false;}
     virtual std::string getname(){return "";}
+    virtual std::pair<std::string, bool> initCondition(const Table &table){return std::pair<std::string,bool>("",true);};
+    virtual  bool evalCondition(const Table::Object &object){return true;};
     virtual void dump(){}
     virtual bool dividable(){return false;}
     virtual bool iswrite(){return false;}
     Query() = default;
 
-    virtual void combine(DivQuery *div){result = std::make_unique<NullQueryResult>();}
+    virtual void combine(DivQuery &div){result = std::make_unique<NullQueryResult>();}
 
     virtual void finish(){}
 

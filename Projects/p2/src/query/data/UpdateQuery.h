@@ -8,6 +8,7 @@
 #include "../Query.h"
 
 class UpdateQuery : public ComplexQuery {
+    friend class DivQuery;
     static constexpr const char *qname = "UPDATE";
     Table::ValueType fieldValue;// = (operands[0]=="KEY")? 0 :std::stoi(operands[1]);
     Table::FieldIndex fieldId;

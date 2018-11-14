@@ -202,7 +202,7 @@ class DivQuery{
         //QueryResult::Ptr LubDivExe();
         //QueryResult::Ptr SumDivExe();
         //QueryResult::Ptr SwapDivExe();
-        //QueryResult::Ptr UpdateDivExe();
+        QueryResult::Ptr UpdateDivExe();
 
 };
 

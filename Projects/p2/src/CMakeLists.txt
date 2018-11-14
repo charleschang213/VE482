@@ -35,6 +35,8 @@ set(SOURCE_FILES
         query/data/SumQuery.cpp query/data/SumQuery.h
         query/data/MaxQuery.cpp query/data/MaxQuery.h
         query/data/MinQuery.cpp query/data/MinQuery.h
+
+        query/divs/UpdateDiv.cpp
         )
 add_executable(lemondb main.cpp ${SOURCE_FILES})
 target_link_libraries(lemondb pthread)
