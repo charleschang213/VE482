@@ -26,6 +26,16 @@ void Database::testDuplicate(const std::string &tableName)
 
 void Database::insertQuery(std::unique_ptr<Query> &&query)
 {
+    if (query->uniquery()){
+        auto q = query.get();
+        int id=-1;
+        resultMutex.lock();
+        q->setId(results.size());
+        results.emplace_back(std::move(query), nullptr);
+        taskMutex.lock();
+        tasks.push(std::make_unique<DivQuery>(id, "", 0));
+        taskMutex.unlock();
+    }
     if (!query->iscreate())
     {
         auto q = query.get();
@@ -37,9 +47,7 @@ void Database::insertQuery(std::unique_ptr<Query> &&query)
         std::string tablename = q->getTableName();
         resultMutex.lock();
         q->setId(results.size());
-        id = q->getId();
         results.emplace_back(std::move(query), nullptr);
-        results.back().first->setGroups(groups);
         resultMutex.unlock();
         while (true)
         {
@@ -63,6 +71,9 @@ void Database::insertQuery(std::unique_ptr<Query> &&query)
                 tasks.push(std::make_unique<DivQuery>(id, tablename, i));
             }
             taskMutex.unlock();
+            resultMutex.lock();
+            results[id].first->setGroups(groups);
+            resultMutex.unlock();
         }
         else
         {
