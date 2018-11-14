@@ -10,6 +10,7 @@
 class QuitQuery : public Query {
     static constexpr const char *qname = "QUIT";
 public:
+    bool uniquery(){return true;}
     std::string getname(){return "QUIT";}
     QuitQuery() = default;
 
