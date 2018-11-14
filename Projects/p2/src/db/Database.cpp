@@ -124,6 +124,7 @@ void Database::runthread(Database *db)
             std::cout << "Getit" << std::endl;
             if (query->iscreate()||query->uniquery()){
                 query->execute();
+                db->deletewaiting(query->getTableName());
                 continue;
             }
             while (true){
@@ -177,7 +178,7 @@ void Database::runthread(Database *db)
                 task.execute();
             else
                 query->execute();
-            db->deletewaiting(query->getTableName());
+            //db->deletewaiting(query->getTableName());
             table.tlock();
             table.downactive();
             if (table.getactive() == 0)
