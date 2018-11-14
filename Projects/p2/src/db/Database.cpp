@@ -33,6 +33,7 @@ void Database::insertQuery(std::unique_ptr<Query> &&query)
         q->setId(results.size());
         id = q->getId();
         results.emplace_back(std::move(query), nullptr);
+        resultMutex.unlock();
         taskMutex.lock();
         tasks.emplace(id, "", 0);
         std::cout << "Added" << std::endl;
