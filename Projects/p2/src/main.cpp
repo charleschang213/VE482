@@ -123,6 +123,7 @@ int main(int argc, char *argv[]) {
             if (queryStr[0]!='Q') std::cout << ++counter << "\n";
             auto &db = Database::getInstance();
             db.insertQuery(std::move(query));
+            if (queryStr=="QUIT") break;
             /*if (result->success()) {
                 if (result->display()) {
                     std::cout << *result;

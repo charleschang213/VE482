@@ -14,7 +14,7 @@ std::string QuitQuery::toString() {
 QueryResult::Ptr QuitQuery::execute() {
     auto &db = Database::getInstance();
     db.setExit();
-    db.exit();
+    //db.exit();
     // might not reach here, but we want to keep the consistency of queries
     return std::make_unique<SuccessMsgResult>(qname);
 }

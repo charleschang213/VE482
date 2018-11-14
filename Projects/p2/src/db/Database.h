@@ -65,6 +65,10 @@ private:
 
 public:
     friend class DivQuery; 
+    void jointhread(){
+        for (auto &thread : threads)
+            thread.join();
+    }
     void insertQuery(std::unique_ptr<Query> &&query);
     void testDuplicate(const std::string &tableName);
     void setExit(){timetoexit=true;}
