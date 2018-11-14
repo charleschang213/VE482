@@ -52,6 +52,7 @@ void Database::insertQuery(std::unique_ptr<Query> &&query)
         std::cout << "Adding" << std::endl;
         resultMutex.lock();
         q->setId(results.size());
+        id = q->getId();
         results.emplace_back(std::move(query), nullptr);
         resultMutex.unlock();
         if (dividable)
