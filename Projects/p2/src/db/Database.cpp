@@ -35,6 +35,7 @@ void Database::insertQuery(std::unique_ptr<Query> &&query)
         taskMutex.lock();
         tasks.push(std::make_unique<DivQuery>(id, "", 0));
         taskMutex.unlock();
+        return;
     }
     if (!query->iscreate())
     {
