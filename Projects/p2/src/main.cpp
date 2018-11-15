@@ -125,10 +125,12 @@ int main(int argc, char *argv[]) {
             if (listenfin.empty())
                 queryStr = extractQueryString(is);
             else {
+                
+                std::cout << "Start" << std::endl;
+                std::cout.flush();
                 queryStr = extractQueryString(*listenfin.top());
                 if (listenfin.top()->eof()) listenfin.pop();
             }
-            std::cout << "Start" << std::endl;
             if (queryStr.find("LISTEN")==0){
                 std::string filename = queryStr.substr(9,queryStr.size()-11);
                 std::fstream tmpstream(filename);
@@ -136,7 +138,6 @@ int main(int argc, char *argv[]) {
                     listenfin.push(std::make_unique<std::istream>(tmpstream.rdbuf()));
                     auto &db = Database::getInstance();
                     db.insertQuery(std::make_unique<NopQuery>(),std::make_unique<SuccessListenResult>(filename));
-                    //std::cout << "OK" << std::endl;
                 }
                 else {
                     auto &db = Database::getInstance();
