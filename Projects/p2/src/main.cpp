@@ -72,7 +72,7 @@ int main(int argc, char *argv[]) {
     parseArgs(argc, argv);
 
     std::fstream fin;
-    std::stack<std::istream> listenfin;
+    std::stack<std::unique_ptr<std::istream> > listenfin;
     if (!parsedArgs.listen.empty()) {
         fin.open(parsedArgs.listen);
         if (!fin.is_open()) {
@@ -125,15 +125,14 @@ int main(int argc, char *argv[]) {
             if (listenfin.empty())
                 queryStr = extractQueryString(is);
             else {
-                queryStr = extractQueryString(listenfin.top());
-                if (listenfin.top().eof()) listenfin.pop();
+                queryStr = extractQueryString(*listenfin.top());
+                if (listenfin.top()->eof()) listenfin.pop();
             }
             if (queryStr.find("LISTEN")==0){
                 std::string filename = queryStr.substr(9,queryStr.size()-12);
                 std::fstream tmpstream(filename);
                 if (tmpstream.is_open()){
-                    std::istream tmpi(tmpstream.rdbuf());
-                    listenfin.push(std::move(tmpi));
+                    listenfin.push(std::make_unique<std::istream>(tmpstream.rdbuf()));
                     auto &db = Database::getInstance();
                     db.insertQuery(std::make_unique<NopQuery>(),std::make_unique<SuccessListenResult>(filename));
                 }
