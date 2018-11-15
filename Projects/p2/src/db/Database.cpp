@@ -46,7 +46,7 @@ void Database::insertQuery(std::unique_ptr<Query> &&query)
          while (true){
                 bool a = false;
                 waitingMutex.lock();
-                a = TableExists(q->getTableName());
+                a = (std::count(waiting.begin(),waiting.end(),q->getTableName()))==0;
                 waitingMutex.unlock();
                 if (a) break;
         }
