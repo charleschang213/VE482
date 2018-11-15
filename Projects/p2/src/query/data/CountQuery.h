@@ -12,7 +12,6 @@ class CountQuery : public ComplexQuery {
     //Table::FieldIndex fieldId;
     // Table::KeyType keyValue;
     int counter=0;
-    bool initted = false;
     std::mutex initMutex;
 public:
     bool iswrite() override {return false;}

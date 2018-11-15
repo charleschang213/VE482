@@ -6,7 +6,7 @@ class CopyTableQuery : public Query {
     static constexpr const char *qname = "COPYTABLE";
     const std::string NewTable;
 public:
-    bool iscreate(){return true;}
+    bool iscreate() override {return true;}
     std::string getname() override {return "COPYTABLE";}
     explicit CopyTableQuery(std::string table, std::string NewTable) :
             Query(std::move(NewTable)), NewTable(std::move(table)) {}

@@ -12,7 +12,6 @@ class DuplicateQuery : public ComplexQuery {
     //Table::FieldIndex fieldId;
     //Table::KeyType keyValue;
     std::pair<std::vector<std::string>,std::vector<std::vector<Table::ValueType >>> totalvecter;
-    bool initted = false;
     std::mutex initMutex;
 public:
     bool iswrite() override {return true;}

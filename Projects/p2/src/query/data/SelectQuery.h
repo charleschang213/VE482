@@ -13,7 +13,7 @@ class SelectQuery : public ComplexQuery {
    // Table::KeyType keyValue;
     std::pair<std::vector<std::string>,std::vector<std::vector<Table::ValueType>>> selectedResults;
     std::priority_queue<std::string,std::vector<std::string>,std::greater<std::string>> totalResults;
-    bool initted = false;
+
     std::mutex initMutex;
 public:
     bool iswrite() override {return false;}
