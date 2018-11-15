@@ -64,6 +64,19 @@ std::string extractQueryString(std::istream &is) {
     } while (true);
 }
 
+std::string extractQueryString(std::ifstream &is) {
+    std::string buf;
+    do {
+        int ch = is.get();
+        if (ch == ';') {
+            is.get();
+            return buf;
+        }
+        if (ch == EOF) throw std::ios_base::failure("End of input");
+        buf.push_back((char) ch);
+    } while (true);
+}
+
 int main(int argc, char *argv[]) {
     // Assume only C++ style I/O is used in lemondb
     // Do not use printf/fprintf in <cstdio> with this line
@@ -72,7 +85,7 @@ int main(int argc, char *argv[]) {
     parseArgs(argc, argv);
 
     std::fstream fin;
-    std::stack<std::unique_ptr<std::istream> > listenfin;
+    std::stack<std::unique_ptr<std::ifstream> > listenfin;
     if (!parsedArgs.listen.empty()) {
         fin.open(parsedArgs.listen);
         if (!fin.is_open()) {
@@ -132,13 +145,13 @@ int main(int argc, char *argv[]) {
             }
             if (queryStr.find("LISTEN")==0){
                 std::string filename = queryStr.substr(9,queryStr.size()-11);
-                std::fstream tmpstream(filename);
-                if (tmpstream.is_open()){
-                    listenfin.push(std::make_unique<std::istream>(tmpstream));
+                listenfin.push(std::make_unique<std::ifstream>(filename));
+                if (listenfin.top()->is_open()){
                     auto &db = Database::getInstance();
                     db.insertQuery(std::make_unique<NopQuery>(),std::make_unique<SuccessListenResult>(filename));
                 }
                 else {
+                    listenfin.top();
                     auto &db = Database::getInstance();
                     db.insertQuery(std::make_unique<NopQuery>(),std::make_unique<FailedListenResult>(filename));
                 }
