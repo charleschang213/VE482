@@ -108,6 +108,17 @@ public:
                     % qname % table % msg;
     }
 
+    explicit SuccessMsgResult(const std::pair<std::vector<std::string>,std::vector<std::vector<int >>> results){
+        std::stringstream ss;
+        for (unsigned int i = 0; i < results.first.size(); ++i) {
+            ss << "( " << results.first[i] << " ";
+            for (unsigned int j = 0; j < results.second[i].size(); ++j) {
+                ss << results.second[i][j] << " ";
+            }
+            ss << ")\n";
+        }
+        this->msg = ss.str();
+    }
 protected:
     std::ostream &output(std::ostream &os) const override {
         return os << msg << "\n";

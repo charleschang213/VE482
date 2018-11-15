@@ -162,11 +162,11 @@ class DivQuery{
             }else if (name=="ADD"){
                 AddDivExe();
             }else if (name=="COUNT"){
-                NullDivExe();
+                CountDivExe();
             }else if (name=="DELETE"){
                 DeleteDivExe();
             }else if (name=="DUPLICATE"){
-                NullDivExe();
+                DuplicateDivExe();
             }else if (name=="INSERT"){
                 NullDivExe();
             }else if (name=="MAX"){
@@ -174,7 +174,7 @@ class DivQuery{
             }else if (name=="MIN"){
                 MinDivExe();
             }else if (name=="SELECT"){
-                NullDivExe();
+                SelectDivExe();
             }else if (name=="SUB"){
                 SubDivExe();
             }else if (name=="SUM"){
@@ -199,13 +199,13 @@ class DivQuery{
         //void PrintDivExe();
         //void QuitDivExe();
         void AddDivExe();
-        //void CountDivExe();
+        void CountDivExe();
         void DeleteDivExe();
-        //void DuplicateDivExe();
+        void DuplicateDivExe();
         //void InsertDivExe();
         void MaxDivExe();
         void MinDivExe();
-        //void SelectDivExe();
+        void SelectDivExe();
         void SubDivExe();
         void SumDivExe();
         void SwapDivExe();
