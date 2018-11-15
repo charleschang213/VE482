@@ -11,7 +11,7 @@ class UpdateQuery : public ComplexQuery {
     friend class DivQuery;
     static constexpr const char *qname = "UPDATE";
     Table::ValueType fieldValue;// = (operands[0]=="KEY")? 0 :std::stoi(operands[1]);
-    Table::FieldIndex fieldId;
+    std::string fieldId;
     Table::KeyType keyValue;
     int counter = 0;
 public:
@@ -19,11 +19,10 @@ public:
     using ComplexQuery::ComplexQuery;
     void init(){
         auto &db = Database::getInstance();
-        auto &table = db[this->getTableName()];
         if (this->operands[0] == "KEY") {
             this->keyValue = this->operands[1];
         } else {
-            this->fieldId = table.getFieldIndex(this->operands[0]);
+            this->fieldId = this->operands[0];
             this->fieldValue = (Table::ValueType) strtol(this->operands[1].c_str(), nullptr, 10);
         }
     }
