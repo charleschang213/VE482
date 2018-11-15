@@ -313,6 +313,7 @@ Database &Database::getInstance(int threads)
         instance = std::unique_ptr<Database>(new Database);
         if (threads==0) instance->threadnum = std::thread::hardware_concurrency();
         else instance->threadnum = threads;
+        instance->tasks.reserve(100000);
         for (int i = 0; i < instance->threadnum; i++)
             instance->threads.emplace_back(runthread, instance.get());
     }

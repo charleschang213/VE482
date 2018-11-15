@@ -49,7 +49,7 @@ private:
      */
     std::unordered_map<std::string, std::string> fileTableNameMap;
 
-    std::vector<DivQuery,100000> tasks;
+    std::vector<DivQuery> tasks;
     unsigned long taskcursor = 0;
     std::mutex taskMutex;
 
