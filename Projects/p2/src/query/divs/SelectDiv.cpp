@@ -10,7 +10,7 @@ void DivQuery::SelectDivExe() {
     auto &table = db[target];
     auto &query = db.results[id].first;
     auto q = dynamic_cast<SelectQuery *>(query.get());
-    std::priority_queue<string, std::vector<string>, std::less<std::string>> cntResults;
+    std::priority_queue<string, std::vector<string>, std::greater<std::string>> cntResults;
     auto result = q->initCondition(table);
     if (result.second) {
         for (auto it = table.begin() + counter * Partnumber;

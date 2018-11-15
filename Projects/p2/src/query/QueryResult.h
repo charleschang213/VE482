@@ -115,7 +115,7 @@ public:
             for (unsigned int j = 0; j < results.second[i].size(); ++j) {
                 ss << results.second[i][j] << " ";
             }
-            ss << ")\n";
+            if (i!=results.first.size()-1) ss << ")\n";
         }
         this->msg = ss.str();
     }
