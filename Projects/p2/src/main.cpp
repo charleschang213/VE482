@@ -125,10 +125,9 @@ int main(int argc, char *argv[]) {
             if (listenfin.empty())
                 queryStr = extractQueryString(is);
             else {
-                
+                queryStr = extractQueryString(*listenfin.top());
                 std::cout << "Start" << std::endl;
                 std::cout.flush();
-                queryStr = extractQueryString(*listenfin.top());
                 if (listenfin.top()->eof()) listenfin.pop();
             }
             if (queryStr.find("LISTEN")==0){
