@@ -48,7 +48,7 @@ void Database::insertQuery(std::unique_ptr<Query> &&query)
         results.emplace_back(std::move(query), nullptr);
         resultMutex.unlock();
         taskMutex.lock();
-        tasks.emplace(id, "", 0);
+        tasks.emplace_back(id, "", 0);
         //std::cout << "Added" << std::endl;
         taskMutex.unlock();
         return;
@@ -94,7 +94,7 @@ void Database::insertQuery(std::unique_ptr<Query> &&query)
             taskMutex.lock();
             for (int i = 0; i < groups; i++)
             {
-                tasks.emplace(id, tablename, i);
+                tasks.emplace_back(id, tablename, i);
             }
             taskMutex.unlock();
             resultMutex.lock();
@@ -104,7 +104,7 @@ void Database::insertQuery(std::unique_ptr<Query> &&query)
         else
         {
             taskMutex.lock();
-            tasks.emplace(id, tablename, 0);
+            tasks.emplace_back(id, tablename, 0);
             taskMutex.unlock();
         }
     }else{
@@ -117,7 +117,7 @@ void Database::insertQuery(std::unique_ptr<Query> &&query)
         results.emplace_back(std::move(query), nullptr);
         resultMutex.unlock();
         taskMutex.lock();
-        tasks.emplace(id, tablename, 0);
+        tasks.emplace_back(id, tablename, 0);
         taskMutex.unlock();
         waitingMutex.lock();
         waiting.push_back(q->getTableName());
@@ -148,7 +148,7 @@ void Database::runthread(Database *db)
     while (true)
     {
         db->taskMutex.lock();
-        if (db->tasks.empty())
+        if (db->taskcursor==db->tasks.size())
         {
             db->taskMutex.unlock();
             if (db->ExitTime())
@@ -157,11 +157,11 @@ void Database::runthread(Database *db)
         }
         else
         {
-            auto &task = db->tasks.front();
+            auto &task = db->tasks[db->taskcursor];
             int id = task.getid();
             auto &query = db->results[task.getid()].first;
             std::string name = query->getTableName();
-            db->tasks.pop();
+            db->taskcursor++;
             db->taskMutex.unlock();
             //std::cout << "Getit" << std::endl;
             if (query->iscreate()||query->uniquery()){
