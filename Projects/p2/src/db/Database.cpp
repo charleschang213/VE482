@@ -30,7 +30,7 @@ void Database::insertQuery(std::unique_ptr<Query> &&query,std::unique_ptr<QueryR
     q->setId(results.size());
     results.emplace_back(std::move(query),std::move(result));
     for (unsigned int i=resultflag;i<this->results.size()&&results[i].second!=nullptr;i++){
-        std::cout << i << std::endl;
+        if (results[i].first->getname()!="QUIT") std::cout << i << std::endl;
         std::cout << *(this->results[i].second);
         std::cout.flush();
         resultflag++;
@@ -129,7 +129,7 @@ void Database::insertResult(int id,QueryResult::Ptr result){
     resultMutex.lock();
     this->results[id].second = std::move(result);
     for (unsigned int i=resultflag;i<this->results.size()&&results[i].second!=nullptr;i++){
-        std::cout << i << std::endl;
+        if (results[i].first->getname()!="QUIT") std::cout << i << std::endl;
         std::cout << *(this->results[i].second);
         std::cout.flush();
         resultflag++;
