@@ -170,7 +170,13 @@ void Database::runthread(Database *db)
                 continue;
             }
             //std::cout << "Wait for table Creation" << std::endl;
-           
+            while (true){
+                int a = 0;
+                db->waitingMutex.lock();
+                a = std::count(db->waiting.begin(),db->waiting.end(),query->getTableName());
+                db->waitingMutex.unlock();
+                if (a==0) break;
+            }
             //std::cout << "Founded" << std::endl;
             auto &table = (*db)[task.target];
             //std::cout << "Wait for table operations" << std::endl;
