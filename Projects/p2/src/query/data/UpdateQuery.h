@@ -35,12 +35,15 @@ public:
         initMutex.unlock();
     }
     void combine(int cnt){
+        this->glock();
         this->counter+=cnt;
         this->decgroup();
         if (this->getGroups()==0){
+            this->gunlock();
             auto &db = Database::getInstance();
             db.insertResult(this->getId(),std::make_unique<RecordCountResult>(counter));
         }
+        else this->gunlock();
     }
 
     QueryResult::Ptr execute() override;

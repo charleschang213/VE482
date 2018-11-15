@@ -28,9 +28,12 @@ protected:
     std::string targetTable;
     int id = -1;
     int groups = 0;
+    std::mutex gMutex;
 
 public:
     virtual void init(){}
+    void glock(){gMutex.lock();}
+    void gunlock(){gMutex.unlock();}
     QueryResult::Ptr result = nullptr;
     virtual bool uniquery(){return false;}
     virtual bool iscreate(){return false;}
