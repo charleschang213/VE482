@@ -230,7 +230,7 @@ void Database::runthread(Database *db)
             //db->deletewaiting(query->getTableName());
             table.tlock();
             table.downactive();
-            if ((table.getactive() == 0)&&(((table.getstatus()>=0))||(query->getGroups()==0)))
+            if ((table.getactive() == 0)&&(((table.getstatus()>=0))||(db->results[id].first->getGroups()==0)))
                 table.setstatus(0);
             table.tunlock();
         }
