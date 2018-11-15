@@ -129,7 +129,7 @@ int main(int argc, char *argv[]) {
                 if (listenfin.top()->eof()) listenfin.pop();
             }
             if (queryStr.find("LISTEN")==0){
-                std::string filename = queryStr.substr(9,queryStr.size()-12);
+                std::string filename = queryStr.substr(9,queryStr.size()-11);
                 std::fstream tmpstream(filename);
                 if (tmpstream.is_open()){
                     listenfin.push(std::make_unique<std::istream>(tmpstream.rdbuf()));
@@ -140,6 +140,7 @@ int main(int argc, char *argv[]) {
                     auto &db = Database::getInstance();
                     db.insertQuery(std::make_unique<NopQuery>(),std::make_unique<FailedListenResult>(filename));
                 }
+                std::cout.flush();
                 continue;
             }
             Query::Ptr query = p.parseQuery(queryStr);
