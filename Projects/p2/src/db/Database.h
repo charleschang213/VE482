@@ -180,6 +180,8 @@ class DivQuery{
                 NullDivExe();
             }else if (name=="UPDATE"){
                 UpdateDivExe();
+            }else{
+                NullDivExe();
             }
         }
         int getcounter(){return counter;}
