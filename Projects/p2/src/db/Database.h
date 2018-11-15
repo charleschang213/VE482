@@ -134,7 +134,6 @@ class DivQuery{
         int id;
         std::string target;
         int counter;
-        QueryResult::Ptr result = nullptr;
     public:
         friend class Database;
         typedef std::unique_ptr<DivQuery> Ptr;
