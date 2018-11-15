@@ -12,7 +12,7 @@ class SelectQuery : public ComplexQuery {
     //Table::FieldIndex fieldId;
    // Table::KeyType keyValue;
     std::pair<std::vector<std::string>,std::vector<std::vector<Table::ValueType>>> selectedResults;
-    std::priority_queue<std::string,std::vector<std::string>,std::less<>> totalResults;
+    std::priority_queue<std::string,std::vector<std::string>,std::less<std::string>> totalResults;
     bool initted = false;
     std::mutex initMutex;
 public:
@@ -20,7 +20,7 @@ public:
     bool dividable(){return true;}
     std::string getname(){return "SELECT";}
     using ComplexQuery::ComplexQuery;
-    void combine(std::priority_queue<std::string,std::vector<std::string>,std::less<>> cnt){
+    void combine(std::priority_queue<std::string,std::vector<std::string>,std::less<std::string>> cnt){
         this->glock();
         while (!cnt.empty()){
             totalResults.push(cnt.top());
