@@ -157,6 +157,7 @@ void Database::runthread(Database *db)
                 db->waitingMutex.unlock();
                 if (a) break;
             }
+            std::cout << "Founded" << std::endl();
             auto &table = (*db)[task.target];
             //std::cout << "Wait for table operations" << std::endl;
             while (true)
