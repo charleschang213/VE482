@@ -164,10 +164,11 @@ void Database::runthread(Database *db)
             //std::cout << "Getit" << std::endl;
             if (query->iscreate()||query->uniquery()){
                 int id = query->getId();
+                std::string name = query->getTableName();
                 query->execute();
                 db->insertResult(id,std::make_unique<NullQueryResult>());
                 //std::cout << "Done" << std::endl;
-                db->deletewaiting(query->getTableName());
+                db->deletewaiting(name);
                 continue;
             }
             //std::cout << "Wait for table Creation" << std::endl;
