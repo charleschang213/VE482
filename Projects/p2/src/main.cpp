@@ -118,7 +118,6 @@ int main(int argc, char *argv[]) {
     //size_t counter = 0;
 
     while (is||(!listenfin.empty())) {
-        std::cout << "Start" << std::endl;
         try {
             // A very standard REPL
             // REPL: Read-Evaluate-Print-Loop
@@ -129,6 +128,7 @@ int main(int argc, char *argv[]) {
                 queryStr = extractQueryString(*listenfin.top());
                 if (listenfin.top()->eof()) listenfin.pop();
             }
+            std::cout << "Start" << std::endl;
             if (queryStr.find("LISTEN")==0){
                 std::string filename = queryStr.substr(9,queryStr.size()-11);
                 std::fstream tmpstream(filename);
