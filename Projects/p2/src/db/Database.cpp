@@ -163,8 +163,9 @@ void Database::runthread(Database *db)
             db->taskMutex.unlock();
             //std::cout << "Getit" << std::endl;
             if (query->iscreate()||query->uniquery()){
+                int id = query->getId();
                 query->execute();
-                db->insertResult(query->getId(),std::make_unique<NullQueryResult>());
+                db->insertResult(id,std::make_unique<NullQueryResult>());
                 //std::cout << "Done" << std::endl;
                 db->deletewaiting(query->getTableName());
                 continue;
