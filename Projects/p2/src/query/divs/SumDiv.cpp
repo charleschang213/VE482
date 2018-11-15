@@ -2,7 +2,7 @@
 #include "../data/SumQuery.h"
 #include <vector>
 
-void DivQuery::UpdateDivExe(){
+void DivQuery::SumDivExe(){
     using namespace std;
     auto &db = Database::getInstance();
     auto &table = db[target];
