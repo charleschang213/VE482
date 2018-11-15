@@ -163,7 +163,7 @@ class DivQuery{
             }else if (name=="COUNT"){
                 NullDivExe();
             }else if (name=="DELETE"){
-                NullDivExe();
+                DeleteDivExe();
             }else if (name=="DUPLICATE"){
                 NullDivExe();
             }else if (name=="INSERT"){
