@@ -118,6 +118,7 @@ int main(int argc, char *argv[]) {
     //size_t counter = 0;
 
     while (is||(!listenfin.empty())) {
+        std::cout << "Start" << std::endl;
         try {
             // A very standard REPL
             // REPL: Read-Evaluate-Print-Loop
@@ -135,7 +136,7 @@ int main(int argc, char *argv[]) {
                     listenfin.push(std::make_unique<std::istream>(tmpstream.rdbuf()));
                     auto &db = Database::getInstance();
                     db.insertQuery(std::make_unique<NopQuery>(),std::make_unique<SuccessListenResult>(filename));
-                    std::cout << "OK" << std::endl;
+                    //std::cout << "OK" << std::endl;
                 }
                 else {
                     auto &db = Database::getInstance();
