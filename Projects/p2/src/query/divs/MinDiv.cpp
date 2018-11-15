@@ -27,5 +27,5 @@ void DivQuery::MinDivExe(){
             }
         }
     }
-    q->combine(cnt);
+    q->combine(Minimum);
 }
