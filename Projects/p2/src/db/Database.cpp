@@ -36,7 +36,7 @@ void Database::insertQuery(std::unique_ptr<Query> &&query)
         resultMutex.unlock();
         taskMutex.lock();
         tasks.emplace(id, "", 0);
-        std::cout << "Added" << std::endl;
+        //std::cout << "Added" << std::endl;
         taskMutex.unlock();
         return;
     }
@@ -49,7 +49,7 @@ void Database::insertQuery(std::unique_ptr<Query> &&query)
         int id = -1;
         bool dividable = q->dividable();
         std::string tablename = q->getTableName();
-        std::cout << "Adding" << std::endl;
+        //std::cout << "Adding" << std::endl;
         resultMutex.lock();
         q->setId(results.size());
         id = q->getId();
@@ -105,9 +105,19 @@ void Database::insertQuery(std::unique_ptr<Query> &&query)
     }
 }
 
+void Database::insertResult(int id,QueryResult::Ptr result){
+    resultMutex.lock();
+    this->results[id].second = std::move(result);
+    for (int i=resultflag;i<this->results.size()&&results[i].second!=nullptr;i++){
+        std::cout << *(this->results[id].second);
+        resultflag++;
+    }
+    resultMutex.unlock();
+}
+
 void Database::runthread(Database *db)
 {
-    std::cout << "Hi" << std::endl;
+    //std::cout << "Hi" << std::endl;
     while (true)
     {
         db->taskMutex.lock();
@@ -124,14 +134,15 @@ void Database::runthread(Database *db)
             auto &query = db->results[task.getid()].first;
             db->tasks.pop();
             db->taskMutex.unlock();
-            std::cout << "Getit" << std::endl;
+            //std::cout << "Getit" << std::endl;
             if (query->iscreate()||query->uniquery()){
                 query->execute();
-                std::cout << "Done" << std::endl;
+                db->insertResult(query->getId(),std::make_unique<NullQueryResult>());
+                //std::cout << "Done" << std::endl;
                 db->deletewaiting(query->getTableName());
                 continue;
             }
-            std::cout << "Wait for table Creation" << std::endl;
+            //std::cout << "Wait for table Creation" << std::endl;
             while (true){
                 bool a = false;
                 db->waitingMutex.lock();
@@ -140,7 +151,7 @@ void Database::runthread(Database *db)
                 if (a) break;
             }
             auto &table = (*db)[task.target];
-            std::cout << "Wait for table operations" << std::endl;
+            //std::cout << "Wait for table operations" << std::endl;
             while (true)
             {
                 bool a = false;
@@ -179,11 +190,12 @@ void Database::runthread(Database *db)
                 if (a)
                     break;
             }
-            std::cout << "work" << std::endl;
+            //std::cout << "work" << std::endl;
             if (query->dividable())
                 task.execute();
             else
                 query->execute();
+                db->insertResult(query->getId(),std::make_unique<NullQueryResult>());
             //db->deletewaiting(query->getTableName());
             table.tlock();
             table.downactive();

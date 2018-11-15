@@ -28,9 +28,9 @@ protected:
     std::string targetTable;
     int id = -1;
     int groups = 0;
-    QueryResult::Ptr result = nullptr;
 
 public:
+    QueryResult::Ptr result = nullptr;
     virtual bool uniquery(){return false;}
     virtual bool iscreate(){return false;}
     virtual std::string getname(){return "";}
@@ -41,13 +41,11 @@ public:
     virtual bool iswrite(){return false;}
     Query() = default;
 
-    virtual void combine(DivQuery &div){result = std::make_unique<NullQueryResult>();}
-
-    virtual void finish(){}
-
+    void finish(){}
     void setId(int x){id=x;}
     int getId(){return id;}
     void setGroups(int x){groups=x;}
+    void decgroup(){groups--;}
     int getGroups(){return groups;}
 
     explicit Query(std::string targetTable) : targetTable(std::move(targetTable)) {}

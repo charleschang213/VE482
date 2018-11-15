@@ -35,6 +35,8 @@ private:
 
     int threadnum=8;
 
+    int resultflag = 0;
+
     bool timetoexit = false;
 
     /**
@@ -69,6 +71,7 @@ public:
         for (auto &thread : threads)
             thread.join();
     }
+    void insertResult(int id,QueryResult::Ptr result);
     void insertQuery(std::unique_ptr<Query> &&query);
     void testDuplicate(const std::string &tableName);
     void setExit(){timetoexit=true;}
@@ -138,71 +141,71 @@ class DivQuery{
             auto &db = Database::getInstance();
             std::string name = db.getqueryname(id);
             if (name=="LOAD"){
-                result = NullDivExe();
+                NullDivExe();
             }else if (name=="DUMP"){
-                result = NullDivExe();
+                NullDivExe();
             }else if (name=="TRUNCATE"){
-                result = NullDivExe();
+                NullDivExe();
             }else if (name=="COPYTABLE"){
-                result = NullDivExe();
+                NullDivExe();
             }else if (name=="DROP"){
-                result = NullDivExe();
+                NullDivExe();
             }else if (name=="LIST"){
-                result = NullDivExe();
+                NullDivExe();
             }else if (name=="PRINT"){
-                result = NullDivExe();
+                NullDivExe();
             }else if (name=="QUIT"){
-                result = NullDivExe();
+                NullDivExe();
             }else if (name=="ADD"){
-                result = NullDivExe();
+                NullDivExe();
             }else if (name=="COUNT"){
-                result = NullDivExe();
+                NullDivExe();
             }else if (name=="DELETE"){
-                result = NullDivExe();
+                NullDivExe();
             }else if (name=="DUPLICATE"){
-                result = NullDivExe();
+                NullDivExe();
             }else if (name=="INSERT"){
-                result = NullDivExe();
+                NullDivExe();
             }else if (name=="MAX"){
-                result = NullDivExe();
+                NullDivExe();
             }else if (name=="MIN"){
-                result = NullDivExe();
+                NullDivExe();
             }else if (name=="SELECT"){
-                result = NullDivExe();
+                NullDivExe();
             }else if (name=="SUB"){
-                result = NullDivExe();
+                NullDivExe();
             }else if (name=="SUM"){
-                result = NullDivExe();
+                NullDivExe();
             }else if (name=="SWAP"){
-                result = NullDivExe();
+                NullDivExe();
             }else if (name=="UPDATE"){
-                result = NullDivExe();
+                UpdateDivExe();
             }
         }
         int getcounter(){return counter;}
         int getid(){return id;}
-        QueryResult::Ptr NullDivExe(){return std::make_unique<NullQueryResult>();}
-        //QueryResult::Ptr LoadDivExe();
-        //QueryResult::Ptr DumpDivExe();
-        //QueryResult::Ptr TruncateDivExe();
-        //QueryResult::Ptr DropDivExe();
-        //QueryResult::Ptr CopytableDivExe();
-        //QueryResult::Ptr AddDivExe();
-        //QueryResult::Ptr ListDivExe();
-        //QueryResult::Ptr PrintDivExe();
-        //QueryResult::Ptr QuitDivExe();
-        //QueryResult::Ptr AddDivExe();
-        //QueryResult::Ptr CountDivExe();
-        //QueryResult::Ptr DeleteDivExe();
-        //QueryResult::Ptr DuplicateDivExe();
-        //QueryResult::Ptr InsertDivExe();
-        //QueryResult::Ptr MaxDivExe();
-        //QueryResult::Ptr MinDivExe();
-        //QueryResult::Ptr SelectDivExe();
-        //QueryResult::Ptr LubDivExe();
-        //QueryResult::Ptr SumDivExe();
-        //QueryResult::Ptr SwapDivExe();
-        QueryResult::Ptr UpdateDivExe();
+        void NullDivExe(){}
+        //voidLoadDivExe();
+        //void DumpDivExe();
+        //void TruncateDivExe();
+        //void DropDivExe();
+        //void CopytableDivExe();
+        //void AddDivExe();
+        //void ListDivExe();
+        //void PrintDivExe();
+        //void QuitDivExe();
+        //void AddDivExe();
+        //void CountDivExe();
+        //void DeleteDivExe();
+        //void DuplicateDivExe();
+        //void InsertDivExe();
+        //void MaxDivExe();
+        //void MinDivExe();
+        //void SelectDivExe();
+        //void LubDivExe();
+        //void SumDivExe();
+        //void SwapDivExe();
+        void UpdateDivExe();
 
 };
 
