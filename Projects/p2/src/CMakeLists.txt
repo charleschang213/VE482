@@ -37,6 +37,7 @@ set(SOURCE_FILES
         query/data/MinQuery.cpp query/data/MinQuery.h
 
         query/divs/UpdateDiv.cpp
+        query/divs/DeleteDiv.cpp
         )
 add_executable(lemondb main.cpp ${SOURCE_FILES})
 target_link_libraries(lemondb pthread)
