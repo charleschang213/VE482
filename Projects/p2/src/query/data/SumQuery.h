@@ -30,7 +30,11 @@ public:
     void combine(std::vector<Table::ValueType> SumResult){
         this->glock();
         //this->counter+=cnt;
-        FinalSumResult.insert(FinalSumResult.end(), SumResult.begin(), SumResult.end());
+        if (FinalSumResult.empty())
+            FinalSumResult.insert(FinalSumResult.end(), SumResult.begin(), SumResult.end());
+        else {
+            for (size_t i=0;i<FinalSumResult.size();i++) FinalSumResult[i]+=SumResult[i];
+        }
         this->decgroup();
         if (this->getGroups()==0){
             this->gunlock();
