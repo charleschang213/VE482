@@ -158,13 +158,13 @@ void Database::runthread(Database *db)
         else
         {
             auto &task = db->tasks.front();
+            int id = task.getid();
             auto &query = db->results[task.getid()].first;
+            std::string name = query->getTableName();
             db->tasks.pop();
             db->taskMutex.unlock();
             //std::cout << "Getit" << std::endl;
             if (query->iscreate()||query->uniquery()){
-                int id = query->getId();
-                std::string name = query->getTableName();
                 query->execute();
                 db->insertResult(id,std::make_unique<NullQueryResult>());
                 //std::cout << "Done" << std::endl;
@@ -175,12 +175,12 @@ void Database::runthread(Database *db)
             while (true){
                 int a = 0;
                 db->waitingMutex.lock();
-                a = std::count(db->waiting.begin(),db->waiting.end(),query->getTableName());
+                a = std::count(db->waiting.begin(),db->waiting.end(),name);
                 db->waitingMutex.unlock();
                 if (a==0) break;
             }
             //std::cout << "Founded" << std::endl;
-            auto &table = (*db)[task.target];
+            auto &table = (*db)[name];
             //std::cout << "Wait for table operations" << std::endl;
             while (true)
             {
@@ -189,7 +189,7 @@ void Database::runthread(Database *db)
                 //std::cout << query->getId() << " " << table.getstatus() << std::endl;
                 if (table.getstatus() < 0)
                 {
-                    if (table.getstatus() + task.getid() == 0)
+                    if (table.getstatus() + id == 0)
                     {
                         a = true;
                         table.upactive();
@@ -200,12 +200,12 @@ void Database::runthread(Database *db)
                     a = true;
                     if (query->iswrite())
                     {
-                        table.setstatus(0 - task.getid());
+                        table.setstatus(0 - id);
                         table.upactive();
                     }
                     else
                     {
-                        table.setstatus(task.getid());
+                        table.setstatus(id);
                         table.upactive();
                     }
                 }
@@ -222,7 +222,6 @@ void Database::runthread(Database *db)
                     break;
             }
             //std::cout << "work" << std::endl;
-            int id = query->getId();
             if (query->dividable())
                 task.execute();
             else{
