@@ -199,7 +199,7 @@ class DivQuery{
         //void ListDivExe();
         //void PrintDivExe();
         //void QuitDivExe();
-        //void AddDivExe();
+        void AddDivExe();
         //void CountDivExe();
         void DeleteDivExe();
         //void DuplicateDivExe();
@@ -208,8 +208,8 @@ class DivQuery{
         //void MinDivExe();
         //void SelectDivExe();
         //void LubDivExe();
-        //void SumDivExe();
-        //void SwapDivExe();
+        void SumDivExe();
+        void SwapDivExe();
         void UpdateDivExe();
 
 };
