@@ -139,7 +139,7 @@ int main(int argc, char *argv[]) {
                 queryStr = extractQueryString(is);
             else {
                 queryStr = extractQueryString(*listenfin.top());
-                std::cout << "Start" << std::endl;
+                //std::cout << "Start" << std::endl;
                 std::cout.flush();
                 if (listenfin.top()->eof()) listenfin.pop();
             }
@@ -151,7 +151,7 @@ int main(int argc, char *argv[]) {
                     db.insertQuery(std::make_unique<NopQuery>(),std::make_unique<SuccessListenResult>(filename));
                 }
                 else {
-                    listenfin.top();
+                    listenfin.pop();
                     auto &db = Database::getInstance();
                     db.insertQuery(std::make_unique<NopQuery>(),std::make_unique<FailedListenResult>(filename));
                 }
