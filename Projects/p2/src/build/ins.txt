@@ -1,5 +1,10 @@
 LOAD test2.tbl;
-UPDATE ( ID 10000 ) FROM Test WHERE ( ID > 300 );
-DELETE ( ) FROM Test WHERE ( ID = 10000 );
+COPYTABLE Test Test2;
+SUM ( c1 c2 c3 ) FROM Test WHERE ( c1 < 100 );
+SUM ( c1 c2 c3 ) FROM Test2 WHERE ( c1 < 100 );
+ADD ( c1 c2 c3 ) FROM Test WHERE ( c1 < 200 );
+MAX ( c2 c3 ) FROM Test WHERE ( c1 < 100 );
+MAX ( c2 c3 ) FROM Test2 WHERE ( c1 < 100 );
+MIN ( c1 c2 ) FROM Test WHERE ( c1 < 100 );
 DUMP Test tt.tbl;
 QUIT;

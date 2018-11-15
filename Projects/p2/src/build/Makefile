@@ -636,6 +636,33 @@ query/data/UpdateQuery.cpp.s:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/data/UpdateQuery.cpp.s
 .PHONY : query/data/UpdateQuery.cpp.s
 
+query/divs/AddDiv.o: query/divs/AddDiv.cpp.o
+
+.PHONY : query/divs/AddDiv.o
+
+# target to build an object file
+query/divs/AddDiv.cpp.o:
+	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/divs/AddDiv.cpp.o
+.PHONY : query/divs/AddDiv.cpp.o
+
+query/divs/AddDiv.i: query/divs/AddDiv.cpp.i
+
+.PHONY : query/divs/AddDiv.i
+
+# target to preprocess a source file
+query/divs/AddDiv.cpp.i:
+	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/divs/AddDiv.cpp.i
+.PHONY : query/divs/AddDiv.cpp.i
+
+query/divs/AddDiv.s: query/divs/AddDiv.cpp.s
+
+.PHONY : query/divs/AddDiv.s
+
+# target to generate assembly for a file
+query/divs/AddDiv.cpp.s:
+	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/divs/AddDiv.cpp.s
+.PHONY : query/divs/AddDiv.cpp.s
+
 query/divs/DeleteDiv.o: query/divs/DeleteDiv.cpp.o
 
 .PHONY : query/divs/DeleteDiv.o
@@ -662,6 +689,141 @@ query/divs/DeleteDiv.s: query/divs/DeleteDiv.cpp.s
 query/divs/DeleteDiv.cpp.s:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/divs/DeleteDiv.cpp.s
 .PHONY : query/divs/DeleteDiv.cpp.s
+
+query/divs/MaxDiv.o: query/divs/MaxDiv.cpp.o
+
+.PHONY : query/divs/MaxDiv.o
+
+# target to build an object file
+query/divs/MaxDiv.cpp.o:
+	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/divs/MaxDiv.cpp.o
+.PHONY : query/divs/MaxDiv.cpp.o
+
+query/divs/MaxDiv.i: query/divs/MaxDiv.cpp.i
+
+.PHONY : query/divs/MaxDiv.i
+
+# target to preprocess a source file
+query/divs/MaxDiv.cpp.i:
+	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/divs/MaxDiv.cpp.i
+.PHONY : query/divs/MaxDiv.cpp.i
+
+query/divs/MaxDiv.s: query/divs/MaxDiv.cpp.s
+
+.PHONY : query/divs/MaxDiv.s
+
+# target to generate assembly for a file
+query/divs/MaxDiv.cpp.s:
+	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/divs/MaxDiv.cpp.s
+.PHONY : query/divs/MaxDiv.cpp.s
+
+query/divs/MinDiv.o: query/divs/MinDiv.cpp.o
+
+.PHONY : query/divs/MinDiv.o
+
+# target to build an object file
+query/divs/MinDiv.cpp.o:
+	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/divs/MinDiv.cpp.o
+.PHONY : query/divs/MinDiv.cpp.o
+
+query/divs/MinDiv.i: query/divs/MinDiv.cpp.i
+
+.PHONY : query/divs/MinDiv.i
+
+# target to preprocess a source file
+query/divs/MinDiv.cpp.i:
+	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/divs/MinDiv.cpp.i
+.PHONY : query/divs/MinDiv.cpp.i
+
+query/divs/MinDiv.s: query/divs/MinDiv.cpp.s
+
+.PHONY : query/divs/MinDiv.s
+
+# target to generate assembly for a file
+query/divs/MinDiv.cpp.s:
+	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/divs/MinDiv.cpp.s
+.PHONY : query/divs/MinDiv.cpp.s
+
+query/divs/SubDiv.o: query/divs/SubDiv.cpp.o
+
+.PHONY : query/divs/SubDiv.o
+
+# target to build an object file
+query/divs/SubDiv.cpp.o:
+	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/divs/SubDiv.cpp.o
+.PHONY : query/divs/SubDiv.cpp.o
+
+query/divs/SubDiv.i: query/divs/SubDiv.cpp.i
+
+.PHONY : query/divs/SubDiv.i
+
+# target to preprocess a source file
+query/divs/SubDiv.cpp.i:
+	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/divs/SubDiv.cpp.i
+.PHONY : query/divs/SubDiv.cpp.i
+
+query/divs/SubDiv.s: query/divs/SubDiv.cpp.s
+
+.PHONY : query/divs/SubDiv.s
+
+# target to generate assembly for a file
+query/divs/SubDiv.cpp.s:
+	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/divs/SubDiv.cpp.s
+.PHONY : query/divs/SubDiv.cpp.s
+
+query/divs/SumDiv.o: query/divs/SumDiv.cpp.o
+
+.PHONY : query/divs/SumDiv.o
+
+# target to build an object file
+query/divs/SumDiv.cpp.o:
+	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/divs/SumDiv.cpp.o
+.PHONY : query/divs/SumDiv.cpp.o
+
+query/divs/SumDiv.i: query/divs/SumDiv.cpp.i
+
+.PHONY : query/divs/SumDiv.i
+
+# target to preprocess a source file
+query/divs/SumDiv.cpp.i:
+	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/divs/SumDiv.cpp.i
+.PHONY : query/divs/SumDiv.cpp.i
+
+query/divs/SumDiv.s: query/divs/SumDiv.cpp.s
+
+.PHONY : query/divs/SumDiv.s
+
+# target to generate assembly for a file
+query/divs/SumDiv.cpp.s:
+	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/divs/SumDiv.cpp.s
+.PHONY : query/divs/SumDiv.cpp.s
+
+query/divs/SwapDiv.o: query/divs/SwapDiv.cpp.o
+
+.PHONY : query/divs/SwapDiv.o
+
+# target to build an object file
+query/divs/SwapDiv.cpp.o:
+	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/divs/SwapDiv.cpp.o
+.PHONY : query/divs/SwapDiv.cpp.o
+
+query/divs/SwapDiv.i: query/divs/SwapDiv.cpp.i
+
+.PHONY : query/divs/SwapDiv.i
+
+# target to preprocess a source file
+query/divs/SwapDiv.cpp.i:
+	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/divs/SwapDiv.cpp.i
+.PHONY : query/divs/SwapDiv.cpp.i
+
+query/divs/SwapDiv.s: query/divs/SwapDiv.cpp.s
+
+.PHONY : query/divs/SwapDiv.s
+
+# target to generate assembly for a file
+query/divs/SwapDiv.cpp.s:
+	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/divs/SwapDiv.cpp.s
+.PHONY : query/divs/SwapDiv.cpp.s
 
 query/divs/UpdateDiv.o: query/divs/UpdateDiv.cpp.o
 
@@ -972,9 +1134,27 @@ help:
 	@echo "... query/data/UpdateQuery.o"
 	@echo "... query/data/UpdateQuery.i"
 	@echo "... query/data/UpdateQuery.s"
+	@echo "... query/divs/AddDiv.o"
+	@echo "... query/divs/AddDiv.i"
+	@echo "... query/divs/AddDiv.s"
 	@echo "... query/divs/DeleteDiv.o"
 	@echo "... query/divs/DeleteDiv.i"
 	@echo "... query/divs/DeleteDiv.s"
+	@echo "... query/divs/MaxDiv.o"
+	@echo "... query/divs/MaxDiv.i"
+	@echo "... query/divs/MaxDiv.s"
+	@echo "... query/divs/MinDiv.o"
+	@echo "... query/divs/MinDiv.i"
+	@echo "... query/divs/MinDiv.s"
+	@echo "... query/divs/SubDiv.o"
+	@echo "... query/divs/SubDiv.i"
+	@echo "... query/divs/SubDiv.s"
+	@echo "... query/divs/SumDiv.o"
+	@echo "... query/divs/SumDiv.i"
+	@echo "... query/divs/SumDiv.s"
+	@echo "... query/divs/SwapDiv.o"
+	@echo "... query/divs/SwapDiv.i"
+	@echo "... query/divs/SwapDiv.s"
 	@echo "... query/divs/UpdateDiv.o"
 	@echo "... query/divs/UpdateDiv.i"
 	@echo "... query/divs/UpdateDiv.s"

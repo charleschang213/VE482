@@ -187,6 +187,15 @@ CMakeFiles/lemondb.dir/query/data/UpdateQuery.cpp.o: ../query/data/UpdateQuery.h
 CMakeFiles/lemondb.dir/query/data/UpdateQuery.cpp.o: ../utils/formatter.h
 CMakeFiles/lemondb.dir/query/data/UpdateQuery.cpp.o: ../utils/uexception.h
 
+CMakeFiles/lemondb.dir/query/divs/AddDiv.cpp.o: ../db/Database.h
+CMakeFiles/lemondb.dir/query/divs/AddDiv.cpp.o: ../db/Table.h
+CMakeFiles/lemondb.dir/query/divs/AddDiv.cpp.o: ../query/Query.h
+CMakeFiles/lemondb.dir/query/divs/AddDiv.cpp.o: ../query/QueryResult.h
+CMakeFiles/lemondb.dir/query/divs/AddDiv.cpp.o: ../query/data/AddQuery.h
+CMakeFiles/lemondb.dir/query/divs/AddDiv.cpp.o: ../query/divs/AddDiv.cpp
+CMakeFiles/lemondb.dir/query/divs/AddDiv.cpp.o: ../utils/formatter.h
+CMakeFiles/lemondb.dir/query/divs/AddDiv.cpp.o: ../utils/uexception.h
+
 CMakeFiles/lemondb.dir/query/divs/DeleteDiv.cpp.o: ../db/Database.h
 CMakeFiles/lemondb.dir/query/divs/DeleteDiv.cpp.o: ../db/Table.h
 CMakeFiles/lemondb.dir/query/divs/DeleteDiv.cpp.o: ../query/Query.h
@@ -195,6 +204,51 @@ CMakeFiles/lemondb.dir/query/divs/DeleteDiv.cpp.o: ../query/data/DeleteQuery.h
 CMakeFiles/lemondb.dir/query/divs/DeleteDiv.cpp.o: ../query/divs/DeleteDiv.cpp
 CMakeFiles/lemondb.dir/query/divs/DeleteDiv.cpp.o: ../utils/formatter.h
 CMakeFiles/lemondb.dir/query/divs/DeleteDiv.cpp.o: ../utils/uexception.h
+
+CMakeFiles/lemondb.dir/query/divs/MaxDiv.cpp.o: ../db/Database.h
+CMakeFiles/lemondb.dir/query/divs/MaxDiv.cpp.o: ../db/Table.h
+CMakeFiles/lemondb.dir/query/divs/MaxDiv.cpp.o: ../query/Query.h
+CMakeFiles/lemondb.dir/query/divs/MaxDiv.cpp.o: ../query/QueryResult.h
+CMakeFiles/lemondb.dir/query/divs/MaxDiv.cpp.o: ../query/data/MaxQuery.h
+CMakeFiles/lemondb.dir/query/divs/MaxDiv.cpp.o: ../query/divs/MaxDiv.cpp
+CMakeFiles/lemondb.dir/query/divs/MaxDiv.cpp.o: ../utils/formatter.h
+CMakeFiles/lemondb.dir/query/divs/MaxDiv.cpp.o: ../utils/uexception.h
+
+CMakeFiles/lemondb.dir/query/divs/MinDiv.cpp.o: ../db/Database.h
+CMakeFiles/lemondb.dir/query/divs/MinDiv.cpp.o: ../db/Table.h
+CMakeFiles/lemondb.dir/query/divs/MinDiv.cpp.o: ../query/Query.h
+CMakeFiles/lemondb.dir/query/divs/MinDiv.cpp.o: ../query/QueryResult.h
+CMakeFiles/lemondb.dir/query/divs/MinDiv.cpp.o: ../query/data/MinQuery.h
+CMakeFiles/lemondb.dir/query/divs/MinDiv.cpp.o: ../query/divs/MinDiv.cpp
+CMakeFiles/lemondb.dir/query/divs/MinDiv.cpp.o: ../utils/formatter.h
+CMakeFiles/lemondb.dir/query/divs/MinDiv.cpp.o: ../utils/uexception.h
+
+CMakeFiles/lemondb.dir/query/divs/SubDiv.cpp.o: ../db/Database.h
+CMakeFiles/lemondb.dir/query/divs/SubDiv.cpp.o: ../db/Table.h
+CMakeFiles/lemondb.dir/query/divs/SubDiv.cpp.o: ../query/Query.h
+CMakeFiles/lemondb.dir/query/divs/SubDiv.cpp.o: ../query/QueryResult.h
+CMakeFiles/lemondb.dir/query/divs/SubDiv.cpp.o: ../query/data/SubQuery.h
+CMakeFiles/lemondb.dir/query/divs/SubDiv.cpp.o: ../query/divs/SubDiv.cpp
+CMakeFiles/lemondb.dir/query/divs/SubDiv.cpp.o: ../utils/formatter.h
+CMakeFiles/lemondb.dir/query/divs/SubDiv.cpp.o: ../utils/uexception.h
+
+CMakeFiles/lemondb.dir/query/divs/SumDiv.cpp.o: ../db/Database.h
+CMakeFiles/lemondb.dir/query/divs/SumDiv.cpp.o: ../db/Table.h
+CMakeFiles/lemondb.dir/query/divs/SumDiv.cpp.o: ../query/Query.h
+CMakeFiles/lemondb.dir/query/divs/SumDiv.cpp.o: ../query/QueryResult.h
+CMakeFiles/lemondb.dir/query/divs/SumDiv.cpp.o: ../query/data/SumQuery.h
+CMakeFiles/lemondb.dir/query/divs/SumDiv.cpp.o: ../query/divs/SumDiv.cpp
+CMakeFiles/lemondb.dir/query/divs/SumDiv.cpp.o: ../utils/formatter.h
+CMakeFiles/lemondb.dir/query/divs/SumDiv.cpp.o: ../utils/uexception.h
+
+CMakeFiles/lemondb.dir/query/divs/SwapDiv.cpp.o: ../db/Database.h
+CMakeFiles/lemondb.dir/query/divs/SwapDiv.cpp.o: ../db/Table.h
+CMakeFiles/lemondb.dir/query/divs/SwapDiv.cpp.o: ../query/Query.h
+CMakeFiles/lemondb.dir/query/divs/SwapDiv.cpp.o: ../query/QueryResult.h
+CMakeFiles/lemondb.dir/query/divs/SwapDiv.cpp.o: ../query/data/SwapQuery.h
+CMakeFiles/lemondb.dir/query/divs/SwapDiv.cpp.o: ../query/divs/SwapDiv.cpp
+CMakeFiles/lemondb.dir/query/divs/SwapDiv.cpp.o: ../utils/formatter.h
+CMakeFiles/lemondb.dir/query/divs/SwapDiv.cpp.o: ../utils/uexception.h
 
 CMakeFiles/lemondb.dir/query/divs/UpdateDiv.cpp.o: ../db/Database.h
 CMakeFiles/lemondb.dir/query/divs/UpdateDiv.cpp.o: ../db/Table.h

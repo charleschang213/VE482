@@ -28,6 +28,12 @@ file(REMOVE_RECURSE
   "CMakeFiles/lemondb.dir/query/data/MinQuery.cpp.o"
   "CMakeFiles/lemondb.dir/query/divs/UpdateDiv.cpp.o"
   "CMakeFiles/lemondb.dir/query/divs/DeleteDiv.cpp.o"
+  "CMakeFiles/lemondb.dir/query/divs/AddDiv.cpp.o"
+  "CMakeFiles/lemondb.dir/query/divs/SubDiv.cpp.o"
+  "CMakeFiles/lemondb.dir/query/divs/SwapDiv.cpp.o"
+  "CMakeFiles/lemondb.dir/query/divs/SumDiv.cpp.o"
+  "CMakeFiles/lemondb.dir/query/divs/MaxDiv.cpp.o"
+  "CMakeFiles/lemondb.dir/query/divs/MinDiv.cpp.o"
   "lemondb.pdb"
   "lemondb"
 )
