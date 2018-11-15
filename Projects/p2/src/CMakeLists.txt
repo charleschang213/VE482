@@ -38,6 +38,9 @@ set(SOURCE_FILES
 
         query/divs/UpdateDiv.cpp
         query/divs/DeleteDiv.cpp
+        query/divs/AddDiv.cpp
+        query/divs/SubDiv.cpp
+        query/divs/SwapDiv.cpp
         )
 add_executable(lemondb main.cpp ${SOURCE_FILES})
 target_link_libraries(lemondb pthread)
