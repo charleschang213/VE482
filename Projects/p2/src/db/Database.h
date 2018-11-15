@@ -200,7 +200,7 @@ class DivQuery{
         //void QuitDivExe();
         //void AddDivExe();
         //void CountDivExe();
-        //void DeleteDivExe();
+        void DeleteDivExe();
         //void DuplicateDivExe();
         //void InsertDivExe();
         //void MaxDivExe();

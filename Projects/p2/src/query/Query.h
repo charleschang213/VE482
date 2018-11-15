@@ -87,6 +87,8 @@ public:
     typedef std::unique_ptr<ComplexQuery> Ptr;
 
 
+
+
     /**
      * init a fast condition according to the table
      * note that the condition is only effective if the table fields are not changed

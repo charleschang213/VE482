@@ -11,6 +11,7 @@ class InsertQuery : public ComplexQuery {
     static constexpr const char *qname = "INSERT";
 public:
     bool iswrite(){return true;}
+    bool dividable(){return false;}
     std::string getname(){return "INSERT";}
     using ComplexQuery::ComplexQuery;
 
