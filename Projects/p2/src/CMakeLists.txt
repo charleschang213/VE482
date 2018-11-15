@@ -14,7 +14,7 @@ set(SOURCE_FILES
         query/QueryResult.h query/QueryResult.cpp
         query/QueryBuilders.cpp query/QueryBuilders.h
 
-        query/management/LoadTableQuery.cpp query/management/LoadTableQuery.h
+		query/management/LoadTableQuery.cpp query/management/LoadTableQuery.h
         query/management/DropTableQuery.cpp query/management/DropTableQuery.h
         query/management/DumpTableQuery.cpp query/management/DumpTableQuery.h
         query/management/ListTableQuery.cpp query/management/ListTableQuery.h
@@ -24,17 +24,28 @@ set(SOURCE_FILES
         query/management/PrintTableQuery.cpp query/management/PrintTableQuery.h
 		
         query/data/InsertQuery.cpp query/data/InsertQuery.h
-        query/data/UpdateQuery.cpp query/data/UpdateQuery.h
-        query/data/DeleteQuery.cpp query/data/DeleteQuery.h
-        query/data/AddQuery.cpp query/data/AddQuery.h
-        query/data/SubQuery.cpp query/data/SubQuery.h
-        query/data/SwapQuery.cpp query/data/SwapQuery.h
-	  query/data/CountQuery.cpp query/data/CountQuery.h
-        query/data/SelectQuery.cpp query/data/SelectQuery.h
-        query/data/DuplicateQuery.cpp query/data/DuplicateQuery.h
-        query/data/SumQuery.cpp query/data/SumQuery.h
-        query/data/MaxQuery.cpp query/data/MaxQuery.h
-        query/data/MinQuery.cpp query/data/MinQuery.h
+		#query/data/UpdateQuery.cpp 
+		query/data/UpdateQuery.h
+		#query/data/DeleteQuery.cpp 
+		query/data/DeleteQuery.h
+		#query/data/AddQuery.cpp 
+		query/data/AddQuery.h
+		#query/data/SubQuery.cpp 
+		query/data/SubQuery.h
+		#query/data/SwapQuery.cpp 
+		query/data/SwapQuery.h
+	    #query/data/CountQuery.cpp 
+		query/data/CountQuery.h
+		#query/data/SelectQuery.cpp 
+		query/data/SelectQuery.h
+        #query/data/DuplicateQuery.cpp 
+		query/data/DuplicateQuery.h
+		#query/data/SumQuery.cpp 
+		query/data/SumQuery.h
+        #query/data/MaxQuery.cpp 
+		query/data/MaxQuery.h
+		#query/data/MinQuery.cpp 
+		query/data/MinQuery.h
 
         query/divs/UpdateDiv.cpp
         query/divs/DeleteDiv.cpp

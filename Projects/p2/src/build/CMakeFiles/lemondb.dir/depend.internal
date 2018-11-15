@@ -79,42 +79,6 @@ CMakeFiles/lemondb.dir/query/QueryResult.cpp.o
  /root/VE482/Projects/p2/src/query/QueryResult.cpp
  /root/VE482/Projects/p2/src/query/QueryResult.h
  /root/VE482/Projects/p2/src/utils/formatter.h
-CMakeFiles/lemondb.dir/query/data/AddQuery.cpp.o
- /root/VE482/Projects/p2/src/db/Database.h
- /root/VE482/Projects/p2/src/db/Table.h
- /root/VE482/Projects/p2/src/query/Query.h
- /root/VE482/Projects/p2/src/query/QueryResult.h
- /root/VE482/Projects/p2/src/query/data/AddQuery.cpp
- /root/VE482/Projects/p2/src/query/data/AddQuery.h
- /root/VE482/Projects/p2/src/utils/formatter.h
- /root/VE482/Projects/p2/src/utils/uexception.h
-CMakeFiles/lemondb.dir/query/data/CountQuery.cpp.o
- /root/VE482/Projects/p2/src/db/Database.h
- /root/VE482/Projects/p2/src/db/Table.h
- /root/VE482/Projects/p2/src/query/Query.h
- /root/VE482/Projects/p2/src/query/QueryResult.h
- /root/VE482/Projects/p2/src/query/data/CountQuery.cpp
- /root/VE482/Projects/p2/src/query/data/CountQuery.h
- /root/VE482/Projects/p2/src/utils/formatter.h
- /root/VE482/Projects/p2/src/utils/uexception.h
-CMakeFiles/lemondb.dir/query/data/DeleteQuery.cpp.o
- /root/VE482/Projects/p2/src/db/Database.h
- /root/VE482/Projects/p2/src/db/Table.h
- /root/VE482/Projects/p2/src/query/Query.h
- /root/VE482/Projects/p2/src/query/QueryResult.h
- /root/VE482/Projects/p2/src/query/data/DeleteQuery.cpp
- /root/VE482/Projects/p2/src/query/data/DeleteQuery.h
- /root/VE482/Projects/p2/src/utils/formatter.h
- /root/VE482/Projects/p2/src/utils/uexception.h
-CMakeFiles/lemondb.dir/query/data/DuplicateQuery.cpp.o
- /root/VE482/Projects/p2/src/db/Database.h
- /root/VE482/Projects/p2/src/db/Table.h
- /root/VE482/Projects/p2/src/query/Query.h
- /root/VE482/Projects/p2/src/query/QueryResult.h
- /root/VE482/Projects/p2/src/query/data/DuplicateQuery.cpp
- /root/VE482/Projects/p2/src/query/data/DuplicateQuery.h
- /root/VE482/Projects/p2/src/utils/formatter.h
- /root/VE482/Projects/p2/src/utils/uexception.h
 CMakeFiles/lemondb.dir/query/data/InsertQuery.cpp.o
  /root/VE482/Projects/p2/src/db/Database.h
  /root/VE482/Projects/p2/src/db/Table.h
@@ -122,69 +86,6 @@ CMakeFiles/lemondb.dir/query/data/InsertQuery.cpp.o
  /root/VE482/Projects/p2/src/query/QueryResult.h
  /root/VE482/Projects/p2/src/query/data/InsertQuery.cpp
  /root/VE482/Projects/p2/src/query/data/InsertQuery.h
- /root/VE482/Projects/p2/src/utils/formatter.h
- /root/VE482/Projects/p2/src/utils/uexception.h
-CMakeFiles/lemondb.dir/query/data/MaxQuery.cpp.o
- /root/VE482/Projects/p2/src/db/Database.h
- /root/VE482/Projects/p2/src/db/Table.h
- /root/VE482/Projects/p2/src/query/Query.h
- /root/VE482/Projects/p2/src/query/QueryResult.h
- /root/VE482/Projects/p2/src/query/data/MaxQuery.cpp
- /root/VE482/Projects/p2/src/query/data/MaxQuery.h
- /root/VE482/Projects/p2/src/utils/formatter.h
- /root/VE482/Projects/p2/src/utils/uexception.h
-CMakeFiles/lemondb.dir/query/data/MinQuery.cpp.o
- /root/VE482/Projects/p2/src/db/Database.h
- /root/VE482/Projects/p2/src/db/Table.h
- /root/VE482/Projects/p2/src/query/Query.h
- /root/VE482/Projects/p2/src/query/QueryResult.h
- /root/VE482/Projects/p2/src/query/data/MinQuery.cpp
- /root/VE482/Projects/p2/src/query/data/MinQuery.h
- /root/VE482/Projects/p2/src/utils/formatter.h
- /root/VE482/Projects/p2/src/utils/uexception.h
-CMakeFiles/lemondb.dir/query/data/SelectQuery.cpp.o
- /root/VE482/Projects/p2/src/db/Database.h
- /root/VE482/Projects/p2/src/db/Table.h
- /root/VE482/Projects/p2/src/query/Query.h
- /root/VE482/Projects/p2/src/query/QueryResult.h
- /root/VE482/Projects/p2/src/query/data/SelectQuery.cpp
- /root/VE482/Projects/p2/src/query/data/SelectQuery.h
- /root/VE482/Projects/p2/src/utils/formatter.h
- /root/VE482/Projects/p2/src/utils/uexception.h
-CMakeFiles/lemondb.dir/query/data/SubQuery.cpp.o
- /root/VE482/Projects/p2/src/db/Database.h
- /root/VE482/Projects/p2/src/db/Table.h
- /root/VE482/Projects/p2/src/query/Query.h
- /root/VE482/Projects/p2/src/query/QueryResult.h
- /root/VE482/Projects/p2/src/query/data/SubQuery.cpp
- /root/VE482/Projects/p2/src/query/data/SubQuery.h
- /root/VE482/Projects/p2/src/utils/formatter.h
- /root/VE482/Projects/p2/src/utils/uexception.h
-CMakeFiles/lemondb.dir/query/data/SumQuery.cpp.o
- /root/VE482/Projects/p2/src/db/Database.h
- /root/VE482/Projects/p2/src/db/Table.h
- /root/VE482/Projects/p2/src/query/Query.h
- /root/VE482/Projects/p2/src/query/QueryResult.h
- /root/VE482/Projects/p2/src/query/data/SumQuery.cpp
- /root/VE482/Projects/p2/src/query/data/SumQuery.h
- /root/VE482/Projects/p2/src/utils/formatter.h
- /root/VE482/Projects/p2/src/utils/uexception.h
-CMakeFiles/lemondb.dir/query/data/SwapQuery.cpp.o
- /root/VE482/Projects/p2/src/db/Database.h
- /root/VE482/Projects/p2/src/db/Table.h
- /root/VE482/Projects/p2/src/query/Query.h
- /root/VE482/Projects/p2/src/query/QueryResult.h
- /root/VE482/Projects/p2/src/query/data/SwapQuery.cpp
- /root/VE482/Projects/p2/src/query/data/SwapQuery.h
- /root/VE482/Projects/p2/src/utils/formatter.h
- /root/VE482/Projects/p2/src/utils/uexception.h
-CMakeFiles/lemondb.dir/query/data/UpdateQuery.cpp.o
- /root/VE482/Projects/p2/src/db/Database.h
- /root/VE482/Projects/p2/src/db/Table.h
- /root/VE482/Projects/p2/src/query/Query.h
- /root/VE482/Projects/p2/src/query/QueryResult.h
- /root/VE482/Projects/p2/src/query/data/UpdateQuery.cpp
- /root/VE482/Projects/p2/src/query/data/UpdateQuery.h
  /root/VE482/Projects/p2/src/utils/formatter.h
  /root/VE482/Projects/p2/src/utils/uexception.h
 CMakeFiles/lemondb.dir/query/divs/AddDiv.cpp.o

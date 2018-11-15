@@ -214,53 +214,17 @@ string
 vector
 -
 
-/root/VE482/Projects/p2/src/query/data/AddQuery.cpp
-../../db/Database.h
-/root/VE482/Projects/p2/src/db/Database.h
-AddQuery.h
-/root/VE482/Projects/p2/src/query/data/AddQuery.h
-
 /root/VE482/Projects/p2/src/query/data/AddQuery.h
 ../Query.h
 /root/VE482/Projects/p2/src/query/Query.h
-
-/root/VE482/Projects/p2/src/query/data/CountQuery.cpp
-../../db/Database.h
-/root/VE482/Projects/p2/src/db/Database.h
-CountQuery.h
-/root/VE482/Projects/p2/src/query/data/CountQuery.h
-iostream
--
 
 /root/VE482/Projects/p2/src/query/data/CountQuery.h
 ../Query.h
 /root/VE482/Projects/p2/src/query/Query.h
 
-/root/VE482/Projects/p2/src/query/data/DeleteQuery.cpp
-../../db/Database.h
-/root/VE482/Projects/p2/src/db/Database.h
-DeleteQuery.h
-/root/VE482/Projects/p2/src/query/data/DeleteQuery.h
-../QueryResult.h
-/root/VE482/Projects/p2/src/query/QueryResult.h
-algorithm
--
-vector
--
-utility
--
-
 /root/VE482/Projects/p2/src/query/data/DeleteQuery.h
 ../Query.h
 /root/VE482/Projects/p2/src/query/Query.h
-
-/root/VE482/Projects/p2/src/query/data/DuplicateQuery.cpp
-../../db/Database.h
-/root/VE482/Projects/p2/src/db/Database.h
-DuplicateQuery.h
-/root/VE482/Projects/p2/src/query/data/DuplicateQuery.h
-iostream
--
 
 /root/VE482/Projects/p2/src/query/data/DuplicateQuery.h
 ../Query.h
@@ -280,27 +244,11 @@ algorithm
 ../Query.h
 /root/VE482/Projects/p2/src/query/Query.h
 
-/root/VE482/Projects/p2/src/query/data/MaxQuery.cpp
-../../db/Database.h
-/root/VE482/Projects/p2/src/db/Database.h
-vector
--
-MaxQuery.h
-/root/VE482/Projects/p2/src/query/data/MaxQuery.h
-
 /root/VE482/Projects/p2/src/query/data/MaxQuery.h
 ../Query.h
 /root/VE482/Projects/p2/src/query/Query.h
 vector
 -
-
-/root/VE482/Projects/p2/src/query/data/MinQuery.cpp
-../../db/Database.h
-/root/VE482/Projects/p2/src/db/Database.h
-vector
--
-MinQuery.h
-/root/VE482/Projects/p2/src/query/data/MinQuery.h
 
 /root/VE482/Projects/p2/src/query/data/MinQuery.h
 ../Query.h
@@ -308,37 +256,13 @@ MinQuery.h
 vector
 -
 
-/root/VE482/Projects/p2/src/query/data/SelectQuery.cpp
-../../db/Database.h
-/root/VE482/Projects/p2/src/db/Database.h
-SelectQuery.h
-/root/VE482/Projects/p2/src/query/data/SelectQuery.h
-iostream
--
-algorithm
--
-
 /root/VE482/Projects/p2/src/query/data/SelectQuery.h
 ../Query.h
 /root/VE482/Projects/p2/src/query/Query.h
 
-/root/VE482/Projects/p2/src/query/data/SubQuery.cpp
-../../db/Database.h
-/root/VE482/Projects/p2/src/db/Database.h
-SubQuery.h
-/root/VE482/Projects/p2/src/query/data/SubQuery.h
-
 /root/VE482/Projects/p2/src/query/data/SubQuery.h
 ../Query.h
 /root/VE482/Projects/p2/src/query/Query.h
-
-/root/VE482/Projects/p2/src/query/data/SumQuery.cpp
-../../db/Database.h
-/root/VE482/Projects/p2/src/db/Database.h
-vector
--
-SumQuery.h
-/root/VE482/Projects/p2/src/query/data/SumQuery.h
 
 /root/VE482/Projects/p2/src/query/data/SumQuery.h
 ../Query.h
@@ -346,21 +270,9 @@ SumQuery.h
 vector
 -
 
-/root/VE482/Projects/p2/src/query/data/SwapQuery.cpp
-../../db/Database.h
-/root/VE482/Projects/p2/src/db/Database.h
-SwapQuery.h
-/root/VE482/Projects/p2/src/query/data/SwapQuery.h
-
 /root/VE482/Projects/p2/src/query/data/SwapQuery.h
 ../Query.h
 /root/VE482/Projects/p2/src/query/Query.h
-
-/root/VE482/Projects/p2/src/query/data/UpdateQuery.cpp
-../../db/Database.h
-/root/VE482/Projects/p2/src/db/Database.h
-UpdateQuery.h
-/root/VE482/Projects/p2/src/query/data/UpdateQuery.h
 
 /root/VE482/Projects/p2/src/query/data/UpdateQuery.h
 ../Query.h
