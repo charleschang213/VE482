@@ -58,9 +58,9 @@ public:
 
     std::string getTableName(){return targetTable;}
 
-    virtual QueryResult::Ptr execute() = 0;
+    virtual QueryResult::Ptr execute(){return std::make_unique<NullQueryResult>();}
 
-    virtual std::string toString() = 0;
+    virtual std::string toString(){return "";}
 
     virtual ~Query() = default;
 };
