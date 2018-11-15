@@ -17,7 +17,16 @@ class UpdateQuery : public ComplexQuery {
 public:
     std::string getname(){return "UPDATE";}
     using ComplexQuery::ComplexQuery;
-
+    void init(){
+        auto &db = Database::getInstance();
+        auto &table = db[this->getTableName()];
+        if (this->operands[0] == "KEY") {
+            this->keyValue = this->operands[1];
+        } else {
+            this->fieldId = table.getFieldIndex(this->operands[0]);
+            this->fieldValue = (Table::ValueType) strtol(this->operands[1].c_str(), nullptr, 10);
+        }
+    }
     void combine(int cnt){
         this->counter+=cnt;
         this->decgroup();

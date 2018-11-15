@@ -26,6 +26,7 @@ void Database::testDuplicate(const std::string &tableName)
 
 void Database::insertQuery(std::unique_ptr<Query> &&query)
 {
+    query->init();
     if (query->uniquery()){
         auto q = query.get();
         int id=-1;

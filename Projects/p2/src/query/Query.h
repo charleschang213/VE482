@@ -30,6 +30,7 @@ protected:
     int groups = 0;
 
 public:
+    virtual void init(){}
     QueryResult::Ptr result = nullptr;
     virtual bool uniquery(){return false;}
     virtual bool iscreate(){return false;}
@@ -81,6 +82,7 @@ protected:
 public:
     bool dividable(){return true;}
     typedef std::unique_ptr<ComplexQuery> Ptr;
+
 
     /**
      * init a fast condition according to the table
