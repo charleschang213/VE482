@@ -18,7 +18,6 @@ public:
     std::string getname(){return "UPDATE";}
     using ComplexQuery::ComplexQuery;
     void init(){
-        auto &db = Database::getInstance();
         if (this->operands[0] == "KEY") {
             this->keyValue = this->operands[1];
         } else {
