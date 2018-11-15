@@ -133,9 +133,9 @@ int main(int argc, char *argv[]) {
                 std::fstream tmpstream(filename);
                 if (tmpstream.is_open()){
                     listenfin.push(std::make_unique<std::istream>(tmpstream.rdbuf()));
-                    std::cout << "OK" << std::endl;
                     auto &db = Database::getInstance();
                     db.insertQuery(std::make_unique<NopQuery>(),std::make_unique<SuccessListenResult>(filename));
+                    std::cout << "OK" << std::endl;
                 }
                 else {
                     auto &db = Database::getInstance();
