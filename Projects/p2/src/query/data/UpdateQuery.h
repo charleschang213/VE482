@@ -20,7 +20,7 @@ public:
     bool iswrite(){return true;}
     std::string getname(){return "UPDATE";}
     using ComplexQuery::ComplexQuery;
-    void init(){
+    void init() override{
         initMutex.lock();
         if (initted){
             initMutex.unlock();
