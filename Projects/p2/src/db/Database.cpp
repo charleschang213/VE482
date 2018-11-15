@@ -293,11 +293,13 @@ void Database::printAllTable()
     std::cout << "=========================" << std::endl;
 }
 
-Database &Database::getInstance()
+Database &Database::getInstance(int threads=0)
 {
     if (Database::instance == nullptr)
     {
         instance = std::unique_ptr<Database>(new Database);
+        if (threads==0) instance->threadnum = std::thread::hardware_concurrency();
+        else instance->threadnum = threads;
         for (int i = 0; i < instance->threadnum; i++)
             instance->threads.emplace_back(runthread, instance.get());
     }

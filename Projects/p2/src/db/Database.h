@@ -110,7 +110,7 @@ public:
 
     ~Database() = default;
 
-    static Database &getInstance();
+    static Database &getInstance(int threads=0);
 
     void updateFileTableName(const std::string &fileName, const std::string &tableName);
 
