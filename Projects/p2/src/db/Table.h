@@ -95,8 +95,8 @@ private:
     std::string tableName;
 
     std::mutex statusMutex;
-    int status;
-    int active;
+    int status = 0;
+    int active = 0;
 
 public:
     void tlock(){statusMutex.lock();}
