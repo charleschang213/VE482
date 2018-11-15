@@ -138,7 +138,7 @@ int main(int argc, char *argv[]) {
                 }
                 else {
                     auto &db = Database::getInstance();
-                    db.insertQuery(std::make_unique<NopQuery>(),std::make_unique<FailedListenResult>(filename);
+                    db.insertQuery(std::make_unique<NopQuery>(),std::make_unique<FailedListenResult>(filename));
                 }
                 continue;
             }
