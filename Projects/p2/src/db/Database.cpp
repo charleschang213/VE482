@@ -43,6 +43,13 @@ void Database::insertQuery(std::unique_ptr<Query> &&query)
     if (!query->iscreate())
     {
         auto q = query.get();
+         while (true){
+                bool a = false;
+                waitingMutex.lock();
+                a = TableExists(q->getTableName());
+                waitingMutex.unlock();
+                if (a) break;
+        }
         auto &table = (*this)[q->getTableName()];
         int groups = 0;
         int size = 0;
@@ -149,13 +156,7 @@ void Database::runthread(Database *db)
                 continue;
             }
             //std::cout << "Wait for table Creation" << std::endl;
-            while (true){
-                bool a = false;
-                db->waitingMutex.lock();
-                a = db->TableExists(query->getTableName());
-                db->waitingMutex.unlock();
-                if (a) break;
-            }
+           
             std::cout << "Founded" << std::endl;
             auto &table = (*db)[task.target];
             //std::cout << "Wait for table operations" << std::endl;
