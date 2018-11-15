@@ -190,7 +190,7 @@ void Database::runthread(Database *db)
                 }
                 else
                 {
-                    if (task.getid() > 0)
+                    if (!query->iswrite())
                     {
                         a = true;
                         table.upactive();

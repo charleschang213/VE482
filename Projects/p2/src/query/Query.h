@@ -28,6 +28,7 @@ protected:
     std::string targetTable;
     int id = -1;
     int groups = 0;
+    int agroups = 0;
     std::mutex gMutex;
 
 public:
@@ -48,7 +49,7 @@ public:
     void finish(){}
     void setId(int x){id=x;}
     int getId(){return id;}
-    void setGroups(int x){groups=x;}
+    void setGroups(int x){groups=agroups=x;}
     void decgroup(){groups--;}
     int getGroups(){return groups;}
 
