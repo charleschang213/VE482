@@ -160,7 +160,7 @@ class DivQuery{
             }else if (name=="QUIT"){
                 NullDivExe();
             }else if (name=="ADD"){
-                NullDivExe();
+                AddDivExe();
             }else if (name=="COUNT"){
                 NullDivExe();
             }else if (name=="DELETE"){
@@ -176,11 +176,11 @@ class DivQuery{
             }else if (name=="SELECT"){
                 NullDivExe();
             }else if (name=="SUB"){
-                NullDivExe();
+                SubDivExe();
             }else if (name=="SUM"){
                 NullDivExe();
             }else if (name=="SWAP"){
-                NullDivExe();
+                SwapDivExe();
             }else if (name=="UPDATE"){
                 UpdateDivExe();
             }else{

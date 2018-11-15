@@ -11,6 +11,8 @@ class AddQuery : public ComplexQuery {
     int counter = 0;
 
 public:
+    bool iswrite(){return true;}
+    bool dividable(){return true;}
     std::string getname(){return "ADD";}
     using ComplexQuery::ComplexQuery;
     void combine(int cnt){
