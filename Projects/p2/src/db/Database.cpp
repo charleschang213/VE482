@@ -293,7 +293,7 @@ void Database::printAllTable()
     std::cout << "=========================" << std::endl;
 }
 
-Database &Database::getInstance(int threads=0)
+Database &Database::getInstance(int threads)
 {
     if (Database::instance == nullptr)
     {
