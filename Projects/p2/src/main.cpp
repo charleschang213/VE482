@@ -117,7 +117,7 @@ int main(int argc, char *argv[]) {
 
     //size_t counter = 0;
 
-    while (is) {
+    while (is&&(!listenfin.empty())) {
         try {
             // A very standard REPL
             // REPL: Read-Evaluate-Print-Loop
