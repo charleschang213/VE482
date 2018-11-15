@@ -48,7 +48,7 @@ void Database::insertQuery(std::unique_ptr<Query> &&query)
         results.emplace_back(std::move(query), nullptr);
         resultMutex.unlock();
         taskMutex.lock();
-        tasks.emplace_back(id, "", 0);
+        tasks.push_back(DivQuery(id,"",0));
         //std::cout << "Added" << std::endl;
         taskMutex.unlock();
         return;
@@ -94,7 +94,7 @@ void Database::insertQuery(std::unique_ptr<Query> &&query)
             taskMutex.lock();
             for (int i = 0; i < groups; i++)
             {
-                tasks.emplace_back(id, tablename, i);
+                tasks.push_back(DivQuery(id, tablename, i));
             }
             taskMutex.unlock();
             resultMutex.lock();
@@ -104,7 +104,7 @@ void Database::insertQuery(std::unique_ptr<Query> &&query)
         else
         {
             taskMutex.lock();
-            tasks.emplace_back(id, tablename, 0);
+            tasks.push_back(DivQuery(id, tablename, 0));
             taskMutex.unlock();
         }
     }else{
@@ -117,7 +117,7 @@ void Database::insertQuery(std::unique_ptr<Query> &&query)
         results.emplace_back(std::move(query), nullptr);
         resultMutex.unlock();
         taskMutex.lock();
-        tasks.emplace_back(id, tablename, 0);
+        tasks.push_back(DivQuery(id, tablename, 0));
         taskMutex.unlock();
         waitingMutex.lock();
         waiting.push_back(q->getTableName());
