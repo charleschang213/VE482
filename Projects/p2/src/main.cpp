@@ -120,7 +120,7 @@ int main(int argc, char *argv[]) {
             // REPL: Read-Evaluate-Print-Loop
             std::string queryStr = extractQueryString(is);
             Query::Ptr query = p.parseQuery(queryStr);
-            if (queryStr[0]!='Q') std::cout << ++counter << "\n";
+            //if (queryStr[0]!='Q') std::cout << ++counter << "\n";
             auto &db = Database::getInstance();
             db.insertQuery(std::move(query));
             if (queryStr=="QUIT") break;
