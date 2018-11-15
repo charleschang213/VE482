@@ -193,9 +193,10 @@ void Database::runthread(Database *db)
             //std::cout << "work" << std::endl;
             if (query->dividable())
                 task.execute();
-            else
+            else{
                 query->execute();
                 db->insertResult(query->getId(),std::make_unique<NullQueryResult>());
+            }  
             //db->deletewaiting(query->getTableName());
             table.tlock();
             table.downactive();
