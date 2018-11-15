@@ -165,7 +165,7 @@ void Database::runthread(Database *db)
             {
                 bool a = false;
                 table.tlock();
-                std::cout << query->getId() << " " << table.getstatus() << std::endl;
+                //std::cout << query->getId() << " " << table.getstatus() << std::endl;
                 if (table.getstatus() < 0)
                 {
                     if (table.getstatus() + task.getid() == 0)
@@ -210,7 +210,7 @@ void Database::runthread(Database *db)
             //db->deletewaiting(query->getTableName());
             table.tlock();
             table.downactive();
-            if (table.getactive() == 0)
+            if ((table.getactive() == 0)&&(query->getGroups()==0))
                 table.setstatus(0);
             table.tunlock();
         }
