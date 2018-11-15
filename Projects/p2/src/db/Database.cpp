@@ -165,7 +165,7 @@ void Database::runthread(Database *db)
             {
                 bool a = false;
                 table.tlock();
-                std::cout << query->getId() << " " << table.getFieldIndex() << std::endl;
+                std::cout << query->getId() << " " << table.getstatus() << std::endl;
                 if (table.getstatus() < 0)
                 {
                     if (table.getstatus() + task.getid() == 0)
