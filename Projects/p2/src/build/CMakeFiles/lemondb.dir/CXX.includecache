@@ -11,11 +11,15 @@ Database.h
 /root/VE482/Projects/p2/src/db/Database.h
 Table.h
 /root/VE482/Projects/p2/src/db/Table.h
+../query/Query.h
+/root/VE482/Projects/p2/src/query/Query.h
 deque
 -
 fstream
 -
 iostream
+-
+algorithm
 -
 iomanip
 -
@@ -29,12 +33,16 @@ vector
 -
 utility
 -
+queue
+-
 mutex
 -
-Table.h
-/root/VE482/Projects/p2/src/db/Table.h
+thread
+-
 ../query/Query.h
 /root/VE482/Projects/p2/src/query/Query.h
+Table.h
+/root/VE482/Projects/p2/src/db/Table.h
 ../query/QueryResult.h
 /root/VE482/Projects/p2/src/query/QueryResult.h
 
@@ -67,8 +75,14 @@ unordered_map
 -
 utility
 -
+mutex
+-
 
 /root/VE482/Projects/p2/src/main.cpp
+db/Database.h
+/root/VE482/Projects/p2/src/db/Database.h
+query/Query.h
+/root/VE482/Projects/p2/src/query/Query.h
 query/QueryParser.h
 /root/VE482/Projects/p2/src/query/QueryParser.h
 query/QueryBuilders.h
@@ -83,12 +97,16 @@ string
 -
 
 /root/VE482/Projects/p2/src/query/Query.cpp
+../db/Database.h
+/root/VE482/Projects/p2/src/db/Database.h
 Query.h
 /root/VE482/Projects/p2/src/query/Query.h
 cassert
 -
 
 /root/VE482/Projects/p2/src/query/Query.h
+../db/Database.h
+/root/VE482/Projects/p2/src/db/Database.h
 QueryResult.h
 /root/VE482/Projects/p2/src/query/QueryResult.h
 ../db/Table.h
@@ -101,10 +119,10 @@ string
 -
 
 /root/VE482/Projects/p2/src/query/QueryBuilders.cpp
-QueryBuilders.h
-/root/VE482/Projects/p2/src/query/QueryBuilders.h
 ../db/Database.h
 /root/VE482/Projects/p2/src/db/Database.h
+QueryBuilders.h
+/root/VE482/Projects/p2/src/query/QueryBuilders.h
 management/LoadTableQuery.h
 /root/VE482/Projects/p2/src/query/management/LoadTableQuery.h
 management/DropTableQuery.h
@@ -157,6 +175,8 @@ QueryParser.h
 /root/VE482/Projects/p2/src/db/Table.h
 
 /root/VE482/Projects/p2/src/query/QueryParser.cpp
+../db/Database.h
+/root/VE482/Projects/p2/src/db/Database.h
 Query.h
 /root/VE482/Projects/p2/src/query/Query.h
 QueryParser.h
@@ -193,20 +213,20 @@ vector
 -
 
 /root/VE482/Projects/p2/src/query/data/AddQuery.cpp
-AddQuery.h
-/root/VE482/Projects/p2/src/query/data/AddQuery.h
 ../../db/Database.h
 /root/VE482/Projects/p2/src/db/Database.h
+AddQuery.h
+/root/VE482/Projects/p2/src/query/data/AddQuery.h
 
 /root/VE482/Projects/p2/src/query/data/AddQuery.h
 ../Query.h
 /root/VE482/Projects/p2/src/query/Query.h
 
 /root/VE482/Projects/p2/src/query/data/CountQuery.cpp
-CountQuery.h
-/root/VE482/Projects/p2/src/query/data/CountQuery.h
 ../../db/Database.h
 /root/VE482/Projects/p2/src/db/Database.h
+CountQuery.h
+/root/VE482/Projects/p2/src/query/data/CountQuery.h
 iostream
 -
 
@@ -215,15 +235,17 @@ iostream
 /root/VE482/Projects/p2/src/query/Query.h
 
 /root/VE482/Projects/p2/src/query/data/DeleteQuery.cpp
-DeleteQuery.h
-/root/VE482/Projects/p2/src/query/data/DeleteQuery.h
 ../../db/Database.h
 /root/VE482/Projects/p2/src/db/Database.h
+DeleteQuery.h
+/root/VE482/Projects/p2/src/query/data/DeleteQuery.h
 ../QueryResult.h
 /root/VE482/Projects/p2/src/query/QueryResult.h
 algorithm
 -
 vector
+-
+utility
 -
 
 /root/VE482/Projects/p2/src/query/data/DeleteQuery.h
@@ -231,10 +253,10 @@ vector
 /root/VE482/Projects/p2/src/query/Query.h
 
 /root/VE482/Projects/p2/src/query/data/DuplicateQuery.cpp
-DuplicateQuery.h
-/root/VE482/Projects/p2/src/query/data/DuplicateQuery.h
 ../../db/Database.h
 /root/VE482/Projects/p2/src/db/Database.h
+DuplicateQuery.h
+/root/VE482/Projects/p2/src/query/data/DuplicateQuery.h
 iostream
 -
 
@@ -243,10 +265,10 @@ iostream
 /root/VE482/Projects/p2/src/query/Query.h
 
 /root/VE482/Projects/p2/src/query/data/InsertQuery.cpp
-InsertQuery.h
-/root/VE482/Projects/p2/src/query/data/InsertQuery.h
 ../../db/Database.h
 /root/VE482/Projects/p2/src/db/Database.h
+InsertQuery.h
+/root/VE482/Projects/p2/src/query/data/InsertQuery.h
 ../QueryResult.h
 /root/VE482/Projects/p2/src/query/QueryResult.h
 algorithm
@@ -257,34 +279,34 @@ algorithm
 /root/VE482/Projects/p2/src/query/Query.h
 
 /root/VE482/Projects/p2/src/query/data/MaxQuery.cpp
+../../db/Database.h
+/root/VE482/Projects/p2/src/db/Database.h
 vector
 -
 MaxQuery.h
 /root/VE482/Projects/p2/src/query/data/MaxQuery.h
-../../db/Database.h
-/root/VE482/Projects/p2/src/db/Database.h
 
 /root/VE482/Projects/p2/src/query/data/MaxQuery.h
 ../Query.h
 /root/VE482/Projects/p2/src/query/Query.h
 
 /root/VE482/Projects/p2/src/query/data/MinQuery.cpp
+../../db/Database.h
+/root/VE482/Projects/p2/src/db/Database.h
 vector
 -
 MinQuery.h
 /root/VE482/Projects/p2/src/query/data/MinQuery.h
-../../db/Database.h
-/root/VE482/Projects/p2/src/db/Database.h
 
 /root/VE482/Projects/p2/src/query/data/MinQuery.h
 ../Query.h
 /root/VE482/Projects/p2/src/query/Query.h
 
 /root/VE482/Projects/p2/src/query/data/SelectQuery.cpp
-SelectQuery.h
-/root/VE482/Projects/p2/src/query/data/SelectQuery.h
 ../../db/Database.h
 /root/VE482/Projects/p2/src/db/Database.h
+SelectQuery.h
+/root/VE482/Projects/p2/src/query/data/SelectQuery.h
 iostream
 -
 algorithm
@@ -295,72 +317,78 @@ algorithm
 /root/VE482/Projects/p2/src/query/Query.h
 
 /root/VE482/Projects/p2/src/query/data/SubQuery.cpp
-SubQuery.h
-/root/VE482/Projects/p2/src/query/data/SubQuery.h
 ../../db/Database.h
 /root/VE482/Projects/p2/src/db/Database.h
+SubQuery.h
+/root/VE482/Projects/p2/src/query/data/SubQuery.h
 
 /root/VE482/Projects/p2/src/query/data/SubQuery.h
 ../Query.h
 /root/VE482/Projects/p2/src/query/Query.h
 
 /root/VE482/Projects/p2/src/query/data/SumQuery.cpp
+../../db/Database.h
+/root/VE482/Projects/p2/src/db/Database.h
 vector
 -
 SumQuery.h
 /root/VE482/Projects/p2/src/query/data/SumQuery.h
-../../db/Database.h
-/root/VE482/Projects/p2/src/db/Database.h
 
 /root/VE482/Projects/p2/src/query/data/SumQuery.h
 ../Query.h
 /root/VE482/Projects/p2/src/query/Query.h
 
 /root/VE482/Projects/p2/src/query/data/SwapQuery.cpp
-SwapQuery.h
-/root/VE482/Projects/p2/src/query/data/SwapQuery.h
 ../../db/Database.h
 /root/VE482/Projects/p2/src/db/Database.h
+SwapQuery.h
+/root/VE482/Projects/p2/src/query/data/SwapQuery.h
 
 /root/VE482/Projects/p2/src/query/data/SwapQuery.h
 ../Query.h
 /root/VE482/Projects/p2/src/query/Query.h
 
 /root/VE482/Projects/p2/src/query/data/UpdateQuery.cpp
-UpdateQuery.h
-/root/VE482/Projects/p2/src/query/data/UpdateQuery.h
 ../../db/Database.h
 /root/VE482/Projects/p2/src/db/Database.h
+UpdateQuery.h
+/root/VE482/Projects/p2/src/query/data/UpdateQuery.h
 
 /root/VE482/Projects/p2/src/query/data/UpdateQuery.h
 ../Query.h
 /root/VE482/Projects/p2/src/query/Query.h
 
-/root/VE482/Projects/p2/src/query/management/CopyTableQuery.cpp
-CopyTableQuery.h
-/root/VE482/Projects/p2/src/query/management/CopyTableQuery.h
+/root/VE482/Projects/p2/src/query/divs/UpdateDiv.cpp
 ../../db/Database.h
 /root/VE482/Projects/p2/src/db/Database.h
+../data/UpdateQuery.h
+/root/VE482/Projects/p2/src/query/data/UpdateQuery.h
+
+/root/VE482/Projects/p2/src/query/management/CopyTableQuery.cpp
+../../db/Database.h
+/root/VE482/Projects/p2/src/db/Database.h
+CopyTableQuery.h
+/root/VE482/Projects/p2/src/query/management/CopyTableQuery.h
 
 /root/VE482/Projects/p2/src/query/management/CopyTableQuery.h
 ../Query.h
 /root/VE482/Projects/p2/src/query/Query.h
 
 /root/VE482/Projects/p2/src/query/management/DropTableQuery.cpp
-DropTableQuery.h
-/root/VE482/Projects/p2/src/query/management/DropTableQuery.h
 ../../db/Database.h
 /root/VE482/Projects/p2/src/db/Database.h
+DropTableQuery.h
+/root/VE482/Projects/p2/src/query/management/DropTableQuery.h
 
 /root/VE482/Projects/p2/src/query/management/DropTableQuery.h
 ../Query.h
 /root/VE482/Projects/p2/src/query/Query.h
 
 /root/VE482/Projects/p2/src/query/management/DumpTableQuery.cpp
-DumpTableQuery.h
-/root/VE482/Projects/p2/src/query/management/DumpTableQuery.h
 ../../db/Database.h
 /root/VE482/Projects/p2/src/db/Database.h
+DumpTableQuery.h
+/root/VE482/Projects/p2/src/query/management/DumpTableQuery.h
 fstream
 -
 
@@ -369,20 +397,20 @@ fstream
 /root/VE482/Projects/p2/src/query/Query.h
 
 /root/VE482/Projects/p2/src/query/management/ListTableQuery.cpp
-ListTableQuery.h
-/root/VE482/Projects/p2/src/query/management/ListTableQuery.h
 ../../db/Database.h
 /root/VE482/Projects/p2/src/db/Database.h
+ListTableQuery.h
+/root/VE482/Projects/p2/src/query/management/ListTableQuery.h
 
 /root/VE482/Projects/p2/src/query/management/ListTableQuery.h
 ../Query.h
 /root/VE482/Projects/p2/src/query/Query.h
 
 /root/VE482/Projects/p2/src/query/management/LoadTableQuery.cpp
-LoadTableQuery.h
-/root/VE482/Projects/p2/src/query/management/LoadTableQuery.h
 ../../db/Database.h
 /root/VE482/Projects/p2/src/db/Database.h
+LoadTableQuery.h
+/root/VE482/Projects/p2/src/query/management/LoadTableQuery.h
 fstream
 -
 
@@ -391,10 +419,10 @@ fstream
 /root/VE482/Projects/p2/src/query/Query.h
 
 /root/VE482/Projects/p2/src/query/management/PrintTableQuery.cpp
-PrintTableQuery.h
-/root/VE482/Projects/p2/src/query/management/PrintTableQuery.h
 ../../db/Database.h
 /root/VE482/Projects/p2/src/db/Database.h
+PrintTableQuery.h
+/root/VE482/Projects/p2/src/query/management/PrintTableQuery.h
 iostream
 -
 
@@ -403,20 +431,20 @@ iostream
 /root/VE482/Projects/p2/src/query/Query.h
 
 /root/VE482/Projects/p2/src/query/management/QuitQuery.cpp
-QuitQuery.h
-/root/VE482/Projects/p2/src/query/management/QuitQuery.h
 ../../db/Database.h
 /root/VE482/Projects/p2/src/db/Database.h
+QuitQuery.h
+/root/VE482/Projects/p2/src/query/management/QuitQuery.h
 
 /root/VE482/Projects/p2/src/query/management/QuitQuery.h
 ../Query.h
 /root/VE482/Projects/p2/src/query/Query.h
 
 /root/VE482/Projects/p2/src/query/management/TruncateTableQuery.cpp
-TruncateTableQuery.h
-/root/VE482/Projects/p2/src/query/management/TruncateTableQuery.h
 ../../db/Database.h
 /root/VE482/Projects/p2/src/db/Database.h
+TruncateTableQuery.h
+/root/VE482/Projects/p2/src/query/management/TruncateTableQuery.h
 
 /root/VE482/Projects/p2/src/query/management/TruncateTableQuery.h
 ../Query.h

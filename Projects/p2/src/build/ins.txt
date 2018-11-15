@@ -1,4 +1,4 @@
-LOAD test.tbl;
-DUPLICATE ( ) FROM Test;
-SHOWTABLE Test;
+LOAD test2.tbl;
+UPDATE ( ID 10000 ) FROM Test WHERE ( ID > 300 );
+DUMP Test tt.tbl;
 QUIT;

@@ -636,6 +636,33 @@ query/data/UpdateQuery.cpp.s:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/data/UpdateQuery.cpp.s
 .PHONY : query/data/UpdateQuery.cpp.s
 
+query/divs/UpdateDiv.o: query/divs/UpdateDiv.cpp.o
+
+.PHONY : query/divs/UpdateDiv.o
+
+# target to build an object file
+query/divs/UpdateDiv.cpp.o:
+	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/divs/UpdateDiv.cpp.o
+.PHONY : query/divs/UpdateDiv.cpp.o
+
+query/divs/UpdateDiv.i: query/divs/UpdateDiv.cpp.i
+
+.PHONY : query/divs/UpdateDiv.i
+
+# target to preprocess a source file
+query/divs/UpdateDiv.cpp.i:
+	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/divs/UpdateDiv.cpp.i
+.PHONY : query/divs/UpdateDiv.cpp.i
+
+query/divs/UpdateDiv.s: query/divs/UpdateDiv.cpp.s
+
+.PHONY : query/divs/UpdateDiv.s
+
+# target to generate assembly for a file
+query/divs/UpdateDiv.cpp.s:
+	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/divs/UpdateDiv.cpp.s
+.PHONY : query/divs/UpdateDiv.cpp.s
+
 query/management/CopyTableQuery.o: query/management/CopyTableQuery.cpp.o
 
 .PHONY : query/management/CopyTableQuery.o
@@ -918,6 +945,9 @@ help:
 	@echo "... query/data/UpdateQuery.o"
 	@echo "... query/data/UpdateQuery.i"
 	@echo "... query/data/UpdateQuery.s"
+	@echo "... query/divs/UpdateDiv.o"
+	@echo "... query/divs/UpdateDiv.i"
+	@echo "... query/divs/UpdateDiv.s"
 	@echo "... query/management/CopyTableQuery.o"
 	@echo "... query/management/CopyTableQuery.i"
 	@echo "... query/management/CopyTableQuery.s"

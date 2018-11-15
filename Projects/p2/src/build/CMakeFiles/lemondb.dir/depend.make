@@ -17,6 +17,7 @@ CMakeFiles/lemondb.dir/db/Table.cpp.o: ../query/QueryResult.h
 CMakeFiles/lemondb.dir/db/Table.cpp.o: ../utils/formatter.h
 CMakeFiles/lemondb.dir/db/Table.cpp.o: ../utils/uexception.h
 
+CMakeFiles/lemondb.dir/main.cpp.o: ../db/Database.h
 CMakeFiles/lemondb.dir/main.cpp.o: ../db/Table.h
 CMakeFiles/lemondb.dir/main.cpp.o: ../main.cpp
 CMakeFiles/lemondb.dir/main.cpp.o: ../query/Query.h
@@ -26,6 +27,7 @@ CMakeFiles/lemondb.dir/main.cpp.o: ../query/QueryResult.h
 CMakeFiles/lemondb.dir/main.cpp.o: ../utils/formatter.h
 CMakeFiles/lemondb.dir/main.cpp.o: ../utils/uexception.h
 
+CMakeFiles/lemondb.dir/query/Query.cpp.o: ../db/Database.h
 CMakeFiles/lemondb.dir/query/Query.cpp.o: ../db/Table.h
 CMakeFiles/lemondb.dir/query/Query.cpp.o: ../query/Query.cpp
 CMakeFiles/lemondb.dir/query/Query.cpp.o: ../query/Query.h
@@ -63,6 +65,7 @@ CMakeFiles/lemondb.dir/query/QueryBuilders.cpp.o: ../query/management/TruncateTa
 CMakeFiles/lemondb.dir/query/QueryBuilders.cpp.o: ../utils/formatter.h
 CMakeFiles/lemondb.dir/query/QueryBuilders.cpp.o: ../utils/uexception.h
 
+CMakeFiles/lemondb.dir/query/QueryParser.cpp.o: ../db/Database.h
 CMakeFiles/lemondb.dir/query/QueryParser.cpp.o: ../db/Table.h
 CMakeFiles/lemondb.dir/query/QueryParser.cpp.o: ../query/Query.h
 CMakeFiles/lemondb.dir/query/QueryParser.cpp.o: ../query/QueryBuilders.h
@@ -183,6 +186,15 @@ CMakeFiles/lemondb.dir/query/data/UpdateQuery.cpp.o: ../query/data/UpdateQuery.c
 CMakeFiles/lemondb.dir/query/data/UpdateQuery.cpp.o: ../query/data/UpdateQuery.h
 CMakeFiles/lemondb.dir/query/data/UpdateQuery.cpp.o: ../utils/formatter.h
 CMakeFiles/lemondb.dir/query/data/UpdateQuery.cpp.o: ../utils/uexception.h
+
+CMakeFiles/lemondb.dir/query/divs/UpdateDiv.cpp.o: ../db/Database.h
+CMakeFiles/lemondb.dir/query/divs/UpdateDiv.cpp.o: ../db/Table.h
+CMakeFiles/lemondb.dir/query/divs/UpdateDiv.cpp.o: ../query/Query.h
+CMakeFiles/lemondb.dir/query/divs/UpdateDiv.cpp.o: ../query/QueryResult.h
+CMakeFiles/lemondb.dir/query/divs/UpdateDiv.cpp.o: ../query/data/UpdateQuery.h
+CMakeFiles/lemondb.dir/query/divs/UpdateDiv.cpp.o: ../query/divs/UpdateDiv.cpp
+CMakeFiles/lemondb.dir/query/divs/UpdateDiv.cpp.o: ../utils/formatter.h
+CMakeFiles/lemondb.dir/query/divs/UpdateDiv.cpp.o: ../utils/uexception.h
 
 CMakeFiles/lemondb.dir/query/management/CopyTableQuery.cpp.o: ../db/Database.h
 CMakeFiles/lemondb.dir/query/management/CopyTableQuery.cpp.o: ../db/Table.h
