@@ -111,6 +111,7 @@ void Database::insertResult(int id,QueryResult::Ptr result){
     this->results[id].second = std::move(result);
     for (unsigned int i=resultflag;i<this->results.size()&&results[i].second!=nullptr;i++){
         std::cout << *(this->results[id].second);
+        std::cout.flush();
         resultflag++;
     }
     resultMutex.unlock();
