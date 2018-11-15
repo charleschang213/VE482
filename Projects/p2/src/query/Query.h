@@ -98,7 +98,7 @@ public:
      * if flag is false, the condition is always false
      * in this situation, the condition may not be fully initialized to save time
      */
-    std::pair<std::string, bool> initCondition(const Table &table);
+    std::pair<std::string, bool> initCondition(const Table &table) override;
 
     /**
      * skip the evaluation of KEY
@@ -107,7 +107,7 @@ public:
      * @param object
      * @return
      */
-    bool evalCondition(const Table::Object &object);
+    bool evalCondition(const Table::Object &object) override;
 
     /**
      * This function seems have small effect and causes somme bugs
