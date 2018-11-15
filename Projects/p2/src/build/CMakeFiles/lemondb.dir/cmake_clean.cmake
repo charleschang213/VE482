@@ -27,6 +27,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/lemondb.dir/query/data/MaxQuery.cpp.o"
   "CMakeFiles/lemondb.dir/query/data/MinQuery.cpp.o"
   "CMakeFiles/lemondb.dir/query/divs/UpdateDiv.cpp.o"
+  "CMakeFiles/lemondb.dir/query/divs/DeleteDiv.cpp.o"
   "lemondb.pdb"
   "lemondb"
 )

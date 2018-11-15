@@ -187,6 +187,15 @@ CMakeFiles/lemondb.dir/query/data/UpdateQuery.cpp.o
  /root/VE482/Projects/p2/src/query/data/UpdateQuery.h
  /root/VE482/Projects/p2/src/utils/formatter.h
  /root/VE482/Projects/p2/src/utils/uexception.h
+CMakeFiles/lemondb.dir/query/divs/DeleteDiv.cpp.o
+ /root/VE482/Projects/p2/src/db/Database.h
+ /root/VE482/Projects/p2/src/db/Table.h
+ /root/VE482/Projects/p2/src/query/Query.h
+ /root/VE482/Projects/p2/src/query/QueryResult.h
+ /root/VE482/Projects/p2/src/query/data/DeleteQuery.h
+ /root/VE482/Projects/p2/src/query/divs/DeleteDiv.cpp
+ /root/VE482/Projects/p2/src/utils/formatter.h
+ /root/VE482/Projects/p2/src/utils/uexception.h
 CMakeFiles/lemondb.dir/query/divs/UpdateDiv.cpp.o
  /root/VE482/Projects/p2/src/db/Database.h
  /root/VE482/Projects/p2/src/db/Table.h

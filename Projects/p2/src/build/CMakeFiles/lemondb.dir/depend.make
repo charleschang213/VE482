@@ -187,6 +187,15 @@ CMakeFiles/lemondb.dir/query/data/UpdateQuery.cpp.o: ../query/data/UpdateQuery.h
 CMakeFiles/lemondb.dir/query/data/UpdateQuery.cpp.o: ../utils/formatter.h
 CMakeFiles/lemondb.dir/query/data/UpdateQuery.cpp.o: ../utils/uexception.h
 
+CMakeFiles/lemondb.dir/query/divs/DeleteDiv.cpp.o: ../db/Database.h
+CMakeFiles/lemondb.dir/query/divs/DeleteDiv.cpp.o: ../db/Table.h
+CMakeFiles/lemondb.dir/query/divs/DeleteDiv.cpp.o: ../query/Query.h
+CMakeFiles/lemondb.dir/query/divs/DeleteDiv.cpp.o: ../query/QueryResult.h
+CMakeFiles/lemondb.dir/query/divs/DeleteDiv.cpp.o: ../query/data/DeleteQuery.h
+CMakeFiles/lemondb.dir/query/divs/DeleteDiv.cpp.o: ../query/divs/DeleteDiv.cpp
+CMakeFiles/lemondb.dir/query/divs/DeleteDiv.cpp.o: ../utils/formatter.h
+CMakeFiles/lemondb.dir/query/divs/DeleteDiv.cpp.o: ../utils/uexception.h
+
 CMakeFiles/lemondb.dir/query/divs/UpdateDiv.cpp.o: ../db/Database.h
 CMakeFiles/lemondb.dir/query/divs/UpdateDiv.cpp.o: ../db/Table.h
 CMakeFiles/lemondb.dir/query/divs/UpdateDiv.cpp.o: ../query/Query.h

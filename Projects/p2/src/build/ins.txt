@@ -1,4 +1,5 @@
 LOAD test2.tbl;
 UPDATE ( ID 10000 ) FROM Test WHERE ( ID > 300 );
+DELETE ( ) FROM Test WHERE ( ID = 10000 );
 DUMP Test tt.tbl;
 QUIT;

@@ -23,6 +23,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/root/VE482/Projects/p2/src/query/data/SumQuery.cpp" "/root/VE482/Projects/p2/src/build/CMakeFiles/lemondb.dir/query/data/SumQuery.cpp.o"
   "/root/VE482/Projects/p2/src/query/data/SwapQuery.cpp" "/root/VE482/Projects/p2/src/build/CMakeFiles/lemondb.dir/query/data/SwapQuery.cpp.o"
   "/root/VE482/Projects/p2/src/query/data/UpdateQuery.cpp" "/root/VE482/Projects/p2/src/build/CMakeFiles/lemondb.dir/query/data/UpdateQuery.cpp.o"
+  "/root/VE482/Projects/p2/src/query/divs/DeleteDiv.cpp" "/root/VE482/Projects/p2/src/build/CMakeFiles/lemondb.dir/query/divs/DeleteDiv.cpp.o"
   "/root/VE482/Projects/p2/src/query/divs/UpdateDiv.cpp" "/root/VE482/Projects/p2/src/build/CMakeFiles/lemondb.dir/query/divs/UpdateDiv.cpp.o"
   "/root/VE482/Projects/p2/src/query/management/CopyTableQuery.cpp" "/root/VE482/Projects/p2/src/build/CMakeFiles/lemondb.dir/query/management/CopyTableQuery.cpp.o"
   "/root/VE482/Projects/p2/src/query/management/DropTableQuery.cpp" "/root/VE482/Projects/p2/src/build/CMakeFiles/lemondb.dir/query/management/DropTableQuery.cpp.o"

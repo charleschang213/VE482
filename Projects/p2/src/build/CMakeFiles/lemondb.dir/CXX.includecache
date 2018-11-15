@@ -87,6 +87,8 @@ query/QueryParser.h
 /root/VE482/Projects/p2/src/query/QueryParser.h
 query/QueryBuilders.h
 /root/VE482/Projects/p2/src/query/QueryBuilders.h
+stack
+-
 getopt.h
 -
 fstream
@@ -357,6 +359,12 @@ UpdateQuery.h
 /root/VE482/Projects/p2/src/query/data/UpdateQuery.h
 ../Query.h
 /root/VE482/Projects/p2/src/query/Query.h
+
+/root/VE482/Projects/p2/src/query/divs/DeleteDiv.cpp
+../../db/Database.h
+/root/VE482/Projects/p2/src/db/Database.h
+../data/DeleteQuery.h
+/root/VE482/Projects/p2/src/query/data/DeleteQuery.h
 
 /root/VE482/Projects/p2/src/query/divs/UpdateDiv.cpp
 ../../db/Database.h
