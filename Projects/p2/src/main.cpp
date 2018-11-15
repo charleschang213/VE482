@@ -112,7 +112,7 @@ int main(int argc, char *argv[]) {
     p.registerQueryBuilder(std::make_unique<QueryBuilder(ManageTable)>());
     p.registerQueryBuilder(std::make_unique<QueryBuilder(Complex)>());
 
-    size_t counter = 0;
+    //size_t counter = 0;
 
     while (is) {
         try {
