@@ -28,12 +28,3 @@ void DivQuery::CountDivExe() {
     }
     q->combine(cnt);
 }
-
-//constexpr const char *CountQuery::qname;
-
-
-
-std::string CountQuery::toString() {
-    return "QUERY = COUNT " + this->targetTable + "\"";
-}
-
