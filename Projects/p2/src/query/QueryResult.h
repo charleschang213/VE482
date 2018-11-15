@@ -116,7 +116,7 @@ public:
                 ss << results.second[i][j] << " ";
             }
             ss << ")";
-            if (i!=results.first.size()-1) ss << ")\n";
+            if (i!=results.first.size()-1) ss << "\n";
         }
         this->msg = ss.str();
     }
