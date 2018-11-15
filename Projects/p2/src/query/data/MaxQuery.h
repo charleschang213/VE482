@@ -30,7 +30,12 @@ public:
     void combine(std::vector<Table::ValueType> Maximum){
         this->glock();
         //this->counter+=cnt;
-        FinalMaximum.insert(FinalMaximum.end(), Maximum.begin(), Maximum.end());
+        if (FinalMaximum.empty())
+            FinalMaximum.insert(FinalMaximum.end(), Maximum.begin(), Maximum.end());
+        else {
+            for (size_t i=0;i<Maximum.size();i++)
+            if (Maximum[i]>FinalMaximum[i]) FinalMaximum[i] = Maximum[i];
+        }
         this->decgroup();
         if (this->getGroups()==0){
             this->gunlock();

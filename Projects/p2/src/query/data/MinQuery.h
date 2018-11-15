@@ -30,7 +30,12 @@ public:
     void combine(std::vector<Table::ValueType> Minimum){
         this->glock();
         //this->counter+=cnt;
-        FinalMinimum.insert(FinalMinimum.end(), Minimum.begin(), Minimum.end());
+        if (FinalMinimum.empty())
+            FinalMinimum.insert(FinalMinimum.end(), Minimum.begin(), Minimum.end());
+        else {
+            for (size_t i=0;i<Minimum.size();i++)
+            if (Minimum[i]<FinalMinimum[i]) FinalMinimum[i] = Minimum[i];
+        }
         this->decgroup();
         if (this->getGroups()==0){
             this->gunlock();
