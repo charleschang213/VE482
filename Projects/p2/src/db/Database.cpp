@@ -220,11 +220,12 @@ void Database::runthread(Database *db)
                     break;
             }
             //std::cout << "work" << std::endl;
+            int id = query->getId();
             if (query->dividable())
                 task.execute();
             else{
                 query->execute();
-                db->insertResult(query->getId(),std::make_unique<NullQueryResult>());
+                db->insertResult(id,std::make_unique<NullQueryResult>());
             }  
             //db->deletewaiting(query->getTableName());
             table.tlock();
