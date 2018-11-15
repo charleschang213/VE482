@@ -132,7 +132,8 @@ int main(int argc, char *argv[]) {
                 std::string filename = queryStr.substr(9,queryStr.size()-12);
                 std::fstream tmpstream(filename);
                 if (tmpstream.is_open()){
-                    listenfin.push(std::istream(tmpstream.rdbuf()));
+                    std::istream tmpi(tmpstream.rdbuf());
+                    listenfin.push(tmpi);
                     auto &db = Database::getInstance();
                     db.insertQuery(std::make_unique<NopQuery>(),std::make_unique<SuccessListenResult>(filename));
                 }
