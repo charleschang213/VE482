@@ -11,9 +11,9 @@ class SwapQuery : public ComplexQuery {
     int counter = 0;
 
 public:
-    bool iswrite(){return true;}
-    bool dividable(){return true;}
-    std::string getname(){return "SWAP";}
+    bool iswrite() override {return true;}
+    bool dividable() override {return true;}
+    std::string getname() override {return "SWAP";}
     using ComplexQuery::ComplexQuery;
     void combine(int cnt){
         this->glock();

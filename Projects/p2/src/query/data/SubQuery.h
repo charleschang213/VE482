@@ -10,9 +10,9 @@ class SubQuery : public ComplexQuery {
     static constexpr const char *qname = "SUB";
     int counter = 0;
 public:
-    bool iswrite(){return true;}
-    bool dividable(){return true;}
-    std::string getname(){return "SUB";}
+    bool iswrite() override {return true;}
+    bool dividable() override {return true;}
+    std::string getname() override {return "SUB";}
     using ComplexQuery::ComplexQuery;
     void combine(int cnt){
         this->glock();

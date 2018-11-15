@@ -16,9 +16,9 @@ class SelectQuery : public ComplexQuery {
     bool initted = false;
     std::mutex initMutex;
 public:
-    bool iswrite(){return false;}
-    bool dividable(){return true;}
-    std::string getname(){return "SELECT";}
+    bool iswrite() override {return false;}
+    bool dividable() override {return true;}
+    std::string getname() override {return "SELECT";}
     using ComplexQuery::ComplexQuery;
     void combine(std::priority_queue<std::string,std::vector<std::string>,std::greater<std::string>> cnt){
         this->glock();

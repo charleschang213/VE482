@@ -11,9 +11,9 @@ class AddQuery : public ComplexQuery {
     int counter = 0;
 
 public:
-    bool iswrite(){return true;}
-    bool dividable(){return true;}
-    std::string getname(){return "ADD";}
+    bool iswrite() override {return true;}
+    bool dividable() override {return true;}
+    std::string getname() override {return "ADD";}
     using ComplexQuery::ComplexQuery;
     void combine(int cnt){
         this->glock();

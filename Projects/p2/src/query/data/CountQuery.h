@@ -15,9 +15,9 @@ class CountQuery : public ComplexQuery {
     bool initted = false;
     std::mutex initMutex;
 public:
-    bool iswrite(){return false;}
-    bool dividable(){return true;}
-    std::string getname(){return "COUNT";}
+    bool iswrite() override {return false;}
+    bool dividable() override {return true;}
+    std::string getname() override {return "COUNT";}
     using ComplexQuery::ComplexQuery;
     void combine(int cnt){
         this->glock();

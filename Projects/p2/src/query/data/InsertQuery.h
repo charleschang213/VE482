@@ -10,9 +10,9 @@
 class InsertQuery : public ComplexQuery {
     static constexpr const char *qname = "INSERT";
 public:
-    bool iswrite(){return true;}
-    bool dividable(){return false;}
-    std::string getname(){return "INSERT";}
+    bool iswrite() override {return true;}
+    bool dividable() override {return false;}
+    std::string getname() override {return "INSERT";}
     using ComplexQuery::ComplexQuery;
 
     QueryResult::Ptr execute() override;

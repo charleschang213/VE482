@@ -23,8 +23,8 @@ class MaxQuery : public ComplexQuery {
     //bool initted = false;
     //std::mutex initMutex;
 public:
-    bool dividable(){return true;}
-    std::string getname(){return "MAX";}
+    bool dividable() override{return true;}
+    std::string getname() override {return "MAX";}
     using ComplexQuery::ComplexQuery;
 
     void combine(std::vector<Table::ValueType> Maximum){

@@ -15,9 +15,9 @@ class DuplicateQuery : public ComplexQuery {
     bool initted = false;
     std::mutex initMutex;
 public:
-    bool iswrite(){return true;}
-    bool dividable(){return true;}
-    std::string getname(){return "DUPLICATE";}
+    bool iswrite() override {return true;}
+    bool dividable() override {return true;}
+    std::string getname() override {return "DUPLICATE";}
     using ComplexQuery::ComplexQuery;
 
     void combine(std::pair<std::vector<std::string>,std::vector<std::vector<Table::ValueType >>> cnt){

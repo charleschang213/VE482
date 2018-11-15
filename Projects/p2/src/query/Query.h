@@ -83,7 +83,7 @@ protected:
     /** The function used in where clause */
     std::vector<QueryCondition> condition;
 public:
-    bool dividable(){return true;}
+    bool dividable() override {return true;}
     typedef std::unique_ptr<ComplexQuery> Ptr;
 
 

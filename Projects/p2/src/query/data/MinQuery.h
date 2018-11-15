@@ -23,8 +23,8 @@ class MinQuery : public ComplexQuery {
     //bool initted = false;
     //std::mutex initMutex;
 public:
-    bool dividable(){return true;}
-    std::string getname(){return "MIN";}
+    bool dividable() override {return true;}
+    std::string getname() override {return "MIN";}
     using ComplexQuery::ComplexQuery;
 
     void combine(std::vector<Table::ValueType> Minimum){
