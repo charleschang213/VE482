@@ -1,10 +1,6 @@
-LOAD test2.tbl;
+LOAD test.tbl;
 COPYTABLE Test Test2;
-SUM ( c1 c2 c3 ) FROM Test WHERE ( c1 < 100 );
-SUM ( c1 c2 c3 ) FROM Test2 WHERE ( c1 < 100 );
-ADD ( c1 c2 c3 ) FROM Test WHERE ( c1 < 200 );
-MAX ( c2 c3 ) FROM Test WHERE ( c1 < 100 );
-MAX ( c2 c3 ) FROM Test2 WHERE ( c1 < 100 );
-MIN ( c1 c2 ) FROM Test WHERE ( c1 < 100 );
+INSERT ( MMM 111111 2017 9 ) FROM Test;
+MAX ( class ) FROM Test;
 DUMP Test tt.tbl;
 QUIT;
