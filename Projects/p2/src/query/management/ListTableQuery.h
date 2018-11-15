@@ -10,8 +10,8 @@
 class ListTableQuery : public Query {
     static constexpr const char *qname = "LIST";
 public:
-    bool uniquery(){return true;}
-    std::string getname(){return "LIST";}
+    bool uniquery() override {return true;}
+    std::string getname() override {return "LIST";}
     QueryResult::Ptr execute() override;
 
     std::string toString() override;

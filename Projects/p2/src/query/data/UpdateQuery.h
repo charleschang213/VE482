@@ -17,8 +17,8 @@ class UpdateQuery : public ComplexQuery {
     bool initted = false;
     std::mutex initMutex;
 public:
-    bool iswrite(){return true;}
-    std::string getname(){return "UPDATE";}
+    bool iswrite() override {return true;}
+    std::string getname() override {return "UPDATE";}
     using ComplexQuery::ComplexQuery;
     void init() override{
         initMutex.lock();

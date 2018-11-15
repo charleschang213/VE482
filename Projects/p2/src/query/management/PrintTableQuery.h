@@ -10,7 +10,7 @@
 class PrintTableQuery : public Query {
     static constexpr const char *qname = "SHOWTABLE";
 public:
-    std::string getname(){return "SHOWTABLE";}
+    std::string getname() override {return "SHOWTABLE";}
     using Query::Query;
 
     QueryResult::Ptr execute() override;

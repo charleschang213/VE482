@@ -7,8 +7,8 @@ class DeleteQuery : public ComplexQuery {
     std::vector<std::vector<std::pair<Table::KeyType,std::vector<Table::ValueType> > > > newtable = std::vector<std::vector<std::pair<Table::KeyType,std::vector<Table::ValueType> > > >();
     int counter = 0;
 public:
-    bool iswrite(){return true;}
-    std::string getname(){return "DELETE";}
+    bool iswrite() override {return true;}
+    std::string getname() override {return "DELETE";}
     using ComplexQuery::ComplexQuery;
     //QueryResult::Ptr execute() override;
 

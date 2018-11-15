@@ -11,7 +11,7 @@ class DumpTableQuery : public Query {
     static constexpr const char *qname = "DUMP";
     const std::string fileName;
 public:
-    std::string getname(){return "DUMP";}
+    std::string getname() override {return "DUMP";}
     DumpTableQuery(std::string table, std::string filename)
             : Query(std::move(table)), fileName(std::move(filename)) {}
 

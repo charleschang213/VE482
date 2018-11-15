@@ -13,7 +13,7 @@ class LoadTableQuery : public Query {
     const std::string fileName;
 public:
     bool iscreate(){return true;}
-    std::string getname(){return "LOAD";}
+    std::string getname() override {return "LOAD";}
 
     explicit LoadTableQuery(std::string table, std::string fileName) :
             Query(std::move(table)), fileName(std::move(fileName)) {}

@@ -10,8 +10,8 @@
 class DropTableQuery : public Query {
     static constexpr const char *qname = "DROP";
 public: 
-    bool iswrite(){return true;}
-    std::string getname(){return "DROP";}
+    bool iswrite() override {return true;}
+    std::string getname() override {return "DROP";}
     using Query::Query;
 
     QueryResult::Ptr execute() override;

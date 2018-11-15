@@ -5,8 +5,8 @@
 class TruncateTableQuery : public Query {
     static constexpr const char *qname = "TRUNCATE";
 public:
-    bool iswrite(){return true;}
-    std::string getname(){return "TRUNCATE";}
+    bool iswrite() override {return true;}
+    std::string getname() override {return "TRUNCATE";}
     using Query::Query;
 
     QueryResult::Ptr execute() override;
