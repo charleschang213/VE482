@@ -8,6 +8,7 @@ void DivQuery::UpdateDivExe(){
     auto &query = db.results[id].first;
     auto q = dynamic_cast<UpdateQuery*>(query.get());
     int cnt = 0;
+    q->init();
     if (q->operands[0] == "KEY") {
             q->keyValue = q->operands[1];
         } else {
