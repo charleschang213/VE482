@@ -34,6 +34,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/lemondb.dir/query/divs/SumDiv.cpp.o"
   "CMakeFiles/lemondb.dir/query/divs/MaxDiv.cpp.o"
   "CMakeFiles/lemondb.dir/query/divs/MinDiv.cpp.o"
+  "CMakeFiles/lemondb.dir/query/divs/CountDiv.cpp.o"
+  "CMakeFiles/lemondb.dir/query/divs/DuplicateDiv.cpp.o"
+  "CMakeFiles/lemondb.dir/query/divs/SelectDiv.cpp.o"
   "lemondb.pdb"
   "lemondb"
 )

@@ -897,6 +897,78 @@ CMakeFiles/lemondb.dir/query/divs/MinDiv.cpp.o.provides: CMakeFiles/lemondb.dir/
 CMakeFiles/lemondb.dir/query/divs/MinDiv.cpp.o.provides.build: CMakeFiles/lemondb.dir/query/divs/MinDiv.cpp.o
 
 
+CMakeFiles/lemondb.dir/query/divs/CountDiv.cpp.o: CMakeFiles/lemondb.dir/flags.make
+CMakeFiles/lemondb.dir/query/divs/CountDiv.cpp.o: ../query/divs/CountDiv.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/VE482/Projects/p2/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object CMakeFiles/lemondb.dir/query/divs/CountDiv.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lemondb.dir/query/divs/CountDiv.cpp.o -c /root/VE482/Projects/p2/src/query/divs/CountDiv.cpp
+
+CMakeFiles/lemondb.dir/query/divs/CountDiv.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lemondb.dir/query/divs/CountDiv.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/VE482/Projects/p2/src/query/divs/CountDiv.cpp > CMakeFiles/lemondb.dir/query/divs/CountDiv.cpp.i
+
+CMakeFiles/lemondb.dir/query/divs/CountDiv.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lemondb.dir/query/divs/CountDiv.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/VE482/Projects/p2/src/query/divs/CountDiv.cpp -o CMakeFiles/lemondb.dir/query/divs/CountDiv.cpp.s
+
+CMakeFiles/lemondb.dir/query/divs/CountDiv.cpp.o.requires:
+
+.PHONY : CMakeFiles/lemondb.dir/query/divs/CountDiv.cpp.o.requires
+
+CMakeFiles/lemondb.dir/query/divs/CountDiv.cpp.o.provides: CMakeFiles/lemondb.dir/query/divs/CountDiv.cpp.o.requires
+	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/divs/CountDiv.cpp.o.provides.build
+.PHONY : CMakeFiles/lemondb.dir/query/divs/CountDiv.cpp.o.provides
+
+CMakeFiles/lemondb.dir/query/divs/CountDiv.cpp.o.provides.build: CMakeFiles/lemondb.dir/query/divs/CountDiv.cpp.o
+
+
+CMakeFiles/lemondb.dir/query/divs/DuplicateDiv.cpp.o: CMakeFiles/lemondb.dir/flags.make
+CMakeFiles/lemondb.dir/query/divs/DuplicateDiv.cpp.o: ../query/divs/DuplicateDiv.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/VE482/Projects/p2/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object CMakeFiles/lemondb.dir/query/divs/DuplicateDiv.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lemondb.dir/query/divs/DuplicateDiv.cpp.o -c /root/VE482/Projects/p2/src/query/divs/DuplicateDiv.cpp
+
+CMakeFiles/lemondb.dir/query/divs/DuplicateDiv.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lemondb.dir/query/divs/DuplicateDiv.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/VE482/Projects/p2/src/query/divs/DuplicateDiv.cpp > CMakeFiles/lemondb.dir/query/divs/DuplicateDiv.cpp.i
+
+CMakeFiles/lemondb.dir/query/divs/DuplicateDiv.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lemondb.dir/query/divs/DuplicateDiv.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/VE482/Projects/p2/src/query/divs/DuplicateDiv.cpp -o CMakeFiles/lemondb.dir/query/divs/DuplicateDiv.cpp.s
+
+CMakeFiles/lemondb.dir/query/divs/DuplicateDiv.cpp.o.requires:
+
+.PHONY : CMakeFiles/lemondb.dir/query/divs/DuplicateDiv.cpp.o.requires
+
+CMakeFiles/lemondb.dir/query/divs/DuplicateDiv.cpp.o.provides: CMakeFiles/lemondb.dir/query/divs/DuplicateDiv.cpp.o.requires
+	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/divs/DuplicateDiv.cpp.o.provides.build
+.PHONY : CMakeFiles/lemondb.dir/query/divs/DuplicateDiv.cpp.o.provides
+
+CMakeFiles/lemondb.dir/query/divs/DuplicateDiv.cpp.o.provides.build: CMakeFiles/lemondb.dir/query/divs/DuplicateDiv.cpp.o
+
+
+CMakeFiles/lemondb.dir/query/divs/SelectDiv.cpp.o: CMakeFiles/lemondb.dir/flags.make
+CMakeFiles/lemondb.dir/query/divs/SelectDiv.cpp.o: ../query/divs/SelectDiv.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/VE482/Projects/p2/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object CMakeFiles/lemondb.dir/query/divs/SelectDiv.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lemondb.dir/query/divs/SelectDiv.cpp.o -c /root/VE482/Projects/p2/src/query/divs/SelectDiv.cpp
+
+CMakeFiles/lemondb.dir/query/divs/SelectDiv.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lemondb.dir/query/divs/SelectDiv.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/VE482/Projects/p2/src/query/divs/SelectDiv.cpp > CMakeFiles/lemondb.dir/query/divs/SelectDiv.cpp.i
+
+CMakeFiles/lemondb.dir/query/divs/SelectDiv.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lemondb.dir/query/divs/SelectDiv.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/VE482/Projects/p2/src/query/divs/SelectDiv.cpp -o CMakeFiles/lemondb.dir/query/divs/SelectDiv.cpp.s
+
+CMakeFiles/lemondb.dir/query/divs/SelectDiv.cpp.o.requires:
+
+.PHONY : CMakeFiles/lemondb.dir/query/divs/SelectDiv.cpp.o.requires
+
+CMakeFiles/lemondb.dir/query/divs/SelectDiv.cpp.o.provides: CMakeFiles/lemondb.dir/query/divs/SelectDiv.cpp.o.requires
+	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/divs/SelectDiv.cpp.o.provides.build
+.PHONY : CMakeFiles/lemondb.dir/query/divs/SelectDiv.cpp.o.provides
+
+CMakeFiles/lemondb.dir/query/divs/SelectDiv.cpp.o.provides.build: CMakeFiles/lemondb.dir/query/divs/SelectDiv.cpp.o
+
+
 # Object files for target lemondb
 lemondb_OBJECTS = \
 "CMakeFiles/lemondb.dir/main.cpp.o" \
@@ -933,7 +1005,10 @@ lemondb_OBJECTS = \
 "CMakeFiles/lemondb.dir/query/divs/SwapDiv.cpp.o" \
 "CMakeFiles/lemondb.dir/query/divs/SumDiv.cpp.o" \
 "CMakeFiles/lemondb.dir/query/divs/MaxDiv.cpp.o" \
-"CMakeFiles/lemondb.dir/query/divs/MinDiv.cpp.o"
+"CMakeFiles/lemondb.dir/query/divs/MinDiv.cpp.o" \
+"CMakeFiles/lemondb.dir/query/divs/CountDiv.cpp.o" \
+"CMakeFiles/lemondb.dir/query/divs/DuplicateDiv.cpp.o" \
+"CMakeFiles/lemondb.dir/query/divs/SelectDiv.cpp.o"
 
 # External object files for target lemondb
 lemondb_EXTERNAL_OBJECTS =
@@ -973,9 +1048,12 @@ lemondb: CMakeFiles/lemondb.dir/query/divs/SwapDiv.cpp.o
 lemondb: CMakeFiles/lemondb.dir/query/divs/SumDiv.cpp.o
 lemondb: CMakeFiles/lemondb.dir/query/divs/MaxDiv.cpp.o
 lemondb: CMakeFiles/lemondb.dir/query/divs/MinDiv.cpp.o
+lemondb: CMakeFiles/lemondb.dir/query/divs/CountDiv.cpp.o
+lemondb: CMakeFiles/lemondb.dir/query/divs/DuplicateDiv.cpp.o
+lemondb: CMakeFiles/lemondb.dir/query/divs/SelectDiv.cpp.o
 lemondb: CMakeFiles/lemondb.dir/build.make
 lemondb: CMakeFiles/lemondb.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/root/VE482/Projects/p2/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Linking CXX executable lemondb"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/root/VE482/Projects/p2/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Linking CXX executable lemondb"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/lemondb.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -1018,6 +1096,9 @@ CMakeFiles/lemondb.dir/requires: CMakeFiles/lemondb.dir/query/divs/SwapDiv.cpp.o
 CMakeFiles/lemondb.dir/requires: CMakeFiles/lemondb.dir/query/divs/SumDiv.cpp.o.requires
 CMakeFiles/lemondb.dir/requires: CMakeFiles/lemondb.dir/query/divs/MaxDiv.cpp.o.requires
 CMakeFiles/lemondb.dir/requires: CMakeFiles/lemondb.dir/query/divs/MinDiv.cpp.o.requires
+CMakeFiles/lemondb.dir/requires: CMakeFiles/lemondb.dir/query/divs/CountDiv.cpp.o.requires
+CMakeFiles/lemondb.dir/requires: CMakeFiles/lemondb.dir/query/divs/DuplicateDiv.cpp.o.requires
+CMakeFiles/lemondb.dir/requires: CMakeFiles/lemondb.dir/query/divs/SelectDiv.cpp.o.requires
 
 .PHONY : CMakeFiles/lemondb.dir/requires
 
