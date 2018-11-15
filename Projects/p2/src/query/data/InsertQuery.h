@@ -15,9 +15,9 @@ public:
     std::string getname(){return "INSERT";}
     using ComplexQuery::ComplexQuery;
 
-    QueryResult::Ptr execute() override;
+    //QueryResult::Ptr execute() override;
 
-    std::string toString() override;
+    //std::string toString() override;
 };
 
 

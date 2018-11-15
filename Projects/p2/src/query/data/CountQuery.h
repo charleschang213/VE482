@@ -30,8 +30,8 @@ public:
         }
         else this->gunlock();
     }
-    QueryResult::Ptr execute() override;
+    //QueryResult::Ptr execute() override;
 
-    std::string toString() override;
+    //std::string toString() override;
 };
 #endif //PROJECT_COUNTQUERY_H
