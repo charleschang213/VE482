@@ -157,7 +157,7 @@ void Database::runthread(Database *db)
             }
             //std::cout << "Wait for table Creation" << std::endl;
            
-            std::cout << "Founded" << std::endl;
+            //std::cout << "Founded" << std::endl;
             auto &table = (*db)[task.target];
             //std::cout << "Wait for table operations" << std::endl;
             while (true)
