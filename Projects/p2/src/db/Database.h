@@ -72,6 +72,12 @@ public:
         for (auto &thread : threads)
             thread.join();
     }
+    int getresultflag(){
+        resultMutex.lock();
+        int rf = resultflag;
+        resultMutex.unlock();
+        return rf;
+    }
     void insertResult(int id,QueryResult::Ptr result);
     void insertQuery(std::unique_ptr<Query> &&query);
     void insertQuery(std::unique_ptr<Query> &&query,std::unique_ptr<QueryResult> &&result);

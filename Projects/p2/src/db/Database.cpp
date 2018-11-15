@@ -222,6 +222,11 @@ void Database::runthread(Database *db)
                     break;
             }
             //std::cout << "work" << std::endl;
+            if (query->getname()=="DROP"){
+                while (true){
+                    if (db->getresultflag()>=id) break;
+                }
+            }
             if (query->dividable())
                 task.execute();
             else{
