@@ -10,18 +10,18 @@ void DivQuery::MinDivExe(){
     int cnt = 0;
     q->init();
     vector<Table::ValueType> Minimum;
-    auto result = initCondition(table);
+    auto result = q->initCondition(table);
     if (result.second) {
         for (auto it = table.begin() + counter * Partnumber; it != table.end() && it < table.begin() + (counter + 1) * Partnumber; it++)
         {
             if (q->evalCondition(*it))
             {
-                for (size_t i = 0; i < operands.size(); i++)
+                for (size_t i = 0; i < q->operands.size(); i++)
                 {
-                    if (Minimum.size() < operands.size()) //The first row.
-                        Minimum.push_back((*it)[operands[i]]);
+                    if (Minimum.size() < q->operands.size()) //The first row.
+                        Minimum.push_back((*it)[q->operands[i]]);
                     else
-                        Maximum[i] = (Minimum[i] < (*it)[operands[i]])?Minimum[i]:(*it)[operands[i]];
+                        Minimum[i] = (Minimum[i] < (*it)[q->operands[i]])?Minimum[i]:(*it)[q->operands[i]];
                 }
                 ++cnt;
             }
