@@ -113,6 +113,28 @@ protected:
         return os << msg << "\n";
     }
 };
+
+class SuccessListenResult : public SuceededQueryResult {
+    const std::string file;
+    public:
+        bool display() override {return true;}
+        explicit SuccessListenResult(std::string filename):file(filename){}
+    protected:
+        std::ostream &output(std::ostream &os) const override {
+            return os << "ANSWER = ( listening from " << file << " ).\n";
+        }
+};
+
+class FailedListenResult : public SuceededQueryResult {
+    const std::string file;
+    public:
+        bool display() override {return true;}
+        explicit FailedListenResult(std::string filename):file(filename){}
+    protected:
+        std::ostream &output(std::ostream &os) const override {
+            return os << "Error: could not open " << file << ".\n";
+        }
+};
         
 class SuccessMsgResultDerv : public SuccessMsgResult {
 public:

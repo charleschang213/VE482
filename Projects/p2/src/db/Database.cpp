@@ -24,6 +24,13 @@ void Database::testDuplicate(const std::string &tableName)
     }
 }
 
+void Database::insertQuery(std::unique_ptr<Query> &&query,std::unique_ptr<QueryResult> &&result){
+    auto q = query.get();
+    resultMutex.lock();
+    q->setId(results.size());
+    results.emplace_back(std::move(query),std::move(result));
+    resultMutex.unlock();
+}
 void Database::insertQuery(std::unique_ptr<Query> &&query)
 {
     if (query->uniquery()){

@@ -6,7 +6,7 @@
 #include "query/Query.h"
 #include "query/QueryParser.h"
 #include "query/QueryBuilders.h"
-
+#include <stack>
 #include <getopt.h>
 #include <fstream>
 #include <iostream>
@@ -72,6 +72,7 @@ int main(int argc, char *argv[]) {
     parseArgs(argc, argv);
 
     std::fstream fin;
+    std::stack<std::istream> listenfin;
     if (!parsedArgs.listen.empty()) {
         fin.open(parsedArgs.listen);
         if (!fin.is_open()) {
@@ -80,6 +81,8 @@ int main(int argc, char *argv[]) {
         }
     }
     std::istream is(fin.rdbuf());
+
+    
 
 #ifdef NDEBUG
     // In production mode, listen argument must be defined
@@ -118,7 +121,27 @@ int main(int argc, char *argv[]) {
         try {
             // A very standard REPL
             // REPL: Read-Evaluate-Print-Loop
-            std::string queryStr = extractQueryString(is);
+            std::string queryStr;
+            if (listenfin.empty())
+                queryStr = extractQueryString(is);
+            else {
+                queryStr = extractQueryString(listenfin.top());
+                if (listenfin.top().eof()) listenfin.pop();
+            }
+            if (queryStr.find("LISTEN")==0){
+                std::string filename = queryStr.substr(9,queryStr.size()-12);
+                std::fstream tmpstream(filename);
+                if (tmpstream.is_open()){
+                    listenfin.push(std::istream(tmpstream.rdbuf()));
+                    auto &db = Database::getInstance();
+                    db.insertQuery(std::make_unique<NopQuery>(),std::make_unique<SuccessListenResult>(filename));
+                }
+                else {
+                    auto &db = Database::getInstance();
+                    db.insertQuery(std::make_unique<NopQuery>(),std::make_unique<FailedListenResult>(filename);
+                }
+                continue;
+            }
             Query::Ptr query = p.parseQuery(queryStr);
             //if (queryStr[0]!='Q') std::cout << ++counter << "\n";
             auto &db = Database::getInstance();

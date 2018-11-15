@@ -73,6 +73,7 @@ public:
     }
     void insertResult(int id,QueryResult::Ptr result);
     void insertQuery(std::unique_ptr<Query> &&query);
+    void insertQuery(std::unique_ptr<Query> &&query,std::unique_ptr<QueryResult> &&result);
     void testDuplicate(const std::string &tableName);
     void setExit(){timetoexit=true;}
     bool ExitTime(){return timetoexit;}
