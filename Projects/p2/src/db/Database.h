@@ -207,8 +207,8 @@ class DivQuery{
         //void MaxDivExe();
         //void MinDivExe();
         //void SelectDivExe();
-        //void LubDivExe();
-        void SumDivExe();
+        void SubDivExe();
+        //void SumDivExe();
         void SwapDivExe();
         void UpdateDivExe();
 
