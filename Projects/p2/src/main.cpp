@@ -133,7 +133,7 @@ int main(int argc, char *argv[]) {
                 std::fstream tmpstream(filename);
                 if (tmpstream.is_open()){
                     std::istream tmpi(tmpstream.rdbuf());
-                    listenfin.push(tmpi);
+                    listenfin.push(std::move(tmpi));
                     auto &db = Database::getInstance();
                     db.insertQuery(std::make_unique<NopQuery>(),std::make_unique<SuccessListenResult>(filename));
                 }
