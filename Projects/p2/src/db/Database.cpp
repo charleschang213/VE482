@@ -117,6 +117,11 @@ void Database::insertResult(int id,QueryResult::Ptr result){
     resultMutex.unlock();
 }
 
+bool Database::TableExists(const std::string &tablename){
+    auto it = this->tables.find(tablename);
+    return it!=this->tables.end();
+}
+
 void Database::runthread(Database *db)
 {
     //std::cout << "Hi" << std::endl;
@@ -148,7 +153,7 @@ void Database::runthread(Database *db)
             while (true){
                 bool a = false;
                 db->waitingMutex.lock();
-                a = (std::count(db->waiting.begin(),db->waiting.end(),query->getTableName()))==0;
+                a = db->TableExists(query->getTableName());
                 db->waitingMutex.unlock();
                 if (a) break;
             }

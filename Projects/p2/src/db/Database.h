@@ -95,6 +95,8 @@ public:
 
     Table &operator[](const std::string &tableName);
 
+    bool TableExists(const std::string &tablename);
+
     const Table &operator[](const std::string &tableName) const;
 
     Database &operator=(const Database &) = delete;
