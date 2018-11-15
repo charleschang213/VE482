@@ -41,6 +41,9 @@ set(SOURCE_FILES
         query/divs/AddDiv.cpp
         query/divs/SubDiv.cpp
         query/divs/SwapDiv.cpp
+        query/divs/SumDiv.cpp
+        query/divs/MaxDiv.cpp
+        query/divs/MinDiv.cpp
         )
 add_executable(lemondb main.cpp ${SOURCE_FILES})
 target_link_libraries(lemondb pthread)

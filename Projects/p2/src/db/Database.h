@@ -170,15 +170,15 @@ class DivQuery{
             }else if (name=="INSERT"){
                 NullDivExe();
             }else if (name=="MAX"){
-                NullDivExe();
+                MaxDivExe();
             }else if (name=="MIN"){
-                NullDivExe();
+                MinDivExe();
             }else if (name=="SELECT"){
                 NullDivExe();
             }else if (name=="SUB"){
                 SubDivExe();
             }else if (name=="SUM"){
-                NullDivExe();
+                SumDivExe();
             }else if (name=="SWAP"){
                 SwapDivExe();
             }else if (name=="UPDATE"){
@@ -190,12 +190,11 @@ class DivQuery{
         int getcounter(){return counter;}
         int getid(){return id;}
         void NullDivExe(){}
-        //voidLoadDivExe();
+        //void LoadDivExe();
         //void DumpDivExe();
         //void TruncateDivExe();
         //void DropDivExe();
         //void CopytableDivExe();
-        //void AddDivExe();
         //void ListDivExe();
         //void PrintDivExe();
         //void QuitDivExe();
@@ -204,11 +203,11 @@ class DivQuery{
         void DeleteDivExe();
         //void DuplicateDivExe();
         //void InsertDivExe();
-        //void MaxDivExe();
-        //void MinDivExe();
+        void MaxDivExe();
+        void MinDivExe();
         //void SelectDivExe();
         void SubDivExe();
-        //void SumDivExe();
+        void SumDivExe();
         void SwapDivExe();
         void UpdateDivExe();
 
