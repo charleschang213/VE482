@@ -4,7 +4,7 @@
 
 class DeleteQuery : public ComplexQuery {
     static constexpr const char *qname = "DELETE";
-    std::vector<std::pair<Table::KeyType,std::vector<Table::ValueType> > > newtable = std::vector<std::pair<Table::KeyType,std::vector<Table::ValueType> > >();
+    std::vector<std::vector<std::pair<Table::KeyType,std::vector<Table::ValueType> > > > newtable = std::vector<std::vector<std::pair<Table::KeyType,std::vector<Table::ValueType> > > >();
     int counter = 0;
 public:
     bool iswrite(){return true;}
@@ -12,10 +12,11 @@ public:
     using ComplexQuery::ComplexQuery;
     QueryResult::Ptr execute() override;
 
-    void combine(int cnt, std::vector<std::pair<Table::KeyType,std::vector<Table::ValueType> > > nt){
+    void combine(int gcnt,int cnt, std::vector<std::pair<Table::KeyType,std::vector<Table::ValueType> > > nt){
         this->glock();
         counter += cnt;
-        newtable.insert(newtable.end(),nt.begin(),nt.end());
+        if (newtable.empty()) newtable = std::vector<std::vector<std::pair<Table::KeyType,std::vector<Table::ValueType> > > >(this->getGroups());
+        newtable[gcnt] = nt;
         this->decgroup();
         if (this->getGroups()==0){
             this->gunlock();
@@ -23,7 +24,8 @@ public:
             auto &table = db[this->targetTable];
             table.clear();
             for (auto i:newtable){
-                table.insertByIndex(i.first,std::move(i.second));
+                for (auto j:i)
+                    table.insertByIndex(j.first,std::move(j.second));
             }
             db.insertResult(this->getId(),std::make_unique<RecordCountResult>(counter));
         }

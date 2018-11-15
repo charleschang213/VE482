@@ -23,5 +23,5 @@ void DivQuery::DeleteDivExe(){
             }
         }
     }
-    q->combine(cnt,nt); 
+    q->combine(counter,cnt,nt);
 }
