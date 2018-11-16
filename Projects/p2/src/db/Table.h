@@ -265,7 +265,6 @@ private:
     }
 
     
-    typedef IteratorImpl<Object, decltype(data.begin())> Iterator;
 
 public:
     Table() = delete;
