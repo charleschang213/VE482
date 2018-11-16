@@ -182,13 +182,13 @@ void Database::runthread(Database *db)
             auto &task = db->tasks[db->taskcursor];
             int id = task.getid();
             auto &query = db->results[task.getid()].first;
-            std::string name = query->getTableName();
-            std::string qname = query->getname();
-            bool qiscreate = query->iscreate();
-            bool qdividable = query->dividable();
-            bool qunique = query->uniquery();
-            bool qiswrite = query->iswrite();
-            std::string oldname = query->oldtable();
+            std::string name = db->results[task.getid()].first->getTableName();
+            std::string qname = db->results[id].first->getname();
+            bool qiscreate = db->results[id].first->iscreate();
+            bool qdividable = db->results[id].first->dividable();
+            bool qunique = db->results[id].first->unidb->results[id].first();
+            bool qiswrite = db->results[id].first->iswrite();
+            std::string oldname = db->results[id].first->oldtable();
             db->taskcursor++;
             db->taskMutex.unlock();
             //std::cout << "Getit" << std::endl;
@@ -206,7 +206,7 @@ void Database::runthread(Database *db)
                 }
                 if (qiscreate || qunique)
                 {
-                    query->execute();
+                    db->results[id].first->execute();
                     db->insertResult(id, std::make_unique<NullQueryResult>());
                     //std::cout << "Done" << std::endl;
                     db->deletewaiting(name);
