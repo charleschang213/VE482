@@ -88,6 +88,8 @@ private:
 
     /** The rows are saved in a vector, which is unsorted */
     std::vector<Datum> data;
+    std::vector<Datum> Newdata;
+    std::mutex newdataMutex;
     /** Used to keep the keys unique and provide O(1) access with key */
     std::unordered_map<KeyType, SizeType> keyMap;
 
@@ -262,8 +264,31 @@ private:
         return std::make_unique<Object>(it, table);
     }
 
+    
+    typedef IteratorImpl<Object, decltype(data.begin())> Iterator;
+
 public:
     Table() = delete;
+
+    
+    void erase(const Iterator &it) {
+        newdataMutex.lock();
+        keyMap.erase(it.it->key);
+        newdataMutex.unlock();
+    }
+
+    void move(Iterator &it) {
+        newdataMutex.lock();
+        keyMap.at(it.it->key) = Newdata.size();
+        Newdata.emplace_back(std::move(*(it.it)));
+        newdataMutex.unlock();
+    }
+
+    void swap(){
+        std::swap(data,Newdata);
+        Newdata.clear();
+    }
+
 
     explicit Table(std::string name) : tableName(std::move(name)) {}
 

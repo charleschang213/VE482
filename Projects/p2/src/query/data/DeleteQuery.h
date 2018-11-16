@@ -12,21 +12,15 @@ public:
     using ComplexQuery::ComplexQuery;
     //QueryResult::Ptr execute() override;
 
-    void combine(int gcnt,int cnt, std::vector<std::pair<Table::KeyType,std::vector<Table::ValueType> > > nt){
+    void combine(int cnt){
         this->glock();
         counter += cnt;
-        if (newtable.empty()) newtable = std::vector<std::vector<std::pair<Table::KeyType,std::vector<Table::ValueType> > > >(this->getGroups());
-        newtable[gcnt] = nt;
         this->decgroup();
         if (this->getGroups()==0){
             this->gunlock();
             auto &db = Database::getInstance();
             auto &table = db[this->targetTable];
-            table.clear();
-            for (auto i:newtable){
-                for (auto j:i)
-                    table.insertByIndex(j.first,std::move(j.second));
-            }
+            table.swap();
             db.insertResult(this->getId(),std::make_unique<RecordCountResult>(counter));
         }
         this->gunlock();
