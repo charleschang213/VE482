@@ -134,7 +134,7 @@ public:
     void exit();
 };
 
-static const int Partnumber = 100000;
+static const int Partnumber = 10000;
 
 class DivQuery{
     private:
