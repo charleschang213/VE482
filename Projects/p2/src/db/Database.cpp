@@ -35,7 +35,7 @@ void Database::insertQuery(std::unique_ptr<Query> &&query, std::unique_ptr<Query
         if (results[i].first->getname() != "QUIT")
             std::cout << i + 1 << std::endl;
         std::cout << *(this->results[i].second);
-        //if (i>90) std::cerr << i+1 << std::endl;
+        if (i>130) std::cerr << i+1 << std::endl;
         std::cout.flush();
         resultflag++;
     }
@@ -151,7 +151,7 @@ void Database::insertResult(int id, QueryResult::Ptr result)
         if (results[i].first->getname() != "QUIT")
             std::cout << i + 1 << std::endl;
         std::cout << *(this->results[i].second);
-        //if (i>90) std::cerr << i+1 << std::endl;
+        if (i>90) std::cerr << i+1 << std::endl;
         std::cout.flush();
         resultflag++;
     }
@@ -225,6 +225,7 @@ void Database::runthread(Database *db)
                 //std::cout << "Founded" << std::endl;
                 if (qname == "DUMP")
                 {
+                    std::cerr << "Begin Waiting " << id << std::endl;
                     while (true)
                     {
                         bool a = true;
@@ -239,6 +240,7 @@ void Database::runthread(Database *db)
                         if (a)
                             break;
                     }
+                    std::cerr << "End Waiting " << id << std::endl;
                 }
                 auto &table = (*db)[name];
                 //std::cout << "Wait for table operations" << std::endl;
