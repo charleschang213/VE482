@@ -61,7 +61,7 @@ void Database::insertQuery(std::unique_ptr<Query> &&query)
     if (!query->iscreate())
     {
         //auto q = query.get();
-        while (true)
+        /*while (true)
         {
             bool a = false;
             std::string tablename = query->getTableName();
@@ -78,7 +78,7 @@ void Database::insertQuery(std::unique_ptr<Query> &&query)
             }
             if (a)
                 break;
-        }
+        }*/
         auto &table = (*this)[query->getTableName()];
         int groups = 0;
         int size = 0;
