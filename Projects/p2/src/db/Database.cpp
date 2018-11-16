@@ -64,12 +64,13 @@ void Database::insertQuery(std::unique_ptr<Query> &&query)
         while (true)
         {
             bool a = false;
+            std::string tablename = query->getTableName();
             waitingMutex.lock();
-            a = (std::count(waiting.begin(), waiting.end(), q->getTableName())) == 0;
+            a = (std::count(waiting.begin(), waiting.end(), tablename)) == 0;
             waitingMutex.unlock();
             try
             {
-                (*this)[query->getTableName()];
+                (*this)[tablename];
             }
             catch (const TableNameNotFound &e)
             {
