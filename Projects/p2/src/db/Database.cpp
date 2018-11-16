@@ -67,6 +67,12 @@ void Database::insertQuery(std::unique_ptr<Query> &&query)
             waitingMutex.lock();
             a = (std::count(waiting.begin(), waiting.end(), q->getTableName())) == 0;
             waitingMutex.unlock();
+            try {
+                auto &table = (*this)[q->getTableName()];
+            }
+            catch (const TableFieldNotFound &e){
+                a = false;
+            }
             if (a)
                 break;
         }
