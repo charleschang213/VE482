@@ -69,7 +69,7 @@ void Database::insertQuery(std::unique_ptr<Query> &&query)
             waitingMutex.unlock();
             try
             {
-                (*this)[q->getTableName()];
+                (*this)[query->getTableName()];
             }
             catch (const TableNameNotFound &e)
             {
@@ -78,12 +78,12 @@ void Database::insertQuery(std::unique_ptr<Query> &&query)
             if (a)
                 break;
         }
-        auto &table = (*this)[q->getTableName()];
+        auto &table = (*this)[query->getTableName()];
         int groups = 0;
         int size = 0;
         int id = -1;
-        bool dividable = q->dividable();
-        std::string tablename = q->getTableName();
+        bool dividable = query->dividable();
+        std::string tablename = query->getTableName();
         //std::cout << "Adding" << std::endl;
         resultMutex.lock();
         q->setId(results.size());
