@@ -21,6 +21,7 @@ QueryResult::Ptr LoadTableQuery::execute() {
         infile.close();
         return make_unique<SuccessMsgResult>(qname, targetTable);
     } catch (const exception &e) {
+        std::cerr << "LOAD fail" << std::endl;
         return make_unique<ErrorMsgResult>(qname, e.what());
     }
 }
