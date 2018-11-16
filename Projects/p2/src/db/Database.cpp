@@ -300,7 +300,7 @@ void Database::runthread(Database *db)
                         {
                             (*db)[oldname].tlock();
                         }
-                        query->execute();
+                        db->results[id].first->execute();
                         db->insertResult(id, std::make_unique<NullQueryResult>());
                     }
                 }
