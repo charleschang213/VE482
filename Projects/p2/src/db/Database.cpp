@@ -165,7 +165,7 @@ void Database::insertResult(int id, QueryResult::Ptr result)
         if (results[i].first->getname() != "QUIT")
             std::cout << i + 1 << std::endl;
         std::cout << *(this->results[i].second);
-        if (i>90) std::cerr << i+1 << std::endl;
+        //if (i>90) std::cerr << i+1 << std::endl;
         std::cout.flush();
         resultflag++;
     }
@@ -242,7 +242,7 @@ void Database::runthread(Database *db)
                     //db->insertResult(id, std::make_unique<NullQueryResult>());
                     //continue;
                     std::cerr << "Begin Waiting " << id << std::endl;
-                    db->printAllTable();
+                    //db->printAllTable();
                     while (true)
                     {
                         bool a = true;
