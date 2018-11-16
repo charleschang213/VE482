@@ -189,7 +189,7 @@ void Database::runthread(Database *db)
             db->taskMutex.unlock();
             if (db->ExitTime())
                 return;
-            //std::this_thread::yield();
+            std::this_thread::yield();
         }
         else
         {
@@ -259,7 +259,7 @@ void Database::runthread(Database *db)
                         if (a)
                             break;
                         
-                        std::this_thread::yield;
+                        //std::this_thread::yield;
                     }
                     std::cerr << "End Waiting " << id << std::endl;
                 }
