@@ -238,7 +238,7 @@ void Database::runthread(Database *db)
             else{
                 if (qname=="DROP"){
                     table.tlock();
-                    query->execute();
+                    db->results[id].first->execute();
                     db->insertResult(id,std::make_unique<NullQueryResult>());
                 }
                 else {
