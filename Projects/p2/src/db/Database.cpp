@@ -161,6 +161,7 @@ void Database::runthread(Database *db)
             int id = task.getid();
             auto &query = db->results[task.getid()].first;
             std::string name = query->getTableName();
+            std::string qname = query->getname();
             db->taskcursor++;
             db->taskMutex.unlock();
             //std::cout << "Getit" << std::endl;
@@ -222,7 +223,7 @@ void Database::runthread(Database *db)
                     break;
             }
             //std::cout << "work" << std::endl;
-            if (query->getname()=="DROP"){
+            if (qname=="DROP"){
                 while (true){
                     std::cerr << db->getresultflag() << " " << id << std::endl;
                     if (db->getresultflag()>=id) break;
@@ -231,7 +232,7 @@ void Database::runthread(Database *db)
             if (query->dividable())
                 task.execute();
             else{
-                if (query->getname()=="DROP"){
+                if (qname=="DROP"){
                     table.tlock();
                     query->execute();
                     db->insertResult(id,std::make_unique<NullQueryResult>());
@@ -242,7 +243,7 @@ void Database::runthread(Database *db)
                 }
             }  
             //db->deletewaiting(query->getTableName());
-            if (query->getname()!="DROP"){
+            if (qname!="DROP"){
                 table.tlock();
                 table.downactive();
                 if ((table.getactive() == 0)&&(((table.getstatus()>=0))||(db->results[id].first->getGroups()==0)))
