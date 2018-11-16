@@ -224,7 +224,7 @@ void Database::runthread(Database *db)
                         break;
                 }*/
                 //std::cout << "Founded" << std::endl;
-                /*if (qname == "DUMP")
+                if (qname == "DUMP")
                 {
                     std::cerr << "Begin Waiting " << id << std::endl;
                     while (true)
@@ -242,7 +242,7 @@ void Database::runthread(Database *db)
                             break;
                     }
                     std::cerr << "End Waiting " << id << std::endl;
-                }*/
+                }
                 auto &table = (*db)[name];
                 //std::cout << "Wait for table operations" << std::endl;
                 while (true)
