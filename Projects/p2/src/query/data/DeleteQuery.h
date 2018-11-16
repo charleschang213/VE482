@@ -4,7 +4,6 @@
 
 class DeleteQuery : public ComplexQuery {
     static constexpr const char *qname = "DELETE";
-    std::vector<std::vector<std::pair<Table::KeyType,std::vector<Table::ValueType> > > > newtable = std::vector<std::vector<std::pair<Table::KeyType,std::vector<Table::ValueType> > > >();
     int counter = 0;
 public:
     bool iswrite() override {return true;}
