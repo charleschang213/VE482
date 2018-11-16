@@ -60,15 +60,15 @@ include CMakeFiles/lemondb.dir/flags.make
 CMakeFiles/lemondb.dir/main.cpp.o: CMakeFiles/lemondb.dir/flags.make
 CMakeFiles/lemondb.dir/main.cpp.o: ../main.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/VE482/Projects/p2/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/lemondb.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lemondb.dir/main.cpp.o -c /root/VE482/Projects/p2/src/main.cpp
+	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lemondb.dir/main.cpp.o -c /root/VE482/Projects/p2/src/main.cpp
 
 CMakeFiles/lemondb.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lemondb.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/VE482/Projects/p2/src/main.cpp > CMakeFiles/lemondb.dir/main.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/VE482/Projects/p2/src/main.cpp > CMakeFiles/lemondb.dir/main.cpp.i
 
 CMakeFiles/lemondb.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lemondb.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/VE482/Projects/p2/src/main.cpp -o CMakeFiles/lemondb.dir/main.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/VE482/Projects/p2/src/main.cpp -o CMakeFiles/lemondb.dir/main.cpp.s
 
 CMakeFiles/lemondb.dir/main.cpp.o.requires:
 
@@ -84,15 +84,15 @@ CMakeFiles/lemondb.dir/main.cpp.o.provides.build: CMakeFiles/lemondb.dir/main.cp
 CMakeFiles/lemondb.dir/db/Database.cpp.o: CMakeFiles/lemondb.dir/flags.make
 CMakeFiles/lemondb.dir/db/Database.cpp.o: ../db/Database.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/VE482/Projects/p2/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/lemondb.dir/db/Database.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lemondb.dir/db/Database.cpp.o -c /root/VE482/Projects/p2/src/db/Database.cpp
+	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lemondb.dir/db/Database.cpp.o -c /root/VE482/Projects/p2/src/db/Database.cpp
 
 CMakeFiles/lemondb.dir/db/Database.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lemondb.dir/db/Database.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/VE482/Projects/p2/src/db/Database.cpp > CMakeFiles/lemondb.dir/db/Database.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/VE482/Projects/p2/src/db/Database.cpp > CMakeFiles/lemondb.dir/db/Database.cpp.i
 
 CMakeFiles/lemondb.dir/db/Database.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lemondb.dir/db/Database.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/VE482/Projects/p2/src/db/Database.cpp -o CMakeFiles/lemondb.dir/db/Database.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/VE482/Projects/p2/src/db/Database.cpp -o CMakeFiles/lemondb.dir/db/Database.cpp.s
 
 CMakeFiles/lemondb.dir/db/Database.cpp.o.requires:
 
@@ -108,15 +108,15 @@ CMakeFiles/lemondb.dir/db/Database.cpp.o.provides.build: CMakeFiles/lemondb.dir/
 CMakeFiles/lemondb.dir/db/Table.cpp.o: CMakeFiles/lemondb.dir/flags.make
 CMakeFiles/lemondb.dir/db/Table.cpp.o: ../db/Table.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/VE482/Projects/p2/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/lemondb.dir/db/Table.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lemondb.dir/db/Table.cpp.o -c /root/VE482/Projects/p2/src/db/Table.cpp
+	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lemondb.dir/db/Table.cpp.o -c /root/VE482/Projects/p2/src/db/Table.cpp
 
 CMakeFiles/lemondb.dir/db/Table.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lemondb.dir/db/Table.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/VE482/Projects/p2/src/db/Table.cpp > CMakeFiles/lemondb.dir/db/Table.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/VE482/Projects/p2/src/db/Table.cpp > CMakeFiles/lemondb.dir/db/Table.cpp.i
 
 CMakeFiles/lemondb.dir/db/Table.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lemondb.dir/db/Table.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/VE482/Projects/p2/src/db/Table.cpp -o CMakeFiles/lemondb.dir/db/Table.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/VE482/Projects/p2/src/db/Table.cpp -o CMakeFiles/lemondb.dir/db/Table.cpp.s
 
 CMakeFiles/lemondb.dir/db/Table.cpp.o.requires:
 
@@ -132,15 +132,15 @@ CMakeFiles/lemondb.dir/db/Table.cpp.o.provides.build: CMakeFiles/lemondb.dir/db/
 CMakeFiles/lemondb.dir/query/Query.cpp.o: CMakeFiles/lemondb.dir/flags.make
 CMakeFiles/lemondb.dir/query/Query.cpp.o: ../query/Query.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/VE482/Projects/p2/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/lemondb.dir/query/Query.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lemondb.dir/query/Query.cpp.o -c /root/VE482/Projects/p2/src/query/Query.cpp
+	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lemondb.dir/query/Query.cpp.o -c /root/VE482/Projects/p2/src/query/Query.cpp
 
 CMakeFiles/lemondb.dir/query/Query.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lemondb.dir/query/Query.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/VE482/Projects/p2/src/query/Query.cpp > CMakeFiles/lemondb.dir/query/Query.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/VE482/Projects/p2/src/query/Query.cpp > CMakeFiles/lemondb.dir/query/Query.cpp.i
 
 CMakeFiles/lemondb.dir/query/Query.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lemondb.dir/query/Query.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/VE482/Projects/p2/src/query/Query.cpp -o CMakeFiles/lemondb.dir/query/Query.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/VE482/Projects/p2/src/query/Query.cpp -o CMakeFiles/lemondb.dir/query/Query.cpp.s
 
 CMakeFiles/lemondb.dir/query/Query.cpp.o.requires:
 
@@ -156,15 +156,15 @@ CMakeFiles/lemondb.dir/query/Query.cpp.o.provides.build: CMakeFiles/lemondb.dir/
 CMakeFiles/lemondb.dir/query/QueryParser.cpp.o: CMakeFiles/lemondb.dir/flags.make
 CMakeFiles/lemondb.dir/query/QueryParser.cpp.o: ../query/QueryParser.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/VE482/Projects/p2/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/lemondb.dir/query/QueryParser.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lemondb.dir/query/QueryParser.cpp.o -c /root/VE482/Projects/p2/src/query/QueryParser.cpp
+	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lemondb.dir/query/QueryParser.cpp.o -c /root/VE482/Projects/p2/src/query/QueryParser.cpp
 
 CMakeFiles/lemondb.dir/query/QueryParser.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lemondb.dir/query/QueryParser.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/VE482/Projects/p2/src/query/QueryParser.cpp > CMakeFiles/lemondb.dir/query/QueryParser.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/VE482/Projects/p2/src/query/QueryParser.cpp > CMakeFiles/lemondb.dir/query/QueryParser.cpp.i
 
 CMakeFiles/lemondb.dir/query/QueryParser.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lemondb.dir/query/QueryParser.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/VE482/Projects/p2/src/query/QueryParser.cpp -o CMakeFiles/lemondb.dir/query/QueryParser.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/VE482/Projects/p2/src/query/QueryParser.cpp -o CMakeFiles/lemondb.dir/query/QueryParser.cpp.s
 
 CMakeFiles/lemondb.dir/query/QueryParser.cpp.o.requires:
 
@@ -180,15 +180,15 @@ CMakeFiles/lemondb.dir/query/QueryParser.cpp.o.provides.build: CMakeFiles/lemond
 CMakeFiles/lemondb.dir/query/QueryResult.cpp.o: CMakeFiles/lemondb.dir/flags.make
 CMakeFiles/lemondb.dir/query/QueryResult.cpp.o: ../query/QueryResult.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/VE482/Projects/p2/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/lemondb.dir/query/QueryResult.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lemondb.dir/query/QueryResult.cpp.o -c /root/VE482/Projects/p2/src/query/QueryResult.cpp
+	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lemondb.dir/query/QueryResult.cpp.o -c /root/VE482/Projects/p2/src/query/QueryResult.cpp
 
 CMakeFiles/lemondb.dir/query/QueryResult.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lemondb.dir/query/QueryResult.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/VE482/Projects/p2/src/query/QueryResult.cpp > CMakeFiles/lemondb.dir/query/QueryResult.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/VE482/Projects/p2/src/query/QueryResult.cpp > CMakeFiles/lemondb.dir/query/QueryResult.cpp.i
 
 CMakeFiles/lemondb.dir/query/QueryResult.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lemondb.dir/query/QueryResult.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/VE482/Projects/p2/src/query/QueryResult.cpp -o CMakeFiles/lemondb.dir/query/QueryResult.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/VE482/Projects/p2/src/query/QueryResult.cpp -o CMakeFiles/lemondb.dir/query/QueryResult.cpp.s
 
 CMakeFiles/lemondb.dir/query/QueryResult.cpp.o.requires:
 
@@ -204,15 +204,15 @@ CMakeFiles/lemondb.dir/query/QueryResult.cpp.o.provides.build: CMakeFiles/lemond
 CMakeFiles/lemondb.dir/query/QueryBuilders.cpp.o: CMakeFiles/lemondb.dir/flags.make
 CMakeFiles/lemondb.dir/query/QueryBuilders.cpp.o: ../query/QueryBuilders.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/VE482/Projects/p2/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/lemondb.dir/query/QueryBuilders.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lemondb.dir/query/QueryBuilders.cpp.o -c /root/VE482/Projects/p2/src/query/QueryBuilders.cpp
+	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lemondb.dir/query/QueryBuilders.cpp.o -c /root/VE482/Projects/p2/src/query/QueryBuilders.cpp
 
 CMakeFiles/lemondb.dir/query/QueryBuilders.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lemondb.dir/query/QueryBuilders.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/VE482/Projects/p2/src/query/QueryBuilders.cpp > CMakeFiles/lemondb.dir/query/QueryBuilders.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/VE482/Projects/p2/src/query/QueryBuilders.cpp > CMakeFiles/lemondb.dir/query/QueryBuilders.cpp.i
 
 CMakeFiles/lemondb.dir/query/QueryBuilders.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lemondb.dir/query/QueryBuilders.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/VE482/Projects/p2/src/query/QueryBuilders.cpp -o CMakeFiles/lemondb.dir/query/QueryBuilders.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/VE482/Projects/p2/src/query/QueryBuilders.cpp -o CMakeFiles/lemondb.dir/query/QueryBuilders.cpp.s
 
 CMakeFiles/lemondb.dir/query/QueryBuilders.cpp.o.requires:
 
@@ -228,15 +228,15 @@ CMakeFiles/lemondb.dir/query/QueryBuilders.cpp.o.provides.build: CMakeFiles/lemo
 CMakeFiles/lemondb.dir/query/management/LoadTableQuery.cpp.o: CMakeFiles/lemondb.dir/flags.make
 CMakeFiles/lemondb.dir/query/management/LoadTableQuery.cpp.o: ../query/management/LoadTableQuery.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/VE482/Projects/p2/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/lemondb.dir/query/management/LoadTableQuery.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lemondb.dir/query/management/LoadTableQuery.cpp.o -c /root/VE482/Projects/p2/src/query/management/LoadTableQuery.cpp
+	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lemondb.dir/query/management/LoadTableQuery.cpp.o -c /root/VE482/Projects/p2/src/query/management/LoadTableQuery.cpp
 
 CMakeFiles/lemondb.dir/query/management/LoadTableQuery.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lemondb.dir/query/management/LoadTableQuery.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/VE482/Projects/p2/src/query/management/LoadTableQuery.cpp > CMakeFiles/lemondb.dir/query/management/LoadTableQuery.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/VE482/Projects/p2/src/query/management/LoadTableQuery.cpp > CMakeFiles/lemondb.dir/query/management/LoadTableQuery.cpp.i
 
 CMakeFiles/lemondb.dir/query/management/LoadTableQuery.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lemondb.dir/query/management/LoadTableQuery.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/VE482/Projects/p2/src/query/management/LoadTableQuery.cpp -o CMakeFiles/lemondb.dir/query/management/LoadTableQuery.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/VE482/Projects/p2/src/query/management/LoadTableQuery.cpp -o CMakeFiles/lemondb.dir/query/management/LoadTableQuery.cpp.s
 
 CMakeFiles/lemondb.dir/query/management/LoadTableQuery.cpp.o.requires:
 
@@ -252,15 +252,15 @@ CMakeFiles/lemondb.dir/query/management/LoadTableQuery.cpp.o.provides.build: CMa
 CMakeFiles/lemondb.dir/query/management/DropTableQuery.cpp.o: CMakeFiles/lemondb.dir/flags.make
 CMakeFiles/lemondb.dir/query/management/DropTableQuery.cpp.o: ../query/management/DropTableQuery.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/VE482/Projects/p2/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/lemondb.dir/query/management/DropTableQuery.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lemondb.dir/query/management/DropTableQuery.cpp.o -c /root/VE482/Projects/p2/src/query/management/DropTableQuery.cpp
+	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lemondb.dir/query/management/DropTableQuery.cpp.o -c /root/VE482/Projects/p2/src/query/management/DropTableQuery.cpp
 
 CMakeFiles/lemondb.dir/query/management/DropTableQuery.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lemondb.dir/query/management/DropTableQuery.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/VE482/Projects/p2/src/query/management/DropTableQuery.cpp > CMakeFiles/lemondb.dir/query/management/DropTableQuery.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/VE482/Projects/p2/src/query/management/DropTableQuery.cpp > CMakeFiles/lemondb.dir/query/management/DropTableQuery.cpp.i
 
 CMakeFiles/lemondb.dir/query/management/DropTableQuery.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lemondb.dir/query/management/DropTableQuery.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/VE482/Projects/p2/src/query/management/DropTableQuery.cpp -o CMakeFiles/lemondb.dir/query/management/DropTableQuery.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/VE482/Projects/p2/src/query/management/DropTableQuery.cpp -o CMakeFiles/lemondb.dir/query/management/DropTableQuery.cpp.s
 
 CMakeFiles/lemondb.dir/query/management/DropTableQuery.cpp.o.requires:
 
@@ -276,15 +276,15 @@ CMakeFiles/lemondb.dir/query/management/DropTableQuery.cpp.o.provides.build: CMa
 CMakeFiles/lemondb.dir/query/management/DumpTableQuery.cpp.o: CMakeFiles/lemondb.dir/flags.make
 CMakeFiles/lemondb.dir/query/management/DumpTableQuery.cpp.o: ../query/management/DumpTableQuery.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/VE482/Projects/p2/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/lemondb.dir/query/management/DumpTableQuery.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lemondb.dir/query/management/DumpTableQuery.cpp.o -c /root/VE482/Projects/p2/src/query/management/DumpTableQuery.cpp
+	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lemondb.dir/query/management/DumpTableQuery.cpp.o -c /root/VE482/Projects/p2/src/query/management/DumpTableQuery.cpp
 
 CMakeFiles/lemondb.dir/query/management/DumpTableQuery.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lemondb.dir/query/management/DumpTableQuery.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/VE482/Projects/p2/src/query/management/DumpTableQuery.cpp > CMakeFiles/lemondb.dir/query/management/DumpTableQuery.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/VE482/Projects/p2/src/query/management/DumpTableQuery.cpp > CMakeFiles/lemondb.dir/query/management/DumpTableQuery.cpp.i
 
 CMakeFiles/lemondb.dir/query/management/DumpTableQuery.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lemondb.dir/query/management/DumpTableQuery.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/VE482/Projects/p2/src/query/management/DumpTableQuery.cpp -o CMakeFiles/lemondb.dir/query/management/DumpTableQuery.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/VE482/Projects/p2/src/query/management/DumpTableQuery.cpp -o CMakeFiles/lemondb.dir/query/management/DumpTableQuery.cpp.s
 
 CMakeFiles/lemondb.dir/query/management/DumpTableQuery.cpp.o.requires:
 
@@ -300,15 +300,15 @@ CMakeFiles/lemondb.dir/query/management/DumpTableQuery.cpp.o.provides.build: CMa
 CMakeFiles/lemondb.dir/query/management/ListTableQuery.cpp.o: CMakeFiles/lemondb.dir/flags.make
 CMakeFiles/lemondb.dir/query/management/ListTableQuery.cpp.o: ../query/management/ListTableQuery.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/VE482/Projects/p2/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/lemondb.dir/query/management/ListTableQuery.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lemondb.dir/query/management/ListTableQuery.cpp.o -c /root/VE482/Projects/p2/src/query/management/ListTableQuery.cpp
+	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lemondb.dir/query/management/ListTableQuery.cpp.o -c /root/VE482/Projects/p2/src/query/management/ListTableQuery.cpp
 
 CMakeFiles/lemondb.dir/query/management/ListTableQuery.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lemondb.dir/query/management/ListTableQuery.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/VE482/Projects/p2/src/query/management/ListTableQuery.cpp > CMakeFiles/lemondb.dir/query/management/ListTableQuery.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/VE482/Projects/p2/src/query/management/ListTableQuery.cpp > CMakeFiles/lemondb.dir/query/management/ListTableQuery.cpp.i
 
 CMakeFiles/lemondb.dir/query/management/ListTableQuery.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lemondb.dir/query/management/ListTableQuery.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/VE482/Projects/p2/src/query/management/ListTableQuery.cpp -o CMakeFiles/lemondb.dir/query/management/ListTableQuery.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/VE482/Projects/p2/src/query/management/ListTableQuery.cpp -o CMakeFiles/lemondb.dir/query/management/ListTableQuery.cpp.s
 
 CMakeFiles/lemondb.dir/query/management/ListTableQuery.cpp.o.requires:
 
@@ -324,15 +324,15 @@ CMakeFiles/lemondb.dir/query/management/ListTableQuery.cpp.o.provides.build: CMa
 CMakeFiles/lemondb.dir/query/management/CopyTableQuery.cpp.o: CMakeFiles/lemondb.dir/flags.make
 CMakeFiles/lemondb.dir/query/management/CopyTableQuery.cpp.o: ../query/management/CopyTableQuery.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/VE482/Projects/p2/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/lemondb.dir/query/management/CopyTableQuery.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lemondb.dir/query/management/CopyTableQuery.cpp.o -c /root/VE482/Projects/p2/src/query/management/CopyTableQuery.cpp
+	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lemondb.dir/query/management/CopyTableQuery.cpp.o -c /root/VE482/Projects/p2/src/query/management/CopyTableQuery.cpp
 
 CMakeFiles/lemondb.dir/query/management/CopyTableQuery.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lemondb.dir/query/management/CopyTableQuery.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/VE482/Projects/p2/src/query/management/CopyTableQuery.cpp > CMakeFiles/lemondb.dir/query/management/CopyTableQuery.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/VE482/Projects/p2/src/query/management/CopyTableQuery.cpp > CMakeFiles/lemondb.dir/query/management/CopyTableQuery.cpp.i
 
 CMakeFiles/lemondb.dir/query/management/CopyTableQuery.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lemondb.dir/query/management/CopyTableQuery.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/VE482/Projects/p2/src/query/management/CopyTableQuery.cpp -o CMakeFiles/lemondb.dir/query/management/CopyTableQuery.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/VE482/Projects/p2/src/query/management/CopyTableQuery.cpp -o CMakeFiles/lemondb.dir/query/management/CopyTableQuery.cpp.s
 
 CMakeFiles/lemondb.dir/query/management/CopyTableQuery.cpp.o.requires:
 
@@ -348,15 +348,15 @@ CMakeFiles/lemondb.dir/query/management/CopyTableQuery.cpp.o.provides.build: CMa
 CMakeFiles/lemondb.dir/query/management/TruncateTableQuery.cpp.o: CMakeFiles/lemondb.dir/flags.make
 CMakeFiles/lemondb.dir/query/management/TruncateTableQuery.cpp.o: ../query/management/TruncateTableQuery.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/VE482/Projects/p2/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/lemondb.dir/query/management/TruncateTableQuery.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lemondb.dir/query/management/TruncateTableQuery.cpp.o -c /root/VE482/Projects/p2/src/query/management/TruncateTableQuery.cpp
+	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lemondb.dir/query/management/TruncateTableQuery.cpp.o -c /root/VE482/Projects/p2/src/query/management/TruncateTableQuery.cpp
 
 CMakeFiles/lemondb.dir/query/management/TruncateTableQuery.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lemondb.dir/query/management/TruncateTableQuery.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/VE482/Projects/p2/src/query/management/TruncateTableQuery.cpp > CMakeFiles/lemondb.dir/query/management/TruncateTableQuery.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/VE482/Projects/p2/src/query/management/TruncateTableQuery.cpp > CMakeFiles/lemondb.dir/query/management/TruncateTableQuery.cpp.i
 
 CMakeFiles/lemondb.dir/query/management/TruncateTableQuery.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lemondb.dir/query/management/TruncateTableQuery.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/VE482/Projects/p2/src/query/management/TruncateTableQuery.cpp -o CMakeFiles/lemondb.dir/query/management/TruncateTableQuery.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/VE482/Projects/p2/src/query/management/TruncateTableQuery.cpp -o CMakeFiles/lemondb.dir/query/management/TruncateTableQuery.cpp.s
 
 CMakeFiles/lemondb.dir/query/management/TruncateTableQuery.cpp.o.requires:
 
@@ -372,15 +372,15 @@ CMakeFiles/lemondb.dir/query/management/TruncateTableQuery.cpp.o.provides.build:
 CMakeFiles/lemondb.dir/query/management/QuitQuery.cpp.o: CMakeFiles/lemondb.dir/flags.make
 CMakeFiles/lemondb.dir/query/management/QuitQuery.cpp.o: ../query/management/QuitQuery.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/VE482/Projects/p2/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/lemondb.dir/query/management/QuitQuery.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lemondb.dir/query/management/QuitQuery.cpp.o -c /root/VE482/Projects/p2/src/query/management/QuitQuery.cpp
+	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lemondb.dir/query/management/QuitQuery.cpp.o -c /root/VE482/Projects/p2/src/query/management/QuitQuery.cpp
 
 CMakeFiles/lemondb.dir/query/management/QuitQuery.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lemondb.dir/query/management/QuitQuery.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/VE482/Projects/p2/src/query/management/QuitQuery.cpp > CMakeFiles/lemondb.dir/query/management/QuitQuery.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/VE482/Projects/p2/src/query/management/QuitQuery.cpp > CMakeFiles/lemondb.dir/query/management/QuitQuery.cpp.i
 
 CMakeFiles/lemondb.dir/query/management/QuitQuery.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lemondb.dir/query/management/QuitQuery.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/VE482/Projects/p2/src/query/management/QuitQuery.cpp -o CMakeFiles/lemondb.dir/query/management/QuitQuery.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/VE482/Projects/p2/src/query/management/QuitQuery.cpp -o CMakeFiles/lemondb.dir/query/management/QuitQuery.cpp.s
 
 CMakeFiles/lemondb.dir/query/management/QuitQuery.cpp.o.requires:
 
@@ -396,15 +396,15 @@ CMakeFiles/lemondb.dir/query/management/QuitQuery.cpp.o.provides.build: CMakeFil
 CMakeFiles/lemondb.dir/query/management/PrintTableQuery.cpp.o: CMakeFiles/lemondb.dir/flags.make
 CMakeFiles/lemondb.dir/query/management/PrintTableQuery.cpp.o: ../query/management/PrintTableQuery.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/VE482/Projects/p2/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/lemondb.dir/query/management/PrintTableQuery.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lemondb.dir/query/management/PrintTableQuery.cpp.o -c /root/VE482/Projects/p2/src/query/management/PrintTableQuery.cpp
+	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lemondb.dir/query/management/PrintTableQuery.cpp.o -c /root/VE482/Projects/p2/src/query/management/PrintTableQuery.cpp
 
 CMakeFiles/lemondb.dir/query/management/PrintTableQuery.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lemondb.dir/query/management/PrintTableQuery.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/VE482/Projects/p2/src/query/management/PrintTableQuery.cpp > CMakeFiles/lemondb.dir/query/management/PrintTableQuery.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/VE482/Projects/p2/src/query/management/PrintTableQuery.cpp > CMakeFiles/lemondb.dir/query/management/PrintTableQuery.cpp.i
 
 CMakeFiles/lemondb.dir/query/management/PrintTableQuery.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lemondb.dir/query/management/PrintTableQuery.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/VE482/Projects/p2/src/query/management/PrintTableQuery.cpp -o CMakeFiles/lemondb.dir/query/management/PrintTableQuery.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/VE482/Projects/p2/src/query/management/PrintTableQuery.cpp -o CMakeFiles/lemondb.dir/query/management/PrintTableQuery.cpp.s
 
 CMakeFiles/lemondb.dir/query/management/PrintTableQuery.cpp.o.requires:
 
@@ -420,15 +420,15 @@ CMakeFiles/lemondb.dir/query/management/PrintTableQuery.cpp.o.provides.build: CM
 CMakeFiles/lemondb.dir/query/data/InsertQuery.cpp.o: CMakeFiles/lemondb.dir/flags.make
 CMakeFiles/lemondb.dir/query/data/InsertQuery.cpp.o: ../query/data/InsertQuery.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/VE482/Projects/p2/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/lemondb.dir/query/data/InsertQuery.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lemondb.dir/query/data/InsertQuery.cpp.o -c /root/VE482/Projects/p2/src/query/data/InsertQuery.cpp
+	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lemondb.dir/query/data/InsertQuery.cpp.o -c /root/VE482/Projects/p2/src/query/data/InsertQuery.cpp
 
 CMakeFiles/lemondb.dir/query/data/InsertQuery.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lemondb.dir/query/data/InsertQuery.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/VE482/Projects/p2/src/query/data/InsertQuery.cpp > CMakeFiles/lemondb.dir/query/data/InsertQuery.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/VE482/Projects/p2/src/query/data/InsertQuery.cpp > CMakeFiles/lemondb.dir/query/data/InsertQuery.cpp.i
 
 CMakeFiles/lemondb.dir/query/data/InsertQuery.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lemondb.dir/query/data/InsertQuery.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/VE482/Projects/p2/src/query/data/InsertQuery.cpp -o CMakeFiles/lemondb.dir/query/data/InsertQuery.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/VE482/Projects/p2/src/query/data/InsertQuery.cpp -o CMakeFiles/lemondb.dir/query/data/InsertQuery.cpp.s
 
 CMakeFiles/lemondb.dir/query/data/InsertQuery.cpp.o.requires:
 
@@ -444,15 +444,15 @@ CMakeFiles/lemondb.dir/query/data/InsertQuery.cpp.o.provides.build: CMakeFiles/l
 CMakeFiles/lemondb.dir/query/divs/UpdateDiv.cpp.o: CMakeFiles/lemondb.dir/flags.make
 CMakeFiles/lemondb.dir/query/divs/UpdateDiv.cpp.o: ../query/divs/UpdateDiv.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/VE482/Projects/p2/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/lemondb.dir/query/divs/UpdateDiv.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lemondb.dir/query/divs/UpdateDiv.cpp.o -c /root/VE482/Projects/p2/src/query/divs/UpdateDiv.cpp
+	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lemondb.dir/query/divs/UpdateDiv.cpp.o -c /root/VE482/Projects/p2/src/query/divs/UpdateDiv.cpp
 
 CMakeFiles/lemondb.dir/query/divs/UpdateDiv.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lemondb.dir/query/divs/UpdateDiv.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/VE482/Projects/p2/src/query/divs/UpdateDiv.cpp > CMakeFiles/lemondb.dir/query/divs/UpdateDiv.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/VE482/Projects/p2/src/query/divs/UpdateDiv.cpp > CMakeFiles/lemondb.dir/query/divs/UpdateDiv.cpp.i
 
 CMakeFiles/lemondb.dir/query/divs/UpdateDiv.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lemondb.dir/query/divs/UpdateDiv.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/VE482/Projects/p2/src/query/divs/UpdateDiv.cpp -o CMakeFiles/lemondb.dir/query/divs/UpdateDiv.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/VE482/Projects/p2/src/query/divs/UpdateDiv.cpp -o CMakeFiles/lemondb.dir/query/divs/UpdateDiv.cpp.s
 
 CMakeFiles/lemondb.dir/query/divs/UpdateDiv.cpp.o.requires:
 
@@ -468,15 +468,15 @@ CMakeFiles/lemondb.dir/query/divs/UpdateDiv.cpp.o.provides.build: CMakeFiles/lem
 CMakeFiles/lemondb.dir/query/divs/DeleteDiv.cpp.o: CMakeFiles/lemondb.dir/flags.make
 CMakeFiles/lemondb.dir/query/divs/DeleteDiv.cpp.o: ../query/divs/DeleteDiv.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/VE482/Projects/p2/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/lemondb.dir/query/divs/DeleteDiv.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lemondb.dir/query/divs/DeleteDiv.cpp.o -c /root/VE482/Projects/p2/src/query/divs/DeleteDiv.cpp
+	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lemondb.dir/query/divs/DeleteDiv.cpp.o -c /root/VE482/Projects/p2/src/query/divs/DeleteDiv.cpp
 
 CMakeFiles/lemondb.dir/query/divs/DeleteDiv.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lemondb.dir/query/divs/DeleteDiv.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/VE482/Projects/p2/src/query/divs/DeleteDiv.cpp > CMakeFiles/lemondb.dir/query/divs/DeleteDiv.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/VE482/Projects/p2/src/query/divs/DeleteDiv.cpp > CMakeFiles/lemondb.dir/query/divs/DeleteDiv.cpp.i
 
 CMakeFiles/lemondb.dir/query/divs/DeleteDiv.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lemondb.dir/query/divs/DeleteDiv.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/VE482/Projects/p2/src/query/divs/DeleteDiv.cpp -o CMakeFiles/lemondb.dir/query/divs/DeleteDiv.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/VE482/Projects/p2/src/query/divs/DeleteDiv.cpp -o CMakeFiles/lemondb.dir/query/divs/DeleteDiv.cpp.s
 
 CMakeFiles/lemondb.dir/query/divs/DeleteDiv.cpp.o.requires:
 
@@ -492,15 +492,15 @@ CMakeFiles/lemondb.dir/query/divs/DeleteDiv.cpp.o.provides.build: CMakeFiles/lem
 CMakeFiles/lemondb.dir/query/divs/AddDiv.cpp.o: CMakeFiles/lemondb.dir/flags.make
 CMakeFiles/lemondb.dir/query/divs/AddDiv.cpp.o: ../query/divs/AddDiv.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/VE482/Projects/p2/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/lemondb.dir/query/divs/AddDiv.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lemondb.dir/query/divs/AddDiv.cpp.o -c /root/VE482/Projects/p2/src/query/divs/AddDiv.cpp
+	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lemondb.dir/query/divs/AddDiv.cpp.o -c /root/VE482/Projects/p2/src/query/divs/AddDiv.cpp
 
 CMakeFiles/lemondb.dir/query/divs/AddDiv.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lemondb.dir/query/divs/AddDiv.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/VE482/Projects/p2/src/query/divs/AddDiv.cpp > CMakeFiles/lemondb.dir/query/divs/AddDiv.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/VE482/Projects/p2/src/query/divs/AddDiv.cpp > CMakeFiles/lemondb.dir/query/divs/AddDiv.cpp.i
 
 CMakeFiles/lemondb.dir/query/divs/AddDiv.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lemondb.dir/query/divs/AddDiv.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/VE482/Projects/p2/src/query/divs/AddDiv.cpp -o CMakeFiles/lemondb.dir/query/divs/AddDiv.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/VE482/Projects/p2/src/query/divs/AddDiv.cpp -o CMakeFiles/lemondb.dir/query/divs/AddDiv.cpp.s
 
 CMakeFiles/lemondb.dir/query/divs/AddDiv.cpp.o.requires:
 
@@ -516,15 +516,15 @@ CMakeFiles/lemondb.dir/query/divs/AddDiv.cpp.o.provides.build: CMakeFiles/lemond
 CMakeFiles/lemondb.dir/query/divs/SubDiv.cpp.o: CMakeFiles/lemondb.dir/flags.make
 CMakeFiles/lemondb.dir/query/divs/SubDiv.cpp.o: ../query/divs/SubDiv.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/VE482/Projects/p2/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/lemondb.dir/query/divs/SubDiv.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lemondb.dir/query/divs/SubDiv.cpp.o -c /root/VE482/Projects/p2/src/query/divs/SubDiv.cpp
+	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lemondb.dir/query/divs/SubDiv.cpp.o -c /root/VE482/Projects/p2/src/query/divs/SubDiv.cpp
 
 CMakeFiles/lemondb.dir/query/divs/SubDiv.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lemondb.dir/query/divs/SubDiv.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/VE482/Projects/p2/src/query/divs/SubDiv.cpp > CMakeFiles/lemondb.dir/query/divs/SubDiv.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/VE482/Projects/p2/src/query/divs/SubDiv.cpp > CMakeFiles/lemondb.dir/query/divs/SubDiv.cpp.i
 
 CMakeFiles/lemondb.dir/query/divs/SubDiv.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lemondb.dir/query/divs/SubDiv.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/VE482/Projects/p2/src/query/divs/SubDiv.cpp -o CMakeFiles/lemondb.dir/query/divs/SubDiv.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/VE482/Projects/p2/src/query/divs/SubDiv.cpp -o CMakeFiles/lemondb.dir/query/divs/SubDiv.cpp.s
 
 CMakeFiles/lemondb.dir/query/divs/SubDiv.cpp.o.requires:
 
@@ -540,15 +540,15 @@ CMakeFiles/lemondb.dir/query/divs/SubDiv.cpp.o.provides.build: CMakeFiles/lemond
 CMakeFiles/lemondb.dir/query/divs/SwapDiv.cpp.o: CMakeFiles/lemondb.dir/flags.make
 CMakeFiles/lemondb.dir/query/divs/SwapDiv.cpp.o: ../query/divs/SwapDiv.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/VE482/Projects/p2/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/lemondb.dir/query/divs/SwapDiv.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lemondb.dir/query/divs/SwapDiv.cpp.o -c /root/VE482/Projects/p2/src/query/divs/SwapDiv.cpp
+	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lemondb.dir/query/divs/SwapDiv.cpp.o -c /root/VE482/Projects/p2/src/query/divs/SwapDiv.cpp
 
 CMakeFiles/lemondb.dir/query/divs/SwapDiv.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lemondb.dir/query/divs/SwapDiv.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/VE482/Projects/p2/src/query/divs/SwapDiv.cpp > CMakeFiles/lemondb.dir/query/divs/SwapDiv.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/VE482/Projects/p2/src/query/divs/SwapDiv.cpp > CMakeFiles/lemondb.dir/query/divs/SwapDiv.cpp.i
 
 CMakeFiles/lemondb.dir/query/divs/SwapDiv.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lemondb.dir/query/divs/SwapDiv.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/VE482/Projects/p2/src/query/divs/SwapDiv.cpp -o CMakeFiles/lemondb.dir/query/divs/SwapDiv.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/VE482/Projects/p2/src/query/divs/SwapDiv.cpp -o CMakeFiles/lemondb.dir/query/divs/SwapDiv.cpp.s
 
 CMakeFiles/lemondb.dir/query/divs/SwapDiv.cpp.o.requires:
 
@@ -564,15 +564,15 @@ CMakeFiles/lemondb.dir/query/divs/SwapDiv.cpp.o.provides.build: CMakeFiles/lemon
 CMakeFiles/lemondb.dir/query/divs/SumDiv.cpp.o: CMakeFiles/lemondb.dir/flags.make
 CMakeFiles/lemondb.dir/query/divs/SumDiv.cpp.o: ../query/divs/SumDiv.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/VE482/Projects/p2/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/lemondb.dir/query/divs/SumDiv.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lemondb.dir/query/divs/SumDiv.cpp.o -c /root/VE482/Projects/p2/src/query/divs/SumDiv.cpp
+	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lemondb.dir/query/divs/SumDiv.cpp.o -c /root/VE482/Projects/p2/src/query/divs/SumDiv.cpp
 
 CMakeFiles/lemondb.dir/query/divs/SumDiv.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lemondb.dir/query/divs/SumDiv.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/VE482/Projects/p2/src/query/divs/SumDiv.cpp > CMakeFiles/lemondb.dir/query/divs/SumDiv.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/VE482/Projects/p2/src/query/divs/SumDiv.cpp > CMakeFiles/lemondb.dir/query/divs/SumDiv.cpp.i
 
 CMakeFiles/lemondb.dir/query/divs/SumDiv.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lemondb.dir/query/divs/SumDiv.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/VE482/Projects/p2/src/query/divs/SumDiv.cpp -o CMakeFiles/lemondb.dir/query/divs/SumDiv.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/VE482/Projects/p2/src/query/divs/SumDiv.cpp -o CMakeFiles/lemondb.dir/query/divs/SumDiv.cpp.s
 
 CMakeFiles/lemondb.dir/query/divs/SumDiv.cpp.o.requires:
 
@@ -588,15 +588,15 @@ CMakeFiles/lemondb.dir/query/divs/SumDiv.cpp.o.provides.build: CMakeFiles/lemond
 CMakeFiles/lemondb.dir/query/divs/MaxDiv.cpp.o: CMakeFiles/lemondb.dir/flags.make
 CMakeFiles/lemondb.dir/query/divs/MaxDiv.cpp.o: ../query/divs/MaxDiv.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/VE482/Projects/p2/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/lemondb.dir/query/divs/MaxDiv.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lemondb.dir/query/divs/MaxDiv.cpp.o -c /root/VE482/Projects/p2/src/query/divs/MaxDiv.cpp
+	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lemondb.dir/query/divs/MaxDiv.cpp.o -c /root/VE482/Projects/p2/src/query/divs/MaxDiv.cpp
 
 CMakeFiles/lemondb.dir/query/divs/MaxDiv.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lemondb.dir/query/divs/MaxDiv.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/VE482/Projects/p2/src/query/divs/MaxDiv.cpp > CMakeFiles/lemondb.dir/query/divs/MaxDiv.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/VE482/Projects/p2/src/query/divs/MaxDiv.cpp > CMakeFiles/lemondb.dir/query/divs/MaxDiv.cpp.i
 
 CMakeFiles/lemondb.dir/query/divs/MaxDiv.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lemondb.dir/query/divs/MaxDiv.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/VE482/Projects/p2/src/query/divs/MaxDiv.cpp -o CMakeFiles/lemondb.dir/query/divs/MaxDiv.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/VE482/Projects/p2/src/query/divs/MaxDiv.cpp -o CMakeFiles/lemondb.dir/query/divs/MaxDiv.cpp.s
 
 CMakeFiles/lemondb.dir/query/divs/MaxDiv.cpp.o.requires:
 
@@ -612,15 +612,15 @@ CMakeFiles/lemondb.dir/query/divs/MaxDiv.cpp.o.provides.build: CMakeFiles/lemond
 CMakeFiles/lemondb.dir/query/divs/MinDiv.cpp.o: CMakeFiles/lemondb.dir/flags.make
 CMakeFiles/lemondb.dir/query/divs/MinDiv.cpp.o: ../query/divs/MinDiv.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/VE482/Projects/p2/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/lemondb.dir/query/divs/MinDiv.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lemondb.dir/query/divs/MinDiv.cpp.o -c /root/VE482/Projects/p2/src/query/divs/MinDiv.cpp
+	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lemondb.dir/query/divs/MinDiv.cpp.o -c /root/VE482/Projects/p2/src/query/divs/MinDiv.cpp
 
 CMakeFiles/lemondb.dir/query/divs/MinDiv.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lemondb.dir/query/divs/MinDiv.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/VE482/Projects/p2/src/query/divs/MinDiv.cpp > CMakeFiles/lemondb.dir/query/divs/MinDiv.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/VE482/Projects/p2/src/query/divs/MinDiv.cpp > CMakeFiles/lemondb.dir/query/divs/MinDiv.cpp.i
 
 CMakeFiles/lemondb.dir/query/divs/MinDiv.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lemondb.dir/query/divs/MinDiv.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/VE482/Projects/p2/src/query/divs/MinDiv.cpp -o CMakeFiles/lemondb.dir/query/divs/MinDiv.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/VE482/Projects/p2/src/query/divs/MinDiv.cpp -o CMakeFiles/lemondb.dir/query/divs/MinDiv.cpp.s
 
 CMakeFiles/lemondb.dir/query/divs/MinDiv.cpp.o.requires:
 
@@ -636,15 +636,15 @@ CMakeFiles/lemondb.dir/query/divs/MinDiv.cpp.o.provides.build: CMakeFiles/lemond
 CMakeFiles/lemondb.dir/query/divs/CountDiv.cpp.o: CMakeFiles/lemondb.dir/flags.make
 CMakeFiles/lemondb.dir/query/divs/CountDiv.cpp.o: ../query/divs/CountDiv.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/VE482/Projects/p2/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/lemondb.dir/query/divs/CountDiv.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lemondb.dir/query/divs/CountDiv.cpp.o -c /root/VE482/Projects/p2/src/query/divs/CountDiv.cpp
+	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lemondb.dir/query/divs/CountDiv.cpp.o -c /root/VE482/Projects/p2/src/query/divs/CountDiv.cpp
 
 CMakeFiles/lemondb.dir/query/divs/CountDiv.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lemondb.dir/query/divs/CountDiv.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/VE482/Projects/p2/src/query/divs/CountDiv.cpp > CMakeFiles/lemondb.dir/query/divs/CountDiv.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/VE482/Projects/p2/src/query/divs/CountDiv.cpp > CMakeFiles/lemondb.dir/query/divs/CountDiv.cpp.i
 
 CMakeFiles/lemondb.dir/query/divs/CountDiv.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lemondb.dir/query/divs/CountDiv.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/VE482/Projects/p2/src/query/divs/CountDiv.cpp -o CMakeFiles/lemondb.dir/query/divs/CountDiv.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/VE482/Projects/p2/src/query/divs/CountDiv.cpp -o CMakeFiles/lemondb.dir/query/divs/CountDiv.cpp.s
 
 CMakeFiles/lemondb.dir/query/divs/CountDiv.cpp.o.requires:
 
@@ -660,15 +660,15 @@ CMakeFiles/lemondb.dir/query/divs/CountDiv.cpp.o.provides.build: CMakeFiles/lemo
 CMakeFiles/lemondb.dir/query/divs/DuplicateDiv.cpp.o: CMakeFiles/lemondb.dir/flags.make
 CMakeFiles/lemondb.dir/query/divs/DuplicateDiv.cpp.o: ../query/divs/DuplicateDiv.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/VE482/Projects/p2/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/lemondb.dir/query/divs/DuplicateDiv.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lemondb.dir/query/divs/DuplicateDiv.cpp.o -c /root/VE482/Projects/p2/src/query/divs/DuplicateDiv.cpp
+	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lemondb.dir/query/divs/DuplicateDiv.cpp.o -c /root/VE482/Projects/p2/src/query/divs/DuplicateDiv.cpp
 
 CMakeFiles/lemondb.dir/query/divs/DuplicateDiv.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lemondb.dir/query/divs/DuplicateDiv.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/VE482/Projects/p2/src/query/divs/DuplicateDiv.cpp > CMakeFiles/lemondb.dir/query/divs/DuplicateDiv.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/VE482/Projects/p2/src/query/divs/DuplicateDiv.cpp > CMakeFiles/lemondb.dir/query/divs/DuplicateDiv.cpp.i
 
 CMakeFiles/lemondb.dir/query/divs/DuplicateDiv.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lemondb.dir/query/divs/DuplicateDiv.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/VE482/Projects/p2/src/query/divs/DuplicateDiv.cpp -o CMakeFiles/lemondb.dir/query/divs/DuplicateDiv.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/VE482/Projects/p2/src/query/divs/DuplicateDiv.cpp -o CMakeFiles/lemondb.dir/query/divs/DuplicateDiv.cpp.s
 
 CMakeFiles/lemondb.dir/query/divs/DuplicateDiv.cpp.o.requires:
 
@@ -684,15 +684,15 @@ CMakeFiles/lemondb.dir/query/divs/DuplicateDiv.cpp.o.provides.build: CMakeFiles/
 CMakeFiles/lemondb.dir/query/divs/SelectDiv.cpp.o: CMakeFiles/lemondb.dir/flags.make
 CMakeFiles/lemondb.dir/query/divs/SelectDiv.cpp.o: ../query/divs/SelectDiv.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/VE482/Projects/p2/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/lemondb.dir/query/divs/SelectDiv.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lemondb.dir/query/divs/SelectDiv.cpp.o -c /root/VE482/Projects/p2/src/query/divs/SelectDiv.cpp
+	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lemondb.dir/query/divs/SelectDiv.cpp.o -c /root/VE482/Projects/p2/src/query/divs/SelectDiv.cpp
 
 CMakeFiles/lemondb.dir/query/divs/SelectDiv.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lemondb.dir/query/divs/SelectDiv.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/VE482/Projects/p2/src/query/divs/SelectDiv.cpp > CMakeFiles/lemondb.dir/query/divs/SelectDiv.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/VE482/Projects/p2/src/query/divs/SelectDiv.cpp > CMakeFiles/lemondb.dir/query/divs/SelectDiv.cpp.i
 
 CMakeFiles/lemondb.dir/query/divs/SelectDiv.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lemondb.dir/query/divs/SelectDiv.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/VE482/Projects/p2/src/query/divs/SelectDiv.cpp -o CMakeFiles/lemondb.dir/query/divs/SelectDiv.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/VE482/Projects/p2/src/query/divs/SelectDiv.cpp -o CMakeFiles/lemondb.dir/query/divs/SelectDiv.cpp.s
 
 CMakeFiles/lemondb.dir/query/divs/SelectDiv.cpp.o.requires:
 
