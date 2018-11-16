@@ -67,10 +67,12 @@ void Database::insertQuery(std::unique_ptr<Query> &&query)
             waitingMutex.lock();
             a = (std::count(waiting.begin(), waiting.end(), q->getTableName())) == 0;
             waitingMutex.unlock();
-            try {
+            try
+            {
                 (*this)[q->getTableName()];
             }
-            catch (const TableNameNotFound &e){
+            catch (const TableNameNotFound &e)
+            {
                 a = false;
             }
             if (a)
@@ -221,6 +223,23 @@ void Database::runthread(Database *db)
                         break;
                 }
                 //std::cout << "Founded" << std::endl;
+                if (qname == "DUMP")
+                {
+                    while (true)
+                    {
+                        bool a = true;
+                        try
+                        {
+                            (*db)[name];
+                        }
+                        catch (const TableNameNotFound &e)
+                        {
+                            a = false;
+                        }
+                        if (a)
+                            break;
+                    }
+                }
                 auto &table = (*db)[name];
                 //std::cout << "Wait for table operations" << std::endl;
                 while (true)
