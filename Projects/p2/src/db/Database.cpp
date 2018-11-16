@@ -196,15 +196,15 @@ void Database::runthread(Database *db)
             try
             {
 
-                if (qname == "DROP" || qname == "COPYTABLE" || qname == "DUMP")
-                {
+                //if (qname == "DROP" || qname == "COPYTABLE" || qname == "DUMP")
+                //{
                     while (true)
                     {
                         //std::cerr << db->getresultflag() << " " << id << std::endl;
                         if (db->getresultflag() >= id)
                             break;
                     }
-                }
+                //}
                 if (qiscreate || qunique)
                 {
                     db->results[id].first->execute();
