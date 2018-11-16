@@ -162,10 +162,14 @@ void Database::runthread(Database *db)
             auto &query = db->results[task.getid()].first;
             std::string name = query->getTableName();
             std::string qname = query->getname();
+            bool qiscreate = query->iscreate();
+            bool qdividable = query->dividable();
+            bool qunique = query->uniquery();
+            bool qiswrite = query->iswrite();
             db->taskcursor++;
             db->taskMutex.unlock();
             //std::cout << "Getit" << std::endl;
-            if (query->iscreate()||query->uniquery()){
+            if (qiscreate||qunique){
                 query->execute();
                 db->insertResult(id,std::make_unique<NullQueryResult>());
                 //std::cout << "Done" << std::endl;
@@ -199,7 +203,7 @@ void Database::runthread(Database *db)
                 else if (table.getstatus() == 0)
                 {
                     a = true;
-                    if (query->iswrite())
+                    if (qiswrite)
                     {
                         table.setstatus(0 - id);
                         table.upactive();
@@ -212,7 +216,7 @@ void Database::runthread(Database *db)
                 }
                 else
                 {
-                    if (!query->iswrite())
+                    if (!qiswrite)
                     {
                         a = true;
                         table.upactive();
@@ -229,7 +233,7 @@ void Database::runthread(Database *db)
                     if (db->getresultflag()>=id) break;
                 }
             }
-            if (query->dividable())
+            if (qdividable)
                 task.execute();
             else{
                 if (qname=="DROP"){
