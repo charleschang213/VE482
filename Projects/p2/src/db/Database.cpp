@@ -63,7 +63,7 @@ void Database::insertQuery(std::unique_ptr<Query> &&query)
         //auto q = query.get();
         while (true)
         {
-            /*bool a = false;
+            bool a = false;
             std::string tablename = query->getTableName();
             waitingMutex.lock();
             a = (std::count(waiting.begin(), waiting.end(), tablename)) == 0;
@@ -77,8 +77,9 @@ void Database::insertQuery(std::unique_ptr<Query> &&query)
                 a = false;
             }
             if (a)
-                break;*/
-            if (this->resultflag==this->results.size()) break;
+                break;
+            std::this_thread::yield();
+            //if (this->resultflag==this->results.size()) break;
         } 
         if (!query->dividable()){
             resultMutex.lock();
