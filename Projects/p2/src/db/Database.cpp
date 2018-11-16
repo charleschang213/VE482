@@ -230,7 +230,7 @@ void Database::runthread(Database *db)
                     break;
             }
             //std::cout << "work" << std::endl;
-            if (qname=="DROP"){
+            if (qname=="DROP"||qname=="COPYTABLE"){
                 while (true){
                     //std::cerr << db->getresultflag() << " " << id << std::endl;
                     if (db->getresultflag()>=id) break;
