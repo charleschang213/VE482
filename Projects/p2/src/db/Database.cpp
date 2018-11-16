@@ -60,7 +60,7 @@ void Database::insertQuery(std::unique_ptr<Query> &&query)
     }
     if (!query->iscreate())
     {
-        auto q = query.get();
+        //auto q = query.get();
         while (true)
         {
             bool a = false;
