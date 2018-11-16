@@ -78,7 +78,7 @@ void Database::insertQuery(std::unique_ptr<Query> &&query)
             }
             if (a)
                 break;*/
-            if (this->resultflag==this->results.size());
+            if (this->resultflag==this->results.size()) break;
         }
         auto &table = (*this)[query->getTableName()];
         int groups = 0;
