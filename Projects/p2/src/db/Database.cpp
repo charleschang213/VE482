@@ -194,6 +194,7 @@ void Database::runthread(Database *db)
         else
         {
             auto &task = db->tasks[db->taskcursor];
+            db->taskMutex.unlock();
             int id = task.getid();
             //auto &query = db->results[task.getid()].first;
             std::string name = db->results[task.getid()].first->getTableName();
@@ -204,7 +205,6 @@ void Database::runthread(Database *db)
             bool qiswrite = db->results[id].first->iswrite();
             std::string oldname = db->results[id].first->oldtable();
             db->taskcursor++;
-            db->taskMutex.unlock();
             //std::cout << "Getit" << std::endl;
             try
             {
