@@ -15,7 +15,8 @@ QueryResult::Ptr LoadTableQuery::execute() {
     Database &db = Database::getInstance();
     try {
         ifstream infile(this->fileName);
-        if (!infile.is_open()) {
+        if (!infile.is_open()) {      
+            std::cerr << "LOAD fail" << std::endl;
             return make_unique<ErrorMsgResult>(qname, "Cannot open file '?'"_f % this->fileName);
         }
         db.loadTableFromStream(infile, this->fileName);
