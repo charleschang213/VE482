@@ -20,6 +20,7 @@ QueryResult::Ptr LoadTableQuery::execute() {
             return make_unique<ErrorMsgResult>(qname, "Cannot open file '?'"_f % this->fileName);
         }
         db.loadTableFromStream(infile, this->fileName);
+        infile.clear();
         infile.close();
         return make_unique<SuccessMsgResult>(qname, targetTable);
     } catch (const exception &e) {
