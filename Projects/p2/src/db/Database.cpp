@@ -229,7 +229,7 @@ void Database::runthread(Database *db)
             //std::cout << "work" << std::endl;
             if (qname=="DROP"){
                 while (true){
-                    std::cerr << db->getresultflag() << " " << id << std::endl;
+                    //std::cerr << db->getresultflag() << " " << id << std::endl;
                     if (db->getresultflag()>=id) break;
                 }
             }
