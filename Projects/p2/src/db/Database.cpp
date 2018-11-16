@@ -227,8 +227,8 @@ void Database::runthread(Database *db)
                 //std::cout << "Founded" << std::endl;
                 if (qname == "DUMP")
                 {
-                    db->insertResult(id, std::make_unique<NullQueryResult>());
-                    continue;
+                    //db->insertResult(id, std::make_unique<NullQueryResult>());
+                    //continue;
                     std::cerr << "Begin Waiting " << id << std::endl;
                     while (true)
                     {
