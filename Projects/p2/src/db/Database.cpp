@@ -291,16 +291,15 @@ void Database::runthread(Database *db)
                 {
                     if (qname == "DROP")
                     {
-                        table.tlock();
                         db->results[id].first->execute();
                         db->insertResult(id, std::make_unique<NullQueryResult>());
                     }
                     else
                     {
-                        if (qname == "COPYTABLE")
+                        /*if (qname == "COPYTABLE")
                         {
                             (*db)[oldname].tlock();
-                        }
+                        }*/
                         db->results[id].first->execute();
                         db->insertResult(id, std::make_unique<NullQueryResult>());
                     }
@@ -313,10 +312,10 @@ void Database::runthread(Database *db)
                     if ((table.getactive() == 0) && (((table.getstatus() >= 0)) || (db->results[id].first->getGroups() == 0)))
                         table.setstatus(0);
                     table.tunlock();
-                    if (qname == "COPYTABLE")
+                    /*if (qname == "COPYTABLE")
                     {
                         (*db)[oldname].tunlock();
-                    }
+                    }*/
                 }
             }
             catch (const TableNameNotFound &e)
