@@ -35,7 +35,7 @@ void Database::insertQuery(std::unique_ptr<Query> &&query, std::unique_ptr<Query
         if (results[i].first->getname() != "QUIT")
             std::cout << i + 1 << std::endl;
         std::cout << *(this->results[i].second);
-        if (i>130) std::cerr << i+1 << std::endl;
+        //if (i>130) std::cerr << i+1 << std::endl;
         std::cout.flush();
         resultflag++;
     }
