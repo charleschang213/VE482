@@ -70,7 +70,7 @@ void Database::insertQuery(std::unique_ptr<Query> &&query)
             try {
                 (*this)[q->getTableName()];
             }
-            catch (const TableFieldNotFound &e){
+            catch (const TableNameNotFound &e){
                 a = false;
             }
             if (a)
