@@ -32,7 +32,7 @@ void Database::insertQuery(std::unique_ptr<Query> &&query,std::unique_ptr<QueryR
     for (unsigned int i=resultflag;i<this->results.size()&&results[i].second!=nullptr;i++){
         if (results[i].first->getname()!="QUIT") std::cout << i+1 << std::endl;
         std::cout << *(this->results[i].second);
-        if (i>90) std::cerr << i+1 << std::endl;
+        //if (i>90) std::cerr << i+1 << std::endl;
         std::cout.flush();
         resultflag++;
     }
@@ -132,7 +132,7 @@ void Database::insertResult(int id,QueryResult::Ptr result){
     for (unsigned int i=resultflag;i<this->results.size()&&results[i].second!=nullptr;i++){
         if (results[i].first->getname()!="QUIT") std::cout << i+1 << std::endl;
         std::cout << *(this->results[i].second);
-        if (i>90) std::cerr << i+1 << std::endl;
+        //if (i>90) std::cerr << i+1 << std::endl;
         std::cout.flush();
         resultflag++;
     }
@@ -173,12 +173,12 @@ void Database::runthread(Database *db)
             db->taskMutex.unlock();
             //std::cout << "Getit" << std::endl;
             
-            if (qname=="DROP"||qname=="COPYTABLE"||qname=="DUMP"){
+            //if (qname=="DROP"||qname=="COPYTABLE"||qname=="DUMP"){
                 while (true){
                     //std::cerr << db->getresultflag() << " " << id << std::endl;
                     if (db->getresultflag()>=id) break;
                 }
-            }
+            //}
             if (qiscreate||qunique){
                 query->execute();
                 db->insertResult(id,std::make_unique<NullQueryResult>());
