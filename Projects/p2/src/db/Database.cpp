@@ -181,7 +181,7 @@ void Database::runthread(Database *db)
         {
             auto &task = db->tasks[db->taskcursor];
             int id = task.getid();
-            auto &query = db->results[task.getid()].first;
+            //auto &query = db->results[task.getid()].first;
             std::string name = db->results[task.getid()].first->getTableName();
             std::string qname = db->results[id].first->getname();
             bool qiscreate = db->results[id].first->iscreate();
