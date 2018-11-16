@@ -80,6 +80,17 @@ void Database::insertQuery(std::unique_ptr<Query> &&query)
                 break;*/
             if (this->resultflag==this->results.size()) break;
         }
+        if (!query->dividable()){
+            resultMutex.lock();
+            query->setId(results.size());
+            int id = query->getId();
+            std::string tablename = query->getTableName();
+            results.emplace_back(std::move(query), nullptr);
+            taskMutex.lock();
+            tasks.push_back(DivQuery(id, tablename, 0));
+            taskMutex.unlock();
+            return;
+        }
         auto &table = (*this)[query->getTableName()];
         int groups = 0;
         int size = 0;
