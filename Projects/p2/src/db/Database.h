@@ -35,7 +35,7 @@ private:
 
     int threadnum=8;
 
-    int resultflag = 0;
+    unsigned int resultflag = 0;
 
     bool timetoexit = false;
 
