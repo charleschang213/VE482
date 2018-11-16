@@ -86,8 +86,8 @@ void Database::insertQuery(std::unique_ptr<Query> &&query)
         std::string tablename = query->getTableName();
         //std::cout << "Adding" << std::endl;
         resultMutex.lock();
-        q->setId(results.size());
-        id = q->getId();
+        query->setId(results.size());
+        id = query->getId();
         results.emplace_back(std::move(query), nullptr);
         resultMutex.unlock();
         if (dividable)
