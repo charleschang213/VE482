@@ -186,7 +186,7 @@ void Database::runthread(Database *db)
             std::string qname = db->results[id].first->getname();
             bool qiscreate = db->results[id].first->iscreate();
             bool qdividable = db->results[id].first->dividable();
-            bool qunique = db->results[id].first->unidb->results[id].first();
+            bool qunique = db->results[id].first->uniquery();
             bool qiswrite = db->results[id].first->iswrite();
             std::string oldname = db->results[id].first->oldtable();
             db->taskcursor++;
