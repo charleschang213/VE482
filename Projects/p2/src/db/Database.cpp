@@ -231,15 +231,21 @@ void Database::runthread(Database *db)
             if (query->dividable())
                 task.execute();
             else{
+                if (query->getname()=="DROP"){
+                    table.tlock();
+                    query->execute();
+                }
                 query->execute();
                 db->insertResult(id,std::make_unique<NullQueryResult>());
             }  
             //db->deletewaiting(query->getTableName());
-            table.tlock();
-            table.downactive();
-            if ((table.getactive() == 0)&&(((table.getstatus()>=0))||(db->results[id].first->getGroups()==0)))
-                table.setstatus(0);
-            table.tunlock();
+            if (query->getname()!="DROP"){
+                table.tlock();
+                table.downactive();
+                if ((table.getactive() == 0)&&(((table.getstatus()>=0))||(db->results[id].first->getGroups()==0)))
+                    table.setstatus(0);
+                table.tunlock();
+            }
         }
     }
 }
