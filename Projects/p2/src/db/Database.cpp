@@ -214,7 +214,7 @@ void Database::runthread(Database *db)
                     continue;
                 }
                 //std::cout << "Wait for table Creation" << std::endl;
-                while (true)
+                /*while (true)
                 {
                     int a = 0;
                     db->waitingMutex.lock();
@@ -222,7 +222,7 @@ void Database::runthread(Database *db)
                     db->waitingMutex.unlock();
                     if (a == 0)
                         break;
-                }
+                }*/
                 //std::cout << "Founded" << std::endl;
                 /*if (qname == "DUMP")
                 {
