@@ -6,6 +6,7 @@
 
 
 #include <fstream>
+#include <iostream>
 
 constexpr const char *LoadTableQuery::qname;
 
