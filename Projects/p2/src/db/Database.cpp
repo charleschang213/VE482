@@ -86,6 +86,7 @@ void Database::insertQuery(std::unique_ptr<Query> &&query)
             int id = query->getId();
             std::string tablename = query->getTableName();
             results.emplace_back(std::move(query), nullptr);
+            resultMutex.unlock();
             taskMutex.lock();
             tasks.push_back(DivQuery(id, tablename, 0));
             taskMutex.unlock();
