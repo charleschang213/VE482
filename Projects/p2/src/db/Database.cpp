@@ -172,6 +172,13 @@ void Database::runthread(Database *db)
             db->taskcursor++;
             db->taskMutex.unlock();
             //std::cout << "Getit" << std::endl;
+            
+            if (qname=="DROP"||qname=="COPYTABLE"||qname=="DUMP"){
+                while (true){
+                    //std::cerr << db->getresultflag() << " " << id << std::endl;
+                    if (db->getresultflag()>=id) break;
+                }
+            }
             if (qiscreate||qunique){
                 query->execute();
                 db->insertResult(id,std::make_unique<NullQueryResult>());
@@ -230,12 +237,6 @@ void Database::runthread(Database *db)
                     break;
             }
             //std::cout << "work" << std::endl;
-            if (qname=="DROP"||qname=="COPYTABLE"){
-                while (true){
-                    //std::cerr << db->getresultflag() << " " << id << std::endl;
-                    if (db->getresultflag()>=id) break;
-                }
-            }
             if (qdividable)
                 task.execute();
             else{
