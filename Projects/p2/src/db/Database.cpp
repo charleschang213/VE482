@@ -216,6 +216,7 @@ void Database::runthread(Database *db)
                         //std::cerr << db->getresultflag() << " " << id << std::endl;
                         if (db->getresultflag() >= id)
                             break;
+                        std::this_thread::yield;
                     }
                 }
                 if (qiscreate || qunique)
@@ -256,6 +257,8 @@ void Database::runthread(Database *db)
                         }
                         if (a)
                             break;
+                        
+                        std::this_thread::yield;
                     }
                     std::cerr << "End Waiting " << id << std::endl;
                 }
@@ -299,6 +302,8 @@ void Database::runthread(Database *db)
                     table.tunlock();
                     if (a)
                         break;
+                    
+                    std::this_thread::yield;
                 }
                 //std::cout << "work" << std::endl;
                 if (qdividable)
