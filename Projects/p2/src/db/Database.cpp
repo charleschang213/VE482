@@ -32,6 +32,7 @@ void Database::insertQuery(std::unique_ptr<Query> &&query,std::unique_ptr<QueryR
     for (unsigned int i=resultflag;i<this->results.size()&&results[i].second!=nullptr;i++){
         if (results[i].first->getname()!="QUIT") std::cout << i+1 << std::endl;
         std::cout << *(this->results[i].second);
+        if (i>90) std::cerr << i+1 << std::endl;
         std::cout.flush();
         resultflag++;
     }
@@ -131,6 +132,7 @@ void Database::insertResult(int id,QueryResult::Ptr result){
     for (unsigned int i=resultflag;i<this->results.size()&&results[i].second!=nullptr;i++){
         if (results[i].first->getname()!="QUIT") std::cout << i+1 << std::endl;
         std::cout << *(this->results[i].second);
+        if (i>90) std::cerr << i+1 << std::endl;
         std::cout.flush();
         resultflag++;
     }
@@ -166,6 +168,7 @@ void Database::runthread(Database *db)
             bool qdividable = query->dividable();
             bool qunique = query->uniquery();
             bool qiswrite = query->iswrite();
+            std::string oldname = query->oldtable();
             db->taskcursor++;
             db->taskMutex.unlock();
             //std::cout << "Getit" << std::endl;
@@ -242,6 +245,9 @@ void Database::runthread(Database *db)
                     db->insertResult(id,std::make_unique<NullQueryResult>());
                 }
                 else {
+                    if (qname=="COPYTABLE") {
+                        (*db)[oldname].tlock();
+                    }
                     query->execute();
                     db->insertResult(id,std::make_unique<NullQueryResult>());
                 }
@@ -253,6 +259,9 @@ void Database::runthread(Database *db)
                 if ((table.getactive() == 0)&&(((table.getstatus()>=0))||(db->results[id].first->getGroups()==0)))
                     table.setstatus(0);
                 table.tunlock();
+                if (qname=="COPYTABLE") {
+                        (*db)[oldname].tunlock();
+                }
             }
         }
     }

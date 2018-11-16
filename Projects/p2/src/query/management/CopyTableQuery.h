@@ -6,6 +6,7 @@ class CopyTableQuery : public Query {
     static constexpr const char *qname = "COPYTABLE";
     const std::string NewTable;
 public:
+    std::string oldtable() override {return NewTable;}
     bool iscreate() override {return true;}
     std::string getname() override {return "COPYTABLE";}
     explicit CopyTableQuery(std::string table, std::string NewTable) :

@@ -33,6 +33,7 @@ protected:
 public:
     virtual void init(){}
     void glock(){gMutex.lock();}
+    virtual std::string oldtable(){return "";}
     void gunlock(){gMutex.unlock();}
     QueryResult::Ptr result = nullptr;
     virtual bool uniquery(){return false;}
