@@ -61,8 +61,8 @@ void Database::insertQuery(std::unique_ptr<Query> &&query)
     if (!query->iscreate())
     {
         //auto q = query.get();
-        while (true)
-        {
+        //while (true)
+        //{
             /*bool a = false;
             std::string tablename = query->getTableName();
             waitingMutex.lock();
@@ -78,8 +78,8 @@ void Database::insertQuery(std::unique_ptr<Query> &&query)
             }
             if (a)
                 break;*/
-            if (this->resultflag==this->results.size()) break;
-        }
+            //if (this->resultflag==this->results.size()) break;
+        //} 
         if (!query->dividable()){
             resultMutex.lock();
             query->setId(results.size());
@@ -189,7 +189,7 @@ void Database::runthread(Database *db)
             db->taskMutex.unlock();
             if (db->ExitTime())
                 return;
-            std::this_thread::yield();
+            //std::this_thread::yield();
         }
         else
         {
@@ -214,9 +214,10 @@ void Database::runthread(Database *db)
                     while (true)
                     {
                         //std::cerr << db->getresultflag() << " " << id << std::endl;
+                        
+                        //std::this_thread::yield;
                         if (db->getresultflag() >= id)
                             break;
-                        std::this_thread::yield;
                     }
                 }
                 if (qiscreate || qunique)
@@ -303,7 +304,7 @@ void Database::runthread(Database *db)
                     if (a)
                         break;
                     
-                    std::this_thread::yield;
+                    //std::this_thread::yield;
                 }
                 //std::cout << "work" << std::endl;
                 if (qdividable)
