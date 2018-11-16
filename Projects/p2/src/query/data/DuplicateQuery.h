@@ -27,11 +27,9 @@ public:
             this->gunlock();
             auto &db = Database::getInstance();
             auto &table = db[this->targetTable];
-            for(unsigned int i=0;i<totalvecter.first.size();i++){
-                table.insertByIndex(totalvecter.first[i],move(totalvecter.second[i]));
-            }
+            table.datacombine();
             //table.insertByIndex(newkey, move(data));
-            db.insertResult(this->getId(),std::make_unique<RecordCountResult>(totalvecter.first.size()));
+            db.insertResult(this->getId(),std::make_unique<RecordCountResult>(cnt));
         }
         else this->gunlock();
     }

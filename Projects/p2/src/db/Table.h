@@ -301,7 +301,7 @@ public:
         return true;
     }
 
-    void mergeData() {
+    void datacombine() {
         std::for_each(Newdata.begin(), Newdata.end(), [this](Datum &datum) {
             keyMap.emplace(datum.key, data.size());
             data.emplace_back(std::move(datum));
