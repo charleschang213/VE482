@@ -423,7 +423,7 @@ Database &Database::getInstance(int threads)
         else
             instance->threadnum = threads;
         std::cerr << "Thread Number " << instance->threadnum << std::endl;
-        instance->tasks.reserve(100000);
+        instance->tasks.reserve(100);
         for (int i = 0; i < instance->threadnum; i++)
             instance->threads.emplace_back(runthread, instance.get());
     }
