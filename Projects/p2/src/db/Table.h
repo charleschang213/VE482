@@ -13,6 +13,7 @@
 #include <string>
 #include <vector>
 #include <unordered_map>
+#include <algorithm>
 #include <utility>
 #include <mutex>
 
@@ -287,6 +288,27 @@ public:
         std::swap(data,Newdata);
         Newdata.clear();
     }
+
+    bool dup(Iterator &it){
+        auto key = it->key() + "_copy";
+        newdataMutex.lock();
+        if (keyMap.find(key) != keyMap.end()) {
+            newdataMutex.unlock();
+            return false;
+        }
+        Newdata.emplace_back(key, it->it->datum);
+        newdataMutex.unlock();
+        return true;
+    }
+
+    void mergeData() {
+        std::for_each(Newdata.begin(), Newdata.end(), [this](Datum &datum) {
+            keyMap.emplace(datum.key, data.size());
+            data.emplace_back(std::move(datum));
+        });
+        Newdata.clear();
+    }
+
 
 
     explicit Table(std::string name) : tableName(std::move(name)) {}

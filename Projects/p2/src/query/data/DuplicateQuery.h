@@ -11,7 +11,7 @@ class DuplicateQuery : public ComplexQuery {
     //Table::ValueType fieldValue;// = (operands[0]=="KEY")? 0 :std::stoi(operands[1]);
     //Table::FieldIndex fieldId;
     //Table::KeyType keyValue;
-    std::pair<std::vector<std::string>,std::vector<std::vector<Table::ValueType >>> totalvecter;
+    int counter = 0;
     std::mutex initMutex;
 public:
     bool iswrite() override {return true;}
@@ -19,12 +19,9 @@ public:
     std::string getname() override {return "DUPLICATE";}
     using ComplexQuery::ComplexQuery;
 
-    void combine(std::pair<std::vector<std::string>,std::vector<std::vector<Table::ValueType >>> cnt){
+    void combine(int cnt){
         this->glock();
-        for(unsigned int i=0;i<cnt.first.size();i++){
-            totalvecter.first.push_back(cnt.first[i]);
-            totalvecter.second.push_back(cnt.second[i]);
-        }
+        counter+=cnt;
         this->decgroup();
         if (this->getGroups()==0){
             this->gunlock();
