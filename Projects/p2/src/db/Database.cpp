@@ -242,6 +242,7 @@ void Database::runthread(Database *db)
                     //db->insertResult(id, std::make_unique<NullQueryResult>());
                     //continue;
                     std::cerr << "Begin Waiting " << id << std::endl;
+                    db->printAllTable();
                     while (true)
                     {
                         bool a = true;
@@ -390,19 +391,19 @@ void Database::dropTable(const std::string &tableName)
 void Database::printAllTable()
 {
     const int width = 15;
-    std::cout << "Database overview:" << std::endl;
-    std::cout << "=========================" << std::endl;
-    std::cout << std::setw(width) << "Table name";
-    std::cout << std::setw(width) << "# of fields";
-    std::cout << std::setw(width) << "# of entries" << std::endl;
+    std::cerr << "Database overview:" << std::endl;
+    std::cerr << "=========================" << std::endl;
+    std::cerr << std::setw(width) << "Table name";
+    std::cerr << std::setw(width) << "# of fields";
+    std::cerr << std::setw(width) << "# of entries" << std::endl;
     for (const auto &table : this->tables)
     {
-        std::cout << std::setw(width) << table.first;
-        std::cout << std::setw(width) << (*table.second).field().size() + 1;
-        std::cout << std::setw(width) << (*table.second).size() << std::endl;
+        std::cerr << std::setw(width) << table.first;
+        std::cerr << std::setw(width) << (*table.second).field().size() + 1;
+        std::cerr << std::setw(width) << (*table.second).size() << std::endl;
     }
-    std::cout << "Total " << this->tables.size() << " tables." << std::endl;
-    std::cout << "=========================" << std::endl;
+    std::cerr << "Total " << this->tables.size() << " tables." << std::endl;
+    std::cerr << "=========================" << std::endl;
 }
 
 Database &Database::getInstance(int threads)
