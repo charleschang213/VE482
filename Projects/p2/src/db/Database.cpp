@@ -234,9 +234,12 @@ void Database::runthread(Database *db)
                 if (query->getname()=="DROP"){
                     table.tlock();
                     query->execute();
+                    db->insertResult(id,std::make_unique<NullQueryResult>());
                 }
-                query->execute();
-                db->insertResult(id,std::make_unique<NullQueryResult>());
+                else {
+                    query->execute();
+                    db->insertResult(id,std::make_unique<NullQueryResult>());
+                }
             }  
             //db->deletewaiting(query->getTableName());
             if (query->getname()!="DROP"){
