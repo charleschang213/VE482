@@ -1,3 +1,0 @@
-/root/VE482/Projects/p2/src/build/CMakeFiles/rebuild_cache.dir
-/root/VE482/Projects/p2/src/build/CMakeFiles/lemondb.dir
-/root/VE482/Projects/p2/src/build/CMakeFiles/edit_cache.dir
