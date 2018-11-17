@@ -13,6 +13,7 @@
 #include <string>
 #include <vector>
 #include <unordered_map>
+#include <algorithm>
 #include <utility>
 #include <mutex>
 
@@ -88,6 +89,8 @@ private:
 
     /** The rows are saved in a vector, which is unsorted */
     std::vector<Datum> data;
+    std::vector<Datum> Newdata;
+    std::mutex newdataMutex;
     /** Used to keep the keys unique and provide O(1) access with key */
     std::unordered_map<KeyType, SizeType> keyMap;
 
@@ -262,8 +265,51 @@ private:
         return std::make_unique<Object>(it, table);
     }
 
+    
+
 public:
     Table() = delete;
+
+    
+    void erase(const Iterator &it) {
+        newdataMutex.lock();
+        keyMap.erase(it.it->key);
+        newdataMutex.unlock();
+    }
+
+    void move(Iterator &it) {
+        newdataMutex.lock();
+        keyMap.at(it.it->key) = Newdata.size();
+        Newdata.emplace_back(std::move(*(it.it)));
+        newdataMutex.unlock();
+    }
+
+    void swap(){
+        std::swap(data,Newdata);
+        Newdata.clear();
+    }
+
+    bool dup(Iterator &it){
+        auto key = it->key() + "_copy";
+        newdataMutex.lock();
+        if (keyMap.find(key) != keyMap.end()) {
+            newdataMutex.unlock();
+            return false;
+        }
+        Newdata.emplace_back(key, it->it->datum);
+        newdataMutex.unlock();
+        return true;
+    }
+
+    void datacombine() {
+        std::for_each(Newdata.begin(), Newdata.end(), [this](Datum &datum) {
+            keyMap.emplace(datum.key, data.size());
+            data.emplace_back(std::move(datum));
+        });
+        Newdata.clear();
+    }
+
+
 
     explicit Table(std::string name) : tableName(std::move(name)) {}
 

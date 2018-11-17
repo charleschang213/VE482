@@ -35,7 +35,7 @@ private:
 
     int threadnum=8;
 
-    int resultflag = 0;
+    unsigned int resultflag = 0;
 
     bool timetoexit = false;
 
@@ -134,7 +134,7 @@ public:
     void exit();
 };
 
-static const int Partnumber = 100;
+static const int Partnumber = 10000;
 
 class DivQuery{
     private:

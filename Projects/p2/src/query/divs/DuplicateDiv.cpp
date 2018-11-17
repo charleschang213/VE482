@@ -11,33 +11,15 @@ void DivQuery::DuplicateDivExe() {
     auto q = dynamic_cast<DuplicateQuery*>(query.get());
     auto result = q->initCondition(table);
     //vector<vector<Table::ValueType >> cntvector;
-    pair<vector<string>,vector<vector<Table::ValueType >>> cntvector;
+    int cnt = 0;
     if (result.second) {
-        auto it = table.begin();
-        auto si = table.size();
-        for (size_t i=0; i!=si; ++i) {
-            auto oldkey = (it->key());
-            if (q->evalCondition(*it)) {
-                auto newkey = (it->key());
-                newkey+="_copy";
-                if (table[newkey]!=nullptr) {
-                    ++it;
-                    continue;
+        for (auto it = table.begin()+counter*Partnumber; it != table.end()&&it< table.begin()+(counter+1)*Partnumber; ++it) {
+            if (query->evalCondition(*it)) {
+                if (table.dup(it)) {
+                   cnt++;
                 }
-                counter++;
-                vector<Table::ValueType> data;
-                data.reserve(table.field().size());
-                for (size_t j = 0; j < table.field().size(); ++j) {
-                    data.push_back((*it)[j]);
-                    //data.push_back((*it)[table.field()[i]]);
-                }
-                cntvector.first.push_back(newkey);
-                cntvector.second.push_back(data);
-                //table.insertByIndex(newkey, move(data));
             }
-            for (it=table.begin();it->key()!=oldkey;++it);
-            ++it;
         }
     }
-    q->combine(cntvector);
+    q->combine(cnt);
 }

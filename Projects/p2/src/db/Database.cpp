@@ -35,7 +35,7 @@ void Database::insertQuery(std::unique_ptr<Query> &&query, std::unique_ptr<Query
         if (results[i].first->getname() != "QUIT")
             std::cout << i + 1 << std::endl;
         std::cout << *(this->results[i].second);
-        if (i>130) std::cerr << i+1 << std::endl;
+        //if (i>130) std::cerr << i+1 << std::endl;
         std::cout.flush();
         resultflag++;
     }
@@ -63,7 +63,7 @@ void Database::insertQuery(std::unique_ptr<Query> &&query)
         //auto q = query.get();
         while (true)
         {
-            bool a = false;
+            /*bool a = false;
             std::string tablename = query->getTableName();
             waitingMutex.lock();
             a = (std::count(waiting.begin(), waiting.end(), tablename)) == 0;
@@ -78,6 +78,21 @@ void Database::insertQuery(std::unique_ptr<Query> &&query)
             }
             if (a)
                 break;
+            std::this_thread::yield();*/
+            if (this->resultflag==this->results.size()) break;
+            std::this_thread::yield();
+        } 
+        if (!query->dividable()){
+            resultMutex.lock();
+            query->setId(results.size());
+            int id = query->getId();
+            std::string tablename = query->getTableName();
+            results.emplace_back(std::move(query), nullptr);
+            resultMutex.unlock();
+            taskMutex.lock();
+            tasks.push_back(DivQuery(id, tablename, 0));
+            taskMutex.unlock();
+            return;
         }
         auto &table = (*this)[query->getTableName()];
         int groups = 0;
@@ -152,7 +167,7 @@ void Database::insertResult(int id, QueryResult::Ptr result)
         if (results[i].first->getname() != "QUIT")
             std::cout << i + 1 << std::endl;
         std::cout << *(this->results[i].second);
-        if (i>90) std::cerr << i+1 << std::endl;
+        //if (i>90) std::cerr << i+1 << std::endl;
         std::cout.flush();
         resultflag++;
     }
@@ -201,8 +216,11 @@ void Database::runthread(Database *db)
                     while (true)
                     {
                         //std::cerr << db->getresultflag() << " " << id << std::endl;
+                        
+                       
                         if (db->getresultflag() >= id)
                             break;
+                         std::this_thread::yield();
                     }
                 }
                 if (qiscreate || qunique)
@@ -214,7 +232,7 @@ void Database::runthread(Database *db)
                     continue;
                 }
                 //std::cout << "Wait for table Creation" << std::endl;
-                while (true)
+                /*while (true)
                 {
                     int a = 0;
                     db->waitingMutex.lock();
@@ -222,11 +240,14 @@ void Database::runthread(Database *db)
                     db->waitingMutex.unlock();
                     if (a == 0)
                         break;
-                }
+                }*/
                 //std::cout << "Founded" << std::endl;
                 if (qname == "DUMP")
                 {
+                    //db->insertResult(id, std::make_unique<NullQueryResult>());
+                    //continue;
                     std::cerr << "Begin Waiting " << id << std::endl;
+                    //db->printAllTable();
                     while (true)
                     {
                         bool a = true;
@@ -240,6 +261,8 @@ void Database::runthread(Database *db)
                         }
                         if (a)
                             break;
+                        
+                        std::this_thread::yield();
                     }
                     std::cerr << "End Waiting " << id << std::endl;
                 }
@@ -283,6 +306,8 @@ void Database::runthread(Database *db)
                     table.tunlock();
                     if (a)
                         break;
+                    
+                    std::this_thread::yield();
                 }
                 //std::cout << "work" << std::endl;
                 if (qdividable)
@@ -291,16 +316,15 @@ void Database::runthread(Database *db)
                 {
                     if (qname == "DROP")
                     {
-                        table.tlock();
                         db->results[id].first->execute();
                         db->insertResult(id, std::make_unique<NullQueryResult>());
                     }
                     else
                     {
-                        if (qname == "COPYTABLE")
+                        /*if (qname == "COPYTABLE")
                         {
                             (*db)[oldname].tlock();
-                        }
+                        }*/
                         db->results[id].first->execute();
                         db->insertResult(id, std::make_unique<NullQueryResult>());
                     }
@@ -313,10 +337,10 @@ void Database::runthread(Database *db)
                     if ((table.getactive() == 0) && (((table.getstatus() >= 0)) || (db->results[id].first->getGroups() == 0)))
                         table.setstatus(0);
                     table.tunlock();
-                    if (qname == "COPYTABLE")
+                    /*if (qname == "COPYTABLE")
                     {
                         (*db)[oldname].tunlock();
-                    }
+                    }*/
                 }
             }
             catch (const TableNameNotFound &e)
@@ -376,19 +400,19 @@ void Database::dropTable(const std::string &tableName)
 void Database::printAllTable()
 {
     const int width = 15;
-    std::cout << "Database overview:" << std::endl;
-    std::cout << "=========================" << std::endl;
-    std::cout << std::setw(width) << "Table name";
-    std::cout << std::setw(width) << "# of fields";
-    std::cout << std::setw(width) << "# of entries" << std::endl;
+    std::cerr << "Database overview:" << std::endl;
+    std::cerr << "=========================" << std::endl;
+    std::cerr << std::setw(width) << "Table name";
+    std::cerr << std::setw(width) << "# of fields";
+    std::cerr << std::setw(width) << "# of entries" << std::endl;
     for (const auto &table : this->tables)
     {
-        std::cout << std::setw(width) << table.first;
-        std::cout << std::setw(width) << (*table.second).field().size() + 1;
-        std::cout << std::setw(width) << (*table.second).size() << std::endl;
+        std::cerr << std::setw(width) << table.first;
+        std::cerr << std::setw(width) << (*table.second).field().size() + 1;
+        std::cerr << std::setw(width) << (*table.second).size() << std::endl;
     }
-    std::cout << "Total " << this->tables.size() << " tables." << std::endl;
-    std::cout << "=========================" << std::endl;
+    std::cerr << "Total " << this->tables.size() << " tables." << std::endl;
+    std::cerr << "=========================" << std::endl;
 }
 
 Database &Database::getInstance(int threads)
@@ -397,11 +421,11 @@ Database &Database::getInstance(int threads)
     {
         instance = std::unique_ptr<Database>(new Database);
         if (threads == 0)
-            instance->threadnum = std::thread::hardware_concurrency();
+            instance->threadnum = 1;//std::thread::hardware_concurrency();
         else
-            instance->threadnum = threads;
-        std::cerr << "Thread Number " << instance->threadnum << std::endl;
-        instance->tasks.reserve(100000);
+            instance->threadnum = std::thread::hardware_concurrency()+1-threads;
+        std::cerr << "Thread Number " << std::thread::hardware_concurrency()+1-instance->threadnum << std::endl;
+        instance->tasks.reserve(100);
         for (int i = 0; i < instance->threadnum; i++)
             instance->threads.emplace_back(runthread, instance.get());
     }

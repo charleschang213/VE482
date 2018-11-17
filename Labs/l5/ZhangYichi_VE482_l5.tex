@@ -1,0 +1,47 @@
+\documentclass{article}
+\usepackage{bookmark}
+\usepackage{color}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+\begin{document}
+\begin{itemize}
+\item How to enable built-in debugging in gcc?
+
+When compiling, add the flag -g 
+
+\item What is the meaning of GDB?
+
+GDB gives programmers a tool to check the running progress of their program in a more specified way, which will help them a lot in finding the bugs.
+
+\item What languages are supported by GDB?
+
+It supports Ada, Assembly, C, C++, D, Fortran, Go, Objective-C, OpenCL, Modula-2, Pascal and Rust
+
+\item The commands serves as the following 
+
+\begin{itemize}
+    \item backtrace: to show where your program has runned implementation
+    \item where : they are additional aliases for backtrace 
+    \item finish: it asks the program to finish the current function
+    \item delete: it will delete a break point 
+    \item info breakpoints: it shows the condition on the line following the affected breakpoint, together with its condition evaluation mode in between parentheses. 
+\end{itemize}
+\item How to use conditional breakpoints?
+
+Just add a command 'condition breakpoint expression', the breakpoint will only stop when the expression is satisfied.
+
+\item What is -tui option for GDB?
+
+Activate the Text User Interface when starting. The Text User Interface manages several text windows on the terminal, showing source, assembly, registers and GDB command outputs 
+
+\item What is the “reverse step” in GDB and how to enable it. Provide the key steps and commands.
+
+It will run the program backward until control reaches the start of a different source line; then stop it, and return control to GDB. In using, just use 'reverse-step [count]'
+
+\end{itemize}
+
+\end{document}
