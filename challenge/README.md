@@ -1,6 +1,6 @@
 <img src="image/icon.jpg" align="right" height="130" width="130"/>  
 
-# <br>VE482 Linux Challenge</br> ![Author](https://img.shields.io/badge/Author-Zhang%20Yichi-orange.svg) ![Progress](https://img.shields.io/badge/Progress-1%2F20-yellow.svg)<br></br>
+# <br>VE482 Linux Challenge</br> ![Author](https://img.shields.io/badge/Author-Zhang%20Yichi-orange.svg) ![Progress](https://img.shields.io/badge/Progress-2%2F20-yellow.svg)<br></br>
 
 ## Platform  
 In this challenge, all codes are compiled/tested in my Aliyun ECS server. The basic information is given below:
@@ -16,6 +16,28 @@ The task asks to write a kernel module and use Makefile to compile it. The sourc
 To see the effect of unload the module, I also let it output "Good night ve482!" when exiting. The image below shows the result of compilation and testing.
 
 <p style="text-align:center"><img src="image/t01_1.png" /></p>  
+
+### Task 2  
+I have already cloned the latest git tree of linux kernel by Linus Trovald. 
+
+I use the directory /root/build/kernel to store the build result. The first step of compiling is set the confuguration of the version name. Use the command   
+
+> make O=/root/build/kernel menuconfig
+
+In the apeearing interface, tick the highlighten option to enable LOCALVERSION_AUTO.  
+
+<p style="text-align:center"><img src="image/t02_1.png" /></p>
+
+Then do the following
+
+> make O=/root/build/kernel localmodconfig
+> make O=/root/build/kernel  
+> make O=/root/build/kernel modules_install   
+> make O=/root/build/kernel install  
+
+Then the kernel image and system map will appear in the directory /boot/. Reboot the system and the kernel appears to be the new one.
+
+<p style="text-align:center"><img src="image/t02_2.png" /></p>
 
 ## Contact 
 **Zhang Yichi**  
