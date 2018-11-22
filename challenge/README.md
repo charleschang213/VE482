@@ -1,6 +1,6 @@
 <img src="image/icon.jpg" align="right" height="130" width="130"/>  
 
-# <br>VE482 Linux Challenge</br> ![Author](https://img.shields.io/badge/Author-Zhang%20Yichi-orange.svg) ![Progress](https://img.shields.io/badge/Progress-3%2F20-yellow.svg)<br></br>
+# <br>VE482 Linux Challenge</br> ![Author](https://img.shields.io/badge/Author-Zhang%20Yichi-orange.svg) ![Progress](https://img.shields.io/badge/Progress-4%2F20-yellow.svg)<br></br>
 
 ## Platform  
 In this challenge, all codes are compiled/tested in my Aliyun ECS server. The basic information is given below:
@@ -59,6 +59,12 @@ The description of the patch is shown below
 Then use the patch checking tool for to check 
 
 <p style="text-align:center"><img src="image/t03_3.png" /></p> 
+
+### Task 4  
+
+I modified the code (The modified codes are in directory t4) and it shows that both the source code and the Makefile pass the check.
+
+<p style="text-align:center"><img src="image/t04_1.png" /></p> 
 
 ## Contact 
 **Zhang Yichi**  
