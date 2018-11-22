@@ -1,6 +1,6 @@
 <img src="image/icon.jpg" align="right" height="130" width="130"/>  
 
-# <br>VE482 Linux Challenge</br> ![Author](https://img.shields.io/badge/Author-Zhang%20Yichi-orange.svg) ![Progress](https://img.shields.io/badge/Progress-5%2F20-yellow.svg)<br></br>
+# <br>VE482 Linux Challenge</br> ![Author](https://img.shields.io/badge/Author-Zhang%20Yichi-orange.svg) ![Progress](https://img.shields.io/badge/Progress-6%2F20-yellow.svg)<br></br>
 
 ## Platform  
 In this challenge, all codes are compiled/tested in my Aliyun ECS server. The basic information is given below:
@@ -75,6 +75,18 @@ The main point is to write a interface driver for usb keyboard devices. The resu
 <p style="text-align:center"><img src="image/t05_1.png" /></p> 
 
 The first line shows that the new driver is registered, and following lines happened when I plugged my USB keyboard. It seems that the new module works. The codes are in directory t5
+
+### Task 6  
+
+The basic usage of misc device is used in this part. When loading the module and deleting the module, it can be seen in the following result that the device will appear and disappear as well.  
+
+<p style="text-align:center"><img src="image/t06_1.png" /></p> 
+
+And I wrote a test program to see its performance. The program will do 1. Read 2. Write correct value 3. Write invalid value to the device and the output is seen below.
+
+<p style="text-align:center"><img src="image/t06_2.png" /></p> 
+
+It can be seen that the module works. The source code for the module and the test program is given in the directory t6
 
 ## Contact 
 **Zhang Yichi**  
