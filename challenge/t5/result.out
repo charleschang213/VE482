@@ -1,0 +1,13 @@
+[ 2146.433385] usbcore: registered new interface driver usbt5
+[ 2146.433389] Good morning ve482!
+[ 2152.182436] usb 1-2: new full-speed USB device number 20 using xhci_hcd
+[ 2152.323675] usb 1-2: New USB device found, idVendor=060b, idProduct=7a06, bcdDevice= 1.09
+[ 2152.323682] usb 1-2: New USB device strings: Mfr=0, Product=2, SerialNumber=0
+[ 2152.323686] usb 1-2: Product: USB Keyboard
+[ 2152.326772] input: USB Keyboard as /devices/pci0000:00/0000:00:14.0/usb1/1-2/1-2:1.0/0003:060B:7A06.0024/input/input68
+[ 2152.383126] hid-generic 0003:060B:7A06.0024: input,hidraw2: USB HID v1.11 Keyboard [USB Keyboard] on usb-0000:00:14.0-2/input0
+[ 2152.384214] hid-generic 0003:060B:7A06.0025: hiddev0,hidraw3: USB HID v1.11 Device [USB Keyboard] on usb-0000:00:14.0-2/input1
+[ 2152.385452] input: USB Keyboard System Control as /devices/pci0000:00/0000:00:14.0/usb1/1-2/1-2:1.2/0003:060B:7A06.0026/input/input69
+[ 2152.439506] input: USB Keyboard Consumer Control as /devices/pci0000:00/0000:00:14.0/usb1/1-2/1-2:1.2/0003:060B:7A06.0026/input/input70
+[ 2152.439782] input: USB Keyboard Keyboard as /devices/pci0000:00/0000:00:14.0/usb1/1-2/1-2:1.2/0003:060B:7A06.0026/input/input71
+[ 2152.440116] hid-generic 0003:060B:7A06.0026: input,hidraw4: USB HID v1.11 Keyboard [USB Keyboard] on usb-0000:00:14.0-2/input2

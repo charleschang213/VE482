@@ -1,3 +1,4 @@
+#define DEBUG
 #include <linux/module.h>
 #include <linux/kernel.h>
 #include <linux/usb.h>
@@ -41,12 +42,14 @@ static int __init t5_init(void)
     res = usb_register(&t5_driver);
     if (res)
         pr_err("usb_register failed with error %d", res);
+	else 
+		pr_debug("Good morning ve482!");
     return res;
 }
 
 static void __exit t5_exit(void)
 {
-    pr_debug("USB Keyboard Removed..\n");
+    pr_debug("Good night ve482!\n");
     usb_deregister(&t5_driver);
     return;
 }
