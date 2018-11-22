@@ -1,6 +1,6 @@
 <img src="image/icon.jpg" align="right" height="130" width="130"/>  
 
-# <br>VE482 Linux Challenge</br> ![Author](https://img.shields.io/badge/Author-Zhang%20Yichi-orange.svg) ![Progress](https://img.shields.io/badge/Progress-6%2F20-yellow.svg)<br></br>
+# <br>VE482 Linux Challenge</br> ![Author](https://img.shields.io/badge/Author-Zhang%20Yichi-orange.svg) ![Progress](https://img.shields.io/badge/Progress-7%2F20-yellow.svg)<br></br>
 
 ## Platform  
 In this challenge, all codes are compiled/tested in my Aliyun ECS server. The basic information is given below:
@@ -87,6 +87,12 @@ And I wrote a test program to see its performance. The program will do 1. Read 2
 <p style="text-align:center"><img src="image/t06_2.png" /></p> 
 
 It can be seen that the module works. The source code for the module and the test program is given in the directory t6
+
+### Task 7
+
+I have built the kernel and booted with it. It can be shown in the picture below that the kernel version is now 4.20.0-rc3-next-20181122
+
+<p style="text-align:center"><img src="image/t07_1.png" /></p> 
 
 ## Contact 
 **Zhang Yichi**  
