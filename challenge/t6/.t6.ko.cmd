@@ -1,0 +1,1 @@
+cmd_/root/VE482/challenge/t6/t6.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000 -T /usr/src/linux/scripts/module-common.lds  --build-id  -o /root/VE482/challenge/t6/t6.ko /root/VE482/challenge/t6/t6.o /root/VE482/challenge/t6/t6.mod.o ;  true
