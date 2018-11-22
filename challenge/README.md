@@ -1,6 +1,6 @@
 <img src="image/icon.jpg" align="right" height="130" width="130"/>  
 
-# <br>VE482 Linux Challenge</br> ![Author](https://img.shields.io/badge/Author-Zhang%20Yichi-orange.svg) ![Progress](https://img.shields.io/badge/Progress-2%2F20-yellow.svg)<br></br>
+# <br>VE482 Linux Challenge</br> ![Author](https://img.shields.io/badge/Author-Zhang%20Yichi-orange.svg) ![Progress](https://img.shields.io/badge/Progress-3%2F20-yellow.svg)<br></br>
 
 ## Platform  
 In this challenge, all codes are compiled/tested in my Aliyun ECS server. The basic information is given below:
@@ -38,6 +38,27 @@ Then do the following
 Then the kernel image and system map will appear in the directory /boot/. Reboot the system and the kernel appears to be the new one.
 
 <p style="text-align:center"><img src="image/t02_2.png" /></p>
+
+### Task 3
+This is done by modifying the EXTRAVERSION field in Makefile. After rebuilding and reboot, the version string shows 
+
+<p style="text-align:center"><img src="image/t03_1.png" /></p> 
+
+The postfixes are due to my enabling of LOCALVERSION_AUTO, and "dirty" means the kernel is modified compared with the original version.
+
+Next is do the patch. use the following commands  
+
+> git add Makefile  
+> git commit -s -v  
+> git format-patch master  
+
+The description of the patch is shown below  
+
+<p style="text-align:center"><img src="image/t03_2.png" /></p>   
+
+Then use the patch checking tool for to check 
+
+<p style="text-align:center"><img src="image/t03_3.png" /></p> 
 
 ## Contact 
 **Zhang Yichi**  
