@@ -1,0 +1,1 @@
+cmd_/root/VE482/challenge/t4/t4.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000 -T /usr/src/linux/scripts/module-common.lds  --build-id  -o /root/VE482/challenge/t4/t4.ko /root/VE482/challenge/t4/t4.o /root/VE482/challenge/t4/t4.mod.o ;  true
