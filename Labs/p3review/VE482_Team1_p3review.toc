@@ -1,0 +1,7 @@
+\beamer@endinputifotherversion {3.14pt}
+\beamer@sectionintoc {1}{Introduction}{3}{0}{1}
+\beamer@sectionintoc {2}{Configuration}{6}{0}{2}
+\beamer@subsectionintoc {2}{1}{Building}{6}{0}{2}
+\beamer@subsectionintoc {2}{2}{Booting}{7}{0}{2}
+\beamer@subsectionintoc {2}{3}{Runtime}{9}{0}{2}
+\beamer@sectionintoc {3}{References}{11}{0}{3}
