@@ -1,0 +1,1 @@
+cmd_/root/VE482/challenge/t8/t8.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000 -T /root/linux-next/scripts/module-common.lds  --build-id  -o /root/VE482/challenge/t8/t8.ko /root/VE482/challenge/t8/t8.o /root/VE482/challenge/t8/t8.mod.o ;  true

@@ -1,8 +1,8 @@
-cmd_/root/VE482/challenge/t6/t6.o := gcc -Wp,-MD,/root/VE482/challenge/t6/.t6.o.d  -nostdinc -isystem /usr/lib/gcc/x86_64-linux-gnu/7/include -I/root/linux-next/arch/x86/include -I./arch/x86/include/generated  -I/root/linux-next/include -I./include -I/root/linux-next/arch/x86/include/uapi -I./arch/x86/include/generated/uapi -I/root/linux-next/include/uapi -I./include/generated/uapi -include /root/linux-next/include/linux/kconfig.h -include /root/linux-next/include/linux/compiler_types.h  -I/root/VE482/challenge/t6 -I/root/VE482/challenge/t6 -D__KERNEL__ -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -fshort-wchar -Werror-implicit-function-declaration -Wno-format-security -std=gnu89 -fno-PIE -DCC_HAVE_ASM_GOTO -mno-sse -mno-mmx -mno-sse2 -mno-3dnow -mno-avx -m64 -falign-jumps=1 -falign-loops=1 -mno-80387 -mno-fp-ret-in-387 -mpreferred-stack-boundary=3 -mskip-rax-setup -mtune=generic -mno-red-zone -mcmodel=kernel -funit-at-a-time -DCONFIG_X86_X32_ABI -DCONFIG_AS_CFI=1 -DCONFIG_AS_CFI_SIGNAL_FRAME=1 -DCONFIG_AS_CFI_SECTIONS=1 -DCONFIG_AS_FXSAVEQ=1 -DCONFIG_AS_SSSE3=1 -DCONFIG_AS_AVX=1 -DCONFIG_AS_AVX2=1 -DCONFIG_AS_AVX512=1 -DCONFIG_AS_SHA1_NI=1 -DCONFIG_AS_SHA256_NI=1 -Wno-sign-compare -fno-asynchronous-unwind-tables -mindirect-branch=thunk-extern -mindirect-branch-register -Wa,arch/x86/kernel/macros.s -fno-delete-null-pointer-checks -Wno-frame-address -Wno-format-truncation -Wno-format-overflow -Wno-int-in-bool-context -O2 --param=allow-store-data-races=0 -Wframe-larger-than=1024 -fstack-protector-strong -Wno-unused-but-set-variable -Wno-unused-const-variable -fno-omit-frame-pointer -fno-optimize-sibling-calls -fno-var-tracking-assignments -g -gdwarf-4 -pg -mrecord-mcount -mfentry -DCC_USING_FENTRY -Wdeclaration-after-statement -Wvla -Wno-pointer-sign -fno-strict-overflow -fno-merge-all-constants -fmerge-constants -fno-stack-check -fconserve-stack -Werror=implicit-int -Werror=strict-prototypes -Werror=date-time -Werror=incompatible-pointer-types -Werror=designated-init  -DMODULE  -DKBUILD_BASENAME='"t6"' -DKBUILD_MODNAME='"t6"' -c -o /root/VE482/challenge/t6/t6.o /root/VE482/challenge/t6/t6.c
+cmd_/root/VE482/challenge/t8/t8.o := gcc -Wp,-MD,/root/VE482/challenge/t8/.t8.o.d  -nostdinc -isystem /usr/lib/gcc/x86_64-linux-gnu/7/include -I/root/linux-next/arch/x86/include -I./arch/x86/include/generated  -I/root/linux-next/include -I./include -I/root/linux-next/arch/x86/include/uapi -I./arch/x86/include/generated/uapi -I/root/linux-next/include/uapi -I./include/generated/uapi -include /root/linux-next/include/linux/kconfig.h -include /root/linux-next/include/linux/compiler_types.h  -I/root/VE482/challenge/t8 -I/root/VE482/challenge/t8 -D__KERNEL__ -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -fshort-wchar -Werror-implicit-function-declaration -Wno-format-security -std=gnu89 -fno-PIE -DCC_HAVE_ASM_GOTO -mno-sse -mno-mmx -mno-sse2 -mno-3dnow -mno-avx -m64 -falign-jumps=1 -falign-loops=1 -mno-80387 -mno-fp-ret-in-387 -mpreferred-stack-boundary=3 -mskip-rax-setup -mtune=generic -mno-red-zone -mcmodel=kernel -funit-at-a-time -DCONFIG_X86_X32_ABI -DCONFIG_AS_CFI=1 -DCONFIG_AS_CFI_SIGNAL_FRAME=1 -DCONFIG_AS_CFI_SECTIONS=1 -DCONFIG_AS_FXSAVEQ=1 -DCONFIG_AS_SSSE3=1 -DCONFIG_AS_AVX=1 -DCONFIG_AS_AVX2=1 -DCONFIG_AS_AVX512=1 -DCONFIG_AS_SHA1_NI=1 -DCONFIG_AS_SHA256_NI=1 -Wno-sign-compare -fno-asynchronous-unwind-tables -mindirect-branch=thunk-extern -mindirect-branch-register -Wa,arch/x86/kernel/macros.s -fno-delete-null-pointer-checks -Wno-frame-address -Wno-format-truncation -Wno-format-overflow -Wno-int-in-bool-context -O2 --param=allow-store-data-races=0 -Wframe-larger-than=1024 -fstack-protector-strong -Wno-unused-but-set-variable -Wno-unused-const-variable -fno-omit-frame-pointer -fno-optimize-sibling-calls -fno-var-tracking-assignments -g -gdwarf-4 -pg -mrecord-mcount -mfentry -DCC_USING_FENTRY -Wdeclaration-after-statement -Wvla -Wno-pointer-sign -fno-strict-overflow -fno-merge-all-constants -fmerge-constants -fno-stack-check -fconserve-stack -Werror=implicit-int -Werror=strict-prototypes -Werror=date-time -Werror=incompatible-pointer-types -Werror=designated-init  -DMODULE  -DKBUILD_BASENAME='"t8"' -DKBUILD_MODNAME='"t8"' -c -o /root/VE482/challenge/t8/t8.o /root/VE482/challenge/t8/t8.c
 
-source_/root/VE482/challenge/t6/t6.o := /root/VE482/challenge/t6/t6.c
+source_/root/VE482/challenge/t8/t8.o := /root/VE482/challenge/t8/t8.c
 
-deps_/root/VE482/challenge/t6/t6.o := \
+deps_/root/VE482/challenge/t8/t8.o := \
   /root/linux-next/include/linux/kconfig.h \
     $(wildcard include/config/cpu/big/endian.h) \
     $(wildcard include/config/booger.h) \
@@ -901,6 +901,19 @@ deps_/root/VE482/challenge/t6/t6.o := \
   /root/linux-next/include/linux/vm_event_item.h \
     $(wildcard include/config/memory/balloon.h) \
     $(wildcard include/config/balloon/compaction.h) \
+  /root/linux-next/include/linux/cred.h \
+    $(wildcard include/config/debug/credentials.h) \
+    $(wildcard include/config/keys.h) \
+  /root/linux-next/include/linux/key.h \
+  /root/linux-next/include/linux/assoc_array.h \
+    $(wildcard include/config/associative/array.h) \
+  /root/linux-next/include/linux/selinux.h \
+    $(wildcard include/config/security/selinux.h) \
+  /root/linux-next/include/linux/sched/user.h \
+    $(wildcard include/config/fanotify.h) \
+    $(wildcard include/config/posix/mqueue.h) \
+    $(wildcard include/config/bpf/syscall.h) \
+    $(wildcard include/config/net.h) \
   /root/linux-next/include/linux/slab.h \
     $(wildcard include/config/debug/slab.h) \
     $(wildcard include/config/failslab.h) \
@@ -914,8 +927,11 @@ deps_/root/VE482/challenge/t6/t6.o := \
   /root/linux-next/arch/x86/include/asm/smap.h \
   /root/linux-next/arch/x86/include/asm/extable.h \
   /root/linux-next/arch/x86/include/asm/uaccess_64.h \
-  /root/VE482/challenge/t6/t6.h \
+  /root/linux-next/include/linux/debugfs.h \
+    $(wildcard include/config/debug/fs.h) \
+  /root/linux-next/include/linux/seq_file.h \
+  /root/VE482/challenge/t8/t8.h \
 
-/root/VE482/challenge/t6/t6.o: $(deps_/root/VE482/challenge/t6/t6.o)
+/root/VE482/challenge/t8/t8.o: $(deps_/root/VE482/challenge/t8/t8.o)
 
-$(deps_/root/VE482/challenge/t6/t6.o):
+$(deps_/root/VE482/challenge/t8/t8.o):

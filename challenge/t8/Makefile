@@ -1,6 +1,6 @@
-obj-m := t6.o
+obj-m := t8.o
 CROSS_COMPILE =
-KERNELDIR ?= /root/build/kernel#/usr/src/linux-headers-$(shell uname -r)
+KERNELDIR ?= /root/build/linux-next#/usr/src/linux-headers-$(shell uname -r)
 PWD := $(shell pwd)
 
 all: modules
