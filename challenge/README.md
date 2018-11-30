@@ -1,6 +1,6 @@
 <img src="image/icon.jpg" align="right" height="130" width="130"/>  
 
-# <br>VE482 Linux Challenge</br> ![Author](https://img.shields.io/badge/Author-Zhang%20Yichi-orange.svg) ![Progress](https://img.shields.io/badge/Progress-7%2F20-yellow.svg)<br></br>
+# <br>VE482 Linux Challenge</br> ![Author](https://img.shields.io/badge/Author-Zhang%20Yichi-orange.svg) ![Progress](https://img.shields.io/badge/Progress-8%2F20-yellow.svg)<br></br>
 
 ## Platform  
 In this challenge, all codes are compiled/tested in my Aliyun ECS server. The basic information is given below:
@@ -93,6 +93,18 @@ It can be seen that the module works. The source code for the module and the tes
 I have built the kernel and booted with it. It can be shown in the picture below that the kernel version is now 4.20.0-rc3-next-20181122
 
 <p style="text-align:center"><img src="image/t07_1.png" /></p> 
+
+### Task 8
+
+The module is installed and the three files can be seen using ls command 
+
+<p style="text-align:center"><img src="image/t08_1.png" /></p> 
+
+In the test program, the "hobby" part is similar to that of task 7, and the jiffies part is also simple reading the file. In the info part, the program will first try to wirte the "generated number" into the file and read the data from it to "Line got". 
+
+It can be easily seen that when the user is root, the write and read are processed normally. And when a non-root user is usin gthe program, the data read is still the data written by the root, which satisfies the requirements.
+
+The source code for both kernel module and test program are in the t8 directory.
 
 ## Contact 
 **Zhang Yichi**  
