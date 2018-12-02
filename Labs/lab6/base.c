@@ -369,7 +369,7 @@ ssize_t dadfs_write(struct file * filp, const char __user * buf, size_t len,
 
 	int retval;
 
-	sb = filp->f_path.dentry->d_inode;
+	sb = filp->f_path.dentry->d_inode->i_sb;
 	sfs_sb = DADFS_SB(sb);
 
 	handle = jbd2_journal_start(sfs_sb->journal, 1);
