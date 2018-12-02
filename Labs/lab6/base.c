@@ -366,7 +366,8 @@ ssize_t dadfs_write(struct file * filp, const char __user * buf, size_t len,loff
 	struct dadfs_inode *sfs_inode;
 	struct buffer_head *bh;
 	struct super_block *sb;
-	struct dadfs_super_block *sfs_sb;
+    struct dadfs_super_block *sfs_sb;
+	
 	handle_t *handle;
 
 	char *buffer;
@@ -377,11 +378,12 @@ ssize_t dadfs_write(struct file * filp, const char __user * buf, size_t len,loff
     struct file *filp = kiocb->ki_filp;
     size_t len = iov_iter_count(from);
     loff_t *ppos = &(kiocb->ki_pos);
+	sb = filp->f_path.dentry->d_inode->i_sb;
+	sfs_sb = DADFS_SB(sb);
     retval = generic_write_checks(kiocb,from);
     if (retval)
         return retval;
     #else
-
 	sb = filp->f_path.dentry->d_inode->i_sb;
 	sfs_sb = DADFS_SB(sb);
 
