@@ -359,7 +359,8 @@ ssize_t dadfs_write(struct kiocb * kiocb, struct iov_iter *from)// const char __
 	 * f->f_path.dentry->d_inode redirection */
     size_t count;
     ssize_t ret;
-    uio_seg_t seg = UIO_USERSPACE;struct dadfs_inode *sfs_inode;
+    sigset_t seg = BIO_USER_MAPPED;
+    struct dadfs_inode *sfs_inode;
 	struct buffer_head *bh;
 	struct super_block *sb;
 	struct dadfs_super_block *sfs_sb;
@@ -373,7 +374,7 @@ ssize_t dadfs_write(struct kiocb * kiocb, struct iov_iter *from)// const char __
     struct address_space *mapping = filp->f_mapping;
 	struct inode *inode = mapping->host;
     int isblk = S_ISBLK(inode->i_mode);
-    count = iov_iter_count(from);
+    count = bio_iter_len(from);
 	
 
 	sb = filp->f_path.dentry->d_inode->i_sb;
