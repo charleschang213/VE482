@@ -933,14 +933,15 @@ release:
 
 	return ret;
 }
-
-static struct dentry *dadfs_mount(struct file_system_type *fs_type,
-				     int flags, const char *dev_name,
-				     void *data)
+#if LINUX_VERSION_CODE >= KERNEL_VERSION(3, 11, 0)
+static struct dentry *dadfs_mount(struct file_system_type *fs_type,int flags, const char *dev_name,void *data,size_t size)
+#else
+static struct dentry *dadfs_mount(struct file_system_type *fs_type,int flags, const char *dev_name,void *data)
+#endif
 {
 	struct dentry *ret;
     #if LINUX_VERSION_CODE >= KERNEL_VERSION(3, 11, 0)
-	ret = mount_bdev(fs_type, flags, dev_name, data,DADFS_DEFAULT_BLOCK_SIZE, dadfs_fill_super);
+	ret = mount_bdev(fs_type, flags, dev_name, data,size, dadfs_fill_super);
     #else
 	ret = mount_bdev(fs_type, flags, dev_name, data, dadfs_fill_super);
     #endif
