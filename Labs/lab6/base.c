@@ -352,14 +352,14 @@ int dadfs_inode_save(struct super_block *sb, struct dadfs_inode *sfs_inode)
 
 /* FIXME: The write support is rudimentary. I have not figured out a way to do writes
  * from particular offsets (even though I have written some untested code for this below) efficiently. */
-ssize_t dadfs_write(struct file * filp, const char __user * buf, size_t len,
-		       loff_t * ppos)
+ssize_t dadfs_write(struct kiocb * kiocb, struct iov_iter *from)// const char __user * buf, size_t len,loff_t * ppos)
 {
 	/* After the commit dd37978c5 in the upstream linux kernel,
 	 * we can use just filp->f_inode instead of the
 	 * f->f_path.dentry->d_inode redirection */
-	struct inode *inode;
-	struct dadfs_inode *sfs_inode;
+    size_t count;
+    ssize_t ret;
+    uio_seg_t seg = UIO_USERSPACE;struct dadfs_inode *sfs_inode;
 	struct buffer_head *bh;
 	struct super_block *sb;
 	struct dadfs_super_block *sfs_sb;
@@ -368,6 +368,13 @@ ssize_t dadfs_write(struct file * filp, const char __user * buf, size_t len,
 	char *buffer;
 
 	int retval;
+#ifndef HAVE_GENERIC_WRITE_CHECKS_KIOCB
+    struct file *filp = kiocb->ki_filp;
+    struct address_space *mapping = filp->f_mapping;
+	struct inode *inode = mapping->host;
+    int isblk = S_ISBLK(inode->i_mode);
+    count = iov_iter_count(from);
+	
 
 	sb = filp->f_path.dentry->d_inode->i_sb;
 	sfs_sb = DADFS_SB(sb);
@@ -375,10 +382,15 @@ ssize_t dadfs_write(struct file * filp, const char __user * buf, size_t len,
 	handle = jbd2_journal_start(sfs_sb->journal, 1);
 	if (IS_ERR(handle))
 		return PTR_ERR(handle);
-	retval = generic_write_checks(filp, ppos, &len, 0);
+	retval = generic_write_checks(filp, &kiocb->ki_pos, &count, isblk);
 	if (retval)
 		return retval;
-
+#else
+    ret = generic_write_checks(kiocb,from);
+    if (ret<=0)
+        return ret;
+    count = ret;
+#endif
 	inode = filp->f_path.dentry->d_inode;
 	sfs_inode = DADFS_INODE(inode);
 
