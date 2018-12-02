@@ -934,9 +934,11 @@ static struct dentry *dadfs_mount(struct file_system_type *fs_type,
 				     void *data)
 {
 	struct dentry *ret;
-
+    #if LINUX_VERSION_CODE >= KERNEL_VERSION(3, 11, 0)
+	ret = mount_bdev(fs_type, flags, dev_name, data,DADFS_DEFAULT_BLOCK_SIZE, dadfs_fill_super);
+    #else
 	ret = mount_bdev(fs_type, flags, dev_name, data, dadfs_fill_super);
-
+    #endif
 	if (unlikely(IS_ERR(ret)))
 		printk(KERN_ERR "Error mounting dadfs");
 	else
