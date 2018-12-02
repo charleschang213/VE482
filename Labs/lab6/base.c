@@ -14,6 +14,7 @@
 #include <linux/jbd2.h>
 #include <linux/parser.h>
 #include <linux/blkdev.h>
+#include <linux/uio.h>
 
 #include "sblock.h"
 
