@@ -377,7 +377,7 @@ ssize_t dadfs_write(struct file * filp, const char __user * buf, size_t len,loff
     struct file *filp = kiocb->ki_filp;
     size_t len = iov_iter_count(from);
     loff_t *ppos = &(kiocb->ki_pos);
-    ret = generic_write_checks(kiocb,from);
+    retval = generic_write_checks(kiocb,from);
     if (retval)
         return retval;
     #else
