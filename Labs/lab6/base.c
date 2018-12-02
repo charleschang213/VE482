@@ -375,7 +375,7 @@ ssize_t dadfs_write(struct file * filp, const char __user * buf, size_t len,loff
 
     #if LINUX_VERSION_CODE >= KERNEL_VERSION(3, 11, 0)
     struct file *filp = kiocb->ki_filp;
-    size_t len = from->count;
+    size_t len = iov_iter_count(from);
     loff_t *ppos = &(kiocb->ki_pos);
     ret = generic_write_checks(kiocb,from);
     if (retval)
