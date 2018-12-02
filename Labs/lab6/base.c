@@ -465,7 +465,11 @@ ssize_t dadfs_write(struct file * filp, const char __user * buf, size_t len,loff
 
 const struct file_operations dadfs_file_operations = {
 	.read = dadfs_read,
+    #if LINUX_VERSION_CODE >= KERNEL_VERSION(3, 11, 0)
+    .write_iter = dadfs_write,
+    #else
 	.write = dadfs_write,
+    #endif
 };
 
 const struct file_operations dadfs_dir_operations = {
