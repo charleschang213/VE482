@@ -885,7 +885,7 @@ int dadfs_fill_super(struct super_block *sb, void *data, int silent)
 
 	/* For all practical purposes, we will be using this s_fs_info as the super block */
 	sb->s_fs_info = sb_disk;
-    sb->s_blocksize = size;
+    //sb->s_blocksize = size;
 
 	sb->s_maxbytes = DADFS_DEFAULT_BLOCK_SIZE;
 	sb->s_op = &dadfs_sops;
