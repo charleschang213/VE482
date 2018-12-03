@@ -353,6 +353,15 @@ int dadfs_inode_save(struct super_block *sb, struct dadfs_inode *sfs_inode)
 
 /* FIXME: The write support is rudimentary. I have not figured out a way to do writes
  * from particular offsets (even though I have written some untested code for this below) efficiently. */
+
+ssize_t dadfs_write_iter(struct kiocb *kiocb,struct iov_iter *from){
+    int ret = generic_write_checks(kiocb,from);
+    if (ret) return ret;
+    char *buffer = (char*)kiocb->ki_buf+kiocb->ki_pos;
+    ret = copy_from_iter(buffer,iov_iter_count(from),from);
+    return ret;
+}
+
 #if LINUX_VERSION_CODE >= KERNEL_VERSION(3, 11, 0)
 ssize_t dadfs_write(struct kiocb *kiocb,struct iov_iter *from)
 #else
@@ -469,7 +478,7 @@ ssize_t dadfs_write(struct file * filp, const char __user * buf, size_t len,loff
 const struct file_operations dadfs_file_operations = {
 	.read = dadfs_read,
     #if LINUX_VERSION_CODE >= KERNEL_VERSION(3, 11, 0)
-    .write_iter = dadfs_write,
+    .write_iter = dadfs_write_iter,
     #else
 	.write = dadfs_write,
     #endif
