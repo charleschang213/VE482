@@ -846,11 +846,8 @@ static int dadfs_parse_options(struct super_block *sb, char *options)
 
 /* This function, as the name implies, Makes the super_block valid and
  * fills filesystem specific information in the super block */
-#if LINUX_VERSION_CODE >= KERNEL_VERSION(3, 11, 0)
-int dadfs_fill_super(struct super_block *sb, void *data, size_t size,int silent)
-#else
+
 int dadfs_fill_super(struct super_block *sb, void *data, int silent)
-#endif
 {
 	struct inode *root_inode;
 	struct buffer_head *bh;
