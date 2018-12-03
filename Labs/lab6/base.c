@@ -832,6 +832,7 @@ static int dadfs_parse_options(struct super_block *sb, char *options)
 						return ret;
 				} else {
 					/** Seems didn't work properly */
+                    printk(KERN_ERR "Its me!");
 					if ((ret = dadfs_sb_load_journal(sb, journal_inode)))
 						return ret;
 				}
