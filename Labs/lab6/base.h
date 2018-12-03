@@ -83,6 +83,7 @@ struct dadfs_super_block {
 	uint64_t block_size;
 
 	/* FIXME: This should be moved to the inode store and not part of the sb */
+    
 	uint64_t inodes_count;
 
 	uint64_t free_blocks;

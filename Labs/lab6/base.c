@@ -991,7 +991,7 @@ static int dadfs_init(void)
 
 	ret = register_filesystem(&dadfs_fs_type);
 	if (likely(ret == 0))
-		printk(KERN_INFO "Sucessfully registered dadfs\n");
+		printk(KERN_ERR "Sucessfully registered dadfs\n");
 	else
 		printk(KERN_ERR "Failed to register dadfs. Error:[%d]", ret);
 
