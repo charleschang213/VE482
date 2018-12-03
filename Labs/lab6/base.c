@@ -832,7 +832,7 @@ static int dadfs_parse_options(struct super_block *sb, char *options)
 						return ret;
 				} else {
 					/** Seems didn't work properly */
-                    printk(KERN_ERR "Its me!");
+                    //printk(KERN_ERR "Its me!");
 					if ((ret = dadfs_sb_load_journal(sb, journal_inode)))
 						return ret;
 				}
@@ -923,6 +923,7 @@ int dadfs_fill_super(struct super_block *sb, void *data, int silent)
 	if (!sb_disk->journal) {
 		struct inode *journal_inode;
 		journal_inode = dadfs_iget(sb, DADFS_JOURNAL_INODE_NUMBER);
+        printk(KERN_ERR "It's me!");
 
 		ret = dadfs_sb_load_journal(sb, journal_inode);
 		goto release;
