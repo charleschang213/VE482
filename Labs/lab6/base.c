@@ -923,7 +923,7 @@ int dadfs_fill_super(struct super_block *sb, void *data, int silent)
 	if (!sb_disk->journal) {
 		struct inode *journal_inode;
 		journal_inode = dadfs_iget(sb, DADFS_JOURNAL_INODE_NUMBER);
-        printk(KERN_ERR "It's me!");
+        printk(KERN_ERR "It's me!%p",journal_inode);
 
 		ret = dadfs_sb_load_journal(sb, journal_inode);
 		goto release;
