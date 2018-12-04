@@ -284,6 +284,7 @@ void dlistSort(dlist_const this, dlist listDst, dlistSortMethod method)
             tmp = tmp_2;
         }
         dst_list->num = 0;
+        dst_list->first = NULL;
     }
     dlistValueType type = src_list->value_type;
     if (type == DLIST_STR || type == DLIST_INT || type == DLIST_DOUBLE)
