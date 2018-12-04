@@ -1,0 +1,47 @@
+\documentclass{article}
+\usepackage{bookmark}
+\usepackage{color}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+\begin{document}
+
+
+\begin{itemize}
+
+\item    {\bf Note: } The lab content is completed by four members of VE482 Project Team 1 , which are 
+
+\begin{itemize}
+    \item Zhang Yichi
+    \item Zhao Wenhui
+    \item Zhou Runqin
+    \item Zhu Yuankun
+\end{itemize}
+
+\item What is a kernel module, and how does it different from a regular library?
+
+A kernel module is an object file which serves to extend the usage of the kernel, for example, they can add drivers to harwares, install new filesystems, add new syscalls, etc.
+
+Comapred with a a kernel module, a library usually offers some resources that can be used by other programs, instead of offering independent features as kernel module does.
+
+\item How to compile a kernel module?
+
+In the Makefile, you should define the name of object-m, the version of your kernel (KVERSION=), and then use the following line to make 
+
+make -C [module directory for the kernel] M=[working dir] modules
+
+
+\item Programming part description is in code/README
+
+\item How is information shared between the kernel and user spaces? 
+
+The functions copy\_to\_user() and copy\_from\_user() are used.
+
+\item It is in code/README
+
+\end{itemize}
+
+\end{document}
