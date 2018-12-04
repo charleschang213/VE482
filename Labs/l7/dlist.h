@@ -1,14 +1,10 @@
-//
-// Created by camelboat on 18-12-3.
-//
-
-#ifndef LAB7_CORRECT_DLIST_H
-#define LAB7_CORRECT_DLIST_H
+#ifndef _LAB7_DLIST_H_
+#define _LAB7_DLIST_H_
 
 // Data type stored in the dlist
 typedef enum dlistValueType_t {
-    DLIST_INT    = 0x01, // list contains int values
-    DLIST_STR    = 0x02, // list contains char* values
+    DLIST_INT = 0x01, // list contains int values
+    DLIST_STR = 0x02, // list contains char* values
     DLIST_DOUBLE = 0x03, // list contains double values
     DLIST_UNKOWN = 0x00
 } dlistValueType;
@@ -17,9 +13,9 @@ typedef enum dlistValueType_t {
 // Different options for sorting
 // String are sorted in lexical order
 typedef enum dlistSortMethod_t {
-    DLIST_SORT_RAND  = 0x01, // Randomize entries
-    DLIST_SORT_INC   = 0x02, // Sort in ascending order
-    DLIST_SORT_DEC   = 0x03, // Sort in descending order
+    DLIST_SORT_RAND = 0x01, // Randomize entries
+    DLIST_SORT_INC = 0x02, // Sort in ascending order
+    DLIST_SORT_DEC = 0x03, // Sort in descending order
     DLIST_SORT_UNKOWN = 0x00
 } dlistSortMethod;
 
@@ -72,5 +68,4 @@ void dlistFree(dlist this);
 //          By freeing the list the user also needs to free the data
 //          the list manages
 
-
-#endif //LAB7_CORRECT_DLIST_H
+#endif

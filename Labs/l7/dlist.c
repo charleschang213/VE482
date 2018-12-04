@@ -1,355 +1,209 @@
-//
-// Created by camelboat on 18-12-3.
-//
-
-#include "dlist.h"
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
 #include <string.h>
-#include <time.h>
+#include <assert.h>
+#include "dlist.h"
 
-typedef struct linked_list list_t;
-typedef struct linked_node node_t;
+typedef struct list_node{
+	char *name;
+	dlistValue value;
+	struct list_node *next;
+} ListNode;
 
-struct linked_node
-{
-    char *name;
-    dlistValue value;
-    node_t *next;
-    node_t *before;
+typedef struct list{
+	ListNode * first;
+	ListNode * last;
+	size_t length;
+	dlistValueType type;
+} List;
+
+//Free
+int list_Free(List *list){
+	if(list->first){
+		ListNode *tmp1 = list->first;
+		ListNode *tmp2 = NULL;
+		while(tmp1){
+			if(list->type == DLIST_STR){
+				free(tmp1->value.strValue);
+			}
+			tmp2 = tmp1->next;
+			free(tmp1->name);
+			free(tmp1);
+			tmp1 = tmp2;
+		}
+	}
+	list->first = NULL;
+	list->length = 0;
+	list->last = NULL;
+	return 0;
+}
+
+int list_Free_all(List *list){
+	list_Free(list);
+	free(list);
+	return 0;
+}
+
+static int int_inc(const void *e1, const void *e2) {
+    int e1_tmp = ((ListNode *) e1)->value.intValue;
+    int e2_tmp = ((ListNode *) e2)->value.intValue;
+    return e1_tmp-e2_tmp;
+}
+
+static int int_dec(const void *e1, const void *e2) {
+    return int_inc(e2, e1);
+}
+
+static int double_inc(const void *e1, const void *e2) {
+    double e1_tmp = ((ListNode *) e1)->value.doubleValue;
+    double e2_tmp = ((ListNode *) e2)->value.doubleValue;
+    if (e1_tmp > e2_tmp) return 1;
+    if (e1_tmp < e2_tmp) return -1;
+    return 0;
+}
+
+static int double_dec(const void *e1, const void *e2) {
+    return double_inc(e2, e1);
+}
+
+static int string_inc(const void *e1, const void *e2) {
+    return strcmp(((ListNode *) e1)->value.strValue, ((ListNode *) e2)->value.strValue);
+}
+
+static int string_dec(const void *e1, const void *e2) {
+    return strcmp(((ListNode *) e2)->value.strValue, ((ListNode *) e1)->value.strValue);
+}
+
+static int all_rand(const void *a, const void *b) {
+    return (rand() % 3) - 1;
+}
+
+//Compare Method
+static int (*const mode[3][3])(const void *, const void *) = {
+        {all_rand, int_inc,    int_dec},
+        {all_rand, string_inc, string_dec},
+        {all_rand, double_inc, double_dec},
 };
 
-struct linked_list
-{
-    dlistValueType value_type;
-    node_t *first;
-    size_t num;
-};
-
-static node_t *createNode(const list_t *list, const char *name, dlistValue value)
-{
-    node_t *newnode = malloc(sizeof(node_t));
-    char *newkey = malloc(strlen(name) + 1);
-    strcpy(newkey, name);
-    newnode->name = newkey;
-    newnode->next = NULL;
-    newnode->before = NULL;
-    if (list->value_type == DLIST_STR)
-    {
-        char *newvalue = malloc(strlen(value.strValue) + 1);
-        strcpy(newvalue, value.strValue);
-        newnode->value.strValue = newvalue;
-    }
-    else
-    {
-        newnode->value = value;
-    }
-    return newnode;
+//Initalize the list
+List *create_list(dlistValueType type){
+	List *list = NULL;
+	list = (List *)calloc(1, sizeof(List));
+	list->type = type;
+	list->first = NULL;
+	list->last = NULL;
+	list->length = 0;
+	return list;
 }
 
-void swap_node(list_t *list, node_t *node_1, node_t *node_2)
-{
-    if (node_1->before == NULL)
-    {
-        list->first = node_2;
-        node_t *tmp = node_2->next;
-        node_2->next = node_1;
-        node_1->before = node_2;
-        if (tmp != NULL)
-        {
-            tmp->before = node_1;
-            node_1->next = tmp;
-        }
-        else
-        {
-            node_1->next = NULL;
-        }
-    }
-    else
-    {
-        node_t *tmp = node_2->next;
-        node_t *tmp_2 = node_1->before;
-        node_2->before = node_1->before;
-        node_1->before = node_2;
-        node_2->next = node_1;
-        tmp_2->next = node_2;
-        if (tmp != NULL)
-        {
-            tmp->before = node_1;
-            node_1->next = tmp;
-        }
-        else
-        {
-            node_1->next = NULL;
-        }
-    }
+//Initiate the node
+static ListNode * Node_Init(List *list, const char * str, dlistValue data){
+	ListNode * new_node = malloc(sizeof(ListNode));
+	new_node->next = NULL;
+	//Copy the name
+	char *name = malloc(strlen(str)+1);
+	strcpy(name, str);
+	new_node->name = name;
+	if(list->type == DLIST_STR){
+		char *new_value = malloc(strlen(data.strValue)+1);
+		strcpy(new_value, data.strValue);
+		new_node->value.strValue = new_value;
+	}
+	else{
+		new_node->value = data;
+	}
+	return new_node;
 }
 
-void sort_list_rand(const list_t *src_list, list_t *dst_list)
-{
-    node_t *tmp = src_list->first;
-    for (int i = 0; i < src_list->num; ++i)
-    {
-        dlistAppend(dst_list, tmp->name, tmp->value);
-        tmp = tmp->next;
-    }
-    for (int i = 0; i < dst_list->num * dst_list->num; ++i)
-    {
-        node_t *tmp = dst_list->first;
-        node_t *tmp_2 = tmp;
-        for (int j = 0; j < dst_list->num-1; ++j)
-        {
-            tmp_2 = tmp->next;
-            if (rand() % 2 == 1)
-            {
-                swap_node(dst_list, tmp, tmp->next);
-            }
-            tmp = tmp_2;
-        }
-    }
+//Add node and Append to the list
+int add_Node(List *list, ListNode *ListNode){
+	if(list->first == NULL){
+		list->first = ListNode;
+		list->last = ListNode;
+	}
+	else{
+		list->last->next = ListNode;
+		list->last = ListNode;
+	}
+    list->length++;
+	return 0;
 }
 
-void sort_list_inc(const list_t *src_list, list_t *dst_list)
-{
-    node_t *tmp = src_list->first;
-    for (int i = 0; i < src_list->num; ++i)
-    {
-        dlistAppend(dst_list, tmp->name, tmp->value);
-        tmp = tmp->next;
-    }
-    for (int i = 0; i < dst_list->num; ++i)
-    {
-        node_t *tmp = dst_list->first;
-        for (int j = 0; j < dst_list->num-1; ++j)
-        {
-            if (src_list->value_type == DLIST_INT)
-            {
-                if (tmp->value.intValue > tmp->next->value.intValue)
-                {
-                    swap_node(dst_list, tmp, tmp->next);
-                }
-                else
-                {
-                    tmp = tmp->next;
-                }
-            }
-            else if (src_list->value_type == DLIST_DOUBLE)
-            {
-                if (tmp->value.doubleValue > tmp->next->value.doubleValue)
-                {
-                    swap_node(dst_list, tmp, tmp->next);
-                }
-                else
-                {
-                    tmp = tmp->next;
-                }
-            }
-            else if (src_list->value_type == DLIST_STR)
-            {
-                if (strcmp(tmp->value.strValue, tmp->next->value.strValue) > 0)
-                {
-                    swap_node(dst_list, tmp, tmp->next);
-                }
-                else
-                {
-                    tmp = tmp->next;
-                }
-            }
-        }
-    }
+int append_Node(List *list, const char *str, dlistValue data){
+	ListNode *new_node = Node_Init(list, str, data);
+	add_Node(list, new_node);
+	return 0;
 }
 
-void sort_list_dec(const list_t *src_list, list_t *dst_list)
-{
-    node_t *tmp = src_list->first;
-    for (int i = 0; i < src_list->num; ++i)
-    {
-        dlistAppend(dst_list, tmp->name, tmp->value);
-        tmp = tmp->next;
-    }
-    for (int i = 0; i < dst_list->num; ++i)
-    {
-        node_t *tmp = dst_list->first;
-        for (int j = 0; j < dst_list->num-1; ++j)
-        {
-            if (src_list->value_type == DLIST_INT)
-            {
-                if (tmp->value.intValue < tmp->next->value.intValue)
-                {
-                    swap_node(dst_list, tmp, tmp->next);
-                }
-                else
-                {
-                    tmp = tmp->next;
-                }
-            }
-            else if (src_list->value_type == DLIST_DOUBLE)
-            {
-                if (tmp->value.doubleValue < tmp->next->value.doubleValue)
-                {
-                    swap_node(dst_list, tmp, tmp->next);
-                }
-                else
-                {
-                    tmp = tmp->next;
-                }
-            }
-            else if (src_list->value_type == DLIST_STR)
-            {
-                if (strcmp(tmp->value.strValue, tmp->next->value.strValue) < 0)
-                {
-                    swap_node(dst_list, tmp, tmp->next);
-                }
-                else
-                {
-                    tmp = tmp->next;
-                }
-            }
-        }
-    }
+//Sort Implementation
+static void Sort_List(const List *list, List *new_list, int (*cmp)(const void *, const void *)){
+	ListNode * tmp_Node_List = malloc(list->length * sizeof(ListNode));
+	ListNode * head  = list->first;
+	int i = 0;
+	for(ListNode *tmp1 = head; tmp1!=NULL; tmp1 = tmp1->next){
+		memcpy(tmp_Node_List + (i), tmp1, sizeof(ListNode));
+	}
+	qsort(tmp_Node_List, list->length, sizeof(ListNode), cmp);
+	for(int i = 0; i < list->length; i++){
+		append_Node(new_list, tmp_Node_List[i].name, tmp_Node_List[i].value);
+	}
 }
 
-dlist createDlist(dlistValueType type)
-{
-    if (type == DLIST_SORT_RAND || type == DLIST_SORT_INC
-    || type == DLIST_SORT_DEC)
-    {
-        list_t *newlist = malloc(sizeof(list_t));
-        newlist->first = NULL;
-        newlist->num = 0;
-        newlist->value_type = type;
-        return newlist;
-    }
-    else
-    {
-        perror("type error, failed to create new list\n");
-        return NULL;
-    }
+//Print the list to the file
+void list_Print(const List *list, FILE *file){
+	ListNode * head  = list->first;
+	for(ListNode *tmp1 = head; tmp1!=NULL; tmp1 = tmp1->next){
+		fprintf(file, "%s=", tmp1->name);
+		switch(list->type){
+			case DLIST_STR:
+				fprintf(file, "%s\n", tmp1->value.strValue);
+				break;
+			case DLIST_INT:
+				fprintf(file, "%d\n", tmp1->value.intValue);
+				break;
+			case DLIST_DOUBLE:
+				fprintf(file, "%lf\n", tmp1->value.doubleValue);
+				break;
+			default:
+				assert(0);
+		}
+	}
 }
 
-int dlistIsEmpty(dlist_const this)
-{
-    if (((const list_t*) this)->num == 0)
-    {
-        return 1;
-    }
-    else
-    {
-        return 0;
-    }
+//Interface
+dlist createDlist(dlistValueType type){
+	if(type > DLIST_UNKOWN && type <= DLIST_DOUBLE){
+		List *list = create_list(type);
+		return list;
+	}
+	return NULL;
 }
 
-void dlistAppend(dlist this, const char* key, dlistValue value)
-{
-    node_t *newnode = createNode(this, key, value);
-    list_t *current_list = this;
-    if (current_list->num == 0)
-    {
-        current_list->first = newnode;
-        current_list->first->before = NULL;
-        current_list->num = 1;
-    }
-    else
-    {
-        node_t *tmp = current_list->first;
-         for (int i = 0; i < current_list->num-1; ++i)
-        {
-            tmp = tmp->next;
-        }
-        tmp->next = newnode;
-        newnode->before = tmp;
-        current_list->num++;
-    }
+int dlistIsEmpty(dlist_const this){
+	return ((const List *) this)->length == 0;
 }
 
-void dlistSort(dlist_const this, dlist listDst, dlistSortMethod method)
-{
-    const list_t *src_list = this;
-    list_t *dst_list = listDst;
-    if (dst_list->num != 0)
-    {
-        node_t *tmp = dst_list->first;
-        node_t *tmp_2;
-        size_t num = dst_list->num;
-        for (int i = 0; i < num; ++i)
-        {
-
-            tmp_2 = tmp->next;
-
-            free(tmp->name);
-            if (dst_list->value_type == DLIST_STR) {
-                free(tmp->value.strValue);
-            }
-            free(tmp);
-            tmp = tmp_2;
-        }
-        dst_list->num = 0;
-        dst_list->first = NULL;
-    }
-    dlistValueType type = src_list->value_type;
-    if (type == DLIST_STR || type == DLIST_INT || type == DLIST_DOUBLE)
-    {
-        if (method == DLIST_SORT_INC)
-        {
-            sort_list_inc(src_list, dst_list);
-        }
-        else if (method == DLIST_SORT_DEC)
-        {
-            sort_list_dec(src_list, dst_list);
-        }
-        else if (method == DLIST_SORT_RAND)
-        {
-            sort_list_rand(src_list, dst_list);
-        }
-        else
-        {
-            perror("wrong method\n");
-        }
-    }
-    else
-    {
-        perror("wrong type\n");
-    }
+void dlistAppend(dlist this, const char *key, dlistValue value){
+	append_Node(this, key, value);
 }
 
-void dlistPrint(dlist_const this)
-{
-    const list_t *current_list = this;
-    node_t *tmp = current_list->first;
-    for (int i = 0; i < current_list->num; ++i)
-    {
-        printf("%s=", tmp->name);
-        if (current_list->value_type == DLIST_INT)
-        {
-            printf("%d\n", tmp->value.intValue);
-        }
-        else if (current_list->value_type == DLIST_DOUBLE)
-        {
-            printf("%lf\n", tmp->value.doubleValue);
-        }
-        else if (current_list->value_type == DLIST_STR)
-        {
-            printf("%s\n", tmp->value.strValue);
-        }
-        tmp = tmp->next;
+void dlistSort(dlist_const this, dlist listDst, dlistSortMethod method){
+	list_Free(listDst);
+	dlistValueType type = ((const List *) (this))->type;
+	if (type <= DLIST_UNKOWN || type > DLIST_DOUBLE) {
+        return;
     }
+    if (method <= DLIST_SORT_UNKOWN || method > DLIST_SORT_DEC) {
+        return;
+    }
+	//Decide the method
+    Sort_List(this, listDst, mode[type - 1][method - 1]);
 }
 
-void dlistFree(dlist this)
-{
-    list_t *dst_list = this;
-    node_t *tmp = dst_list->first;
-    node_t *tmp_2;
-    size_t num = dst_list->num;
-    for (int i = 0; i < num; ++i)
-    {
-        tmp_2 = tmp->next;
-        if (dst_list->value_type == DLIST_STR) {
-            free(tmp->value.strValue);
-        }
-        free(tmp->name);
-        free(tmp);
-        tmp = tmp_2;
-    }
-    free(dst_list);
+void dlistPrint(dlist_const this){
+	list_Print(this, stdout);
+}
+
+void dlistFree(dlist this){
+	list_Free_all(this);
 }
