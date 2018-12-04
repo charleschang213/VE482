@@ -1,3 +1,7 @@
+//
+// Created by liu on 7/7/18.
+//
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <assert.h>
@@ -5,11 +9,15 @@
 #include "dlist.h"
 
 int main() {
+//    freopen("case0.in", "r", stdin);
+//    freopen("case0.ans", "w", stdout);
+
     char buffer[100], buffer2[100];
     int n;
     scanf("%d %s", &n, buffer);
     fprintf(stderr, "%d %s\n", n, buffer);
 
+    // parse dlist type
     dlistValueType valueType = DLIST_UNKOWN;
     if (strcmp(buffer, "int") == 0) {
         valueType = DLIST_INT;
@@ -21,6 +29,7 @@ int main() {
         assert(0);
     }
 
+    // init dlist
     dlist list1 = createDlist(valueType);
     dlist list2 = createDlist(valueType);
 

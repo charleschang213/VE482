@@ -215,8 +215,6 @@ dlist createDlist(dlistValueType type)
     || type == DLIST_SORT_DEC)
     {
         list_t *newlist = malloc(sizeof(list_t));
-        node_t *newnode = malloc(sizeof(node_t));
-        newnode->name = NULL;
         newlist->first = NULL;
         newlist->num = 0;
         newlist->value_type = type;
@@ -348,8 +346,9 @@ void dlistFree(dlist this)
         if (dst_list->value_type == DLIST_STR) {
             free(tmp->value.strValue);
         }
-        tmp = tmp_2;
+        free(tmp->name);
         free(tmp);
+        tmp = tmp_2;
     }
     free(dst_list);
 }
