@@ -1,0 +1,1 @@
+cmd_/home/charles/VE482/challenge/t5/t5.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000 -T ./scripts/module-common.lds  --build-id  -o /home/charles/VE482/challenge/t5/t5.ko /home/charles/VE482/challenge/t5/t5.o /home/charles/VE482/challenge/t5/t5.mod.o ;  true

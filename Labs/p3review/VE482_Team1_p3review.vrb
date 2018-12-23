@@ -1,0 +1,13 @@
+\subsection{Runtime}
+\frametitle{In Runtime}
+Some kernel arguments can also be modified in runtime, and there are mainly two ways to do this.
+\begin{block}{Using procfs}
+Kernel arguments are saved as files in the proc file systems (which is always mounted at /proc in linux) directly write to the files can change the kernel arguments.
+\end{block}
+    The basic step is using {\color{blue} echo} to change these files.
+
+
+    \begin{lstlisting}[language=bash]
+    echo SOME_VALUE > /proc/sys/SOME_DIRECTORY/SOME_FILE
+    \end{lstlisting}
+

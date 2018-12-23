@@ -1,0 +1,161 @@
+diff --git a/base.c b/base.c
+index d2d26c0..d5d3eb5 100644
+--- a/base.c
++++ b/base.c
+@@ -14,6 +14,7 @@
+ #include <linux/jbd2.h>
+ #include <linux/parser.h>
+ #include <linux/blkdev.h>
++#include <linux/uio.h>
+ 
+ #include "sblock.h"
+ 
+@@ -352,8 +353,12 @@ int dadfs_inode_save(struct super_block *sb, struct dadfs_inode *sfs_inode)
+ 
+ /* FIXME: The write support is rudimentary. I have not figured out a way to do writes
+  * from particular offsets (even though I have written some untested code for this below) efficiently. */
+-ssize_t dadfs_write(struct file * filp, const char __user * buf, size_t len,
+-		       loff_t * ppos)
++
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(3, 11, 0)
++ssize_t dadfs_write(struct kiocb *kiocb,struct iov_iter *from)
++#else
++ssize_t dadfs_write(struct file * filp, const char __user * buf, size_t len,loff_t * ppos)
++#endif
+ {
+ 	/* After the commit dd37978c5 in the upstream linux kernel,
+ 	 * we can use just filp->f_inode instead of the
+@@ -362,13 +367,25 @@ ssize_t dadfs_write(struct file * filp, const char __user * buf, size_t len,
+ 	struct dadfs_inode *sfs_inode;
+ 	struct buffer_head *bh;
+ 	struct super_block *sb;
+-	struct dadfs_super_block *sfs_sb;
++    struct dadfs_super_block *sfs_sb;
++	
+ 	handle_t *handle;
+ 
+ 	char *buffer;
+ 
+ 	int retval;
+ 
++    #if LINUX_VERSION_CODE >= KERNEL_VERSION(3, 11, 0)
++    struct file *filp = kiocb->ki_filp;
++    size_t len = iov_iter_count(from);
++    loff_t *ppos = &(kiocb->ki_pos);
++	sb = filp->f_path.dentry->d_inode->i_sb;
++	sfs_sb = DADFS_SB(sb);
++	handle = jbd2_journal_start(sfs_sb->journal, 1);
++    retval = generic_write_checks(kiocb,from);
++    if (retval)
++        return retval;
++    #else
+ 	sb = filp->f_path.dentry->d_inode->i_sb;
+ 	sfs_sb = DADFS_SB(sb);
+ 
+@@ -378,7 +395,7 @@ ssize_t dadfs_write(struct file * filp, const char __user * buf, size_t len,
+ 	retval = generic_write_checks(filp, ppos, &len, 0);
+ 	if (retval)
+ 		return retval;
+-
++    #endif
+ 	inode = filp->f_path.dentry->d_inode;
+ 	sfs_inode = DADFS_INODE(inode);
+ 
+@@ -401,8 +418,12 @@ ssize_t dadfs_write(struct file * filp, const char __user * buf, size_t len,
+ 		sfs_trace("Can't get write access for bh\n");
+ 		return retval;
+ 	}
+-
+-	if (copy_from_user(buffer, buf, len)) {
++    #if LINUX_VERSION_CODE >= KERNEL_VERSION(3, 11, 0)
++    if (copy_from_iter(buffer,len,from))
++    #else
++	if (copy_from_user(buffer, buf, len))
++    #endif
++    {
+ 		brelse(bh);
+ 		printk(KERN_ERR
+ 		       "Error copying file contents from the userspace buffer to the kernel space\n");
+@@ -448,7 +469,11 @@ ssize_t dadfs_write(struct file * filp, const char __user * buf, size_t len,
+ 
+ const struct file_operations dadfs_file_operations = {
+ 	.read = dadfs_read,
++    #if LINUX_VERSION_CODE >= KERNEL_VERSION(3, 11, 0)
++    .write_iter = dadfs_write,
++    #else
+ 	.write = dadfs_write,
++    #endif
+ };
+ 
+ const struct file_operations dadfs_dir_operations = {
+@@ -808,6 +833,7 @@ static int dadfs_parse_options(struct super_block *sb, char *options)
+ 						return ret;
+ 				} else {
+ 					/** Seems didn't work properly */
++                    //printk(KERN_ERR "Its me!");
+ 					if ((ret = dadfs_sb_load_journal(sb, journal_inode)))
+ 						return ret;
+ 				}
+@@ -822,6 +848,7 @@ static int dadfs_parse_options(struct super_block *sb, char *options)
+ 
+ /* This function, as the name implies, Makes the super_block valid and
+  * fills filesystem specific information in the super block */
++
+ int dadfs_fill_super(struct super_block *sb, void *data, int silent)
+ {
+ 	struct inode *root_inode;
+@@ -860,6 +887,7 @@ int dadfs_fill_super(struct super_block *sb, void *data, int silent)
+ 
+ 	/* For all practical purposes, we will be using this s_fs_info as the super block */
+ 	sb->s_fs_info = sb_disk;
++    sb->s_blocksize = DADFS_DEFAULT_BLOCK_SIZE;
+ 
+ 	sb->s_maxbytes = DADFS_DEFAULT_BLOCK_SIZE;
+ 	sb->s_op = &dadfs_sops;
+@@ -896,6 +924,7 @@ int dadfs_fill_super(struct super_block *sb, void *data, int silent)
+ 	if (!sb_disk->journal) {
+ 		struct inode *journal_inode;
+ 		journal_inode = dadfs_iget(sb, DADFS_JOURNAL_INODE_NUMBER);
++        printk(KERN_ERR "It's me!%p",journal_inode);
+ 
+ 		ret = dadfs_sb_load_journal(sb, journal_inode);
+ 		goto release;
+@@ -907,15 +936,11 @@ release:
+ 
+ 	return ret;
+ }
+-
+-static struct dentry *dadfs_mount(struct file_system_type *fs_type,
+-				     int flags, const char *dev_name,
+-				     void *data)
++static struct dentry *dadfs_mount(struct file_system_type *fs_type,int flags, const char *dev_name,void *data)
+ {
+ 	struct dentry *ret;
+-
++    printk(KERN_ERR "mount on [%s]\n",dev_name);
+ 	ret = mount_bdev(fs_type, flags, dev_name, data, dadfs_fill_super);
+-
+ 	if (unlikely(IS_ERR(ret)))
+ 		printk(KERN_ERR "Error mounting dadfs");
+ 	else
+@@ -959,7 +984,7 @@ static int dadfs_init(void)
+ 
+ 	ret = register_filesystem(&dadfs_fs_type);
+ 	if (likely(ret == 0))
+-		printk(KERN_INFO "Sucessfully registered dadfs\n");
++		printk(KERN_ERR "Sucessfully registered dadfs\n");
+ 	else
+ 		printk(KERN_ERR "Failed to register dadfs. Error:[%d]", ret);
+ 
+diff --git a/base.h b/base.h
+index 62daa2a..56aadc6 100644
+--- a/base.h
++++ b/base.h
+@@ -83,6 +83,7 @@ struct dadfs_super_block {
+ 	uint64_t block_size;
+ 
+ 	/* FIXME: This should be moved to the inode store and not part of the sb */
++    
+ 	uint64_t inodes_count;
+ 
+ 	uint64_t free_blocks;
