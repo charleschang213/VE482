@@ -62,6 +62,5 @@ set(SOURCE_FILES
         query/divs/SelectDiv.cpp
         )
 add_executable(lemondb main.cpp ${SOURCE_FILES})
-add_library(lemondbl8 main.cpp ${SOURCE_FILES} )
 target_link_libraries(lemondb pthread)
 

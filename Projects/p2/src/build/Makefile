@@ -123,19 +123,6 @@ lemondb/fast:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/build
 .PHONY : lemondb/fast
 
-#=============================================================================
-# Target rules for targets named lemondbl8
-
-# Build rule for target.
-lemondbl8: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 lemondbl8
-.PHONY : lemondbl8
-
-# fast build rule for target.
-lemondbl8/fast:
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/build
-.PHONY : lemondbl8/fast
-
 db/Database.o: db/Database.cpp.o
 
 .PHONY : db/Database.o
@@ -143,7 +130,6 @@ db/Database.o: db/Database.cpp.o
 # target to build an object file
 db/Database.cpp.o:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/db/Database.cpp.o
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/db/Database.cpp.o
 .PHONY : db/Database.cpp.o
 
 db/Database.i: db/Database.cpp.i
@@ -153,7 +139,6 @@ db/Database.i: db/Database.cpp.i
 # target to preprocess a source file
 db/Database.cpp.i:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/db/Database.cpp.i
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/db/Database.cpp.i
 .PHONY : db/Database.cpp.i
 
 db/Database.s: db/Database.cpp.s
@@ -163,7 +148,6 @@ db/Database.s: db/Database.cpp.s
 # target to generate assembly for a file
 db/Database.cpp.s:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/db/Database.cpp.s
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/db/Database.cpp.s
 .PHONY : db/Database.cpp.s
 
 db/Table.o: db/Table.cpp.o
@@ -173,7 +157,6 @@ db/Table.o: db/Table.cpp.o
 # target to build an object file
 db/Table.cpp.o:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/db/Table.cpp.o
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/db/Table.cpp.o
 .PHONY : db/Table.cpp.o
 
 db/Table.i: db/Table.cpp.i
@@ -183,7 +166,6 @@ db/Table.i: db/Table.cpp.i
 # target to preprocess a source file
 db/Table.cpp.i:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/db/Table.cpp.i
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/db/Table.cpp.i
 .PHONY : db/Table.cpp.i
 
 db/Table.s: db/Table.cpp.s
@@ -193,7 +175,6 @@ db/Table.s: db/Table.cpp.s
 # target to generate assembly for a file
 db/Table.cpp.s:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/db/Table.cpp.s
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/db/Table.cpp.s
 .PHONY : db/Table.cpp.s
 
 main.o: main.cpp.o
@@ -203,7 +184,6 @@ main.o: main.cpp.o
 # target to build an object file
 main.cpp.o:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/main.cpp.o
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -213,7 +193,6 @@ main.i: main.cpp.i
 # target to preprocess a source file
 main.cpp.i:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/main.cpp.i
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -223,7 +202,6 @@ main.s: main.cpp.s
 # target to generate assembly for a file
 main.cpp.s:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/main.cpp.s
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 query/Query.o: query/Query.cpp.o
@@ -233,7 +211,6 @@ query/Query.o: query/Query.cpp.o
 # target to build an object file
 query/Query.cpp.o:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/Query.cpp.o
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/query/Query.cpp.o
 .PHONY : query/Query.cpp.o
 
 query/Query.i: query/Query.cpp.i
@@ -243,7 +220,6 @@ query/Query.i: query/Query.cpp.i
 # target to preprocess a source file
 query/Query.cpp.i:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/Query.cpp.i
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/query/Query.cpp.i
 .PHONY : query/Query.cpp.i
 
 query/Query.s: query/Query.cpp.s
@@ -253,7 +229,6 @@ query/Query.s: query/Query.cpp.s
 # target to generate assembly for a file
 query/Query.cpp.s:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/Query.cpp.s
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/query/Query.cpp.s
 .PHONY : query/Query.cpp.s
 
 query/QueryBuilders.o: query/QueryBuilders.cpp.o
@@ -263,7 +238,6 @@ query/QueryBuilders.o: query/QueryBuilders.cpp.o
 # target to build an object file
 query/QueryBuilders.cpp.o:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/QueryBuilders.cpp.o
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/query/QueryBuilders.cpp.o
 .PHONY : query/QueryBuilders.cpp.o
 
 query/QueryBuilders.i: query/QueryBuilders.cpp.i
@@ -273,7 +247,6 @@ query/QueryBuilders.i: query/QueryBuilders.cpp.i
 # target to preprocess a source file
 query/QueryBuilders.cpp.i:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/QueryBuilders.cpp.i
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/query/QueryBuilders.cpp.i
 .PHONY : query/QueryBuilders.cpp.i
 
 query/QueryBuilders.s: query/QueryBuilders.cpp.s
@@ -283,7 +256,6 @@ query/QueryBuilders.s: query/QueryBuilders.cpp.s
 # target to generate assembly for a file
 query/QueryBuilders.cpp.s:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/QueryBuilders.cpp.s
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/query/QueryBuilders.cpp.s
 .PHONY : query/QueryBuilders.cpp.s
 
 query/QueryParser.o: query/QueryParser.cpp.o
@@ -293,7 +265,6 @@ query/QueryParser.o: query/QueryParser.cpp.o
 # target to build an object file
 query/QueryParser.cpp.o:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/QueryParser.cpp.o
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/query/QueryParser.cpp.o
 .PHONY : query/QueryParser.cpp.o
 
 query/QueryParser.i: query/QueryParser.cpp.i
@@ -303,7 +274,6 @@ query/QueryParser.i: query/QueryParser.cpp.i
 # target to preprocess a source file
 query/QueryParser.cpp.i:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/QueryParser.cpp.i
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/query/QueryParser.cpp.i
 .PHONY : query/QueryParser.cpp.i
 
 query/QueryParser.s: query/QueryParser.cpp.s
@@ -313,7 +283,6 @@ query/QueryParser.s: query/QueryParser.cpp.s
 # target to generate assembly for a file
 query/QueryParser.cpp.s:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/QueryParser.cpp.s
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/query/QueryParser.cpp.s
 .PHONY : query/QueryParser.cpp.s
 
 query/QueryResult.o: query/QueryResult.cpp.o
@@ -323,7 +292,6 @@ query/QueryResult.o: query/QueryResult.cpp.o
 # target to build an object file
 query/QueryResult.cpp.o:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/QueryResult.cpp.o
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/query/QueryResult.cpp.o
 .PHONY : query/QueryResult.cpp.o
 
 query/QueryResult.i: query/QueryResult.cpp.i
@@ -333,7 +301,6 @@ query/QueryResult.i: query/QueryResult.cpp.i
 # target to preprocess a source file
 query/QueryResult.cpp.i:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/QueryResult.cpp.i
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/query/QueryResult.cpp.i
 .PHONY : query/QueryResult.cpp.i
 
 query/QueryResult.s: query/QueryResult.cpp.s
@@ -343,7 +310,6 @@ query/QueryResult.s: query/QueryResult.cpp.s
 # target to generate assembly for a file
 query/QueryResult.cpp.s:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/QueryResult.cpp.s
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/query/QueryResult.cpp.s
 .PHONY : query/QueryResult.cpp.s
 
 query/data/InsertQuery.o: query/data/InsertQuery.cpp.o
@@ -353,7 +319,6 @@ query/data/InsertQuery.o: query/data/InsertQuery.cpp.o
 # target to build an object file
 query/data/InsertQuery.cpp.o:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/data/InsertQuery.cpp.o
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/query/data/InsertQuery.cpp.o
 .PHONY : query/data/InsertQuery.cpp.o
 
 query/data/InsertQuery.i: query/data/InsertQuery.cpp.i
@@ -363,7 +328,6 @@ query/data/InsertQuery.i: query/data/InsertQuery.cpp.i
 # target to preprocess a source file
 query/data/InsertQuery.cpp.i:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/data/InsertQuery.cpp.i
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/query/data/InsertQuery.cpp.i
 .PHONY : query/data/InsertQuery.cpp.i
 
 query/data/InsertQuery.s: query/data/InsertQuery.cpp.s
@@ -373,7 +337,6 @@ query/data/InsertQuery.s: query/data/InsertQuery.cpp.s
 # target to generate assembly for a file
 query/data/InsertQuery.cpp.s:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/data/InsertQuery.cpp.s
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/query/data/InsertQuery.cpp.s
 .PHONY : query/data/InsertQuery.cpp.s
 
 query/divs/AddDiv.o: query/divs/AddDiv.cpp.o
@@ -383,7 +346,6 @@ query/divs/AddDiv.o: query/divs/AddDiv.cpp.o
 # target to build an object file
 query/divs/AddDiv.cpp.o:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/divs/AddDiv.cpp.o
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/query/divs/AddDiv.cpp.o
 .PHONY : query/divs/AddDiv.cpp.o
 
 query/divs/AddDiv.i: query/divs/AddDiv.cpp.i
@@ -393,7 +355,6 @@ query/divs/AddDiv.i: query/divs/AddDiv.cpp.i
 # target to preprocess a source file
 query/divs/AddDiv.cpp.i:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/divs/AddDiv.cpp.i
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/query/divs/AddDiv.cpp.i
 .PHONY : query/divs/AddDiv.cpp.i
 
 query/divs/AddDiv.s: query/divs/AddDiv.cpp.s
@@ -403,7 +364,6 @@ query/divs/AddDiv.s: query/divs/AddDiv.cpp.s
 # target to generate assembly for a file
 query/divs/AddDiv.cpp.s:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/divs/AddDiv.cpp.s
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/query/divs/AddDiv.cpp.s
 .PHONY : query/divs/AddDiv.cpp.s
 
 query/divs/CountDiv.o: query/divs/CountDiv.cpp.o
@@ -413,7 +373,6 @@ query/divs/CountDiv.o: query/divs/CountDiv.cpp.o
 # target to build an object file
 query/divs/CountDiv.cpp.o:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/divs/CountDiv.cpp.o
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/query/divs/CountDiv.cpp.o
 .PHONY : query/divs/CountDiv.cpp.o
 
 query/divs/CountDiv.i: query/divs/CountDiv.cpp.i
@@ -423,7 +382,6 @@ query/divs/CountDiv.i: query/divs/CountDiv.cpp.i
 # target to preprocess a source file
 query/divs/CountDiv.cpp.i:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/divs/CountDiv.cpp.i
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/query/divs/CountDiv.cpp.i
 .PHONY : query/divs/CountDiv.cpp.i
 
 query/divs/CountDiv.s: query/divs/CountDiv.cpp.s
@@ -433,7 +391,6 @@ query/divs/CountDiv.s: query/divs/CountDiv.cpp.s
 # target to generate assembly for a file
 query/divs/CountDiv.cpp.s:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/divs/CountDiv.cpp.s
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/query/divs/CountDiv.cpp.s
 .PHONY : query/divs/CountDiv.cpp.s
 
 query/divs/DeleteDiv.o: query/divs/DeleteDiv.cpp.o
@@ -443,7 +400,6 @@ query/divs/DeleteDiv.o: query/divs/DeleteDiv.cpp.o
 # target to build an object file
 query/divs/DeleteDiv.cpp.o:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/divs/DeleteDiv.cpp.o
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/query/divs/DeleteDiv.cpp.o
 .PHONY : query/divs/DeleteDiv.cpp.o
 
 query/divs/DeleteDiv.i: query/divs/DeleteDiv.cpp.i
@@ -453,7 +409,6 @@ query/divs/DeleteDiv.i: query/divs/DeleteDiv.cpp.i
 # target to preprocess a source file
 query/divs/DeleteDiv.cpp.i:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/divs/DeleteDiv.cpp.i
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/query/divs/DeleteDiv.cpp.i
 .PHONY : query/divs/DeleteDiv.cpp.i
 
 query/divs/DeleteDiv.s: query/divs/DeleteDiv.cpp.s
@@ -463,7 +418,6 @@ query/divs/DeleteDiv.s: query/divs/DeleteDiv.cpp.s
 # target to generate assembly for a file
 query/divs/DeleteDiv.cpp.s:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/divs/DeleteDiv.cpp.s
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/query/divs/DeleteDiv.cpp.s
 .PHONY : query/divs/DeleteDiv.cpp.s
 
 query/divs/DuplicateDiv.o: query/divs/DuplicateDiv.cpp.o
@@ -473,7 +427,6 @@ query/divs/DuplicateDiv.o: query/divs/DuplicateDiv.cpp.o
 # target to build an object file
 query/divs/DuplicateDiv.cpp.o:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/divs/DuplicateDiv.cpp.o
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/query/divs/DuplicateDiv.cpp.o
 .PHONY : query/divs/DuplicateDiv.cpp.o
 
 query/divs/DuplicateDiv.i: query/divs/DuplicateDiv.cpp.i
@@ -483,7 +436,6 @@ query/divs/DuplicateDiv.i: query/divs/DuplicateDiv.cpp.i
 # target to preprocess a source file
 query/divs/DuplicateDiv.cpp.i:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/divs/DuplicateDiv.cpp.i
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/query/divs/DuplicateDiv.cpp.i
 .PHONY : query/divs/DuplicateDiv.cpp.i
 
 query/divs/DuplicateDiv.s: query/divs/DuplicateDiv.cpp.s
@@ -493,7 +445,6 @@ query/divs/DuplicateDiv.s: query/divs/DuplicateDiv.cpp.s
 # target to generate assembly for a file
 query/divs/DuplicateDiv.cpp.s:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/divs/DuplicateDiv.cpp.s
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/query/divs/DuplicateDiv.cpp.s
 .PHONY : query/divs/DuplicateDiv.cpp.s
 
 query/divs/MaxDiv.o: query/divs/MaxDiv.cpp.o
@@ -503,7 +454,6 @@ query/divs/MaxDiv.o: query/divs/MaxDiv.cpp.o
 # target to build an object file
 query/divs/MaxDiv.cpp.o:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/divs/MaxDiv.cpp.o
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/query/divs/MaxDiv.cpp.o
 .PHONY : query/divs/MaxDiv.cpp.o
 
 query/divs/MaxDiv.i: query/divs/MaxDiv.cpp.i
@@ -513,7 +463,6 @@ query/divs/MaxDiv.i: query/divs/MaxDiv.cpp.i
 # target to preprocess a source file
 query/divs/MaxDiv.cpp.i:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/divs/MaxDiv.cpp.i
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/query/divs/MaxDiv.cpp.i
 .PHONY : query/divs/MaxDiv.cpp.i
 
 query/divs/MaxDiv.s: query/divs/MaxDiv.cpp.s
@@ -523,7 +472,6 @@ query/divs/MaxDiv.s: query/divs/MaxDiv.cpp.s
 # target to generate assembly for a file
 query/divs/MaxDiv.cpp.s:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/divs/MaxDiv.cpp.s
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/query/divs/MaxDiv.cpp.s
 .PHONY : query/divs/MaxDiv.cpp.s
 
 query/divs/MinDiv.o: query/divs/MinDiv.cpp.o
@@ -533,7 +481,6 @@ query/divs/MinDiv.o: query/divs/MinDiv.cpp.o
 # target to build an object file
 query/divs/MinDiv.cpp.o:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/divs/MinDiv.cpp.o
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/query/divs/MinDiv.cpp.o
 .PHONY : query/divs/MinDiv.cpp.o
 
 query/divs/MinDiv.i: query/divs/MinDiv.cpp.i
@@ -543,7 +490,6 @@ query/divs/MinDiv.i: query/divs/MinDiv.cpp.i
 # target to preprocess a source file
 query/divs/MinDiv.cpp.i:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/divs/MinDiv.cpp.i
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/query/divs/MinDiv.cpp.i
 .PHONY : query/divs/MinDiv.cpp.i
 
 query/divs/MinDiv.s: query/divs/MinDiv.cpp.s
@@ -553,7 +499,6 @@ query/divs/MinDiv.s: query/divs/MinDiv.cpp.s
 # target to generate assembly for a file
 query/divs/MinDiv.cpp.s:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/divs/MinDiv.cpp.s
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/query/divs/MinDiv.cpp.s
 .PHONY : query/divs/MinDiv.cpp.s
 
 query/divs/SelectDiv.o: query/divs/SelectDiv.cpp.o
@@ -563,7 +508,6 @@ query/divs/SelectDiv.o: query/divs/SelectDiv.cpp.o
 # target to build an object file
 query/divs/SelectDiv.cpp.o:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/divs/SelectDiv.cpp.o
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/query/divs/SelectDiv.cpp.o
 .PHONY : query/divs/SelectDiv.cpp.o
 
 query/divs/SelectDiv.i: query/divs/SelectDiv.cpp.i
@@ -573,7 +517,6 @@ query/divs/SelectDiv.i: query/divs/SelectDiv.cpp.i
 # target to preprocess a source file
 query/divs/SelectDiv.cpp.i:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/divs/SelectDiv.cpp.i
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/query/divs/SelectDiv.cpp.i
 .PHONY : query/divs/SelectDiv.cpp.i
 
 query/divs/SelectDiv.s: query/divs/SelectDiv.cpp.s
@@ -583,7 +526,6 @@ query/divs/SelectDiv.s: query/divs/SelectDiv.cpp.s
 # target to generate assembly for a file
 query/divs/SelectDiv.cpp.s:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/divs/SelectDiv.cpp.s
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/query/divs/SelectDiv.cpp.s
 .PHONY : query/divs/SelectDiv.cpp.s
 
 query/divs/SubDiv.o: query/divs/SubDiv.cpp.o
@@ -593,7 +535,6 @@ query/divs/SubDiv.o: query/divs/SubDiv.cpp.o
 # target to build an object file
 query/divs/SubDiv.cpp.o:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/divs/SubDiv.cpp.o
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/query/divs/SubDiv.cpp.o
 .PHONY : query/divs/SubDiv.cpp.o
 
 query/divs/SubDiv.i: query/divs/SubDiv.cpp.i
@@ -603,7 +544,6 @@ query/divs/SubDiv.i: query/divs/SubDiv.cpp.i
 # target to preprocess a source file
 query/divs/SubDiv.cpp.i:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/divs/SubDiv.cpp.i
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/query/divs/SubDiv.cpp.i
 .PHONY : query/divs/SubDiv.cpp.i
 
 query/divs/SubDiv.s: query/divs/SubDiv.cpp.s
@@ -613,7 +553,6 @@ query/divs/SubDiv.s: query/divs/SubDiv.cpp.s
 # target to generate assembly for a file
 query/divs/SubDiv.cpp.s:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/divs/SubDiv.cpp.s
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/query/divs/SubDiv.cpp.s
 .PHONY : query/divs/SubDiv.cpp.s
 
 query/divs/SumDiv.o: query/divs/SumDiv.cpp.o
@@ -623,7 +562,6 @@ query/divs/SumDiv.o: query/divs/SumDiv.cpp.o
 # target to build an object file
 query/divs/SumDiv.cpp.o:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/divs/SumDiv.cpp.o
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/query/divs/SumDiv.cpp.o
 .PHONY : query/divs/SumDiv.cpp.o
 
 query/divs/SumDiv.i: query/divs/SumDiv.cpp.i
@@ -633,7 +571,6 @@ query/divs/SumDiv.i: query/divs/SumDiv.cpp.i
 # target to preprocess a source file
 query/divs/SumDiv.cpp.i:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/divs/SumDiv.cpp.i
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/query/divs/SumDiv.cpp.i
 .PHONY : query/divs/SumDiv.cpp.i
 
 query/divs/SumDiv.s: query/divs/SumDiv.cpp.s
@@ -643,7 +580,6 @@ query/divs/SumDiv.s: query/divs/SumDiv.cpp.s
 # target to generate assembly for a file
 query/divs/SumDiv.cpp.s:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/divs/SumDiv.cpp.s
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/query/divs/SumDiv.cpp.s
 .PHONY : query/divs/SumDiv.cpp.s
 
 query/divs/SwapDiv.o: query/divs/SwapDiv.cpp.o
@@ -653,7 +589,6 @@ query/divs/SwapDiv.o: query/divs/SwapDiv.cpp.o
 # target to build an object file
 query/divs/SwapDiv.cpp.o:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/divs/SwapDiv.cpp.o
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/query/divs/SwapDiv.cpp.o
 .PHONY : query/divs/SwapDiv.cpp.o
 
 query/divs/SwapDiv.i: query/divs/SwapDiv.cpp.i
@@ -663,7 +598,6 @@ query/divs/SwapDiv.i: query/divs/SwapDiv.cpp.i
 # target to preprocess a source file
 query/divs/SwapDiv.cpp.i:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/divs/SwapDiv.cpp.i
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/query/divs/SwapDiv.cpp.i
 .PHONY : query/divs/SwapDiv.cpp.i
 
 query/divs/SwapDiv.s: query/divs/SwapDiv.cpp.s
@@ -673,7 +607,6 @@ query/divs/SwapDiv.s: query/divs/SwapDiv.cpp.s
 # target to generate assembly for a file
 query/divs/SwapDiv.cpp.s:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/divs/SwapDiv.cpp.s
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/query/divs/SwapDiv.cpp.s
 .PHONY : query/divs/SwapDiv.cpp.s
 
 query/divs/UpdateDiv.o: query/divs/UpdateDiv.cpp.o
@@ -683,7 +616,6 @@ query/divs/UpdateDiv.o: query/divs/UpdateDiv.cpp.o
 # target to build an object file
 query/divs/UpdateDiv.cpp.o:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/divs/UpdateDiv.cpp.o
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/query/divs/UpdateDiv.cpp.o
 .PHONY : query/divs/UpdateDiv.cpp.o
 
 query/divs/UpdateDiv.i: query/divs/UpdateDiv.cpp.i
@@ -693,7 +625,6 @@ query/divs/UpdateDiv.i: query/divs/UpdateDiv.cpp.i
 # target to preprocess a source file
 query/divs/UpdateDiv.cpp.i:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/divs/UpdateDiv.cpp.i
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/query/divs/UpdateDiv.cpp.i
 .PHONY : query/divs/UpdateDiv.cpp.i
 
 query/divs/UpdateDiv.s: query/divs/UpdateDiv.cpp.s
@@ -703,7 +634,6 @@ query/divs/UpdateDiv.s: query/divs/UpdateDiv.cpp.s
 # target to generate assembly for a file
 query/divs/UpdateDiv.cpp.s:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/divs/UpdateDiv.cpp.s
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/query/divs/UpdateDiv.cpp.s
 .PHONY : query/divs/UpdateDiv.cpp.s
 
 query/management/CopyTableQuery.o: query/management/CopyTableQuery.cpp.o
@@ -713,7 +643,6 @@ query/management/CopyTableQuery.o: query/management/CopyTableQuery.cpp.o
 # target to build an object file
 query/management/CopyTableQuery.cpp.o:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/management/CopyTableQuery.cpp.o
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/query/management/CopyTableQuery.cpp.o
 .PHONY : query/management/CopyTableQuery.cpp.o
 
 query/management/CopyTableQuery.i: query/management/CopyTableQuery.cpp.i
@@ -723,7 +652,6 @@ query/management/CopyTableQuery.i: query/management/CopyTableQuery.cpp.i
 # target to preprocess a source file
 query/management/CopyTableQuery.cpp.i:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/management/CopyTableQuery.cpp.i
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/query/management/CopyTableQuery.cpp.i
 .PHONY : query/management/CopyTableQuery.cpp.i
 
 query/management/CopyTableQuery.s: query/management/CopyTableQuery.cpp.s
@@ -733,7 +661,6 @@ query/management/CopyTableQuery.s: query/management/CopyTableQuery.cpp.s
 # target to generate assembly for a file
 query/management/CopyTableQuery.cpp.s:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/management/CopyTableQuery.cpp.s
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/query/management/CopyTableQuery.cpp.s
 .PHONY : query/management/CopyTableQuery.cpp.s
 
 query/management/DropTableQuery.o: query/management/DropTableQuery.cpp.o
@@ -743,7 +670,6 @@ query/management/DropTableQuery.o: query/management/DropTableQuery.cpp.o
 # target to build an object file
 query/management/DropTableQuery.cpp.o:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/management/DropTableQuery.cpp.o
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/query/management/DropTableQuery.cpp.o
 .PHONY : query/management/DropTableQuery.cpp.o
 
 query/management/DropTableQuery.i: query/management/DropTableQuery.cpp.i
@@ -753,7 +679,6 @@ query/management/DropTableQuery.i: query/management/DropTableQuery.cpp.i
 # target to preprocess a source file
 query/management/DropTableQuery.cpp.i:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/management/DropTableQuery.cpp.i
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/query/management/DropTableQuery.cpp.i
 .PHONY : query/management/DropTableQuery.cpp.i
 
 query/management/DropTableQuery.s: query/management/DropTableQuery.cpp.s
@@ -763,7 +688,6 @@ query/management/DropTableQuery.s: query/management/DropTableQuery.cpp.s
 # target to generate assembly for a file
 query/management/DropTableQuery.cpp.s:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/management/DropTableQuery.cpp.s
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/query/management/DropTableQuery.cpp.s
 .PHONY : query/management/DropTableQuery.cpp.s
 
 query/management/DumpTableQuery.o: query/management/DumpTableQuery.cpp.o
@@ -773,7 +697,6 @@ query/management/DumpTableQuery.o: query/management/DumpTableQuery.cpp.o
 # target to build an object file
 query/management/DumpTableQuery.cpp.o:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/management/DumpTableQuery.cpp.o
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/query/management/DumpTableQuery.cpp.o
 .PHONY : query/management/DumpTableQuery.cpp.o
 
 query/management/DumpTableQuery.i: query/management/DumpTableQuery.cpp.i
@@ -783,7 +706,6 @@ query/management/DumpTableQuery.i: query/management/DumpTableQuery.cpp.i
 # target to preprocess a source file
 query/management/DumpTableQuery.cpp.i:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/management/DumpTableQuery.cpp.i
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/query/management/DumpTableQuery.cpp.i
 .PHONY : query/management/DumpTableQuery.cpp.i
 
 query/management/DumpTableQuery.s: query/management/DumpTableQuery.cpp.s
@@ -793,7 +715,6 @@ query/management/DumpTableQuery.s: query/management/DumpTableQuery.cpp.s
 # target to generate assembly for a file
 query/management/DumpTableQuery.cpp.s:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/management/DumpTableQuery.cpp.s
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/query/management/DumpTableQuery.cpp.s
 .PHONY : query/management/DumpTableQuery.cpp.s
 
 query/management/ListTableQuery.o: query/management/ListTableQuery.cpp.o
@@ -803,7 +724,6 @@ query/management/ListTableQuery.o: query/management/ListTableQuery.cpp.o
 # target to build an object file
 query/management/ListTableQuery.cpp.o:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/management/ListTableQuery.cpp.o
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/query/management/ListTableQuery.cpp.o
 .PHONY : query/management/ListTableQuery.cpp.o
 
 query/management/ListTableQuery.i: query/management/ListTableQuery.cpp.i
@@ -813,7 +733,6 @@ query/management/ListTableQuery.i: query/management/ListTableQuery.cpp.i
 # target to preprocess a source file
 query/management/ListTableQuery.cpp.i:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/management/ListTableQuery.cpp.i
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/query/management/ListTableQuery.cpp.i
 .PHONY : query/management/ListTableQuery.cpp.i
 
 query/management/ListTableQuery.s: query/management/ListTableQuery.cpp.s
@@ -823,7 +742,6 @@ query/management/ListTableQuery.s: query/management/ListTableQuery.cpp.s
 # target to generate assembly for a file
 query/management/ListTableQuery.cpp.s:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/management/ListTableQuery.cpp.s
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/query/management/ListTableQuery.cpp.s
 .PHONY : query/management/ListTableQuery.cpp.s
 
 query/management/LoadTableQuery.o: query/management/LoadTableQuery.cpp.o
@@ -833,7 +751,6 @@ query/management/LoadTableQuery.o: query/management/LoadTableQuery.cpp.o
 # target to build an object file
 query/management/LoadTableQuery.cpp.o:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/management/LoadTableQuery.cpp.o
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/query/management/LoadTableQuery.cpp.o
 .PHONY : query/management/LoadTableQuery.cpp.o
 
 query/management/LoadTableQuery.i: query/management/LoadTableQuery.cpp.i
@@ -843,7 +760,6 @@ query/management/LoadTableQuery.i: query/management/LoadTableQuery.cpp.i
 # target to preprocess a source file
 query/management/LoadTableQuery.cpp.i:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/management/LoadTableQuery.cpp.i
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/query/management/LoadTableQuery.cpp.i
 .PHONY : query/management/LoadTableQuery.cpp.i
 
 query/management/LoadTableQuery.s: query/management/LoadTableQuery.cpp.s
@@ -853,7 +769,6 @@ query/management/LoadTableQuery.s: query/management/LoadTableQuery.cpp.s
 # target to generate assembly for a file
 query/management/LoadTableQuery.cpp.s:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/management/LoadTableQuery.cpp.s
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/query/management/LoadTableQuery.cpp.s
 .PHONY : query/management/LoadTableQuery.cpp.s
 
 query/management/PrintTableQuery.o: query/management/PrintTableQuery.cpp.o
@@ -863,7 +778,6 @@ query/management/PrintTableQuery.o: query/management/PrintTableQuery.cpp.o
 # target to build an object file
 query/management/PrintTableQuery.cpp.o:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/management/PrintTableQuery.cpp.o
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/query/management/PrintTableQuery.cpp.o
 .PHONY : query/management/PrintTableQuery.cpp.o
 
 query/management/PrintTableQuery.i: query/management/PrintTableQuery.cpp.i
@@ -873,7 +787,6 @@ query/management/PrintTableQuery.i: query/management/PrintTableQuery.cpp.i
 # target to preprocess a source file
 query/management/PrintTableQuery.cpp.i:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/management/PrintTableQuery.cpp.i
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/query/management/PrintTableQuery.cpp.i
 .PHONY : query/management/PrintTableQuery.cpp.i
 
 query/management/PrintTableQuery.s: query/management/PrintTableQuery.cpp.s
@@ -883,7 +796,6 @@ query/management/PrintTableQuery.s: query/management/PrintTableQuery.cpp.s
 # target to generate assembly for a file
 query/management/PrintTableQuery.cpp.s:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/management/PrintTableQuery.cpp.s
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/query/management/PrintTableQuery.cpp.s
 .PHONY : query/management/PrintTableQuery.cpp.s
 
 query/management/QuitQuery.o: query/management/QuitQuery.cpp.o
@@ -893,7 +805,6 @@ query/management/QuitQuery.o: query/management/QuitQuery.cpp.o
 # target to build an object file
 query/management/QuitQuery.cpp.o:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/management/QuitQuery.cpp.o
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/query/management/QuitQuery.cpp.o
 .PHONY : query/management/QuitQuery.cpp.o
 
 query/management/QuitQuery.i: query/management/QuitQuery.cpp.i
@@ -903,7 +814,6 @@ query/management/QuitQuery.i: query/management/QuitQuery.cpp.i
 # target to preprocess a source file
 query/management/QuitQuery.cpp.i:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/management/QuitQuery.cpp.i
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/query/management/QuitQuery.cpp.i
 .PHONY : query/management/QuitQuery.cpp.i
 
 query/management/QuitQuery.s: query/management/QuitQuery.cpp.s
@@ -913,7 +823,6 @@ query/management/QuitQuery.s: query/management/QuitQuery.cpp.s
 # target to generate assembly for a file
 query/management/QuitQuery.cpp.s:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/management/QuitQuery.cpp.s
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/query/management/QuitQuery.cpp.s
 .PHONY : query/management/QuitQuery.cpp.s
 
 query/management/TruncateTableQuery.o: query/management/TruncateTableQuery.cpp.o
@@ -923,7 +832,6 @@ query/management/TruncateTableQuery.o: query/management/TruncateTableQuery.cpp.o
 # target to build an object file
 query/management/TruncateTableQuery.cpp.o:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/management/TruncateTableQuery.cpp.o
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/query/management/TruncateTableQuery.cpp.o
 .PHONY : query/management/TruncateTableQuery.cpp.o
 
 query/management/TruncateTableQuery.i: query/management/TruncateTableQuery.cpp.i
@@ -933,7 +841,6 @@ query/management/TruncateTableQuery.i: query/management/TruncateTableQuery.cpp.i
 # target to preprocess a source file
 query/management/TruncateTableQuery.cpp.i:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/management/TruncateTableQuery.cpp.i
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/query/management/TruncateTableQuery.cpp.i
 .PHONY : query/management/TruncateTableQuery.cpp.i
 
 query/management/TruncateTableQuery.s: query/management/TruncateTableQuery.cpp.s
@@ -943,7 +850,6 @@ query/management/TruncateTableQuery.s: query/management/TruncateTableQuery.cpp.s
 # target to generate assembly for a file
 query/management/TruncateTableQuery.cpp.s:
 	$(MAKE) -f CMakeFiles/lemondb.dir/build.make CMakeFiles/lemondb.dir/query/management/TruncateTableQuery.cpp.s
-	$(MAKE) -f CMakeFiles/lemondbl8.dir/build.make CMakeFiles/lemondbl8.dir/query/management/TruncateTableQuery.cpp.s
 .PHONY : query/management/TruncateTableQuery.cpp.s
 
 # Help Target
@@ -953,9 +859,8 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... edit_cache"
 	@echo "... lemondb"
-	@echo "... lemondbl8"
+	@echo "... edit_cache"
 	@echo "... db/Database.o"
 	@echo "... db/Database.i"
 	@echo "... db/Database.s"
