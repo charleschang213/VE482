@@ -15,7 +15,7 @@ QueryResult::Ptr LoadTableQuery::execute() {
     Database &db = Database::getInstance();
     try {
         std::string a = this->fileName;
-        if (a.find("..")==0) a = a.substr(1);
+        //if (a.find("..")==0) a = a.substr(1);
         ifstream infile(a);
         if (!infile.is_open()) {      
             std::cerr << "LOAD file " << this->fileName << " failed." << std::endl;
